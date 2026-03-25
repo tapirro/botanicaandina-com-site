@@ -91,8 +91,12 @@
         .result-heading h2 { font-size: 1.5rem; color: #1a5632; margin-bottom: 0.3rem; }
         .result-heading p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #666; }
 
-        .plant-result { background: #fff; border-radius: 12px; padding: 1.8rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 1.2rem; border-left: 4px solid #1a5632; }
+        .plant-result { background: #fff; border-radius: 12px; padding: 1.8rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 1.2rem; border-left: 4px solid #1a5632; display: flex; gap: 1.2rem; align-items: flex-start; }
         .plant-result.secondary { border-left-color: #4caf50; }
+        .plant-img { width: 100px; height: 100px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
+        .plant-img-placeholder { width: 100px; height: 100px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+        .plant-info { flex: 1; min-width: 0; }
+        @media (max-width: 600px) { .plant-result { flex-direction: column; } .plant-img, .plant-img-placeholder { width: 80px; height: 80px; } }
         .plant-rank { font-family: Arial, sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #1a5632; margin-bottom: 0.3rem; }
         .plant-result h3 { font-size: 1.15rem; margin-bottom: 0.2rem; }
         .plant-result .scientific { font-style: italic; font-size: 0.85rem; color: #888; margin-bottom: 0.8rem; }
@@ -281,7 +285,7 @@
 
     const PLANTS = [
         {
-            id: "curcuma", name: "Cúrcuma / Curcumina", scientific: "Curcuma longa",
+            id: "curcuma", name: "Cúrcuma / Curcumina", scientific: "Curcuma longa", image: "/assets/img/plantas/curcuma.webp",
             matchTags: ["inflammation", "pain", "chronic", "cardio", "diabetes", "capsule", "food"],
             evidence: "Ensayos clínicos (40+ meta-análisis)",
             description: "La curcumina reduce marcadores de inflamación (PCR, TNF-α) y dolor articular. En un ensayo con 120 pacientes, logró 40% menos dolor en 8 semanas. Absorción 20x mayor con pimienta negra.",
@@ -290,7 +294,7 @@
             tags_evidence: ["Metaanálisis", "Ensayo clínico", "EMA"]
         },
         {
-            id: "una_de_gato", name: "Uña de Gato", scientific: "Uncaria tomentosa",
+            id: "una_de_gato", name: "Uña de Gato", scientific: "Uncaria tomentosa", image: "/assets/img/plantas/una-de-gato.webp",
             matchTags: ["inflammation", "immunity", "chronic", "pain", "traditional", "tea", "capsule"],
             evidence: "Ensayos clínicos + tradición andina",
             description: "Planta amazónica con efecto antiinflamatorio e inmunomodulador. Un estudio mostró reducción de aterosclerosis. Usada tradicionalmente por comunidades amazónicas durante siglos.",
@@ -299,7 +303,7 @@
             tags_evidence: ["Ensayo clínico", "Tradición amazónica"]
         },
         {
-            id: "berberina", name: "Berberina", scientific: "Berberis vulgaris",
+            id: "berberina", name: "Berberina", scientific: "Berberis vulgaris", image: null,
             matchTags: ["diabetes", "metabolism", "cholesterol", "chronic", "capsule", "strict_evidence"],
             evidence: "Ensayos clínicos (publicados en JAMA)",
             description: "Reduce grasa visceral y mejora la resistencia a la insulina. Un ensayo en JAMA mostró 3.6 cm menos de cintura en 12 semanas. Eficacia comparable a metformina en algunos estudios.",
@@ -308,7 +312,7 @@
             tags_evidence: ["JAMA", "Ensayo clínico"]
         },
         {
-            id: "maca", name: "Maca", scientific: "Lepidium meyenii",
+            id: "maca", name: "Maca", scientific: "Lepidium meyenii", image: "/assets/img/plantas/maca.webp",
             matchTags: ["energy", "mood", "stress", "altitude", "active", "food", "capsule", "traditional"],
             evidence: "Ensayos clínicos",
             description: "Raíz andina que mejora energía, libido y adaptación a la altitud. Cultivada sobre 4000 msnm en los Andes peruanos. Contiene macamidas únicas que modulan el sistema endocannabinoide.",
@@ -317,7 +321,7 @@
             tags_evidence: ["Ensayo clínico", "Tradición andina"]
         },
         {
-            id: "ayahuasca", name: "Ayahuasca", scientific: "Banisteriopsis caapi",
+            id: "ayahuasca", name: "Ayahuasca", scientific: "Banisteriopsis caapi", image: null,
             matchTags: ["mood", "stress", "open_evidence", "traditional"],
             evidence: "Ensayos clínicos preliminares + revisiones sistemáticas",
             description: "Revisiones sistemáticas muestran potencial en depresión resistente y ansiedad. Los alcaloides harmala son inhibidores de MAO reversibles. Solo debe usarse en contexto ceremonial supervisado.",
@@ -326,7 +330,7 @@
             tags_evidence: ["Revisión sistemática", "Ensayo clínico"]
         },
         {
-            id: "chanca_piedra", name: "Chanca Piedra", scientific: "Phyllanthus niruri",
+            id: "chanca_piedra", name: "Chanca Piedra", scientific: "Phyllanthus niruri", image: "/assets/img/plantas/chanca-piedra.webp",
             matchTags: ["renal", "diabetes", "chronic", "tea", "traditional"],
             evidence: "Ensayos clínicos + tradición amazónica",
             description: "Protege la función renal en pacientes diabéticos. Un estudio mostró reducción significativa de proteinuria. Tradicionalmente usada como 'rompe piedras' para cálculos renales.",
@@ -335,7 +339,7 @@
             tags_evidence: ["Ensayo clínico", "Tradición amazónica"]
         },
         {
-            id: "hoja_de_coca", name: "Hoja de Coca", scientific: "Erythroxylum coca",
+            id: "hoja_de_coca", name: "Hoja de Coca", scientific: "Erythroxylum coca", image: null,
             matchTags: ["stress", "altitude", "energy", "active", "traditional", "tea", "food"],
             evidence: "Estudios clínicos",
             description: "Reduce cortisol (hormona del estrés) en trabajadores de altura. Mejora adaptación a la altitud y energía. Usada por culturas andinas durante 8000 años. Legal como hoja en Perú, Bolivia y Colombia.",
@@ -344,7 +348,7 @@
             tags_evidence: ["Estudio piloto", "Tradición andina milenaria"]
         },
         {
-            id: "guayusa", name: "Guayusa", scientific: "Ilex guayusa",
+            id: "guayusa", name: "Guayusa", scientific: "Ilex guayusa", image: null,
             matchTags: ["energy", "cognition", "active", "tea", "sedentary"],
             evidence: "Estudios preclínicos + ensayos preliminares",
             description: "Hoja amazónica rica en cafeína y L-teanina. Mejora la atención sin los picos de ansiedad del café. Contiene ácido clorogénico con propiedades antioxidantes.",
@@ -353,7 +357,7 @@
             tags_evidence: ["Estudio preclínico", "Tradición kichwa"]
         },
         {
-            id: "sangre_de_drago", name: "Sangre de Drago", scientific: "Croton lechleri",
+            id: "sangre_de_drago", name: "Sangre de Drago", scientific: "Croton lechleri", image: null,
             matchTags: ["inflammation", "acute", "traditional"],
             evidence: "Estudios preclínicos + uso etnobotánico",
             description: "Resina amazónica con potente efecto cicatrizante y antiinflamatorio. Contiene taspina y proantocianidinas. El loureirin B muestra actividad anticoagulante natural.",
@@ -362,7 +366,7 @@
             tags_evidence: ["Estudio preclínico", "Tradición amazónica"]
         },
         {
-            id: "melon_amargo", name: "Melón Amargo", scientific: "Momordica charantia",
+            id: "melon_amargo", name: "Melón Amargo", scientific: "Momordica charantia", image: null,
             matchTags: ["diabetes", "metabolism", "food", "open_evidence"],
             evidence: "Ensayos clínicos + metaanálisis",
             description: "Fruto tropical con efecto hipoglucemiante demostrado. Contiene charantina y polipéptido-p (análogo de insulina vegetal). Metaanálisis muestra reducción significativa de HbA1c.",
@@ -371,7 +375,7 @@
             tags_evidence: ["Metaanálisis", "Ensayo clínico"]
         },
         {
-            id: "tarwi", name: "Tarwi / Chocho", scientific: "Lupinus mutabilis",
+            id: "tarwi", name: "Tarwi / Chocho", scientific: "Lupinus mutabilis", image: null,
             matchTags: ["microbiome", "bloating", "metabolism", "food", "traditional"],
             evidence: "Estudios clínicos",
             description: "Legumbre andina con 44% de proteína y efecto prebiótico. Mejora la composición del microbioma intestinal. Alto en fibra y bajo índice glucémico.",
@@ -380,7 +384,7 @@
             tags_evidence: ["Estudio clínico", "Alimento ancestral"]
         },
         {
-            id: "quinoa", name: "Quinoa", scientific: "Chenopodium quinoa",
+            id: "quinoa", name: "Quinoa", scientific: "Chenopodium quinoa", image: null,
             matchTags: ["metabolism", "cholesterol", "good_digestion", "food", "active"],
             evidence: "Metaanálisis",
             description: "Pseudocereal andino, proteína completa con los 9 aminoácidos esenciales. Mejora el perfil lipídico y tiene bajo índice glucémico. Libre de gluten.",
@@ -490,14 +494,21 @@
                 ? plant.articles.map(a => `<a href="${a}" class="read-more">Leer estudio completo →</a>`).join(' ')
                 : '';
 
+            const imgHtml = plant.image
+                ? `<img class="plant-img" src="${plant.image}" alt="${plant.name}" loading="lazy">`
+                : `<div class="plant-img-placeholder">🌿</div>`;
+
             html += `<div class="plant-result${cls}">
-                <div class="plant-rank">${labels[i] || 'Otra opción'}</div>
-                <h3>${plant.name}</h3>
-                <div class="scientific">${plant.scientific}</div>
-                <div class="match-reason">${plant.description}</div>
-                <div>${tagsHtml}</div>
-                ${warningsHtml}
-                <div style="margin-top:0.5rem">${articleLinks}</div>
+                ${imgHtml}
+                <div class="plant-info">
+                    <div class="plant-rank">${labels[i] || 'Otra opción'}</div>
+                    <h3>${plant.name}</h3>
+                    <div class="scientific">${plant.scientific}</div>
+                    <div class="match-reason">${plant.description}</div>
+                    <div>${tagsHtml}</div>
+                    ${warningsHtml}
+                    <div style="margin-top:0.5rem">${articleLinks}</div>
+                </div>
             </div>`;
         });
 
