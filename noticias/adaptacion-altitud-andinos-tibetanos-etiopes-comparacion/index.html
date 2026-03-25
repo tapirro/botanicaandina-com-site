@@ -502,7 +502,7 @@
             })
             .then(function(r) { return r.json(); })
             .then(function(data) {
-                if (data.success) {
+                if (data.success === true || data.success === 'true') {
                     msg.textContent = '¡Gracias! Te has suscrito correctamente.';
                     msg.style.color = '#a5d6a7';
                     form.reset();
