@@ -8332,6 +8332,16 @@
         };
     }
 
+    function quickCheck(herbId, drugId) {
+        selectedHerbs = [herbId];
+        selectedDrugs = [drugId];
+        renderSelected('selectedHerbs', selectedHerbs, HERBS, removeHerb);
+        renderSelected('selectedDrugs', selectedDrugs, DRUG_CLASSES, removeDrug);
+        document.getElementById('herbInput').value = '';
+        document.getElementById('drugInput').value = '';
+        checkInteractions();
+    }
+
     document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
