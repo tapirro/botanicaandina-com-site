@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) -->
+<!-- Source: https://botanicaandina.com/noticias/dengue-chikungunya-vacunacion-viajeros-guia-2026/ -->
+<!-- DOI: 10.1016/j.tmaid.2026.102972 -->
+<svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="casos de dengue en 2024 a nivel global" style="max-width:480px;width:100%;height:auto;margin:1.5rem auto;display:block;">
+    <rect width="480" height="180" rx="12" fill="#b71c1c" opacity="0.08"/>
+    <rect x="0" y="0" width="6" height="180" rx="3" fill="#b71c1c"/>
+    <text x="28" y="80" fill="#b71c1c" font-size="52" font-family="Arial,sans-serif" font-weight="900">14,6M</text>
+    <text x="28" y="112" fill="#333" font-size="15" font-family="Arial,sans-serif" font-weight="600">casos de dengue en 2024 a nivel global</text>
+    <text x="28" y="138" fill="#777" font-size="12" font-family="Arial,sans-serif">12.000 muertes | 410.000+ casos de chikungunya en las Americas</text>
+</svg>
