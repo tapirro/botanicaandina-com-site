@@ -1,15 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <rect width="1200" height="630" fill="#faf5f5"/>
-  <rect x="0" y="0" width="1200" height="6" fill="#1a5632"/>
-  <rect x="0" y="624" width="1200" height="6" fill="#c62828"/>
-  <rect x="80" y="200" width="240" height="36" rx="18" fill="#c62828"/>
-  <text x="200" y="224" text-anchor="middle" font-family="Arial,sans-serif"
-        font-size="14" fill="#fff" font-weight="bold" letter-spacing="1">HERRAMIENTA GRATUITA</text>
-  <text x="80" y="280" font-family="Georgia,serif" font-size="48" fill="#1a1a1a" font-weight="bold">Verificador de Interacciones</text><text x="80" y="338" font-family="Georgia,serif" font-size="48" fill="#1a1a1a" font-weight="bold">Plantas – Medicamentos</text>
-  <text x="80" y="416" font-family="Arial,sans-serif" font-size="22"
-        fill="#666">Revisa si tus suplementos son seguros con tu medicación</text>
-  <text x="80" y="560" font-family="Georgia,serif" font-size="20" fill="#1a5632"
-        font-weight="bold">Botánica Andina</text>
-  <text x="80" y="588" font-family="Arial,sans-serif" font-size="14"
-        fill="#888">botanicaandina.com/herramientas</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f7f2"/>
+      <stop offset="100%" stop-color="#faf5f5"/>
+    </linearGradient>
+    <linearGradient id="headerBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a5632"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="url(#headerBar)"/>
+  <rect x="0" y="622" width="1200" height="8" fill="#c62828"/>
+
+  <!-- Decorative leaf pattern (right side) -->
+  <g transform="translate(820, 80)" opacity="0.12" fill="#1a5632">
+    <!-- Large leaf -->
+    <path d="M120,0 C120,0 180,60 180,150 C180,240 120,300 120,300 C120,300 60,240 60,150 C60,60 120,0 120,0 Z"/>
+    <line x1="120" y1="0" x2="120" y2="300" stroke="#1a5632" stroke-width="2"/>
+    <path d="M120,60 C140,70 155,85 160,100" fill="none" stroke="#1a5632" stroke-width="1.5"/>
+    <path d="M120,120 C140,130 160,145 165,165" fill="none" stroke="#1a5632" stroke-width="1.5"/>
+    <path d="M120,180 C140,190 155,210 158,225" fill="none" stroke="#1a5632" stroke-width="1.5"/>
+    <path d="M120,60 C100,70 85,85 80,100" fill="none" stroke="#1a5632" stroke-width="1.5"/>
+    <path d="M120,120 C100,130 80,145 75,165" fill="none" stroke="#1a5632" stroke-width="1.5"/>
+    <path d="M120,180 C100,190 85,210 82,225" fill="none" stroke="#1a5632" stroke-width="1.5"/>
+  </g>
+
+  <!-- Smaller decorative leaf (right) -->
+  <g transform="translate(1020, 200) scale(0.6)" opacity="0.08" fill="#1a5632">
+    <path d="M60,0 C60,0 100,40 100,100 C100,160 60,200 60,200 C60,200 20,160 20,100 C20,40 60,0 60,0 Z"/>
+    <line x1="60" y1="0" x2="60" y2="200" stroke="#1a5632" stroke-width="2"/>
+  </g>
+
+  <!-- Pill/capsule icon -->
+  <g transform="translate(820, 420)" opacity="0.15">
+    <rect x="0" y="10" width="80" height="35" rx="17" fill="#c62828"/>
+    <rect x="40" y="10" width="40" height="35" rx="0" fill="#e65100"/>
+    <rect x="80" y="10" width="0" height="35" rx="17" fill="#e65100"/>
+    <ellipse cx="80" cy="27" rx="17" ry="17" fill="#e65100"/>
+  </g>
+
+  <!-- Mortar and pestle icon -->
+  <g transform="translate(950, 400)" opacity="0.12" fill="#1a5632">
+    <ellipse cx="40" cy="55" rx="45" ry="20"/>
+    <path d="M10,55 C10,55 5,30 15,15 C25,0 55,0 65,15 C75,30 70,55 70,55" fill="none" stroke="#1a5632" stroke-width="3"/>
+    <line x1="55" y1="10" x2="75" y2="-15" stroke="#1a5632" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Badge -->
+  <rect x="80" y="160" width="240" height="40" rx="20" fill="#c62828"/>
+  <text x="200" y="186" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="15" fill="#fff" font-weight="bold" letter-spacing="1.5">HERRAMIENTA GRATUITA</text>
+
+  <!-- Title -->
+  <text x="80" y="256" font-family="Georgia,serif" font-size="50" fill="#1a1a1a" font-weight="bold">Verificador de</text>
+  <text x="80" y="316" font-family="Georgia,serif" font-size="50" fill="#1a1a1a" font-weight="bold">Interacciones</text>
+  <text x="80" y="372" font-family="Georgia,serif" font-size="42" fill="#2e7d32" font-weight="bold">Plantas &#8211; Medicamentos</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="430" font-family="Arial,sans-serif" font-size="21" fill="#666">Revisa si tus suplementos son seguros con tu medicaci&#243;n</text>
+
+  <!-- Stats -->
+  <g transform="translate(80, 470)">
+    <rect width="140" height="60" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="70" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#1a5632" font-weight="bold">150+</text>
+    <text x="70" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#888" letter-spacing="1">PLANTAS</text>
+  </g>
+  <g transform="translate(240, 470)">
+    <rect width="140" height="60" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="70" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#1a5632" font-weight="bold">500+</text>
+    <text x="70" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#888" letter-spacing="1">INTERACCIONES</text>
+  </g>
+  <g transform="translate(400, 470)">
+    <rect width="140" height="60" rx="8" fill="#fff" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="70" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#c62828" font-weight="bold">53</text>
+    <text x="70" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#888" letter-spacing="1">DOI VERIFICADOS</text>
+  </g>
+
+  <!-- Branding -->
+  <text x="80" y="572" font-family="Georgia,serif" font-size="20" fill="#1a5632" font-weight="bold">Bot&#225;nica Andina</text>
+  <text x="80" y="598" font-family="Arial,sans-serif" font-size="14" fill="#888">botanicaandina.com/herramientas/interacciones</text>
+
+  <!-- Trust badges row -->
+  <g transform="translate(400, 568)">
+    <text font-family="Arial,sans-serif" font-size="12" fill="#999">Datos de EMA &#183; ESCOP &#183; PubMed</text>
+  </g>
 </svg>

@@ -65,9 +65,13 @@
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
         }
 
-        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 2.5rem 1.5rem 2rem; text-align: center; }
-        .tool-header h1 { font-size: 1.7rem; margin-bottom: 0.5rem; }
-        .tool-header p { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 60%, #1a5632 100%); color: #fff; padding: 2.5rem 1.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+        .tool-header::before { content: ''; position: absolute; top: -40px; right: -30px; width: 200px; height: 280px; background: rgba(255,255,255,0.04); border-radius: 50%; }
+        .tool-header::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 180px; height: 180px; background: rgba(255,255,255,0.03); border-radius: 50%; }
+        .tool-header h1 { font-size: 1.7rem; margin-bottom: 0.5rem; position: relative; z-index: 1; }
+        .tool-header p { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.85; max-width: 650px; margin: 0 auto; position: relative; z-index: 1; }
+        .header-illustration { position: relative; z-index: 1; margin: 0 auto 0.5rem; display: flex; justify-content: center; gap: 0.5rem; opacity: 0.7; }
+        .header-illustration svg { width: 40px; height: 40px; }
 
         .tool-container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
 
@@ -193,6 +197,11 @@
     </nav>
 
     <header class="tool-header">
+        <div class="header-illustration">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C20 4 28 12 28 22C28 32 20 36 20 36C20 36 12 32 12 22C12 12 20 4 20 4Z" fill="rgba(255,255,255,0.3)"/><line x1="20" y1="4" x2="20" y2="36" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><path d="M20 14C24 16 26 19 27 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 14C16 16 14 19 13 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 22C24 24 26 27 27 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 22C16 24 14 27 13 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/></svg>
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="16" width="16" height="8" rx="4" fill="rgba(255,255,255,0.25)"/><rect x="20" y="16" width="8" height="8" rx="0" fill="rgba(255,255,255,0.15)"/><ellipse cx="28" cy="20" rx="4" ry="4" fill="rgba(255,255,255,0.15)"/></svg>
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C20 4 28 12 28 22C28 32 20 36 20 36C20 36 12 32 12 22C12 12 20 4 20 4Z" fill="rgba(255,255,255,0.3)"/><line x1="20" y1="4" x2="20" y2="36" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><path d="M20 14C24 16 26 19 27 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 14C16 16 14 19 13 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/></svg>
+        </div>
         <h1>Verificador de Interacciones<br>Plantas Medicinales &ndash; Medicamentos</h1>
         <p>Consulta si tu planta medicinal puede interactuar con medicamentos convencionales. Datos de monograf&iacute;as oficiales (EMA, ESCOP) y estudios indexados en PubMed.</p>
     </header>
@@ -298,6 +307,17 @@
             <h3>Integra esta herramienta en tu sitio web</h3>
             <div class="embed-code" id="embedCode">&lt;iframe src="https://botanicaandina.com/herramientas/interacciones/" width="100%" height="900" frameborder="0" title="Verificador de Interacciones Plantas Medicinales"&gt;&lt;/iframe&gt;</div>
             <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('embedCode').textContent)">Copiar c&oacute;digo</button>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem;padding:1.5rem;background:#e8f5e9;border-radius:12px;">
+            <h3 style="font-size:1rem;margin-bottom:0.8rem;color:#1a5632;">Comparte esta herramienta</h3>
+            <p style="font-family:Arial,sans-serif;font-size:0.85rem;color:#555;margin-bottom:1rem;">Ayuda a que m&aacute;s personas verifiquen las interacciones de sus suplementos</p>
+            <div style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;">
+                <a href="https://twitter.com/intent/tweet?text=Herramienta%20gratuita%20para%20verificar%20interacciones%20entre%20plantas%20medicinales%20y%20medicamentos%20%E2%80%94%20150%2B%20plantas%2C%20500%2B%20interacciones&url=https%3A%2F%2Fbotanicaandina.com%2Fherramientas%2Finteracciones%2F" target="_blank" rel="noopener" class="share-btn twitter">Compartir en X</a>
+                <a href="https://wa.me/?text=Herramienta%20gratuita%20para%20verificar%20interacciones%20plantas%20medicinales%20%E2%80%93%20medicamentos%20https%3A%2F%2Fbotanicaandina.com%2Fherramientas%2Finteracciones%2F" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbotanicaandina.com%2Fherramientas%2Finteracciones%2F" target="_blank" rel="noopener" class="share-btn" style="background:#1877f2;color:#fff;padding:0.5rem 1rem;border-radius:8px;font-family:Arial,sans-serif;font-size:0.82rem;text-decoration:none;display:inline-block;">Facebook</a>
+                <button class="share-btn copy-share" onclick="navigator.clipboard.writeText('https://botanicaandina.com/herramientas/interacciones/');this.textContent='Copiado!'">Copiar enlace</button>
+            </div>
         </div>
     </div>
 
