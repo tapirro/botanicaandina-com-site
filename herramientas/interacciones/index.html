@@ -8292,6 +8292,7 @@
             }).join('');
 
         updateShareButtons(matches);
+        updateUrlHash();
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
@@ -8316,7 +8317,7 @@
             text = `Revis\u00e9 ${matches.length} interacciones de ${herbNames.join(', ')} con medicamentos. Verifica las tuyas:`;
         }
 
-        const url = 'https://botanicaandina.com/herramientas/interacciones/';
+        const url = getShareableUrl();
         const encoded = encodeURIComponent(text);
         const encodedUrl = encodeURIComponent(url);
 
@@ -8324,12 +8325,54 @@
         document.getElementById('shareWhatsapp').href = 'https://wa.me/?text=' + encoded + '%20' + encodedUrl;
 
         document.getElementById('shareCopy').onclick = function() {
-            navigator.clipboard.writeText(url).then(function() {
+            navigator.clipboard.writeText(getShareableUrl()).then(function() {
                 var btn = document.getElementById('shareCopy');
                 btn.textContent = 'Copiado!';
                 setTimeout(function() { btn.textContent = 'Copiar enlace'; }, 2000);
             });
         };
+    }
+
+    function getShareableUrl() {
+        if (selectedHerbs.length === 0) return 'https://botanicaandina.com/herramientas/interacciones/';
+        var params = 'h=' + selectedHerbs.join(',');
+        if (selectedDrugs.length > 0) params += '&d=' + selectedDrugs.join(',');
+        return 'https://botanicaandina.com/herramientas/interacciones/#' + params;
+    }
+
+    function updateUrlHash() {
+        if (selectedHerbs.length === 0) {
+            history.replaceState(null, '', window.location.pathname);
+            return;
+        }
+        var params = 'h=' + selectedHerbs.join(',');
+        if (selectedDrugs.length > 0) params += '&d=' + selectedDrugs.join(',');
+        history.replaceState(null, '', '#' + params);
+    }
+
+    function loadFromHash() {
+        var hash = window.location.hash.slice(1);
+        if (!hash) return;
+        var params = {};
+        hash.split('&').forEach(function(part) {
+            var kv = part.split('=');
+            if (kv.length === 2) params[kv[0]] = kv[1];
+        });
+        if (params.h) {
+            selectedHerbs = params.h.split(',').filter(function(id) {
+                return HERBS.some(function(h) { return h.id === id; });
+            });
+        }
+        if (params.d) {
+            selectedDrugs = params.d.split(',').filter(function(id) {
+                return DRUG_CLASSES.some(function(d) { return d.id === id; });
+            });
+        }
+        if (selectedHerbs.length > 0) {
+            renderSelected('selectedHerbs', selectedHerbs, HERBS, removeHerb);
+            renderSelected('selectedDrugs', selectedDrugs, DRUG_CLASSES, removeDrug);
+            checkInteractions();
+        }
     }
 
     function quickCheck(herbId, drugId) {
@@ -8342,7 +8385,10 @@
         checkInteractions();
     }
 
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function() {
+        init();
+        loadFromHash();
+    });
     </script>
 </body>
 </html>
