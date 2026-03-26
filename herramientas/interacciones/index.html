@@ -314,6 +314,13 @@
                     <a class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener">Compartir en X</a>
                     <a class="share-btn whatsapp" id="shareWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
                     <button class="share-btn copy-share" id="shareCopy">Copiar enlace</button>
+                    <button class="share-btn embed-btn" id="embedToggle" style="background:#2d3748;color:#fff;">&#x2197; Insertar en tu sitio</button>
+                </div>
+                <div id="embedSection" style="display:none;margin-top:1rem;padding:1rem;background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;">
+                    <p style="margin:0 0 0.5rem;font-weight:600;font-size:0.9rem;">C&oacute;digo para insertar esta herramienta:</p>
+                    <textarea id="embedCode" readonly style="width:100%;height:80px;font-family:monospace;font-size:0.8rem;padding:0.5rem;border:1px solid #cbd5e0;border-radius:4px;resize:vertical;background:#fff;"></textarea>
+                    <button id="copyEmbed" style="margin-top:0.5rem;padding:0.4rem 1rem;background:#38a169;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:0.85rem;">Copiar c&oacute;digo</button>
+                    <span id="embedCopied" style="display:none;margin-left:0.5rem;color:#38a169;font-size:0.85rem;">&#10003; Copiado!</span>
                 </div>
             </div>
         </div>
@@ -8388,6 +8395,23 @@
     document.addEventListener('DOMContentLoaded', function() {
         init();
         loadFromHash();
+
+        // Embed functionality
+        document.getElementById('embedToggle').onclick = function() {
+            var sec = document.getElementById('embedSection');
+            sec.style.display = sec.style.display === 'none' ? 'block' : 'none';
+            var url = getShareableUrl();
+            var code = '<iframe src="' + url + '" width="100%" height="600" style="border:1px solid #e2e8f0;border-radius:8px;" title="Verificador de Interacciones Hierba-Medicamento"></iframe>\n<p style="font-size:0.8rem;color:#718096;">Herramienta gratuita de <a href="https://botanicaandina.com/">Bot\u00e1nica Andina</a></p>';
+            document.getElementById('embedCode').value = code;
+        };
+        document.getElementById('copyEmbed').onclick = function() {
+            var code = document.getElementById('embedCode');
+            code.select();
+            navigator.clipboard.writeText(code.value).then(function() {
+                document.getElementById('embedCopied').style.display = 'inline';
+                setTimeout(function() { document.getElementById('embedCopied').style.display = 'none'; }, 2000);
+            });
+        };
     });
     </script>
 </body>
