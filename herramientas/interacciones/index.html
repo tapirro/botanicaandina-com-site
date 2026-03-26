@@ -51,6 +51,54 @@
         ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es el verificador de interacciones de plantas medicinales?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Es una herramienta gratuita que permite consultar interacciones documentadas entre más de 150 plantas medicinales y 30 clases de medicamentos convencionales. Los datos provienen de monografías oficiales de la EMA, ESCOP y estudios indexados en PubMed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo tomar plantas medicinales con mis medicamentos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Depende de la planta y el medicamento. Algunas combinaciones son seguras, pero otras pueden causar interacciones graves. Por ejemplo, la Hierba de San Juan puede reducir la eficacia de antidepresivos y anticoagulantes. Siempre consulte a su médico o farmacéutico antes de combinar suplementos herbales con medicamentos."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿De dónde provienen los datos de interacciones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los datos provienen de tres fuentes principales: monografías de la Agencia Europea de Medicamentos (EMA), monografías ESCOP (European Scientific Cooperative on Phytotherapy) y estudios clínicos publicados en PubMed/MEDLINE. Cada interacción incluye nivel de evidencia y referencia bibliográfica."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué significan los niveles de severidad (alta, moderada, baja)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Alta (rojo) significa que la combinación debe evitarse por riesgo documentado. Moderada (naranja) requiere precaución y monitoreo médico. Baja (azul) indica un riesgo menor que generalmente no requiere ajuste. Teórica (gris) indica interacción basada en mecanismos farmacológicos sin evidencia clínica directa."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿La herramienta reemplaza al médico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Esta herramienta es exclusivamente informativa y educativa. No reemplaza la consulta con su médico o farmacéutico. La ausencia de una interacción en la base de datos no significa que la combinación sea segura. Consulte siempre a un profesional de salud."
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
@@ -223,64 +271,6 @@
     </header>
 
     <div class="tool-container">
-        <div class="stats-bar">
-            <div class="stat-item">
-                <span class="stat-number" id="statHerbs">0</span>
-                <span class="stat-label">Plantas</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="statInteractions">0</span>
-                <span class="stat-label">Interacciones</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="statDrugs">0</span>
-                <span class="stat-label">Medicamentos</span>
-            </div>
-        </div>
-
-        <div class="trust-bar">
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                <span id="trustDois">0</span> fuentes con DOI verificado
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                Datos de EMA, ESCOP y PubMed
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-                Sin rastreo &middot; 100% privado
-            </div>
-        </div>
-
-        <div class="severity-legend">
-            <div class="severity-legend-item"><span class="severity-dot alta"></span> Alta: evitar combinaci&oacute;n</div>
-            <div class="severity-legend-item"><span class="severity-dot moderada"></span> Moderada: precauci&oacute;n/monitoreo</div>
-            <div class="severity-legend-item"><span class="severity-dot baja"></span> Baja: riesgo menor</div>
-            <div class="severity-legend-item"><span class="severity-dot teorica"></span> Te&oacute;rica: sin evidencia cl&iacute;nica</div>
-        </div>
-
-        <div class="evidence-legend">
-            <div class="evidence-legend-item"><span class="evidence-badge level-A">A</span> Ensayos cl&iacute;nicos</div>
-            <div class="evidence-legend-item"><span class="evidence-badge level-B">B</span> Reportes de caso</div>
-            <div class="evidence-legend-item"><span class="evidence-badge level-C">C</span> Estudios precl&iacute;nicos</div>
-            <div class="evidence-legend-item"><span class="evidence-badge level-D">D</span> Te&oacute;rica</div>
-        </div>
-
-        <div class="popular-searches">
-            <h3>Consultas frecuentes</h3>
-            <div class="popular-grid">
-                <button class="popular-btn" onclick="quickCheck('hypericum','isrs')"><span class="pop-icon">&#9888;</span> Hierba de San Juan + Antidepresivos</button>
-                <button class="popular-btn" onclick="quickCheck('ginkgo','anticoagulantes')"><span class="pop-icon">&#9888;</span> Ginkgo + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('curcuma','anticoagulantes')">C&uacute;rcuma + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('valeriana','benzodiacepinas')">Valeriana + Benzodiazepinas</button>
-                <button class="popular-btn" onclick="quickCheck('ajo','anticoagulantes')">Ajo + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('berberina','antidiabeticos')">Berberina + Antidiab&eacute;ticos</button>
-                <button class="popular-btn" onclick="quickCheck('ginseng','anticoagulantes')">Ginseng + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('equinacea','inmunosupresores')">Equin&aacute;cea + Inmunosupresores</button>
-            </div>
-        </div>
-
         <div class="checker-section">
             <h2>1. Selecciona una planta medicinal</h2>
             <div class="input-group">
@@ -323,6 +313,64 @@
                     <span id="embedCopied" style="display:none;margin-left:0.5rem;color:#38a169;font-size:0.85rem;">&#10003; Copiado!</span>
                 </div>
             </div>
+        </div>
+
+        <div class="popular-searches">
+            <h3>Consultas frecuentes</h3>
+            <div class="popular-grid">
+                <button class="popular-btn" onclick="quickCheck('hypericum','isrs')"><span class="pop-icon">&#9888;</span> Hierba de San Juan + Antidepresivos</button>
+                <button class="popular-btn" onclick="quickCheck('ginkgo','anticoagulantes')"><span class="pop-icon">&#9888;</span> Ginkgo + Anticoagulantes</button>
+                <button class="popular-btn" onclick="quickCheck('curcuma','anticoagulantes')">C&uacute;rcuma + Anticoagulantes</button>
+                <button class="popular-btn" onclick="quickCheck('valeriana','benzodiacepinas')">Valeriana + Benzodiazepinas</button>
+                <button class="popular-btn" onclick="quickCheck('ajo','anticoagulantes')">Ajo + Anticoagulantes</button>
+                <button class="popular-btn" onclick="quickCheck('berberina','antidiabeticos')">Berberina + Antidiab&eacute;ticos</button>
+                <button class="popular-btn" onclick="quickCheck('ginseng','anticoagulantes')">Ginseng + Anticoagulantes</button>
+                <button class="popular-btn" onclick="quickCheck('equinacea','inmunosupresores')">Equin&aacute;cea + Inmunosupresores</button>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" id="statHerbs">0</span>
+                <span class="stat-label">Plantas</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="statInteractions">0</span>
+                <span class="stat-label">Interacciones</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="statDrugs">0</span>
+                <span class="stat-label">Medicamentos</span>
+            </div>
+        </div>
+
+        <div class="trust-bar">
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                <span id="trustDois">0</span> fuentes con DOI verificado
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Datos de EMA, ESCOP y PubMed
+            </div>
+            <div class="trust-item">
+                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                Sin rastreo &middot; 100% privado
+            </div>
+        </div>
+
+        <div class="severity-legend">
+            <div class="severity-legend-item"><span class="severity-dot alta"></span> Alta: evitar combinaci&oacute;n</div>
+            <div class="severity-legend-item"><span class="severity-dot moderada"></span> Moderada: precauci&oacute;n/monitoreo</div>
+            <div class="severity-legend-item"><span class="severity-dot baja"></span> Baja: riesgo menor</div>
+            <div class="severity-legend-item"><span class="severity-dot teorica"></span> Te&oacute;rica: sin evidencia cl&iacute;nica</div>
+        </div>
+
+        <div class="evidence-legend">
+            <div class="evidence-legend-item"><span class="evidence-badge level-A">A</span> Ensayos cl&iacute;nicos</div>
+            <div class="evidence-legend-item"><span class="evidence-badge level-B">B</span> Reportes de caso</div>
+            <div class="evidence-legend-item"><span class="evidence-badge level-C">C</span> Estudios precl&iacute;nicos</div>
+            <div class="evidence-legend-item"><span class="evidence-badge level-D">D</span> Te&oacute;rica</div>
         </div>
 
         <div class="disclaimer">
