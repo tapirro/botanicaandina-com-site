@@ -113,13 +113,13 @@
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
         }
 
-        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 60%, #1a5632 100%); color: #fff; padding: 2.5rem 1.5rem 2rem; text-align: center; position: relative; overflow: hidden; }
+        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 60%, #1a5632 100%); color: #fff; padding: 1.5rem 1.5rem 1.2rem; text-align: center; position: relative; overflow: hidden; }
         .tool-header::before { content: ''; position: absolute; top: -40px; right: -30px; width: 200px; height: 280px; background: rgba(255,255,255,0.04); border-radius: 50%; }
         .tool-header::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 180px; height: 180px; background: rgba(255,255,255,0.03); border-radius: 50%; }
-        .tool-header h1 { font-size: 1.7rem; margin-bottom: 0.5rem; position: relative; z-index: 1; }
-        .tool-header p { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.85; max-width: 650px; margin: 0 auto; position: relative; z-index: 1; }
-        .header-illustration { position: relative; z-index: 1; margin: 0 auto 0.5rem; display: flex; justify-content: center; gap: 0.5rem; opacity: 0.7; }
-        .header-illustration svg { width: 40px; height: 40px; }
+        .tool-header h1 { font-size: 1.4rem; margin-bottom: 0.3rem; position: relative; z-index: 1; }
+        .tool-header p { font-family: Arial, sans-serif; font-size: 0.85rem; opacity: 0.85; max-width: 650px; margin: 0 auto; position: relative; z-index: 1; }
+        .header-illustration { position: relative; z-index: 1; margin: 0 auto 0.3rem; display: flex; justify-content: center; gap: 0.5rem; opacity: 0.7; }
+        .header-illustration svg { width: 30px; height: 30px; }
 
         .tool-container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
 
@@ -271,6 +271,20 @@
     </header>
 
     <div class="tool-container">
+        <div class="stats-bar" style="margin-top:0.5rem;">
+            <div class="stat-item">
+                <span class="stat-number" id="statHerbsTop">0</span>
+                <span class="stat-label">Plantas</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="statInteractionsTop">0</span>
+                <span class="stat-label">Interacciones</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="statDrugsTop">0</span>
+                <span class="stat-label">Medicamentos</span>
+            </div>
+        </div>
         <div class="checker-section">
             <h2>1. Selecciona una planta medicinal</h2>
             <div class="input-group">
@@ -8170,6 +8184,12 @@
         document.getElementById('statHerbs').textContent = HERBS.length;
         document.getElementById('statInteractions').textContent = INTERACTIONS.length;
         document.getElementById('statDrugs').textContent = uniqueDrugs.size;
+        var topH = document.getElementById('statHerbsTop');
+        if (topH) topH.textContent = HERBS.length;
+        var topI = document.getElementById('statInteractionsTop');
+        if (topI) topI.textContent = INTERACTIONS.length;
+        var topD = document.getElementById('statDrugsTop');
+        if (topD) topD.textContent = uniqueDrugs.size;
 
         document.getElementById('trustDois').textContent = INTERACTIONS.filter(i => i.doi).length;
         setupAutocomplete('herbInput', 'herbSuggestions', getHerbSuggestions, selectHerb);
@@ -8443,6 +8463,11 @@
     document.addEventListener('DOMContentLoaded', function() {
         init();
         loadFromHash();
+
+        // Show demo result if no hash (first-time visitor)
+        if (!window.location.hash) {
+            quickCheck('hypericum', 'isrs');
+        }
 
         // Embed functionality
         document.getElementById('embedToggle').onclick = function() {
