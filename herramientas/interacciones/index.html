@@ -113,13 +113,28 @@
             .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
         }
 
-        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 60%, #1a5632 100%); color: #fff; padding: 1.5rem 1.5rem 1.2rem; text-align: center; position: relative; overflow: hidden; }
+        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 40%, #1b6b3a 70%, #1a5632 100%); color: #fff; padding: 2rem 1.5rem 1.5rem; text-align: center; position: relative; overflow: hidden; }
         .tool-header::before { content: ''; position: absolute; top: -40px; right: -30px; width: 200px; height: 280px; background: rgba(255,255,255,0.04); border-radius: 50%; }
         .tool-header::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 180px; height: 180px; background: rgba(255,255,255,0.03); border-radius: 50%; }
         .tool-header h1 { font-size: 1.4rem; margin-bottom: 0.3rem; position: relative; z-index: 1; }
         .tool-header p { font-family: Arial, sans-serif; font-size: 0.85rem; opacity: 0.85; max-width: 650px; margin: 0 auto; position: relative; z-index: 1; }
-        .header-illustration { position: relative; z-index: 1; margin: 0 auto 0.3rem; display: flex; justify-content: center; gap: 0.5rem; opacity: 0.7; }
-        .header-illustration svg { width: 30px; height: 30px; }
+        .header-illustration { position: relative; z-index: 1; margin: 0 auto 0.5rem; display: flex; justify-content: center; gap: 1rem; opacity: 0.85; }
+        .header-illustration svg { width: 48px; height: 48px; }
+
+        .example-preview { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; border: 1px solid #e8f5e9; }
+        .example-preview h3 { font-size: 0.9rem; color: #888; text-transform: uppercase; letter-spacing: 1px; font-family: Arial, sans-serif; margin-bottom: 1rem; text-align: center; }
+        .example-result { border-radius: 10px; padding: 1.2rem; margin-bottom: 0.8rem; border-left: 4px solid; }
+        .example-result.ex-alta { border-left-color: #c62828; background: #ffebee; }
+        .example-result.ex-moderada { border-left-color: #e65100; background: #fff3e0; }
+        .example-result.ex-positivo { border-left-color: #2e7d32; background: #e8f5e9; }
+        .example-result .ex-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+        .example-result .ex-title { font-weight: bold; font-size: 0.95rem; }
+        .example-result .ex-badge { padding: 0.15rem 0.6rem; border-radius: 12px; font-family: Arial, sans-serif; font-size: 0.7rem; text-transform: uppercase; color: #fff; }
+        .example-result .ex-badge.alta { background: #c62828; }
+        .example-result .ex-badge.moderada { background: #e65100; }
+        .example-result .ex-badge.positivo { background: #2e7d32; }
+        .example-result .ex-text { font-size: 0.88rem; color: #555; }
+        .example-cta { text-align: center; margin-top: 1rem; font-family: Arial, sans-serif; font-size: 0.85rem; color: #1a5632; }
 
         .tool-container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
 
@@ -285,6 +300,32 @@
                 <span class="stat-label">Medicamentos</span>
             </div>
         </div>
+        <div class="example-preview">
+            <h3>Ejemplo de resultado</h3>
+            <div class="example-result ex-alta">
+                <div class="ex-header">
+                    <span class="ex-title">Hierba de San Juan + Antidepresivos ISRS</span>
+                    <span class="ex-badge alta">Alta</span>
+                </div>
+                <div class="ex-text">Riesgo de síndrome serotoninérgico. La hierba de San Juan inhibe la recaptación de serotonina, potenciando el efecto de ISRS como fluoxetina o sertralina.</div>
+            </div>
+            <div class="example-result ex-moderada">
+                <div class="ex-header">
+                    <span class="ex-title">Ginkgo biloba + Anticoagulantes</span>
+                    <span class="ex-badge moderada">Moderada</span>
+                </div>
+                <div class="ex-text">Ginkgo inhibe el factor activador de plaquetas (PAF). Combinado con warfarina, puede aumentar el riesgo de sangrado. Monitorear INR.</div>
+            </div>
+            <div class="example-result ex-positivo">
+                <div class="ex-header">
+                    <span class="ex-title">Cúrcuma + Antiinflamatorios</span>
+                    <span class="ex-badge positivo">Sinérgico</span>
+                </div>
+                <div class="ex-text">La curcumina complementa el efecto antiinflamatorio de los AINE. Puede permitir reducir la dosis del medicamento. Estudios PubMed respaldan la combinación.</div>
+            </div>
+            <div class="example-cta">Prueba con tus plantas y medicamentos abajo</div>
+        </div>
+
         <div class="checker-section">
             <h2>1. Selecciona una planta medicinal</h2>
             <div class="input-group">
