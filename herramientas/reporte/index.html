@@ -3,41 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Interacciones Plantas Medicinales &mdash; Bot&aacute;nica Andina</title>
-    <meta name="description" content="Verifica interacciones entre 150 plantas medicinales y 30 clases de medicamentos. 503 interacciones documentadas con evidencia de EMA/ESCOP y PubMed. Gratis.">
+    <title>Reporte de Interacciones Personalizado &mdash; Bot&aacute;nica Andina</title>
+    <meta name="description" content="Genera tu reporte personalizado de interacciones entre suplementos herbales y medicamentos. Descarga en PDF. 592 interacciones documentadas con evidencia de PubMed y EMA.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://botanicaandina.com/herramientas/interacciones/">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/reporte/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Verificador de Interacciones Plantas &ndash; Medicamentos">
-    <meta property="og:description" content="Herramienta gratuita para verificar interacciones entre plantas medicinales y medicamentos. Basada en monograf&iacute;as EMA/ESCOP.">
-    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-interacciones.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="Reporte de Interacciones Personalizado">
+    <meta property="og:description" content="Genera un reporte personalizado de interacciones entre tus suplementos y medicamentos. Descarga en PDF.">
     <meta property="og:locale" content="es_LA">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Verificador de Interacciones Plantas &ndash; Medicamentos">
-    <meta name="twitter:description" content="Herramienta gratuita para verificar interacciones entre plantas medicinales y medicamentos.">
-    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-interacciones.jpg">
     <link rel="icon" href="/favicon.ico">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Verificador de Interacciones Plantas Medicinales - Medicamentos",
-        "url": "https://botanicaandina.com/herramientas/interacciones/",
-        "description": "Herramienta interactiva para verificar interacciones conocidas entre plantas medicinales y medicamentos convencionales. Basada en monografías de la EMA, ESCOP y estudios de PubMed.",
+        "name": "Reporte de Interacciones Personalizado",
+        "url": "https://botanicaandina.com/herramientas/reporte/",
+        "description": "Herramienta gratuita para generar reportes personalizados de interacciones entre suplementos herbales y medicamentos. Descarga en PDF.",
         "applicationCategory": "HealthApplication",
         "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "Botánica Andina",
-            "url": "https://botanicaandina.com"
-        }
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "author": {"@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com"}
     }
     </script>
     <script type="application/ld+json">
@@ -47,398 +33,389 @@
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"},
             {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://botanicaandina.com/herramientas/"},
-            {"@type": "ListItem", "position": 3, "name": "Verificador de Interacciones"}
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "¿Qué es el verificador de interacciones de plantas medicinales?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Es una herramienta gratuita que permite consultar interacciones documentadas entre más de 150 plantas medicinales y 30 clases de medicamentos convencionales. Los datos provienen de monografías oficiales de la EMA, ESCOP y estudios indexados en PubMed."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Puedo tomar plantas medicinales con mis medicamentos?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Depende de la planta y el medicamento. Algunas combinaciones son seguras, pero otras pueden causar interacciones graves. Por ejemplo, la Hierba de San Juan puede reducir la eficacia de antidepresivos y anticoagulantes. Siempre consulte a su médico o farmacéutico antes de combinar suplementos herbales con medicamentos."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿De dónde provienen los datos de interacciones?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Los datos provienen de tres fuentes principales: monografías de la Agencia Europea de Medicamentos (EMA), monografías ESCOP (European Scientific Cooperative on Phytotherapy) y estudios clínicos publicados en PubMed/MEDLINE. Cada interacción incluye nivel de evidencia y referencia bibliográfica."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Qué significan los niveles de severidad (alta, moderada, baja)?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Alta (rojo) significa que la combinación debe evitarse por riesgo documentado. Moderada (naranja) requiere precaución y monitoreo médico. Baja (azul) indica un riesgo menor que generalmente no requiere ajuste. Teórica (gris) indica interacción basada en mecanismos farmacológicos sin evidencia clínica directa."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿La herramienta reemplaza al médico?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. Esta herramienta es exclusivamente informativa y educativa. No reemplaza la consulta con su médico o farmacéutico. La ausencia de una interacción en la base de datos no significa que la combinación sea segura. Consulte siempre a un profesional de salud."
-                }
-            }
+            {"@type": "ListItem", "position": 3, "name": "Reporte de Interacciones"}
         ]
     }
     </script>
     <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --danger: #f85149;
+            --warning: #d29922;
+            --success: #3fb950;
+            --info: #58a6ff;
+            --severity-alta: #f85149;
+            --severity-moderada: #d29922;
+            --severity-baja: #58a6ff;
+            --severity-teorica: #8b949e;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
-        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
-        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
-        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
-        .nav-links a:hover { color: #fff; }
-        @media (max-width: 700px) {
-            .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
-            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 32px;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .header p { color: var(--text-muted); font-size: 16px; }
+        .badge {
+            display: inline-block;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 13px;
+            color: var(--accent);
+            margin-top: 12px;
         }
 
-        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 60%, #1a5632 100%); color: #fff; padding: 1.5rem 1.5rem 1.2rem; text-align: center; position: relative; overflow: hidden; }
-        .tool-header::before { content: ''; position: absolute; top: -40px; right: -30px; width: 200px; height: 280px; background: rgba(255,255,255,0.04); border-radius: 50%; }
-        .tool-header::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 180px; height: 180px; background: rgba(255,255,255,0.03); border-radius: 50%; }
-        .tool-header h1 { font-size: 1.4rem; margin-bottom: 0.3rem; position: relative; z-index: 1; }
-        .tool-header p { font-family: Arial, sans-serif; font-size: 0.85rem; opacity: 0.85; max-width: 650px; margin: 0 auto; position: relative; z-index: 1; }
-        .header-illustration { position: relative; z-index: 1; margin: 0 auto 0.3rem; display: flex; justify-content: center; gap: 0.5rem; opacity: 0.7; }
-        .header-illustration svg { width: 30px; height: 30px; }
+        /* Input section */
+        .input-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .input-section h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .input-group { margin-bottom: 20px; }
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+        .autocomplete-wrapper { position: relative; }
+        .autocomplete-wrapper input {
+            width: 100%;
+            padding: 10px 14px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .autocomplete-wrapper input:focus { border-color: var(--accent); }
+        .autocomplete-wrapper input::placeholder { color: var(--text-muted); }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+            margin-top: 4px;
+        }
+        .suggestions.open { display: block; }
+        .suggestion-item {
+            padding: 8px 14px;
+            cursor: pointer;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+        .suggestion-item:last-child { border-bottom: none; }
+        .suggestion-item:hover, .suggestion-item.active { background: rgba(88,166,255,0.1); }
+        .suggestion-item .sci { color: var(--text-muted); font-style: italic; font-size: 12px; }
 
-        .tool-container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
+        /* Tags */
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(88,166,255,0.1);
+            border: 1px solid rgba(88,166,255,0.3);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 13px;
+            color: var(--accent);
+        }
+        .tag.drug {
+            background: rgba(210,153,34,0.1);
+            border-color: rgba(210,153,34,0.3);
+            color: var(--warning);
+        }
+        .tag .remove {
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+            opacity: 0.7;
+        }
+        .tag .remove:hover { opacity: 1; }
 
-        .checker-section { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 2rem; }
-        .checker-section h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #1a5632; }
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+        }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
 
-        .input-group { margin-bottom: 1.2rem; }
-        .input-group label { display: block; font-family: Arial, sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 0.5rem; }
-        .input-group input { width: 100%; padding: 0.9rem 1.2rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; font-family: Georgia, serif; }
-        .input-group input:focus { outline: none; border-color: #1a5632; }
+        /* Report */
+        .report { display: none; }
+        .report.visible { display: block; }
+        .report-header {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .report-header h2 { font-size: 22px; margin-bottom: 8px; }
+        .report-date { color: var(--text-muted); font-size: 13px; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .summary-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+        .summary-card .number { font-size: 28px; font-weight: 700; }
+        .summary-card .label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        .summary-card.alta .number { color: var(--severity-alta); }
+        .summary-card.moderada .number { color: var(--severity-moderada); }
+        .summary-card.baja .number { color: var(--severity-baja); }
+        .summary-card.teorica .number { color: var(--severity-teorica); }
 
-        .suggestions { position: absolute; background: #fff; border: 1px solid #ddd; border-radius: 8px; max-height: 200px; overflow-y: auto; width: 100%; z-index: 50; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: none; }
-        .suggestions div { padding: 0.7rem 1rem; cursor: pointer; font-family: Arial, sans-serif; font-size: 0.9rem; border-bottom: 1px solid #f0f0f0; }
-        .suggestions div:hover, .suggestions div.active { background: #e8f5e9; }
-        .suggestions div small { color: #888; font-style: italic; }
-        .input-wrapper { position: relative; }
+        /* Interaction cards */
+        .interaction-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--border);
+        }
+        .interaction-card.alta { border-left-color: var(--severity-alta); }
+        .interaction-card.moderada { border-left-color: var(--severity-moderada); }
+        .interaction-card.baja { border-left-color: var(--severity-baja); }
+        .interaction-card.teorica { border-left-color: var(--severity-teorica); }
+        .interaction-card .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .interaction-card .pair { font-weight: 700; font-size: 16px; }
+        .severity-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .severity-badge.alta { background: rgba(248,81,73,0.15); color: var(--severity-alta); }
+        .severity-badge.moderada { background: rgba(210,153,34,0.15); color: var(--severity-moderada); }
+        .severity-badge.baja { background: rgba(88,166,255,0.15); color: var(--severity-baja); }
+        .severity-badge.teorica { background: rgba(139,148,158,0.15); color: var(--severity-teorica); }
+        .interaction-card .effect { margin-bottom: 8px; }
+        .interaction-card .mechanism { color: var(--text-muted); font-size: 14px; margin-bottom: 8px; }
+        .interaction-card .evidence { font-size: 12px; color: var(--text-muted); }
+        .interaction-card .doi { color: var(--accent); text-decoration: none; font-size: 12px; }
+        .interaction-card .doi:hover { text-decoration: underline; }
 
-        .selected-items { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
-        .selected-tag { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.3rem 0.8rem; background: #e8f5e9; border-radius: 16px; font-family: Arial, sans-serif; font-size: 0.82rem; color: #1a5632; }
-        .selected-tag button { background: none; border: none; color: #666; cursor: pointer; font-size: 1rem; line-height: 1; padding: 0; }
-        .selected-tag button:hover { color: #c62828; }
+        .no-interactions {
+            text-align: center;
+            padding: 40px;
+            color: var(--success);
+            font-size: 18px;
+        }
+        .no-interactions .icon { font-size: 48px; margin-bottom: 12px; }
 
-        .check-btn { display: block; width: 100%; padding: 0.9rem; background: #1a5632; color: #fff; border: none; border-radius: 8px; font-family: Georgia, serif; font-size: 1.05rem; cursor: pointer; margin-top: 1rem; }
-        .check-btn:hover { background: #2e7d32; }
-        .check-btn:disabled { background: #ccc; cursor: not-allowed; }
+        /* Section */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 24px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
 
-        .results-section { margin-top: 1.5rem; display: none; }
-        .result-card { border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; border-left: 4px solid #ccc; }
-        .result-card.severity-alta { border-left-color: #c62828; background: #ffebee; }
-        .result-card.severity-moderada { border-left-color: #e65100; background: #fff3e0; }
-        .result-card.severity-baja { border-left-color: #1565c0; background: #e3f2fd; }
-        .result-card.severity-teorica { border-left-color: #888; background: #f5f5f5; }
+        /* Disclaimer */
+        .disclaimer {
+            background: rgba(210,153,34,0.08);
+            border: 1px solid rgba(210,153,34,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .disclaimer strong { color: var(--warning); }
 
-        .result-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem; }
-        .result-title { font-size: 1.05rem; font-weight: bold; }
-        .severity-badge { padding: 0.2rem 0.7rem; border-radius: 12px; font-family: Arial, sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
-        .severity-badge.alta { background: #c62828; }
-        .severity-badge.moderada { background: #e65100; }
-        .severity-badge.baja { background: #1565c0; }
-        .severity-badge.teorica { background: #888; }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px 0;
+            margin-top: 32px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
 
-        .result-detail { font-size: 0.9rem; color: #444; margin-bottom: 0.5rem; }
-        .result-detail strong { color: #333; }
-        .result-meta { font-family: Arial, sans-serif; font-size: 0.78rem; color: #888; margin-top: 0.8rem; }
-        .result-meta a { color: #1a5632; text-decoration: none; }
-        .result-meta a:hover { text-decoration: underline; }
-
-        .no-interactions { text-align: center; padding: 2rem 1rem; background: #e8f5e9; border-radius: 10px; }
-        .no-interactions p { font-size: 1rem; color: #2e7d32; margin-bottom: 0.5rem; }
-        .no-interactions small { font-family: Arial, sans-serif; font-size: 0.8rem; color: #888; }
-
-        .disclaimer { background: #fff8e1; border-radius: 8px; padding: 1.2rem 1.5rem; margin-top: 2rem; font-size: 0.85rem; color: #795548; border: 1px solid #ffe082; }
-        .disclaimer strong { color: #5d4037; }
-
-        .methodology { background: #f5f5f5; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; }
-        .methodology h3 { font-size: 0.95rem; color: #333; margin-bottom: 0.8rem; }
-        .methodology p, .methodology li { font-family: Arial, sans-serif; font-size: 0.85rem; color: #555; line-height: 1.7; }
-        .methodology ul { margin-left: 1.2rem; margin-top: 0.5rem; }
-
-        .stats-bar { display: flex; gap: 2rem; justify-content: center; margin: 1.5rem 0; flex-wrap: wrap; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 1.8rem; font-weight: bold; color: #1a5632; display: block; }
-        .stat-label { font-family: Arial, sans-serif; font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-        .verified-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-family: Arial, sans-serif; font-size: 0.7rem; color: #1a5632; background: #e8f5e9; padding: 0.15rem 0.5rem; border-radius: 10px; margin-left: 0.5rem; }
-        .verified-badge svg { width: 12px; height: 12px; fill: #1a5632; }
-
-        .severity-legend { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0 0.5rem; padding: 0.8rem 1rem; background: #fff; border-radius: 8px; border: 1px solid #eee; }
-        .severity-legend-item { display: flex; align-items: center; gap: 0.4rem; font-family: Arial, sans-serif; font-size: 0.75rem; color: #555; }
-        .severity-dot { width: 10px; height: 10px; border-radius: 50%; }
-        .severity-dot.alta { background: #c62828; }
-        .severity-dot.moderada { background: #e65100; }
-        .severity-dot.baja { background: #1565c0; }
-        .severity-dot.teorica { background: #888; }
-
-        .trust-bar { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin: 0.5rem 0 1rem; padding: 0.6rem; }
-        .trust-item { display: flex; align-items: center; gap: 0.3rem; font-family: Arial, sans-serif; font-size: 0.72rem; color: #666; }
-        .trust-item svg { width: 14px; height: 14px; fill: #1a5632; flex-shrink: 0; }
-
-        .embed-section { background: #f5f5f5; border-radius: 8px; padding: 1.2rem 1.5rem; margin-top: 1.5rem; }
-        .embed-section h3 { font-size: 0.9rem; margin-bottom: 0.5rem; color: #555; }
-        .embed-code { font-family: 'Courier New', monospace; font-size: 0.75rem; background: #fff; padding: 0.8rem; border-radius: 6px; border: 1px solid #ddd; word-break: break-all; color: #333; }
-        .copy-btn { margin-top: 0.5rem; padding: 0.4rem 1rem; background: #1a5632; color: #fff; border: none; border-radius: 6px; font-family: Arial, sans-serif; font-size: 0.8rem; cursor: pointer; }
-        .copy-btn:hover { background: #2e7d32; }
-
+        /* Print styles */
         @media print {
-            .site-nav, .check-btn, .share-section, .embed-section, .suggestions, .copy-btn { display: none !important; }
-            .result-card { break-inside: avoid; border: 1px solid #ccc; }
-            .disclaimer { border: 1px solid #e0c072; }
-            body { background: #fff; font-size: 11pt; }
+            body { background: #fff; color: #111; }
+            .container { max-width: 100%; padding: 0; }
+            .input-section, .btn-group, .header .badge { display: none; }
+            .report { display: block !important; }
+            .report-header, .interaction-card, .summary-card, .disclaimer {
+                background: #fff;
+                border-color: #ddd;
+                color: #111;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .interaction-card .mechanism, .interaction-card .evidence,
+            .report-date, .summary-card .label, .disclaimer {
+                color: #555;
+            }
+            .severity-badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .footer { display: block; font-size: 11px; }
+            .no-print { display: none; }
         }
 
-        .share-section { text-align: center; margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px; display: none; }
-        .share-section h3 { font-size: 0.95rem; margin-bottom: 0.8rem; color: #555; font-family: Arial, sans-serif; }
-        .share-buttons { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
-        .share-btn { padding: 0.5rem 1rem; border-radius: 8px; border: none; font-family: Arial, sans-serif; font-size: 0.82rem; cursor: pointer; text-decoration: none; color: #fff; display: inline-block; }
-        .share-btn.twitter { background: #1da1f2; }
-        .share-btn.whatsapp { background: #25d366; }
-        .share-btn.copy-share { background: #555; }
-        .share-btn:hover { opacity: 0.9; }
-
-        footer { background: #1a5632; color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; margin-top: 3rem; text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
-        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
-
+        /* Responsive */
         @media (max-width: 600px) {
-            .tool-header h1 { font-size: 1.3rem; }
-            .checker-section { padding: 1.2rem; }
-            .stats-bar { gap: 1rem; }
+            .header h1 { font-size: 22px; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
-        .evidence-badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.15rem 0.6rem; border-radius: 10px; font-family: Arial, sans-serif; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .evidence-badge.level-A { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
-        .evidence-badge.level-B { background: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }
-        .evidence-badge.level-C { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
-        .evidence-badge.level-D { background: #f5f5f5; color: #757575; border: 1px solid #e0e0e0; }
-
-        .popular-searches { margin: 1.5rem 0; }
-        .popular-searches h3 { font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; font-family: Arial, sans-serif; }
-        .popular-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .popular-btn { padding: 0.45rem 0.9rem; border: 1px solid #c8e6c9; border-radius: 20px; background: #fff; font-family: Arial, sans-serif; font-size: 0.8rem; cursor: pointer; color: #1a5632; transition: all 0.2s; }
-        .popular-btn:hover { background: #e8f5e9; border-color: #1a5632; }
-        .popular-btn .pop-icon { margin-right: 0.3rem; }
-
-        .evidence-legend { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin: 0.5rem 0 1rem; padding: 0.6rem 1rem; background: #fff; border-radius: 8px; border: 1px solid #eee; }
-        .evidence-legend-item { display: flex; align-items: center; gap: 0.3rem; font-family: Arial, sans-serif; font-size: 0.72rem; color: #555; }
     </style>
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
-            <div class="nav-links">
-                <a href="/noticias/">Noticias</a>
-                <a href="/herramientas/buscador/">Buscador</a>
-                <a href="/herramientas/interacciones/" style="color:#fff;font-weight:bold">Interacciones</a>
-                <a href="/sobre-nosotros/">Sobre Nosotros</a>
-            </div>
+    <div class="container">
+        <div class="header">
+            <h1>&#128203; Reporte de Interacciones Personalizado</h1>
+            <p>Ingresa tus suplementos y medicamentos para generar un reporte completo</p>
+            <span class="badge">592 interacciones &bull; 250 hierbas &bull; 53 clases de medicamentos</span>
         </div>
-    </nav>
 
-    <header class="tool-header">
-        <div class="header-illustration">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C20 4 28 12 28 22C28 32 20 36 20 36C20 36 12 32 12 22C12 12 20 4 20 4Z" fill="rgba(255,255,255,0.3)"/><line x1="20" y1="4" x2="20" y2="36" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><path d="M20 14C24 16 26 19 27 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 14C16 16 14 19 13 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 22C24 24 26 27 27 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 22C16 24 14 27 13 30" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/></svg>
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="16" width="16" height="8" rx="4" fill="rgba(255,255,255,0.25)"/><rect x="20" y="16" width="8" height="8" rx="0" fill="rgba(255,255,255,0.15)"/><ellipse cx="28" cy="20" rx="4" ry="4" fill="rgba(255,255,255,0.15)"/></svg>
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4C20 4 28 12 28 22C28 32 20 36 20 36C20 36 12 32 12 22C12 12 20 4 20 4Z" fill="rgba(255,255,255,0.3)"/><line x1="20" y1="4" x2="20" y2="36" stroke="rgba(255,255,255,0.4)" stroke-width="0.8"/><path d="M20 14C24 16 26 19 27 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/><path d="M20 14C16 16 14 19 13 22" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.6"/></svg>
-        </div>
-        <h1>Verificador de Interacciones<br>Plantas Medicinales &ndash; Medicamentos</h1>
-        <p>Consulta si tu planta medicinal puede interactuar con medicamentos convencionales. Datos de monograf&iacute;as oficiales (EMA, ESCOP) y estudios indexados en PubMed.</p>
-    </header>
-
-    <div class="tool-container">
-        <div class="stats-bar" style="margin-top:0.5rem;">
-            <div class="stat-item">
-                <span class="stat-number" id="statHerbsTop">0</span>
-                <span class="stat-label">Plantas</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="statInteractionsTop">0</span>
-                <span class="stat-label">Interacciones</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="statDrugsTop">0</span>
-                <span class="stat-label">Medicamentos</span>
-            </div>
-        </div>
-        <div class="checker-section">
-            <h2>1. Selecciona una planta medicinal</h2>
+        <div class="input-section no-print">
+            <h2>&#127793; Paso 1: Tus suplementos y hierbas</h2>
             <div class="input-group">
-                <label for="herbInput">Escribe el nombre de la planta</label>
-                <div class="input-wrapper">
-                    <input type="text" id="herbInput" placeholder="Ej: c&uacute;rcuma, ajo, ginkgo, hierba de San Juan..." autocomplete="off">
-                    <div class="suggestions" id="herbSuggestions"></div>
+                <label>Busca y selecciona las hierbas o suplementos que tomas</label>
+                <div class="autocomplete-wrapper">
+                    <input type="text" id="herb-input" placeholder="Ej: maca, curcuma, ginkgo..." autocomplete="off">
+                    <div class="suggestions" id="herb-suggestions"></div>
                 </div>
-                <div class="selected-items" id="selectedHerbs"></div>
+                <div class="tags" id="herb-tags"></div>
             </div>
 
-            <h2>2. Selecciona tus medicamentos (opcional)</h2>
+            <h2>&#128138; Paso 2: Tus medicamentos</h2>
             <div class="input-group">
-                <label for="drugInput">Escribe el nombre del medicamento o clase terap&eacute;utica</label>
-                <div class="input-wrapper">
-                    <input type="text" id="drugInput" placeholder="Ej: warfarina, metformina, omeprazol, ISRS..." autocomplete="off">
-                    <div class="suggestions" id="drugSuggestions"></div>
+                <label>Busca por nombre del medicamento o clase terapéutica</label>
+                <div class="autocomplete-wrapper">
+                    <input type="text" id="drug-input" placeholder="Ej: warfarina, metformina, omeprazol..." autocomplete="off">
+                    <div class="suggestions" id="drug-suggestions"></div>
                 </div>
-                <div class="selected-items" id="selectedDrugs"></div>
+                <div class="tags" id="drug-tags"></div>
             </div>
 
-            <button class="check-btn" id="checkBtn" onclick="checkInteractions()">Verificar interacciones</button>
-        </div>
-
-        <div class="results-section" id="resultsSection">
-            <h2 style="margin-bottom:1rem;color:#1a5632;">Resultados</h2>
-            <div id="resultsContainer"></div>
-            <div class="share-section" id="shareSection">
-                <h3>Comparte este resultado</h3>
-                <div class="share-buttons">
-                    <a class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener">Compartir en X</a>
-                    <a class="share-btn whatsapp" id="shareWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
-                    <button class="share-btn copy-share" id="shareCopy">Copiar enlace</button>
-                    <button class="share-btn embed-btn" id="embedToggle" style="background:#2d3748;color:#fff;">&#x2197; Insertar en tu sitio</button>
-                </div>
-                <div id="embedSection" style="display:none;margin-top:1rem;padding:1rem;background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;">
-                    <p style="margin:0 0 0.5rem;font-weight:600;font-size:0.9rem;">C&oacute;digo para insertar esta herramienta:</p>
-                    <textarea id="embedCode" readonly style="width:100%;height:80px;font-family:monospace;font-size:0.8rem;padding:0.5rem;border:1px solid #cbd5e0;border-radius:4px;resize:vertical;background:#fff;"></textarea>
-                    <button id="copyEmbed" style="margin-top:0.5rem;padding:0.4rem 1rem;background:#38a169;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:0.85rem;">Copiar c&oacute;digo</button>
-                    <span id="embedCopied" style="display:none;margin-left:0.5rem;color:#38a169;font-size:0.85rem;">&#10003; Copiado!</span>
-                </div>
+            <div class="btn-group">
+                <button class="btn btn-primary" id="generate-btn" disabled onclick="generateReport()">
+                    &#128196; Generar Reporte
+                </button>
+                <button class="btn btn-secondary" onclick="clearAll()">Limpiar</button>
             </div>
         </div>
 
-        <div class="popular-searches">
-            <h3>Consultas frecuentes</h3>
-            <div class="popular-grid">
-                <button class="popular-btn" onclick="quickCheck('hypericum','isrs')"><span class="pop-icon">&#9888;</span> Hierba de San Juan + Antidepresivos</button>
-                <button class="popular-btn" onclick="quickCheck('ginkgo','anticoagulantes')"><span class="pop-icon">&#9888;</span> Ginkgo + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('curcuma','anticoagulantes')">C&uacute;rcuma + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('valeriana','benzodiacepinas')">Valeriana + Benzodiazepinas</button>
-                <button class="popular-btn" onclick="quickCheck('ajo','anticoagulantes')">Ajo + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('berberina','antidiabeticos')">Berberina + Antidiab&eacute;ticos</button>
-                <button class="popular-btn" onclick="quickCheck('ginseng','anticoagulantes')">Ginseng + Anticoagulantes</button>
-                <button class="popular-btn" onclick="quickCheck('equinacea','inmunosupresores')">Equin&aacute;cea + Inmunosupresores</button>
+        <div class="report" id="report">
+            <div class="report-header">
+                <h2>Reporte de Interacciones</h2>
+                <div class="report-date" id="report-date"></div>
+                <div class="summary-grid" id="summary-grid"></div>
+            </div>
+
+            <div class="btn-group no-print" style="margin-bottom: 24px; justify-content: center;">
+                <button class="btn btn-primary" onclick="window.print()">&#128424; Descargar PDF</button>
+                <button class="btn btn-secondary" onclick="shareReport()">&#128279; Compartir</button>
+            </div>
+
+            <div id="report-body"></div>
+
+            <div class="disclaimer">
+                <strong>&#9888;&#65039; Aviso importante:</strong> Este reporte es exclusivamente informativo y educativo.
+                No reemplaza la consulta con su m&eacute;dico o farmac&eacute;utico. La ausencia de una interacci&oacute;n
+                no significa que la combinaci&oacute;n sea segura. Consulte siempre a un profesional de salud
+                antes de modificar su tratamiento.
             </div>
         </div>
 
-        <div class="stats-bar">
-            <div class="stat-item">
-                <span class="stat-number" id="statHerbs">0</span>
-                <span class="stat-label">Plantas</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="statInteractions">0</span>
-                <span class="stat-label">Interacciones</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="statDrugs">0</span>
-                <span class="stat-label">Medicamentos</span>
-            </div>
-        </div>
-
-        <div class="trust-bar">
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                <span id="trustDois">0</span> fuentes con DOI verificado
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                Datos de EMA, ESCOP y PubMed
-            </div>
-            <div class="trust-item">
-                <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
-                Sin rastreo &middot; 100% privado
-            </div>
-        </div>
-
-        <div class="severity-legend">
-            <div class="severity-legend-item"><span class="severity-dot alta"></span> Alta: evitar combinaci&oacute;n</div>
-            <div class="severity-legend-item"><span class="severity-dot moderada"></span> Moderada: precauci&oacute;n/monitoreo</div>
-            <div class="severity-legend-item"><span class="severity-dot baja"></span> Baja: riesgo menor</div>
-            <div class="severity-legend-item"><span class="severity-dot teorica"></span> Te&oacute;rica: sin evidencia cl&iacute;nica</div>
-        </div>
-
-        <div class="evidence-legend">
-            <div class="evidence-legend-item"><span class="evidence-badge level-A">A</span> Ensayos cl&iacute;nicos</div>
-            <div class="evidence-legend-item"><span class="evidence-badge level-B">B</span> Reportes de caso</div>
-            <div class="evidence-legend-item"><span class="evidence-badge level-C">C</span> Estudios precl&iacute;nicos</div>
-            <div class="evidence-legend-item"><span class="evidence-badge level-D">D</span> Te&oacute;rica</div>
-        </div>
-
-        <div class="disclaimer">
-            <strong>Aviso m&eacute;dico importante:</strong> Esta herramienta es exclusivamente informativa y educativa.
-            <strong>No reemplaza la consulta con su m&eacute;dico o farmac&eacute;utico.</strong>
-            Las interacciones listadas provienen de monograf&iacute;as oficiales (EMA, ESCOP) y estudios publicados en PubMed.
-            La ausencia de una interacci&oacute;n en esta base de datos NO significa que la combinaci&oacute;n sea segura.
-            Consulte siempre a un profesional de salud antes de combinar plantas medicinales con medicamentos.
-        </div>
-
-        <div class="methodology">
-            <h3>Metodolog&iacute;a y fuentes</h3>
-            <p>Las interacciones incluidas en esta herramienta provienen exclusivamente de:</p>
-            <ul>
-                <li><strong>Monograf&iacute;as de la EMA</strong> (Agencia Europea de Medicamentos) &mdash; evaluaciones oficiales de seguridad</li>
-                <li><strong>Monograf&iacute;as ESCOP</strong> (European Scientific Cooperative on Phytotherapy)</li>
-                <li><strong>Memorial Sloan Kettering Cancer Center</strong> &mdash; base de datos de hierbas y suplementos</li>
-                <li><strong>Estudios cl&iacute;nicos y reportes de caso</strong> indexados en PubMed/MEDLINE</li>
-            </ul>
-            <p style="margin-top:0.8rem;">Cada interacci&oacute;n incluye el nivel de evidencia y la referencia bibliogr&aacute;fica.
-            No se incluyen interacciones basadas &uacute;nicamente en teor&iacute;a farmacol&oacute;gica sin evidencia cl&iacute;nica o precl&iacute;nica publicada.</p>
-            <p style="margin-top:0.5rem;">Base de datos actualizada: <strong>marzo 2026</strong>. Versi&oacute;n 2.0 &mdash; 53 interacciones con DOI verificado.</p>
-        </div>
-
-        <div class="embed-section">
-            <h3>Integra esta herramienta en tu sitio web</h3>
-            <div class="embed-code" id="embedCodeStatic">&lt;iframe src="https://botanicaandina.com/herramientas/widget/" width="100%" height="700" frameborder="0" style="border:1px solid #e2e8f0;border-radius:8px;" title="Verificador de Interacciones Plantas Medicinales"&gt;&lt;/iframe&gt;</div>
-            <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('embedCodeStatic').textContent)">Copiar c&oacute;digo</button>
-        </div>
-
-        <div style="text-align:center;margin-top:2rem;padding:1.5rem;background:#e8f5e9;border-radius:12px;">
-            <h3 style="font-size:1rem;margin-bottom:0.8rem;color:#1a5632;">Comparte esta herramienta</h3>
-            <p style="font-family:Arial,sans-serif;font-size:0.85rem;color:#555;margin-bottom:1rem;">Ayuda a que m&aacute;s personas verifiquen las interacciones de sus suplementos</p>
-            <div style="display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;">
-                <a href="https://twitter.com/intent/tweet?text=Herramienta%20gratuita%20para%20verificar%20interacciones%20entre%20plantas%20medicinales%20y%20medicamentos%20%E2%80%94%20150%2B%20plantas%2C%20500%2B%20interacciones&url=https%3A%2F%2Fbotanicaandina.com%2Fherramientas%2Finteracciones%2F" target="_blank" rel="noopener" class="share-btn twitter">Compartir en X</a>
-                <a href="https://wa.me/?text=Herramienta%20gratuita%20para%20verificar%20interacciones%20plantas%20medicinales%20%E2%80%93%20medicamentos%20https%3A%2F%2Fbotanicaandina.com%2Fherramientas%2Finteracciones%2F" target="_blank" rel="noopener" class="share-btn whatsapp">WhatsApp</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbotanicaandina.com%2Fherramientas%2Finteracciones%2F" target="_blank" rel="noopener" class="share-btn" style="background:#1877f2;color:#fff;padding:0.5rem 1rem;border-radius:8px;font-family:Arial,sans-serif;font-size:0.82rem;text-decoration:none;display:inline-block;">Facebook</a>
-                <button class="share-btn copy-share" onclick="navigator.clipboard.writeText('https://botanicaandina.com/herramientas/interacciones/');this.textContent='Copiado!'">Copiar enlace</button>
-            </div>
+        <div class="footer">
+            <p><a href="https://botanicaandina.com">Bot&aacute;nica Andina</a> &mdash; Enciclopedia de hierbas medicinales andinas</p>
+            <p style="margin-top: 4px;">
+                <a href="/herramientas/interacciones/">Verificador de Interacciones</a> &bull;
+                <a href="/herramientas/cafeina/">Reloj de Cafe&iacute;na</a> &bull;
+                <a href="/herramientas/quiz/">Quiz de Plantas</a>
+            </p>
+            <p style="margin-top: 8px; font-size: 11px;">Fuentes: PubMed, EMA/HMPC, ESCOP</p>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 <a href="/">Bot&aacute;nica Andina</a> &mdash; Informaci&oacute;n basada en evidencia cient&iacute;fica</p>
-        <p style="margin-top:0.3rem"><a href="/politica-editorial/">Pol&iacute;tica Editorial</a> &middot; <a href="/sobre-nosotros/">Sobre Nosotros</a></p>
-    </footer>
-
     <script>
-    // ============================================================
-    // HERB-DRUG INTERACTION DATABASE
-    // Sources: EMA monographs, ESCOP, Memorial Sloan Kettering, PubMed
-    // Each interaction includes severity, mechanism, evidence, and source
-    // ============================================================
-
     const HERBS = [
         {
             id: "hypericum",
@@ -7579,321 +7556,261 @@
         }
     ];
 
-    // ============================================================
-    // UI LOGIC
-    // ============================================================
+    // State
+    const selectedHerbs = [];
+    const selectedDrugs = [];
 
-    let selectedHerbs = [];
-    let selectedDrugs = [];
+    // Get herb by ID
+    function getHerb(id) { return HERBS.find(h => h.id === id); }
+    function getDrug(id) { return DRUG_CLASSES.find(d => d.id === id); }
 
-    function init() {
-        const uniqueDrugs = new Set();
-        DRUG_CLASSES.forEach(dc => dc.drugs.forEach(d => uniqueDrugs.add(d)));
-        document.getElementById('statHerbs').textContent = HERBS.length;
-        document.getElementById('statInteractions').textContent = INTERACTIONS.length;
-        document.getElementById('statDrugs').textContent = uniqueDrugs.size;
-        var topH = document.getElementById('statHerbsTop');
-        if (topH) topH.textContent = HERBS.length;
-        var topI = document.getElementById('statInteractionsTop');
-        if (topI) topI.textContent = INTERACTIONS.length;
-        var topD = document.getElementById('statDrugsTop');
-        if (topD) topD.textContent = uniqueDrugs.size;
+    // Autocomplete for herbs
+    const herbInput = document.getElementById('herb-input');
+    const herbSuggestions = document.getElementById('herb-suggestions');
+    const herbTags = document.getElementById('herb-tags');
 
-        document.getElementById('trustDois').textContent = INTERACTIONS.filter(i => i.doi).length;
-        setupAutocomplete('herbInput', 'herbSuggestions', getHerbSuggestions, selectHerb);
-        setupAutocomplete('drugInput', 'drugSuggestions', getDrugSuggestions, selectDrug);
-    }
+    herbInput.addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        if (q.length < 2) { herbSuggestions.classList.remove('open'); return; }
 
-    function setupAutocomplete(inputId, suggestionsId, getSuggestions, onSelect) {
-        const input = document.getElementById(inputId);
-        const sugBox = document.getElementById(suggestionsId);
-
-        input.addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
-            if (query.length < 2) { sugBox.style.display = 'none'; return; }
-            const results = getSuggestions(query);
-            if (results.length === 0) { sugBox.style.display = 'none'; return; }
-            sugBox.innerHTML = results.map(r =>
-                '<div data-id="' + r.id + '"><strong>' + r.name + '</strong>' +
-                (r.detail ? ' <small>' + r.detail + '</small>' : '') + '</div>'
-            ).join('');
-            sugBox.style.display = 'block';
-            sugBox.querySelectorAll('div').forEach(div => {
-                div.addEventListener('click', function() {
-                    onSelect(this.dataset.id);
-                    input.value = '';
-                    sugBox.style.display = 'none';
-                });
-            });
-        });
-
-        input.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') sugBox.style.display = 'none';
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                const active = sugBox.querySelector('.active') || sugBox.querySelector('div');
-                if (active && sugBox.style.display === 'block') {
-                    onSelect(active.dataset.id);
-                    input.value = '';
-                    sugBox.style.display = 'none';
-                }
-            }
-            if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-                e.preventDefault();
-                const items = sugBox.querySelectorAll('div');
-                if (items.length === 0) return;
-                let current = sugBox.querySelector('.active');
-                if (current) current.classList.remove('active');
-                if (e.key === 'ArrowDown') {
-                    const next = current ? current.nextElementSibling || items[0] : items[0];
-                    next.classList.add('active');
-                } else {
-                    const prev = current ? current.previousElementSibling || items[items.length-1] : items[items.length-1];
-                    prev.classList.add('active');
-                }
-            }
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!input.contains(e.target) && !sugBox.contains(e.target)) {
-                sugBox.style.display = 'none';
-            }
-        });
-    }
-
-    function getHerbSuggestions(query) {
-        return HERBS.filter(h => {
+        const matches = HERBS.filter(h => {
             if (selectedHerbs.includes(h.id)) return false;
-            const searchable = [h.name, h.scientific, ...h.aliases].join(' ').toLowerCase();
-            return searchable.includes(query);
-        }).map(h => ({ id: h.id, name: h.name, detail: h.scientific }));
+            return h.name.toLowerCase().includes(q) ||
+                   (h.scientific && h.scientific.toLowerCase().includes(q)) ||
+                   (h.aliases && h.aliases.some(a => a.toLowerCase().includes(q)));
+        }).slice(0, 8);
+
+        if (matches.length === 0) { herbSuggestions.classList.remove('open'); return; }
+
+        herbSuggestions.innerHTML = matches.map(h =>
+            `<div class="suggestion-item" onclick="addHerb('${h.id}')">
+                ${h.name} <span class="sci">${h.scientific || ''}</span>
+            </div>`
+        ).join('');
+        herbSuggestions.classList.add('open');
+    });
+
+    herbInput.addEventListener('blur', () => setTimeout(() => herbSuggestions.classList.remove('open'), 200));
+
+    function addHerb(id) {
+        if (selectedHerbs.includes(id)) return;
+        selectedHerbs.push(id);
+        herbInput.value = '';
+        herbSuggestions.classList.remove('open');
+        renderTags();
     }
 
-    function getDrugSuggestions(query) {
-        const results = [];
-        DRUG_CLASSES.forEach(dc => {
-            if (selectedDrugs.includes(dc.id)) return;
-            const searchable = [dc.name, ...dc.drugs, ...dc.aliases].join(' ').toLowerCase();
-            if (searchable.includes(query)) {
-                results.push({ id: dc.id, name: dc.name, detail: dc.drugs.slice(0,3).join(', ') });
-            }
-        });
-        return results;
+    // Autocomplete for drugs
+    const drugInput = document.getElementById('drug-input');
+    const drugSuggestions = document.getElementById('drug-suggestions');
+    const drugTags = document.getElementById('drug-tags');
+
+    drugInput.addEventListener('input', function() {
+        const q = this.value.toLowerCase().trim();
+        if (q.length < 2) { drugSuggestions.classList.remove('open'); return; }
+
+        const matches = DRUG_CLASSES.filter(d => {
+            if (selectedDrugs.includes(d.id)) return false;
+            return d.name.toLowerCase().includes(q) ||
+                   (d.drugs && d.drugs.some(drug => drug.toLowerCase().includes(q))) ||
+                   (d.aliases && d.aliases.some(a => a.toLowerCase().includes(q)));
+        }).slice(0, 8);
+
+        if (matches.length === 0) { drugSuggestions.classList.remove('open'); return; }
+
+        drugSuggestions.innerHTML = matches.map(d =>
+            `<div class="suggestion-item" onclick="addDrug('${d.id}')">
+                ${d.name} <span class="sci">${d.drugs ? d.drugs.slice(0,3).join(', ') : ''}</span>
+            </div>`
+        ).join('');
+        drugSuggestions.classList.add('open');
+    });
+
+    drugInput.addEventListener('blur', () => setTimeout(() => drugSuggestions.classList.remove('open'), 200));
+
+    function addDrug(id) {
+        if (selectedDrugs.includes(id)) return;
+        selectedDrugs.push(id);
+        drugInput.value = '';
+        drugSuggestions.classList.remove('open');
+        renderTags();
     }
 
-    function selectHerb(id) {
-        if (!selectedHerbs.includes(id)) {
-            selectedHerbs.push(id);
-            renderSelected('selectedHerbs', selectedHerbs, HERBS, removeHerb);
-        }
-    }
+    function renderTags() {
+        herbTags.innerHTML = selectedHerbs.map(id => {
+            const h = getHerb(id);
+            return `<span class="tag">${h ? h.name : id} <span class="remove" onclick="removeHerb('${id}')">&times;</span></span>`;
+        }).join('');
 
-    function selectDrug(id) {
-        if (!selectedDrugs.includes(id)) {
-            selectedDrugs.push(id);
-            renderSelected('selectedDrugs', selectedDrugs, DRUG_CLASSES, removeDrug);
-        }
+        drugTags.innerHTML = selectedDrugs.map(id => {
+            const d = getDrug(id);
+            return `<span class="tag drug">${d ? d.name : id} <span class="remove" onclick="removeDrug('${id}')">&times;</span></span>`;
+        }).join('');
+
+        document.getElementById('generate-btn').disabled = selectedHerbs.length === 0 || selectedDrugs.length === 0;
     }
 
     function removeHerb(id) {
-        selectedHerbs = selectedHerbs.filter(h => h !== id);
-        renderSelected('selectedHerbs', selectedHerbs, HERBS, removeHerb);
+        const idx = selectedHerbs.indexOf(id);
+        if (idx > -1) selectedHerbs.splice(idx, 1);
+        renderTags();
     }
 
     function removeDrug(id) {
-        selectedDrugs = selectedDrugs.filter(d => d !== id);
-        renderSelected('selectedDrugs', selectedDrugs, DRUG_CLASSES, removeDrug);
+        const idx = selectedDrugs.indexOf(id);
+        if (idx > -1) selectedDrugs.splice(idx, 1);
+        renderTags();
     }
 
-    function renderSelected(containerId, ids, dataset, removeFn) {
-        const container = document.getElementById(containerId);
-        container.innerHTML = ids.map(id => {
-            const item = dataset.find(d => d.id === id);
-            return '<span class="selected-tag">' + item.name +
-                   '<button onclick="(' + removeFn.toString() + ')(\'' + id + '\')" aria-label="Eliminar">&times;</button></span>';
-        }).join('');
+    function clearAll() {
+        selectedHerbs.length = 0;
+        selectedDrugs.length = 0;
+        renderTags();
+        document.getElementById('report').classList.remove('visible');
     }
 
-    function checkInteractions() {
-        if (selectedHerbs.length === 0) {
-            alert('Selecciona al menos una planta medicinal.');
-            return;
-        }
+    // Generate report
+    function generateReport() {
+        const found = [];
 
-        const section = document.getElementById('resultsSection');
-        const container = document.getElementById('resultsContainer');
-        section.style.display = 'block';
-
-        let matches = [];
-
-        selectedHerbs.forEach(herbId => {
-            const herbInteractions = INTERACTIONS.filter(i => i.herb === herbId);
-            if (selectedDrugs.length > 0) {
-                selectedDrugs.forEach(drugId => {
-                    const found = herbInteractions.filter(i => i.drugClass === drugId);
-                    found.forEach(f => matches.push(f));
-                });
-            } else {
-                herbInteractions.forEach(i => matches.push(i));
+        for (const inter of INTERACTIONS) {
+            if (selectedHerbs.includes(inter.herb) && selectedDrugs.includes(inter.drug_class)) {
+                found.push(inter);
             }
-        });
+        }
 
         // Sort by severity
-        const severityOrder = { alta: 0, moderada: 1, baja: 2, teorica: 3 };
-        matches.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
+        const order = { alta: 0, moderada: 1, baja: 2, 'teórica': 3, teorica: 3 };
+        found.sort((a, b) => (order[a.severity] || 4) - (order[b.severity] || 4));
 
-        if (matches.length === 0) {
-            container.innerHTML = '<div class="no-interactions">' +
-                '<p><strong>No se encontraron interacciones documentadas</strong> para esta combinaci&oacute;n.</p>' +
-                '<small>Esto NO significa que la combinaci&oacute;n sea segura. Solo indica que no hay interacciones documentadas en nuestra base de datos. Consulte siempre a su m&eacute;dico o farmac&eacute;utico.</small>' +
-                '</div>';
-            document.getElementById('shareSection').style.display = 'none';
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            return;
+        // Summary
+        const counts = { alta: 0, moderada: 0, baja: 0, teorica: 0 };
+        for (const f of found) {
+            const sev = f.severity === 'teórica' ? 'teorica' : f.severity;
+            counts[sev] = (counts[sev] || 0) + 1;
         }
 
-        container.innerHTML = '<p style="font-family:Arial,sans-serif;font-size:0.85rem;color:#666;margin-bottom:1rem;">' +
-            'Se encontraron <strong>' + matches.length + ' interacciones</strong>. Ordenadas por gravedad.</p>' +
-            matches.map(m => {
-                const herb = HERBS.find(h => h.id === m.herb);
-                const drug = DRUG_CLASSES.find(d => d.id === m.drugClass);
-                const severityLabel = { alta: 'Alta', moderada: 'Moderada', baja: 'Baja', teorica: 'Te\u00f3rica' };
-                return '<div class="result-card severity-' + m.severity + '">' +
-                    '<div class="result-header">' +
-                    '<span class="result-title">' + herb.name + ' + ' + drug.name + '</span>' +
-                    '<span class="severity-badge ' + m.severity + '">' + severityLabel[m.severity] + '</span>' +
-                    '</div>' +
-                    '<div class="result-detail"><strong>Efecto:</strong> ' + m.effect + '</div>' +
-                    '<div class="result-detail"><strong>Mecanismo:</strong> ' + m.mechanism + '</div>' +
-                    '<div class="result-detail"><strong>Evidencia:</strong> ' + m.evidence + ' <span class="evidence-badge level-' + (m.evidenceLevel || 'C') + '">' + ({A:'A — Alta',B:'B — Moderada',C:'C — Preclínica',D:'D — Teórica'}[m.evidenceLevel] || 'C') + '</span></div>' +
-                    '<div class="result-meta">' +
-                    '<strong>Fuente:</strong> ' + m.source +
-                    (m.doi ? ' &mdash; <a href="https://doi.org/' + m.doi + '" target="_blank" rel="noopener">DOI</a> <span class="verified-badge"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>Verificado</span>' : '') +
-                    ' &mdash; <a href="https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(herb.scientific + ' ' + drug.name) + '" target="_blank" rel="noopener">PubMed</a>' +
-                    (herb.article ? ' &mdash; <a href="' + herb.article + '">Art&iacute;culo relacionado</a>' : '') +
-                    '</div></div>';
-            }).join('');
+        const summaryGrid = document.getElementById('summary-grid');
+        summaryGrid.innerHTML = `
+            <div class="summary-card alta">
+                <div class="number">${counts.alta}</div>
+                <div class="label">Alta severidad</div>
+            </div>
+            <div class="summary-card moderada">
+                <div class="number">${counts.moderada}</div>
+                <div class="label">Moderada</div>
+            </div>
+            <div class="summary-card baja">
+                <div class="number">${counts.baja}</div>
+                <div class="label">Baja</div>
+            </div>
+            <div class="summary-card teorica">
+                <div class="number">${counts.teorica}</div>
+                <div class="label">Te&oacute;rica</div>
+            </div>
+        `;
 
-        updateShareButtons(matches);
-        updateUrlHash();
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+        // Date
+        const now = new Date();
+        document.getElementById('report-date').textContent =
+            `Generado: ${now.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}`;
 
-    function updateShareButtons(matches) {
-        const shareSection = document.getElementById('shareSection');
-        if (matches.length === 0) {
-            shareSection.style.display = 'none';
-            return;
-        }
-        shareSection.style.display = 'block';
+        // Body
+        const body = document.getElementById('report-body');
 
-        const herbNames = [...new Set(matches.map(m => {
-            const h = HERBS.find(x => x.id === m.herb);
-            return h ? h.name : '';
-        }))].filter(Boolean);
-
-        const highSeverity = matches.filter(m => m.severity === 'alta').length;
-        let text;
-        if (highSeverity > 0) {
-            text = `Encontr\u00e9 ${highSeverity} interacciones de alta gravedad con ${herbNames.join(', ')}. Verifica tus combinaciones:`;
+        if (found.length === 0) {
+            body.innerHTML = `
+                <div class="no-interactions">
+                    <div class="icon">&#9989;</div>
+                    <p>No se encontraron interacciones documentadas entre tus selecciones.</p>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-top: 8px;">
+                        Esto no significa que la combinaci&oacute;n sea segura. Consulta a tu m&eacute;dico.
+                    </p>
+                </div>
+            `;
         } else {
-            text = `Revis\u00e9 ${matches.length} interacciones de ${herbNames.join(', ')} con medicamentos. Verifica las tuyas:`;
+            // Group by severity
+            let html = '';
+            const groups = [
+                { key: 'alta', label: '&#128308; Interacciones de Alta Severidad — Evitar', items: [] },
+                { key: 'moderada', label: '&#128992; Interacciones Moderadas — Precauci&oacute;n', items: [] },
+                { key: 'baja', label: '&#128309; Interacciones de Baja Severidad', items: [] },
+                { key: 'teorica', label: '&#9898; Interacciones Te&oacute;ricas', items: [] },
+            ];
+
+            for (const f of found) {
+                const sev = f.severity === 'teórica' ? 'teorica' : f.severity;
+                const group = groups.find(g => g.key === sev);
+                if (group) group.items.push(f);
+            }
+
+            for (const g of groups) {
+                if (g.items.length === 0) continue;
+                html += `<h3 class="section-title">${g.label}</h3>`;
+
+                for (const inter of g.items) {
+                    const herb = getHerb(inter.herb);
+                    const drug = getDrug(inter.drug_class);
+                    const herbName = herb ? herb.name : inter.herb;
+                    const drugName = drug ? drug.name : inter.drug_class;
+                    const sev = inter.severity === 'teórica' ? 'teorica' : inter.severity;
+                    const sevLabel = inter.severity.charAt(0).toUpperCase() + inter.severity.slice(1);
+
+                    let doiHtml = '';
+                    if (inter.doi) {
+                        doiHtml = ` | <a class="doi" href="https://doi.org/${inter.doi}" target="_blank" rel="noopener">DOI: ${inter.doi}</a>`;
+                    }
+
+                    html += `
+                    <div class="interaction-card ${sev}">
+                        <div class="card-header">
+                            <span class="pair">${herbName} + ${drugName}</span>
+                            <span class="severity-badge ${sev}">${sevLabel}</span>
+                        </div>
+                        <div class="effect">${inter.effect}</div>
+                        <div class="mechanism"><strong>Mecanismo:</strong> ${inter.mechanism}</div>
+                        <div class="evidence">${inter.evidence}${inter.source ? ' | ' + inter.source : ''}${doiHtml}</div>
+                    </div>
+                    `;
+                }
+            }
+
+            // Herb-only section (herbs with no interactions found)
+            const herbsWithInteractions = new Set(found.map(f => f.herb));
+            const herbsWithout = selectedHerbs.filter(id => !herbsWithInteractions.has(id));
+
+            if (herbsWithout.length > 0) {
+                html += `<h3 class="section-title">&#9989; Sin interacciones documentadas</h3>`;
+                html += `<div style="padding: 12px; color: var(--text-muted); font-size: 14px;">`;
+                html += `Las siguientes hierbas no tienen interacciones documentadas con los medicamentos seleccionados: `;
+                html += herbsWithout.map(id => {
+                    const h = getHerb(id);
+                    return `<strong>${h ? h.name : id}</strong>`;
+                }).join(', ');
+                html += `<br><em>Nota: esto no garantiza seguridad. Consulte a su m&eacute;dico.</em></div>`;
+            }
+
+            body.innerHTML = html;
         }
 
-        const url = getShareableUrl();
-        const encoded = encodeURIComponent(text);
-        const encodedUrl = encodeURIComponent(url);
+        document.getElementById('report').classList.add('visible');
+        document.getElementById('report').scrollIntoView({ behavior: 'smooth' });
+    }
 
-        document.getElementById('shareTwitter').href = 'https://twitter.com/intent/tweet?text=' + encoded + '&url=' + encodedUrl;
-        document.getElementById('shareWhatsapp').href = 'https://wa.me/?text=' + encoded + '%20' + encodedUrl;
+    function shareReport() {
+        const herbs = selectedHerbs.map(id => { const h = getHerb(id); return h ? h.name : id; }).join(', ');
+        const drugs = selectedDrugs.map(id => { const d = getDrug(id); return d ? d.name : id; }).join(', ');
+        const text = `Reporte de interacciones: ${herbs} con ${drugs} — Genera el tuyo gratis en`;
+        const url = 'https://botanicaandina.com/herramientas/reporte/';
 
-        document.getElementById('shareCopy').onclick = function() {
-            navigator.clipboard.writeText(getShareableUrl()).then(function() {
-                var btn = document.getElementById('shareCopy');
-                btn.textContent = 'Copiado!';
-                setTimeout(function() { btn.textContent = 'Copiar enlace'; }, 2000);
+        if (navigator.share) {
+            navigator.share({ title: 'Reporte de Interacciones', text, url });
+        } else {
+            navigator.clipboard.writeText(`${text} ${url}`).then(() => {
+                alert('Enlace copiado al portapapeles');
             });
-        };
-    }
-
-    function getShareableUrl() {
-        if (selectedHerbs.length === 0) return 'https://botanicaandina.com/herramientas/interacciones/';
-        var params = 'h=' + selectedHerbs.join(',');
-        if (selectedDrugs.length > 0) params += '&d=' + selectedDrugs.join(',');
-        return 'https://botanicaandina.com/herramientas/interacciones/#' + params;
-    }
-
-    function updateUrlHash() {
-        if (selectedHerbs.length === 0) {
-            history.replaceState(null, '', window.location.pathname);
-            return;
-        }
-        var params = 'h=' + selectedHerbs.join(',');
-        if (selectedDrugs.length > 0) params += '&d=' + selectedDrugs.join(',');
-        history.replaceState(null, '', '#' + params);
-    }
-
-    function loadFromHash() {
-        var hash = window.location.hash.slice(1);
-        if (!hash) return;
-        var params = {};
-        hash.split('&').forEach(function(part) {
-            var kv = part.split('=');
-            if (kv.length === 2) params[kv[0]] = kv[1];
-        });
-        if (params.h) {
-            selectedHerbs = params.h.split(',').filter(function(id) {
-                return HERBS.some(function(h) { return h.id === id; });
-            });
-        }
-        if (params.d) {
-            selectedDrugs = params.d.split(',').filter(function(id) {
-                return DRUG_CLASSES.some(function(d) { return d.id === id; });
-            });
-        }
-        if (selectedHerbs.length > 0) {
-            renderSelected('selectedHerbs', selectedHerbs, HERBS, removeHerb);
-            renderSelected('selectedDrugs', selectedDrugs, DRUG_CLASSES, removeDrug);
-            checkInteractions();
         }
     }
-
-    function quickCheck(herbId, drugId) {
-        selectedHerbs = [herbId];
-        selectedDrugs = [drugId];
-        renderSelected('selectedHerbs', selectedHerbs, HERBS, removeHerb);
-        renderSelected('selectedDrugs', selectedDrugs, DRUG_CLASSES, removeDrug);
-        document.getElementById('herbInput').value = '';
-        document.getElementById('drugInput').value = '';
-        checkInteractions();
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        init();
-        loadFromHash();
-
-        // Show demo result if no hash (first-time visitor)
-        if (!window.location.hash) {
-            quickCheck('hypericum', 'isrs');
-        }
-
-        // Embed functionality
-        document.getElementById('embedToggle').onclick = function() {
-            var sec = document.getElementById('embedSection');
-            sec.style.display = sec.style.display === 'none' ? 'block' : 'none';
-            var url = getShareableUrl();
-            var code = '<iframe src="https://botanicaandina.com/herramientas/widget/" width="100%" height="700" style="border:1px solid #e2e8f0;border-radius:8px;" title="Verificador de Interacciones Hierba-Medicamento"></iframe>\n<p style="font-size:0.8rem;color:#718096;">Herramienta gratuita de <a href="https://botanicaandina.com/herramientas/interacciones/">Bot\u00e1nica Andina</a></p>';
-            document.getElementById('embedCode').value = code;
-        };
-        document.getElementById('copyEmbed').onclick = function() {
-            var code = document.getElementById('embedCode');
-            code.select();
-            navigator.clipboard.writeText(code.value).then(function() {
-                document.getElementById('embedCopied').style.display = 'inline';
-                setTimeout(function() { document.getElementById('embedCopied').style.display = 'none'; }, 2000);
-            });
-        };
-    });
     </script>
 </body>
 </html>
