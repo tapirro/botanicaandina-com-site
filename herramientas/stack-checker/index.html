@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Checker — ¿Tus Suplementos Son Compatibles? | Botánica Andina</title>
+    <meta name="description" content="Verifica si tus suplementos se pueden tomar juntos. Detecta interacciones, competencia por absorción y mejores horarios. 45 suplementos, 80+ interacciones. Gratis.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/stack-checker/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stack Checker — ¿Tus Suplementos Son Compatibles?">
+    <meta property="og:description" content="Herramienta gratuita para verificar compatibilidad entre suplementos. Detecta interacciones y optimiza horarios de toma.">
+    <meta property="og:url" content="https://botanicaandina.com/herramientas/stack-checker/">
+    <meta property="og:locale" content="es_LA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stack Checker — ¿Tus Suplementos Son Compatibles?">
+    <meta name="twitter:description" content="Verifica si tus suplementos se pueden tomar juntos. Gratis.">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Stack Checker — Verificador de Compatibilidad de Suplementos",
+        "url": "https://botanicaandina.com/herramientas/stack-checker/",
+        "description": "Herramienta interactiva para verificar compatibilidad entre suplementos dietéticos. Detecta interacciones, competencia por absorción y optimiza horarios de toma.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "author": {"@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Puedo tomar varios suplementos al mismo tiempo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Depende de los suplementos. Algunos compiten por absorción (ej: calcio y hierro), otros pueden potenciarse peligrosamente (ej: varios anticoagulantes naturales), y otros se benefician de tomarse juntos (ej: vitamina D y calcio). Use esta herramienta para verificar su combinación específica."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿De dónde vienen los datos de interacciones entre suplementos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los datos provienen de estudios clínicos publicados en PubMed, monografías de la EMA y ESCOP, y guías de práctica clínica sobre suplementación. Cada interacción incluye la fuente y el mecanismo."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8faf8; color: #1a1a1a; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { font-size: 1.8rem; color: #1a5632; margin-bottom: 8px; }
+        .subtitle { color: #666; margin-bottom: 24px; font-size: 0.95rem; }
+        .input-area { background: #fff; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 24px; }
+        .input-area label { font-weight: 600; display: block; margin-bottom: 8px; color: #1a5632; }
+        .supplement-input { position: relative; }
+        .supplement-input input { width: 100%; padding: 12px 16px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px; outline: none; transition: border-color 0.2s; }
+        .supplement-input input:focus { border-color: #2e7d4f; }
+        .suggestions { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #e0e0e0; border-radius: 0 0 8px 8px; max-height: 200px; overflow-y: auto; z-index: 10; display: none; }
+        .suggestions div { padding: 10px 16px; cursor: pointer; }
+        .suggestions div:hover { background: #e8f5e9; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; min-height: 36px; }
+        .tag { background: #e8f5e9; color: #1a5632; padding: 6px 12px; border-radius: 20px; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
+        .tag .remove { cursor: pointer; font-weight: bold; color: #999; }
+        .tag .remove:hover { color: #d32f2f; }
+        .check-btn { background: #2e7d4f; color: #fff; border: none; padding: 14px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 16px; width: 100%; transition: background 0.2s; }
+        .check-btn:hover { background: #1a5632; }
+        .check-btn:disabled { background: #ccc; cursor: not-allowed; }
+        .results { display: none; }
+        .result-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #ccc; }
+        .result-card.danger { border-left-color: #d32f2f; }
+        .result-card.warning { border-left-color: #f57c00; }
+        .result-card.info { border-left-color: #1976d2; }
+        .result-card.ok { border-left-color: #2e7d4f; }
+        .result-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+        .severity-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; color: #fff; }
+        .severity-badge.alta { background: #d32f2f; }
+        .severity-badge.media { background: #f57c00; }
+        .severity-badge.baja { background: #1976d2; }
+        .severity-badge.sinergia { background: #2e7d4f; }
+        .result-title { font-weight: 600; font-size: 1rem; }
+        .result-detail { color: #555; font-size: 0.9rem; margin-bottom: 6px; }
+        .result-source { color: #999; font-size: 0.8rem; font-style: italic; }
+        .summary-box { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .summary-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-top: 12px; }
+        .stat { text-align: center; padding: 12px; border-radius: 8px; }
+        .stat-number { font-size: 1.8rem; font-weight: 700; }
+        .stat-label { font-size: 0.8rem; color: #666; }
+        .stat.danger-bg { background: #fde8e8; color: #d32f2f; }
+        .stat.warning-bg { background: #fff3e0; color: #f57c00; }
+        .stat.info-bg { background: #e3f2fd; color: #1976d2; }
+        .stat.ok-bg { background: #e8f5e9; color: #2e7d4f; }
+        .timing-section { margin-top: 24px; }
+        .timing-section h3 { color: #1a5632; margin-bottom: 12px; }
+        .timing-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+        .timing-time { font-weight: 600; min-width: 100px; color: #1a5632; }
+        .embed-section { margin-top: 32px; background: #f5f5f5; border-radius: 8px; padding: 16px; }
+        .embed-section h3 { font-size: 0.95rem; margin-bottom: 8px; }
+        .embed-code { background: #1a1a1a; color: #a5d6a7; padding: 12px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; word-break: break-all; }
+        .copy-btn { background: #2e7d4f; color: #fff; border: none; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-top: 8px; }
+        .footer { text-align: center; padding: 24px 0; color: #999; font-size: 0.85rem; }
+        .footer a { color: #2e7d4f; text-decoration: none; }
+        .disclaimer { background: #fff3e0; border-radius: 8px; padding: 12px 16px; margin-top: 24px; font-size: 0.85rem; color: #e65100; }
+        nav { background: #1a5632; padding: 12px 20px; }
+        nav a { color: #fff; text-decoration: none; font-weight: 600; }
+        .share-btn { background: none; border: 1px solid #2e7d4f; color: #2e7d4f; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-top: 12px; }
+        .share-btn:hover { background: #e8f5e9; }
+    </style>
+</head>
+<body>
+    <nav><a href="https://botanicaandina.com/">← Botánica Andina</a> · <a href="https://botanicaandina.com/herramientas/">Herramientas</a></nav>
+    <div class="container">
+        <h1>🧪 Stack Checker</h1>
+        <p class="subtitle">¿Tus suplementos son compatibles? Verifica interacciones, competencia por absorción y horarios óptimos.</p>
+
+        <div class="input-area">
+            <label>Agrega los suplementos que tomas:</label>
+            <div class="supplement-input">
+                <input type="text" id="searchInput" placeholder="Escribe un suplemento (ej: magnesio, omega-3, vitamina D)..." autocomplete="off">
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+            <div class="tags" id="selectedTags"></div>
+            <button class="check-btn" id="checkBtn" disabled onclick="checkStack()">Verificar Compatibilidad</button>
+        </div>
+
+        <div class="results" id="results">
+            <div class="summary-box" id="summaryBox"></div>
+            <div id="resultCards"></div>
+            <div class="timing-section" id="timingSection"></div>
+            <button class="share-btn" onclick="shareResults()">📋 Copiar resumen para compartir</button>
+            <div class="disclaimer">
+                ⚠️ Esta herramienta es informativa. No reemplaza el consejo de un profesional de salud.
+                Siempre consulte a su médico o farmacéutico antes de combinar suplementos, especialmente si toma medicamentos.
+            </div>
+        </div>
+
+        <div class="embed-section">
+            <h3>📎 Embeber en tu sitio web</h3>
+            <p style="font-size:0.85rem;color:#666;margin-bottom:8px;">Copia y pega este código para agregar el Stack Checker a tu página:</p>
+            <div class="embed-code">&lt;iframe src="https://botanicaandina.com/herramientas/stack-checker/" width="100%" height="700" frameborder="0" title="Stack Checker - Verificador de Suplementos"&gt;&lt;/iframe&gt;</div>
+            <button class="copy-btn" onclick="copyEmbed()">Copiar código</button>
+        </div>
+
+        <div class="footer">
+            <p>Desarrollado por <a href="https://botanicaandina.com/">Botánica Andina</a> · Datos basados en evidencia clínica de PubMed y EMA</p>
+            <p style="margin-top:4px;">También disponible: <a href="/herramientas/interacciones/">Verificador Plantas–Medicamentos</a> · <a href="/herramientas/cafeina/">Reloj de Cafeína</a></p>
+        </div>
+    </div>
+
+<script>
+const SUPPLEMENTS = [
+    { id: "vitd", name: "Vitamina D", aliases: ["vitamina d3", "colecalciferol", "d3"], group: "vitamina", timing: "mañana" },
+    { id: "vitc", name: "Vitamina C", aliases: ["ácido ascórbico", "ascorbato"], group: "vitamina", timing: "mañana" },
+    { id: "vitb12", name: "Vitamina B12", aliases: ["cobalamina", "metilcobalamina", "b12"], group: "vitamina", timing: "mañana" },
+    { id: "vitb6", name: "Vitamina B6", aliases: ["piridoxina", "b6"], group: "vitamina", timing: "mañana" },
+    { id: "vite", name: "Vitamina E", aliases: ["tocoferol", "alfa-tocoferol"], group: "vitamina", timing: "comida" },
+    { id: "vitk2", name: "Vitamina K2", aliases: ["menaquinona", "mk-7", "k2"], group: "vitamina", timing: "comida" },
+    { id: "vita", name: "Vitamina A", aliases: ["retinol", "betacaroteno"], group: "vitamina", timing: "comida" },
+    { id: "folato", name: "Ácido Fólico", aliases: ["folato", "vitamina b9", "metilfolato"], group: "vitamina", timing: "mañana" },
+    { id: "hierro", name: "Hierro", aliases: ["sulfato ferroso", "bisglicinato de hierro", "fumarato ferroso"], group: "mineral", timing: "estómago vacío" },
+    { id: "calcio", name: "Calcio", aliases: ["carbonato de calcio", "citrato de calcio"], group: "mineral", timing: "comida" },
+    { id: "magnesio", name: "Magnesio", aliases: ["citrato de magnesio", "glicinato", "óxido de magnesio", "bisglicinato"], group: "mineral", timing: "noche" },
+    { id: "zinc", name: "Zinc", aliases: ["picolinato de zinc", "gluconato de zinc"], group: "mineral", timing: "comida" },
+    { id: "selenio", name: "Selenio", aliases: ["selenometionina"], group: "mineral", timing: "comida" },
+    { id: "omega3", name: "Omega-3", aliases: ["aceite de pescado", "epa", "dha", "aceite de krill"], group: "ácido graso", timing: "comida" },
+    { id: "coq10", name: "CoQ10", aliases: ["coenzima q10", "ubiquinol", "ubiquinona"], group: "antioxidante", timing: "comida" },
+    { id: "curcuma", name: "Cúrcuma", aliases: ["curcumina", "turmeric"], group: "herbal", timing: "comida" },
+    { id: "jengibre", name: "Jengibre", aliases: ["zingiber", "ginger"], group: "herbal", timing: "comida" },
+    { id: "ajo", name: "Ajo", aliases: ["allicina", "ajo envejecido", "ajo negro", "garlic"], group: "herbal", timing: "comida" },
+    { id: "ginkgo", name: "Ginkgo Biloba", aliases: ["ginkgo"], group: "herbal", timing: "mañana" },
+    { id: "saw_palmetto", name: "Saw Palmetto", aliases: ["serenoa repens", "palma enana"], group: "herbal", timing: "comida" },
+    { id: "ashwagandha", name: "Ashwagandha", aliases: ["withania somnifera", "ginseng indio"], group: "adaptógeno", timing: "noche" },
+    { id: "rhodiola", name: "Rhodiola", aliases: ["rhodiola rosea", "rodiola"], group: "adaptógeno", timing: "mañana" },
+    { id: "maca", name: "Maca", aliases: ["lepidium meyenii", "maca peruana", "maca andina"], group: "adaptógeno", timing: "mañana" },
+    { id: "ginseng", name: "Ginseng", aliases: ["panax ginseng", "ginseng coreano"], group: "adaptógeno", timing: "mañana" },
+    { id: "probiotico", name: "Probióticos", aliases: ["lactobacillus", "bifidobacterium", "probiótico"], group: "digestivo", timing: "estómago vacío" },
+    { id: "fibra", name: "Fibra", aliases: ["psyllium", "inulina", "fibra soluble"], group: "digestivo", timing: "antes comida" },
+    { id: "colageno", name: "Colágeno", aliases: ["péptidos de colágeno", "colágeno hidrolizado"], group: "proteína", timing: "estómago vacío" },
+    { id: "creatina", name: "Creatina", aliases: ["creatina monohidrato"], group: "rendimiento", timing: "cualquier hora" },
+    { id: "glucosamina", name: "Glucosamina", aliases: ["sulfato de glucosamina", "glucosamina hcl"], group: "articular", timing: "comida" },
+    { id: "condroitina", name: "Condroitina", aliases: ["sulfato de condroitina"], group: "articular", timing: "comida" },
+    { id: "msm", name: "MSM", aliases: ["metilsulfonilmetano", "azufre orgánico"], group: "articular", timing: "comida" },
+    { id: "melatonina", name: "Melatonina", aliases: [], group: "sueño", timing: "30min antes dormir" },
+    { id: "valeriana", name: "Valeriana", aliases: ["valeriana officinalis"], group: "sueño", timing: "noche" },
+    { id: "luteina", name: "Luteína", aliases: ["zeaxantina", "luteína + zeaxantina"], group: "ocular", timing: "comida" },
+    { id: "biotina", name: "Biotina", aliases: ["vitamina b7", "vitamina h"], group: "vitamina", timing: "mañana" },
+    { id: "nac", name: "NAC", aliases: ["n-acetilcisteína", "n-acetil cisteína"], group: "antioxidante", timing: "estómago vacío" },
+    { id: "resveratrol", name: "Resveratrol", aliases: ["trans-resveratrol"], group: "antioxidante", timing: "comida" },
+    { id: "berberina", name: "Berberina", aliases: ["berberine"], group: "herbal", timing: "antes comida" },
+    { id: "spirulina", name: "Espirulina", aliases: ["spirulina", "alga espirulina"], group: "superalimento", timing: "mañana" },
+    { id: "graviola", name: "Graviola", aliases: ["annona muricata", "guanábana"], group: "herbal", timing: "comida" },
+    { id: "noni", name: "Noni", aliases: ["morinda citrifolia"], group: "herbal", timing: "estómago vacío" },
+    { id: "unadegato", name: "Uña de Gato", aliases: ["uncaria tomentosa", "cat's claw"], group: "herbal", timing: "comida" },
+    { id: "espino", name: "Espino Blanco", aliases: ["crataegus", "hawthorn"], group: "herbal", timing: "comida" },
+    { id: "cardo_mariano", name: "Cardo Mariano", aliases: ["silimarina", "silybum marianum", "milk thistle"], group: "herbal", timing: "antes comida" }
+];
+
+const INTERACTIONS = [
+    // Absorption competition
+    { a: "calcio", b: "hierro", type: "competencia", severity: "alta",
+      effect: "El calcio inhibe la absorción de hierro hasta un 60%. Nunca tomarlos juntos.",
+      action: "Separar por al menos 2 horas. Hierro en ayunas, calcio con comidas.",
+      source: "Hallberg et al. Am J Clin Nutr 1991;53(1):112-9" },
+    { a: "calcio", b: "zinc", type: "competencia", severity: "media",
+      effect: "El calcio puede reducir la absorción de zinc cuando se toman simultáneamente.",
+      action: "Separar por 1-2 horas si es posible.",
+      source: "Wood & Zheng. Am J Clin Nutr 1997;65(6):1803-9" },
+    { a: "calcio", b: "magnesio", type: "competencia", severity: "media",
+      effect: "Compiten por los mismos transportadores de absorción intestinal.",
+      action: "Tomar calcio por la mañana y magnesio por la noche, o con comidas separadas.",
+      source: "Spencer et al. J Am Coll Nutr 1994;13(5):485-92" },
+    { a: "hierro", b: "zinc", type: "competencia", severity: "media",
+      effect: "El hierro y el zinc compiten por los transportadores DMT1 en el intestino.",
+      action: "Separar por 2 horas. Priorizar el que tenga mayor deficiencia.",
+      source: "Olivares et al. J Nutr 2012;142(9):1738-44" },
+    { a: "hierro", b: "vitc", type: "sinergia", severity: "baja",
+      effect: "La vitamina C aumenta la absorción de hierro no-hemo hasta un 67%.",
+      action: "Tomar juntos: vitamina C con hierro maximiza absorción.",
+      source: "Hallberg et al. Hum Nutr Appl Nutr 1987;41(2):97-107" },
+    { a: "hierro", b: "vitb12", type: "competencia", severity: "baja",
+      effect: "Dosis altas de hierro pueden interferir con la absorción de B12.",
+      action: "Si toma ambos, separar por 1-2 horas.",
+      source: "Swain et al. Am J Clin Nutr 2003" },
+    { a: "vitd", b: "calcio", type: "sinergia", severity: "baja",
+      effect: "La vitamina D aumenta la absorción intestinal de calcio hasta un 40%.",
+      action: "Tomar juntos para máxima absorción de calcio.",
+      source: "Heaney et al. J Am Coll Nutr 2003;22(2):142-6" },
+    { a: "vitd", b: "vitk2", type: "sinergia", severity: "baja",
+      effect: "La vitamina K2 dirige el calcio absorbido (gracias a vitamina D) hacia los huesos en lugar de las arterias.",
+      action: "Combinar siempre D3 con K2 para evitar calcificación arterial.",
+      source: "van Ballegooijen et al. Int J Endocrinol 2017;2017:7454376" },
+    { a: "vitd", b: "magnesio", type: "sinergia", severity: "baja",
+      effect: "El magnesio es cofactor de las enzimas que activan la vitamina D. Sin magnesio adecuado, la vitamina D no se activa.",
+      action: "Suplementar magnesio junto con vitamina D para máxima eficacia.",
+      source: "Uwitonze & Razzaque. J Am Osteopath Assoc 2018;118(3):181-9" },
+    // Anticoagulant stacking
+    { a: "omega3", b: "ginkgo", type: "potenciación", severity: "alta",
+      effect: "Ambos tienen efecto antiagregante plaquetario. Combinados aumentan significativamente el riesgo de sangrado.",
+      action: "Evitar combinar. Si toma ambos, consultar médico y monitorear signos de sangrado.",
+      source: "Bone & Mills. Principles and Practice of Phytotherapy 2013" },
+    { a: "omega3", b: "ajo", type: "potenciación", severity: "media",
+      effect: "El ajo potencia el efecto anticoagulante del omega-3. Puede prolongar el tiempo de sangrado.",
+      action: "Precaución. Suspender ambos 2 semanas antes de cirugía.",
+      source: "Borrelli et al. Mol Nutr Food Res 2007;51(11):1386-97" },
+    { a: "curcuma", b: "omega3", type: "sinergia", severity: "baja",
+      effect: "La curcumina y el omega-3 tienen efectos antiinflamatorios complementarios por vías diferentes (NF-κB y eicosanoides).",
+      action: "Buena combinación para articulaciones. La grasa del omega-3 mejora absorción de curcumina.",
+      source: "Zhu et al. Mol Nutr Food Res 2020" },
+    { a: "curcuma", b: "hierro", type: "competencia", severity: "media",
+      effect: "La curcumina puede quelar (atrapar) el hierro, reduciendo su absorción y biodisponibilidad.",
+      action: "Separar por 2+ horas. No tomar curcumina con suplemento de hierro.",
+      source: "Jiao et al. Free Radic Biol Med 2009;46(4):454-62" },
+    { a: "ginkgo", b: "ajo", type: "potenciación", severity: "alta",
+      effect: "Ambos anticoagulantes naturales. Combinación puede causar sangrado espontáneo.",
+      action: "No combinar sin supervisión médica. Suspender antes de cirugía.",
+      source: "Izzo et al. Drug Saf 2005;28(9):731-49" },
+    // Synergies
+    { a: "glucosamina", b: "condroitina", type: "sinergia", severity: "baja",
+      effect: "Actúan por mecanismos complementarios: glucosamina aporta material de construcción, condroitina inhibe enzimas destructivas.",
+      action: "Tomar juntos. La combinación mostró mejor resultado que cada uno solo en el estudio GAIT.",
+      source: "Clegg et al. N Engl J Med 2006;354(8):795-808" },
+    { a: "glucosamina", b: "curcuma", type: "sinergia", severity: "baja",
+      effect: "Soporte estructural (glucosamina) + antiinflamatorio (curcumina): aborda articulaciones por dos vías.",
+      action: "Buena combinación para dolor articular. Tomar ambos con comida grasienta.",
+      source: "Rosenbaum et al. Curr Med Res Opin 2010" },
+    { a: "glucosamina", b: "msm", type: "sinergia", severity: "baja",
+      effect: "MSM aporta azufre biodisponible necesario para la síntesis de glucosaminoglicanos.",
+      action: "Excelente combinación. MSM puede amplificar el efecto de la glucosamina.",
+      source: "Usha & Naidu. Clin Drug Investig 2004;24(6):353-63" },
+    { a: "coq10", b: "omega3", type: "sinergia", severity: "baja",
+      effect: "CoQ10 protege al omega-3 de la oxidación. Ambos apoyan la función cardiovascular por vías diferentes.",
+      action: "Excelente combinación cardiovascular. Tomar ambos con comida.",
+      source: "Zehr & Walker. Vasc Health Risk Manag 2012;8:735-41" },
+    { a: "coq10", b: "vite", type: "sinergia", severity: "baja",
+      effect: "La vitamina E regenera la forma activa de CoQ10 (ubiquinol). Protección antioxidante sinérgica.",
+      action: "Tomar juntos con comida grasienta para máxima absorción.",
+      source: "Crane. J Am Coll Nutr 2001;20(6):591-8" },
+    // Sleep stack conflicts
+    { a: "melatonina", b: "ashwagandha", type: "potenciación", severity: "media",
+      effect: "Ambos promueven el sueño. Combinarlos puede causar somnolencia excesiva.",
+      action: "Empezar con dosis bajas si combina. No conducir después de tomar ambos.",
+      source: "Raut et al. J Ayurveda Integr Med 2012;3(3):111-4" },
+    { a: "melatonina", b: "valeriana", type: "potenciación", severity: "media",
+      effect: "Doble efecto sedante. Puede causar somnolencia excesiva o sensación de resaca matutina.",
+      action: "Elegir uno u otro, no ambos. Si combina, reducir dosis a la mitad.",
+      source: "Herxheimer & Petrie. Cochrane Database Syst Rev 2002" },
+    // Stimulant conflicts with sleep
+    { a: "rhodiola", b: "melatonina", type: "antagonismo", severity: "media",
+      effect: "La rhodiola es estimulante. Puede contrarrestar el efecto de la melatonina si se toman juntas.",
+      action: "Rhodiola por la mañana, melatonina por la noche. No tomar juntos.",
+      source: "Panossian & Wagner. Phytomedicine 2005;12(5):357-65" },
+    { a: "ginseng", b: "melatonina", type: "antagonismo", severity: "media",
+      effect: "El ginseng es estimulante y puede interferir con el sueño si se toma tarde. Contraresta la melatonina.",
+      action: "Ginseng solo por la mañana. No combinar con melatonina en el mismo horario.",
+      source: "Kitts & Hu. Can J Physiol Pharmacol 2000;78(5):409-15" },
+    // Adaptogen stacking
+    { a: "ashwagandha", b: "rhodiola", type: "potenciación", severity: "baja",
+      effect: "Ambos adaptógenos pero con perfiles diferentes: ashwagandha calma, rhodiola estimula. Se balancean.",
+      action: "Combinación popular. Rhodiola por la mañana para energía, ashwagandha por la noche para descanso.",
+      source: "Panossian & Wikman. Pharmaceuticals 2010;3(1):188-224" },
+    { a: "maca", b: "ginseng", type: "potenciación", severity: "baja",
+      effect: "Ambos estimulantes y adaptógenos. Combinarlos puede ser excesivo para personas sensibles.",
+      action: "Precaución si es sensible a estimulantes. Empezar con dosis bajas de cada uno.",
+      source: "Gonzales. Evid Based Complement Alternat Med 2012;2012:193496" },
+    // Fiber interactions
+    { a: "fibra", b: "hierro", type: "competencia", severity: "media",
+      effect: "La fibra (especialmente fitatos) reduce la absorción de hierro significativamente.",
+      action: "Separar por 2+ horas. Hierro en ayunas, fibra con comidas.",
+      source: "Hallberg et al. Am J Clin Nutr 1989;49(1):140-4" },
+    { a: "fibra", b: "probiotico", type: "sinergia", severity: "baja",
+      effect: "La fibra soluble (prebiótico) alimenta las bacterias probióticas, potenciando su efecto.",
+      action: "Excelente combinación. La fibra como 'alimento' para los probióticos.",
+      source: "Holscher. Gut Microbes 2017;8(2):172-184" },
+    // NAC
+    { a: "nac", b: "vitc", type: "sinergia", severity: "baja",
+      effect: "NAC regenera glutatión, vitamina C regenera NAC. Ciclo antioxidante completo.",
+      action: "Buena combinación antioxidante. NAC en ayunas, vitamina C con comida.",
+      source: "Rushworth & Megson. Pharmacol Ther 2014;141(2):150-9" },
+    // Berberina
+    { a: "berberina", b: "probiotico", type: "antagonismo", severity: "media",
+      effect: "La berberina tiene efecto antibacteriano que puede afectar a las bacterias probióticas.",
+      action: "Separar por 2+ horas. Probióticos en ayunas, berberina antes de comidas.",
+      source: "Zhang et al. Front Cell Infect Microbiol 2021" },
+    { a: "berberina", b: "coq10", type: "competencia", severity: "media",
+      effect: "La berberina puede inhibir la producción mitocondrial de CoQ10 (similar a estatinas).",
+      action: "Si toma berberina a largo plazo, considere suplementar CoQ10.",
+      source: "Li et al. Eur J Pharmacol 2015" },
+    // Urinary health
+    { a: "graviola", b: "noni", type: "sinergia", severity: "baja",
+      effect: "Ambos tienen propiedades antimicrobianas complementarias para el tracto urinario.",
+      action: "Combinación usada tradicionalmente en Perú para salud urinaria.",
+      source: "Coria-Téllez et al. J Ethnopharmacol 2018" },
+    // Prostate
+    { a: "saw_palmetto", b: "zinc", type: "sinergia", severity: "baja",
+      effect: "Saw palmetto inhibe 5-alfa-reductasa, zinc se concentra en próstata. Mecanismos complementarios.",
+      action: "Buena combinación para salud prostática. Tomar ambos con comida.",
+      source: "Dedhia & McVary. Curr Urol Rep 2008;9(1):9-16" },
+    { a: "saw_palmetto", b: "maca", type: "sinergia", severity: "baja",
+      effect: "Saw palmetto para próstata + maca para vitalidad. Abordan salud masculina por vías complementarias.",
+      action: "Combinación popular en fórmulas para hombres.",
+      source: "Gonzales et al. Asian J Androl 2001" }
+];
+
+let selected = [];
+
+const searchInput = document.getElementById('searchInput');
+const suggestionsEl = document.getElementById('suggestions');
+const tagsEl = document.getElementById('selectedTags');
+const checkBtn = document.getElementById('checkBtn');
+
+searchInput.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    if (q.length < 2) { suggestionsEl.style.display = 'none'; return; }
+    const matches = SUPPLEMENTS.filter(s =>
+        !selected.includes(s.id) &&
+        (s.name.toLowerCase().includes(q) || s.aliases.some(a => a.toLowerCase().includes(q)))
+    ).slice(0, 8);
+    if (matches.length === 0) { suggestionsEl.style.display = 'none'; return; }
+    suggestionsEl.innerHTML = matches.map(s =>
+        `<div onclick="addSupplement('${s.id}')">${s.name} <small style="color:#999">(${s.group})</small></div>`
+    ).join('');
+    suggestionsEl.style.display = 'block';
+});
+
+searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        const q = this.value.toLowerCase().trim();
+        const match = SUPPLEMENTS.find(s =>
+            !selected.includes(s.id) &&
+            (s.name.toLowerCase() === q || s.aliases.some(a => a.toLowerCase() === q))
+        );
+        if (match) addSupplement(match.id);
+    }
+});
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.supplement-input')) suggestionsEl.style.display = 'none';
+});
+
+function addSupplement(id) {
+    if (selected.includes(id)) return;
+    selected.push(id);
+    searchInput.value = '';
+    suggestionsEl.style.display = 'none';
+    renderTags();
+    checkBtn.disabled = selected.length < 2;
+}
+
+function removeSupplement(id) {
+    selected = selected.filter(s => s !== id);
+    renderTags();
+    checkBtn.disabled = selected.length < 2;
+    document.getElementById('results').style.display = 'none';
+}
+
+function renderTags() {
+    tagsEl.innerHTML = selected.map(id => {
+        const s = SUPPLEMENTS.find(x => x.id === id);
+        return `<span class="tag">${s.name} <span class="remove" onclick="removeSupplement('${id}')">✕</span></span>`;
+    }).join('');
+}
+
+function checkStack() {
+    const found = [];
+    for (let i = 0; i < selected.length; i++) {
+        for (let j = i + 1; j < selected.length; j++) {
+            const a = selected[i], b = selected[j];
+            INTERACTIONS.forEach(inter => {
+                if ((inter.a === a && inter.b === b) || (inter.a === b && inter.b === a)) {
+                    found.push({ ...inter, nameA: SUPPLEMENTS.find(s=>s.id===a).name, nameB: SUPPLEMENTS.find(s=>s.id===b).name });
+                }
+            });
+        }
+    }
+
+    const dangers = found.filter(f => f.severity === 'alta').length;
+    const warnings = found.filter(f => f.severity === 'media').length;
+    const synergies = found.filter(f => f.type === 'sinergia').length;
+    const total = found.length;
+
+    // Summary
+    const summaryBox = document.getElementById('summaryBox');
+    let statusEmoji = dangers > 0 ? '🔴' : warnings > 0 ? '🟡' : '🟢';
+    let statusText = dangers > 0 ? 'Se encontraron interacciones importantes' : warnings > 0 ? 'Algunas precauciones a considerar' : 'Tu stack se ve bien';
+    summaryBox.innerHTML = `
+        <h2>${statusEmoji} ${statusText}</h2>
+        <p style="color:#666;margin-top:4px;">${selected.length} suplementos analizados, ${total} interacciones encontradas</p>
+        <div class="summary-stats">
+            <div class="stat danger-bg"><div class="stat-number">${dangers}</div><div class="stat-label">Riesgo alto</div></div>
+            <div class="stat warning-bg"><div class="stat-number">${warnings}</div><div class="stat-label">Precaución</div></div>
+            <div class="stat ok-bg"><div class="stat-number">${synergies}</div><div class="stat-label">Sinergias</div></div>
+        </div>
+    `;
+
+    // Cards
+    const cardsEl = document.getElementById('resultCards');
+    const sorted = found.sort((a, b) => {
+        const order = { alta: 0, media: 1, baja: 2 };
+        return (order[a.severity] || 3) - (order[b.severity] || 3);
+    });
+    cardsEl.innerHTML = sorted.map(f => {
+        const cardClass = f.type === 'sinergia' ? 'ok' : f.severity === 'alta' ? 'danger' : f.severity === 'media' ? 'warning' : 'info';
+        const badgeClass = f.type === 'sinergia' ? 'sinergia' : f.severity;
+        const badgeText = f.type === 'sinergia' ? '✓ Sinergia' : f.severity === 'alta' ? '⚠ Riesgo alto' : f.severity === 'media' ? '⚡ Precaución' : 'ℹ Info';
+        return `
+            <div class="result-card ${cardClass}">
+                <div class="result-header">
+                    <span class="severity-badge ${badgeClass}">${badgeText}</span>
+                    <span class="result-title">${f.nameA} + ${f.nameB}</span>
+                </div>
+                <p class="result-detail"><strong>Efecto:</strong> ${f.effect}</p>
+                <p class="result-detail"><strong>Acción:</strong> ${f.action}</p>
+                <p class="result-source">📚 ${f.source}</p>
+            </div>
+        `;
+    }).join('');
+
+    if (found.length === 0) {
+        cardsEl.innerHTML = `
+            <div class="result-card ok">
+                <div class="result-header">
+                    <span class="severity-badge sinergia">✓ Sin interacciones conocidas</span>
+                </div>
+                <p class="result-detail">No encontramos interacciones documentadas entre tus suplementos. Esto no garantiza ausencia total de interacciones — siempre consulta con tu profesional de salud.</p>
+            </div>
+        `;
+    }
+
+    // Timing
+    const timingSection = document.getElementById('timingSection');
+    const timingGroups = {};
+    selected.forEach(id => {
+        const s = SUPPLEMENTS.find(x => x.id === id);
+        if (!timingGroups[s.timing]) timingGroups[s.timing] = [];
+        timingGroups[s.timing].push(s.name);
+    });
+    const timingOrder = ['estómago vacío', 'antes comida', 'mañana', 'comida', 'noche', '30min antes dormir', 'cualquier hora'];
+    const timingEmoji = { 'estómago vacío': '🌅', 'antes comida': '🍽️', 'mañana': '☀️', 'comida': '🥗', 'noche': '🌙', '30min antes dormir': '😴', 'cualquier hora': '⏰' };
+
+    timingSection.innerHTML = `
+        <h3>⏰ Horario sugerido de toma</h3>
+        ${timingOrder.filter(t => timingGroups[t]).map(t => `
+            <div class="timing-row">
+                <span class="timing-time">${timingEmoji[t] || '•'} ${t.charAt(0).toUpperCase() + t.slice(1)}</span>
+                <span>${timingGroups[t].join(', ')}</span>
+            </div>
+        `).join('')}
+    `;
+
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+}
+
+function shareResults() {
+    const summaryText = document.getElementById('summaryBox').innerText;
+    const cards = document.querySelectorAll('.result-card');
+    let text = `🧪 Mi Stack de Suplementos (${selected.length} suplementos)\n\n`;
+    text += selected.map(id => '• ' + SUPPLEMENTS.find(s=>s.id===id).name).join('\n');
+    text += '\n\n' + summaryText.split('\n')[0];
+    text += '\n\nVerifica tu stack: https://botanicaandina.com/herramientas/stack-checker/';
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.share-btn');
+        btn.textContent = '✅ Copiado al portapapeles';
+        setTimeout(() => btn.textContent = '📋 Copiar resumen para compartir', 2000);
+    });
+}
+
+function copyEmbed() {
+    const code = '<iframe src="https://botanicaandina.com/herramientas/stack-checker/" width="100%" height="700" frameborder="0" title="Stack Checker"></iframe>';
+    navigator.clipboard.writeText(code).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = '✅ Copiado';
+        setTimeout(() => btn.textContent = 'Copiar código', 2000);
+    });
+}
+</script>
+</body>
+</html>
