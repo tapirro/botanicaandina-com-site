@@ -231,7 +231,18 @@
         .newsletter-msg { font-family: Arial, sans-serif; font-size: 0.85rem; margin-top: 0.8rem; min-height: 1.2em; }
         .newsletter-privacy { font-family: Arial, sans-serif; font-size: 0.75rem; opacity: 0.6; margin-top: 0.8rem; }
         @media (max-width: 500px) { .newsletter-form { flex-direction: column; } .newsletter-form button { width: 100%; } }
-    </style>
+    
+    .product-callout { margin: 2rem 0; padding: 1.2rem 1.5rem; background: linear-gradient(135deg, #f1f8f3, #e8f5e9);
+        border-radius: 10px; border: 1px solid #c8e6c9; }
+    .product-callout h4 { font-family: Georgia, serif; color: #1a5632; margin: 0 0 0.6rem; font-size: 0.95rem; }
+    .product-callout-list { list-style: none; padding: 0; margin: 0; }
+    .product-callout-list li { padding: 0.5rem 0; border-bottom: 1px solid #e0ece2; display: flex; align-items: center; gap: 0.8rem; }
+    .product-callout-list li:last-child { border-bottom: none; }
+    .product-callout-list a { color: #1a5632; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+    .product-callout-list a:hover { text-decoration: underline; }
+    .product-callout-desc { font-family: Arial, sans-serif; font-size: 0.82rem; color: #666; }
+    .product-callout-note { margin: 0.5rem 0 0; font-family: Arial, sans-serif; font-size: 0.75rem; color: #999; }
+</style>
     <meta property="og:image" content="https://botanicaandina.com/assets/img/og/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto.jpg">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -438,6 +449,17 @@
             <div class="newsletter-privacy">Respetamos tu privacidad. Puedes cancelar en cualquier momento.</div>
         </div>
     </section>
+    
+            <div class="product-callout">
+                <h4>&#x1F33F; Productos relacionados</h4>
+                <ul class="product-callout-list">
+                    <li>
+                        <a href="https://cardiox.pe" target="_blank" rel="noopener">CardioX</a>
+                        <span class="product-callout-desc">Suplemento cardiovascular para el bienestar bajo estres</span>
+                    </li>
+                </ul>
+                <p class="product-callout-note">Suplementos que contienen ingredientes mencionados en este articulo.</p>
+            </div>
     <footer class="site-footer">
     <div class="footer-inner">
         <div class="footer-grid">
