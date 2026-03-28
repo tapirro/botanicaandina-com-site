@@ -713,7 +713,7 @@
         // Show preview
         const preview = document.getElementById('cardPreview');
         const dataUrl = document.getElementById('resultCard').toDataURL('image/png');
-        preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1)" alt="Tu resultado: ${plant.name}">`;
+        preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1)" alt="Tu resultado: ${plant.name}" loading="lazy">`;
     }
 
     function downloadCard() {
