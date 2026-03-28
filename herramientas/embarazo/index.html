@@ -492,6 +492,23 @@ body.embed-mode .methodology { display: none; }
   word-break: break-all;
 }
 
+/* ── SHARE BUTTONS ── */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.share-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px var(--shadow); }
+.share-wa { background: #25D366; color: #fff; }
+.share-copy { background: var(--cream-dark); color: var(--text); border: 1px solid var(--border); }
+
 @media (max-width: 600px) {
   .safety-badges { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: 1fr; }
@@ -582,6 +599,18 @@ body.embed-mode .methodology { display: none; }
     <div class="result-notes" id="r-notes"></div>
 
     <div class="result-sources" id="r-sources"></div>
+
+    <div class="share-section" id="share-section" style="display:none;">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;">
+        <button onclick="shareWhatsApp()" class="share-btn share-wa" title="Compartir por WhatsApp">
+          &#128172; WhatsApp
+        </button>
+        <button onclick="copyShareLink()" class="share-btn share-copy" title="Copiar enlace">
+          &#128279; Copiar enlace
+        </button>
+      </div>
+      <div id="share-copied" style="display:none;color:var(--green);font-size:13px;margin-top:4px;">&#10003; Enlace copiado</div>
+    </div>
 
     <div class="disclaimer-box">
       <strong>Aviso importante:</strong> Esta herramienta es educativa y no reemplaza la consulta médica. Siempre consulte con su profesional de salud antes de usar cualquier hierba durante el embarazo o la lactancia.
@@ -835,6 +864,31 @@ function showResult(herbId) {
   chips.forEach(c => { if (c.textContent.includes(h.name)) c.classList.add('selected'); });
 
   card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  // Show share section
+  document.getElementById('share-section').style.display = 'block';
+  document.getElementById('share-section').dataset.herb = h.name;
+  document.getElementById('share-section').dataset.herbId = h.id;
+  document.getElementById('share-section').dataset.pregnancy = getSafetyLabel(h.pregnancy);
+  document.getElementById('share-section').dataset.breastfeeding = getSafetyLabel(h.breastfeeding);
+}
+
+function getShareText() {
+  const s = document.getElementById('share-section').dataset;
+  const icon = p => p === 'Seguro' ? '\u2705' : p === 'Precaución' ? '\u26A0\uFE0F' : '\u274C';
+  return `\u{1F33F} ${s.herb}\nEmbarazo: ${icon(s.pregnancy)} ${s.pregnancy}\nLactancia: ${icon(s.breastfeeding)} ${s.breastfeeding}\n\nVerifica más hierbas gratis:\nhttps://botanicaandina.com/herramientas/embarazo/?h=${s.herbId}`;
+}
+
+function shareWhatsApp() {
+  window.open('https://wa.me/?text=' + encodeURIComponent(getShareText()), '_blank');
+}
+
+function copyShareLink() {
+  navigator.clipboard.writeText(getShareText()).then(() => {
+    const el = document.getElementById('share-copied');
+    el.style.display = 'block';
+    setTimeout(() => el.style.display = 'none', 2000);
+  });
 }
 
 function toggleFaq(el) {
@@ -844,6 +898,12 @@ function toggleFaq(el) {
 // Init
 document.getElementById('search').addEventListener('input', e => renderGrid(e.target.value));
 renderGrid();
+
+// Deep link: ?h=curcuma opens that herb automatically
+const deepHerb = new URLSearchParams(window.location.search).get('h');
+if (deepHerb && HERBS.find(x => x.id === deepHerb)) {
+  setTimeout(() => showResult(deepHerb), 300);
+}
 
 // Embed mode
 if (new URLSearchParams(window.location.search).get('embed') === '1') {
