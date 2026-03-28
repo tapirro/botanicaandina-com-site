@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embeber Stack Checker en tu sitio — Botánica Andina</title>
+    <meta name="description" content="Agrega el verificador de compatibilidad de suplementos a tu blog o sitio web en 30 segundos. Gratis, sin registro, con 78 suplementos y 102 interacciones.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/stack-checker/embed/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Embeber Stack Checker — Herramienta gratuita de compatibilidad de suplementos">
+    <meta property="og:description" content="Agrega el verificador de compatibilidad de suplementos a tu sitio web. 78 suplementos, 102 interacciones, basado en PubMed.">
+    <meta property="og:url" content="https://botanicaandina.com/herramientas/stack-checker/embed/">
+    <meta property="og:locale" content="es_LA">
+    <link rel="icon" href="/favicon.ico">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #f8f9fa; line-height: 1.6; }
+        nav { background: #1a5632; padding: 12px 20px; }
+        nav a { color: #fff; text-decoration: none; font-weight: 600; }
+        .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+        h1 { font-size: 1.8rem; color: #1a5632; margin-bottom: 8px; }
+        .subtitle { color: #555; font-size: 1.05rem; margin-bottom: 32px; }
+        .demo-section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .demo-section h2 { font-size: 1.2rem; color: #1a5632; margin-bottom: 16px; }
+        .demo-iframe { width: 100%; height: 550px; border: 1px solid #e0e0e0; border-radius: 8px; }
+        .code-section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .code-section h2 { font-size: 1.2rem; color: #1a5632; margin-bottom: 12px; }
+        .code-block { background: #1e1e1e; color: #d4d4d4; padding: 16px; border-radius: 8px; font-family: 'SF Mono', Consolas, monospace; font-size: 0.85rem; overflow-x: auto; white-space: pre; line-height: 1.5; margin-bottom: 12px; }
+        .code-block .tag { color: #569cd6; }
+        .code-block .attr { color: #9cdcfe; }
+        .code-block .val { color: #ce9178; }
+        .copy-btn { background: #2e7d4f; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+        .copy-btn:hover { background: #1a5632; }
+        .copied { background: #4caf50 !important; }
+        .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+        .feature { background: #f0f7f4; padding: 16px; border-radius: 8px; }
+        .feature h3 { font-size: 0.95rem; color: #1a5632; margin-bottom: 4px; }
+        .feature p { font-size: 0.85rem; color: #555; }
+        .options { margin-top: 24px; }
+        .option { margin-bottom: 16px; }
+        .option h3 { font-size: 1rem; margin-bottom: 6px; }
+        .option p { font-size: 0.85rem; color: #555; margin-bottom: 6px; }
+        .stats { display: flex; gap: 24px; margin: 20px 0; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-num { font-size: 1.8rem; font-weight: 800; color: #1a5632; }
+        .stat-label { font-size: 0.8rem; color: #888; }
+        .footer { text-align: center; padding: 32px 20px; color: #888; font-size: 0.85rem; }
+        .footer a { color: #2e7d4f; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <nav><a href="https://botanicaandina.com/">← Botánica Andina</a> · <a href="https://botanicaandina.com/herramientas/">Herramientas</a></nav>
+    <div class="container">
+        <h1>Agrega el Stack Checker a tu sitio web</h1>
+        <p class="subtitle">Verificador gratuito de compatibilidad de suplementos — copia y pega en 30 segundos.</p>
+
+        <div class="stats">
+            <div class="stat"><div class="stat-num">78</div><div class="stat-label">suplementos</div></div>
+            <div class="stat"><div class="stat-num">102</div><div class="stat-label">interacciones</div></div>
+            <div class="stat"><div class="stat-num">0</div><div class="stat-label">costo</div></div>
+            <div class="stat"><div class="stat-num">0</div><div class="stat-label">registro</div></div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Vista previa en vivo</h2>
+            <iframe class="demo-iframe" src="https://botanicaandina.com/herramientas/stack-checker/?embed=true" title="Stack Checker Demo"></iframe>
+        </div>
+
+        <div class="code-section">
+            <h2>1. Código básico — copia y pega</h2>
+            <div class="code-block" id="basicCode">&lt;iframe
+  src="https://botanicaandina.com/herramientas/stack-checker/?embed=true"
+  width="100%" height="600"
+  frameborder="0"
+  style="border:1px solid #e0e0e0;border-radius:8px;"
+  title="Stack Checker - Verificador de Suplementos"&gt;
+&lt;/iframe&gt;</div>
+            <button class="copy-btn" onclick="copyCode('basicCode', this)">📋 Copiar código</button>
+        </div>
+
+        <div class="code-section">
+            <h2>2. Con stack pre-cargado</h2>
+            <p style="font-size:0.85rem;color:#555;margin-bottom:12px;">Muestra el resultado de un stack específico automáticamente (ideal para artículos de suplementos):</p>
+
+            <div class="options">
+                <div class="option">
+                    <h3>💤 Stack de Sueño</h3>
+                    <div class="code-block" id="sleepCode">&lt;iframe src="https://botanicaandina.com/herramientas/stack-checker/?embed=true&amp;stack=magnesio,melatonina,ltheanine,valeriana" width="100%" height="600" frameborder="0" style="border:1px solid #e0e0e0;border-radius:8px;"&gt;&lt;/iframe&gt;</div>
+                    <button class="copy-btn" onclick="copyCode('sleepCode', this)">📋 Copiar</button>
+                </div>
+
+                <div class="option">
+                    <h3>🦴 Stack Articular</h3>
+                    <div class="code-block" id="jointCode">&lt;iframe src="https://botanicaandina.com/herramientas/stack-checker/?embed=true&amp;stack=glucosamina,condroitina,msm,curcuma,omega3" width="100%" height="600" frameborder="0" style="border:1px solid #e0e0e0;border-radius:8px;"&gt;&lt;/iframe&gt;</div>
+                    <button class="copy-btn" onclick="copyCode('jointCode', this)">📋 Copiar</button>
+                </div>
+
+                <div class="option">
+                    <h3>🧠 Stack Cognitivo</h3>
+                    <div class="code-block" id="brainCode">&lt;iframe src="https://botanicaandina.com/herramientas/stack-checker/?embed=true&amp;stack=omega3,lions_mane,bacopa,alpha_gpc" width="100%" height="600" frameborder="0" style="border:1px solid #e0e0e0;border-radius:8px;"&gt;&lt;/iframe&gt;</div>
+                    <button class="copy-btn" onclick="copyCode('brainCode', this)">📋 Copiar</button>
+                </div>
+
+                <div class="option">
+                    <h3>🏔️ Stack Andino</h3>
+                    <div class="code-block" id="andeanCode">&lt;iframe src="https://botanicaandina.com/herramientas/stack-checker/?embed=true&amp;stack=maca,unadegato,graviola,camu_camu" width="100%" height="600" frameborder="0" style="border:1px solid #e0e0e0;border-radius:8px;"&gt;&lt;/iframe&gt;</div>
+                    <button class="copy-btn" onclick="copyCode('andeanCode', this)">📋 Copiar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="code-section">
+            <h2>3. Altura dinámica (opcional)</h2>
+            <p style="font-size:0.85rem;color:#555;margin-bottom:12px;">Para que el iframe se ajuste automáticamente al contenido:</p>
+            <div class="code-block" id="dynamicCode">&lt;iframe id="stackChecker"
+  src="https://botanicaandina.com/herramientas/stack-checker/?embed=true"
+  width="100%" frameborder="0"
+  style="border:1px solid #e0e0e0;border-radius:8px;"&gt;
+&lt;/iframe&gt;
+&lt;script&gt;
+window.addEventListener('message', function(e) {
+  if (e.data &amp;&amp; e.data.type === 'ba-stack-checker-height') {
+    document.getElementById('stackChecker').style.height = e.data.height + 'px';
+  }
+});
+&lt;/script&gt;</div>
+            <button class="copy-btn" onclick="copyCode('dynamicCode', this)">📋 Copiar</button>
+        </div>
+
+        <div class="code-section">
+            <h2>Características</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>📊 78 suplementos</h3>
+                    <p>Vitaminas, minerales, hierbas, aminoácidos, nootrópicos y más.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚠️ 102 interacciones</h3>
+                    <p>Competencias, sinergias, potenciaciones y antagonismos documentados.</p>
+                </div>
+                <div class="feature">
+                    <h3>📚 Basado en PubMed</h3>
+                    <p>Cada interacción cita estudios clínicos publicados.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Privacidad total</h3>
+                    <p>Todo se ejecuta en el navegador. Sin servidores, sin cookies, sin tracking.</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 Responsive</h3>
+                    <p>Funciona perfectamente en móvil, tablet y desktop.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Ultra-rápido</h3>
+                    <p>Carga instantánea. Sin dependencias externas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Stack Checker es un proyecto de <a href="https://botanicaandina.com/">Botánica Andina</a></p>
+        <p style="margin-top:4px;"><a href="https://botanicaandina.com/herramientas/stack-checker/">Usar herramienta completa</a> · <a href="https://botanicaandina.com/herramientas/">Todas las herramientas</a></p>
+    </div>
+
+    <script>
+    function copyCode(id, btn) {
+        const el = document.getElementById(id);
+        const text = el.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+            btn.textContent = '✓ Copiado!';
+            btn.classList.add('copied');
+            setTimeout(() => { btn.textContent = '📋 Copiar'; btn.classList.remove('copied'); }, 2000);
+        });
+    }
+    </script>
+</body>
+</html>
