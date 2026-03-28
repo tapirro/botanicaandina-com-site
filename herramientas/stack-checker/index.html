@@ -117,6 +117,23 @@
         nav a { color: #fff; text-decoration: none; font-weight: 600; }
         .share-btn { background: none; border: 1px solid #2e7d4f; color: #2e7d4f; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-top: 12px; }
         .share-btn:hover { background: #e8f5e9; }
+        #scoreCard { margin: 16px 0; text-align: center; }
+        .score-card-container { background: linear-gradient(135deg, #f8fffe 0%, #e8f5e9 100%); border-radius: 16px; padding: 24px; border: 2px solid #c8e6c9; position: relative; overflow: hidden; }
+        .score-ring { width: 140px; height: 140px; margin: 0 auto 12px; position: relative; }
+        .score-ring svg { transform: rotate(-90deg); }
+        .score-number { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 2.5rem; font-weight: 800; }
+        .score-grade { font-size: 1.1rem; font-weight: 700; margin: 4px 0 8px; }
+        .score-grade.grade-a { color: #2e7d32; } .score-grade.grade-b { color: #558b2f; }
+        .score-grade.grade-c { color: #f9a825; } .score-grade.grade-d { color: #ef6c00; }
+        .score-grade.grade-f { color: #c62828; }
+        .score-supplements { font-size: 0.85rem; color: #666; margin: 8px 0; }
+        .score-actions { display: flex; gap: 8px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+        .score-actions button { padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+        .btn-download { background: #2e7d4f; color: white; }
+        .btn-download:hover { background: #1b5e20; }
+        .btn-share-score { background: white; color: #2e7d4f; border: 1px solid #2e7d4f !important; }
+        .btn-share-score:hover { background: #e8f5e9; }
+        .score-footer { font-size: 0.7rem; color: #999; margin-top: 12px; }
         /* Embed mode: compact, no chrome */
         body.embed-mode nav,
         body.embed-mode .subtitle,
@@ -147,6 +164,7 @@
 
         <div class="results" id="results">
             <div class="summary-box" id="summaryBox"></div>
+            <div id="scoreCard" style="display:none;"></div>
             <div id="resultCards"></div>
             <div class="timing-section" id="timingSection"></div>
             <button class="share-btn" onclick="shareResults()">📋 Copiar resumen para compartir</button>
@@ -793,6 +811,9 @@ function checkStack() {
         </div>
     `;
 
+    // Score Card
+    renderScoreCard(selected, found, dangers, warnings, synergies);
+
     // Cards
     const cardsEl = document.getElementById('resultCards');
     const sorted = found.sort((a, b) => {
@@ -864,6 +885,196 @@ function shareResults() {
         btn.textContent = '✅ Copiado al portapapeles';
         setTimeout(() => btn.textContent = '📋 Copiar resumen para compartir', 2000);
     });
+}
+
+function calculateScore(selected, found, dangers, warnings, synergies) {
+    let score = 100;
+    score -= dangers * 20;
+    score -= warnings * 8;
+    score += synergies * 3;
+    score -= Math.max(0, selected.length - 5) * 2;
+    const competitionPairs = found.filter(f => f.type === 'competencia').length;
+    score -= competitionPairs * 5;
+    return Math.max(0, Math.min(100, Math.round(score)));
+}
+
+function getGrade(score) {
+    if (score >= 90) return { letter: 'A', label: 'Excelente', color: '#2e7d32', bg: '#e8f5e9' };
+    if (score >= 75) return { letter: 'B', label: 'Bueno', color: '#558b2f', bg: '#f1f8e9' };
+    if (score >= 60) return { letter: 'C', label: 'Aceptable', color: '#f9a825', bg: '#fff8e1' };
+    if (score >= 40) return { letter: 'D', label: 'Riesgoso', color: '#ef6c00', bg: '#fff3e0' };
+    return { letter: 'F', label: 'Peligroso', color: '#c62828', bg: '#fce4ec' };
+}
+
+function renderScoreCard(selectedIds, found, dangers, warnings, synergies) {
+    const score = calculateScore(selectedIds, found, dangers, warnings, synergies);
+    const grade = getGrade(score);
+    const circumference = 2 * Math.PI * 54;
+    const offset = circumference - (score / 100) * circumference;
+    const names = selectedIds.map(id => SUPPLEMENTS.find(s => s.id === id).name);
+
+    const el = document.getElementById('scoreCard');
+    el.style.display = 'block';
+    el.innerHTML = `
+        <div class="score-card-container" id="scoreCardInner">
+            <div class="score-ring">
+                <svg width="140" height="140" viewBox="0 0 140 140">
+                    <circle cx="70" cy="70" r="54" fill="none" stroke="#e0e0e0" stroke-width="12"/>
+                    <circle cx="70" cy="70" r="54" fill="none" stroke="${grade.color}" stroke-width="12"
+                        stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"
+                        stroke-linecap="round" style="transition: stroke-dashoffset 1s ease;"/>
+                </svg>
+                <div class="score-number" style="color:${grade.color}">${score}</div>
+            </div>
+            <div class="score-grade grade-${grade.letter.toLowerCase()}">Grado ${grade.letter} — ${grade.label}</div>
+            <div class="score-supplements">${names.join(' · ')}</div>
+            <div style="font-size:0.8rem;color:#888;margin-top:4px;">
+                ${dangers > 0 ? `🔴 ${dangers} riesgo${dangers > 1 ? 's' : ''} alto${dangers > 1 ? 's' : ''}` : ''}
+                ${warnings > 0 ? ` 🟡 ${warnings} precauci${warnings > 1 ? 'ones' : 'ón'}` : ''}
+                ${synergies > 0 ? ` 🟢 ${synergies} sinergia${synergies > 1 ? 's' : ''}` : ''}
+            </div>
+            <div class="score-actions">
+                <button class="btn-download" onclick="downloadScoreCard()">📥 Descargar imagen</button>
+                <button class="btn-share-score" onclick="shareScoreCard()">📋 Compartir resultado</button>
+            </div>
+            <div class="score-footer">botanicaandina.com/herramientas/stack-checker</div>
+        </div>
+        <canvas id="scoreCanvas" style="display:none;" width="600" height="400"></canvas>
+    `;
+}
+
+function drawScoreCanvas() {
+    const scoreEl = document.querySelector('.score-number');
+    const gradeEl = document.querySelector('.score-grade');
+    const suppsEl = document.querySelector('.score-supplements');
+    if (!scoreEl) return null;
+
+    const score = parseInt(scoreEl.textContent);
+    const grade = getGrade(score);
+    const supps = suppsEl ? suppsEl.textContent : '';
+
+    const canvas = document.getElementById('scoreCanvas');
+    const ctx = canvas.getContext('2d');
+    const W = 600, H = 400;
+
+    // Background
+    const bg = ctx.createLinearGradient(0, 0, W, H);
+    bg.addColorStop(0, '#f8fffe');
+    bg.addColorStop(1, '#e8f5e9');
+    ctx.fillStyle = bg;
+    ctx.beginPath();
+    ctx.roundRect(0, 0, W, H, 16);
+    ctx.fill();
+
+    // Border
+    ctx.strokeStyle = '#c8e6c9';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Title
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 18px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Stack Safety Score', W / 2, 40);
+
+    // Score ring
+    const cx = W / 2, cy = 150, r = 60;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.strokeStyle = '#e0e0e0';
+    ctx.lineWidth = 14;
+    ctx.stroke();
+
+    const startAngle = -Math.PI / 2;
+    const endAngle = startAngle + (score / 100) * Math.PI * 2;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, startAngle, endAngle);
+    ctx.strokeStyle = grade.color;
+    ctx.lineWidth = 14;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    // Score number
+    ctx.fillStyle = grade.color;
+    ctx.font = 'bold 42px system-ui, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(score.toString(), cx, cy);
+
+    // Grade
+    ctx.fillStyle = grade.color;
+    ctx.font = 'bold 16px system-ui, sans-serif';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillText(`Grado ${grade.letter} — ${grade.label}`, W / 2, 235);
+
+    // Supplements
+    ctx.fillStyle = '#666';
+    ctx.font = '12px system-ui, sans-serif';
+    const lines = wrapText(supps, 500);
+    lines.forEach((line, i) => {
+        ctx.fillText(line, W / 2, 260 + i * 18);
+    });
+
+    // Footer
+    ctx.fillStyle = '#999';
+    ctx.font = '11px system-ui, sans-serif';
+    ctx.fillText('botanicaandina.com/herramientas/stack-checker', W / 2, H - 20);
+
+    // Branding
+    ctx.fillStyle = '#2e7d4f';
+    ctx.font = 'bold 11px system-ui, sans-serif';
+    ctx.fillText('Powered by Botánica Andina', W / 2, H - 38);
+
+    return canvas;
+}
+
+function wrapText(text, maxWidth) {
+    const words = text.split(' · ');
+    const lines = [];
+    let line = '';
+    words.forEach(w => {
+        const test = line ? line + ' · ' + w : w;
+        if (test.length > 60 && line) {
+            lines.push(line);
+            line = w;
+        } else {
+            line = test;
+        }
+    });
+    if (line) lines.push(line);
+    return lines.slice(0, 3);
+}
+
+function downloadScoreCard() {
+    const canvas = drawScoreCanvas();
+    if (!canvas) return;
+    const link = document.createElement('a');
+    link.download = 'mi-stack-score.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+}
+
+function shareScoreCard() {
+    const scoreEl = document.querySelector('.score-number');
+    const gradeEl = document.querySelector('.score-grade');
+    const suppsEl = document.querySelector('.score-supplements');
+    if (!scoreEl) return;
+
+    const score = scoreEl.textContent;
+    const grade = gradeEl ? gradeEl.textContent : '';
+    const supps = suppsEl ? suppsEl.textContent : '';
+
+    const text = `🧪 Mi Stack Safety Score: ${score}/100 (${grade})\n\n${supps}\n\n¿Tu stack es seguro? Verifica gratis:\nhttps://botanicaandina.com/herramientas/stack-checker/`;
+
+    if (navigator.share) {
+        navigator.share({ title: `Stack Score: ${score}/100`, text: text }).catch(() => {});
+    } else {
+        navigator.clipboard.writeText(text).then(() => {
+            const btn = document.querySelector('.btn-share-score');
+            btn.textContent = '✅ Copiado';
+            setTimeout(() => btn.textContent = '📋 Compartir resultado', 2000);
+        });
+    }
 }
 
 function copyEmbed() {
