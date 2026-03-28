@@ -282,4 +282,10 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://botanicaandina.com/herramientas/dosis-letal/</loc>
+    <lastmod>2026-03-28</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
