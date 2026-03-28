@@ -126,7 +126,8 @@
         .tool-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
 
         .tool-card-inner { display: flex; align-items: stretch; }
-        .tool-icon-area { flex-shrink: 0; width: 140px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; }
+        .tool-icon-area { flex-shrink: 0; width: 140px; display: flex; align-items: center; justify-content: center; }
+        .tool-icon-area img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 0 0 12px; }
         .tool-icon-area.green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
         .tool-icon-area.blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
         .tool-icon-area.amber { background: linear-gradient(135deg, #fff8e1, #ffe082); }
@@ -178,15 +179,15 @@
 
     <div class="stats-bar">
         <div class="stat-item">
-            <span class="stat-number">6</span>
+            <span class="stat-number">11</span>
             <span class="stat-label">Herramientas</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">35+</span>
+            <span class="stat-number">250+</span>
             <span class="stat-label">Plantas</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">90+</span>
+            <span class="stat-number">592</span>
             <span class="stat-label">Interacciones</span>
         </div>
         <div class="stat-item">
@@ -198,7 +199,7 @@
     <div class="tools-grid">
         <a href="/herramientas/interacciones/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area green">&#x1F48A;</div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-interacciones.svg" alt="Verificador de interacciones plantas-medicamentos" width="140" height="140" loading="eager"></div>
                 <div class="tool-content">
                     <span class="tool-badge popular">M&aacute;s usada</span>
                     <h2>Verificador de Interacciones Plantas &ndash; Medicamentos</h2>
@@ -217,7 +218,7 @@
 
         <a href="/herramientas/buscador/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area blue">&#x1F50D;</div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-buscador.svg" alt="Buscador de plantas medicinales andinas" width="140" height="140" loading="lazy"></div>
                 <div class="tool-content">
                     <span class="tool-badge popular">Esencial</span>
                     <h2>Buscador de Plantas Medicinales Andinas</h2>
@@ -235,7 +236,7 @@
 
         <a href="/herramientas/quiz/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area amber">&#x1F33F;</div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-quiz.svg" alt="Quiz de plantas andinas personalizado" width="140" height="140" loading="lazy"></div>
                 <div class="tool-content">
                     <span class="tool-badge new">Nuevo</span>
                     <h2>&iquest;Qu&eacute; Planta Andina Necesitas? &mdash; Quiz Personalizado</h2>
@@ -255,7 +256,7 @@
 
         <a href="/herramientas/verificador/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area green">&#x1F50E;</div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-verificador.svg" alt="Verificador de suplementos con evidencia" width="140" height="140" loading="lazy"></div>
                 <div class="tool-content">
                     <span class="tool-badge new">Nuevo</span>
                     <h2>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica</h2>
@@ -277,7 +278,7 @@
         <a href="/herramientas/stack-checker/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#129514;</span>
+                    <img src="/assets/img/tools/thumb-stack-checker.svg" alt="Stack Checker suplementos" width="60" height="60" loading="lazy" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
@@ -298,7 +299,7 @@
         <a href="/herramientas/embarazo/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#129328;</span>
+                    <img src="/assets/img/tools/thumb-embarazo.svg" alt="Hierbas seguras en embarazo" width="60" height="60" loading="lazy" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
@@ -319,7 +320,7 @@
         <a href="/herramientas/dosis-letal/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#9763;</span>
+                    <img src="/assets/img/tools/thumb-dosis-letal.svg" alt="Calculadora dosis letal" width="60" height="60" loading="lazy" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
@@ -340,7 +341,7 @@
         <a href="/herramientas/cafeina/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#9749;</span>
+                    <img src="/assets/img/tools/thumb-cafeina.svg" alt="Reloj de cafe&iacute;na" width="60" height="60" loading="lazy" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Reloj de Cafe&iacute;na &mdash; &iquest;Cu&aacute;nta cafe&iacute;na tienes ahora?</h2>
@@ -360,7 +361,7 @@
         <a href="/herramientas/botiquin/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#128138;</span>
+                    <img src="/assets/img/tools/thumb-botiquin.svg" alt="Botiqu&iacute;n natural de hierbas" width="60" height="60" loading="lazy" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Botiqu&iacute;n Natural &mdash; Tu kit de hierbas esenciales</h2>
@@ -377,7 +378,7 @@
         <a href="/herramientas/comparador/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#128200;</span>
+                    <img src="/assets/img/tools/thumb-comparador.svg" alt="Comparador de suplementos" width="60" height="60" loading="lazy" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Comparador de Suplementos</h2>
@@ -394,7 +395,7 @@
         <a href="/herramientas/mate/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <span class="tool-icon">&#129481;</span>
+                    <img src="/assets/img/tools/thumb-mate.svg" alt="Calculadora de yerba mate" width="60" height="60" loading="lazy" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Calculadora de Yerba Mate</h2>
