@@ -636,7 +636,37 @@ const INTERACTIONS = [
     { a: "hmb", b: "creatina", type: "sinergia", severity: "baja",
       effect: "HMB reduce catabolismo muscular, creatina mejora rendimiento. Mecanismos anticatabólico + ergogénico complementarios.",
       action: "Combinación segura para masa muscular. No hay interacción negativa.",
-      source: "Jowko et al. Nutrition 2001;17(7-8):558-66" }
+      source: "Jowko et al. Nutrition 2001;17(7-8):558-66" },
+    // ── Coverage: Immune stack ──
+    { a: "vitd", b: "zinc", type: "sinergia", severity: "baja",
+      effect: "La vitamina D modula inmunidad adaptativa (células T). El zinc es esencial para inmunidad innata (neutrófilos, NK). Pilares inmunes complementarios.",
+      action: "Combinación segura y recomendada para inmunidad. Tomar juntos con comida.",
+      source: "Gombart et al. Nutrients 2020;12(1):236" },
+    { a: "vitc", b: "zinc", type: "sinergia", severity: "baja",
+      effect: "Vitamina C y zinc trabajan sinérgicamente en función inmune. Ambos son antioxidantes y apoyan la barrera epitelial.",
+      action: "Combinación clásica para resfriados. Zinc pastillas + vitamina C oral.",
+      source: "Wintergerst et al. Ann Nutr Metab 2006;50(2):85-94" },
+    { a: "elderberry", b: "vitc", type: "sinergia", severity: "baja",
+      effect: "Saúco tiene efecto antiviral directo (bloquea hemaglutinina viral). Vitamina C apoya respuesta inmune celular.",
+      action: "Combinación para temporada de gripes. Saúco jarabe + vitamina C.",
+      source: "Hawkins et al. J Int Med Res 2019;47(7):3159-72" },
+    { a: "probiotico", b: "vitd", type: "sinergia", severity: "baja",
+      effect: "Probióticos modulan inmunidad intestinal (70% del sistema inmune). Vitamina D regula péptidos antimicrobianos intestinales.",
+      action: "Combinación beneficiosa para inmunidad global. Probióticos en ayunas, vitamina D con comida.",
+      source: "Yousefi et al. J Cell Physiol 2019;234(10):18578-91" },
+    // ── Coverage: Andean stack ──
+    { a: "maca", b: "unadegato", type: "sinergia", severity: "baja",
+      effect: "Maca aporta energía adaptogénica, uña de gato tiene efecto inmunomodulador y antiinflamatorio. Stack andino complementario.",
+      action: "Combinación tradicional andina segura. Tomar ambos con comida.",
+      source: "Gonzales. Evid Based Complement Alternat Med 2012;2012:193496" },
+    { a: "graviola", b: "unadegato", type: "sinergia", severity: "baja",
+      effect: "Ambas plantas amazónicas con propiedades inmunomoduladoras. Graviola (acetogeninas) + uña de gato (alcaloides oxindólicos).",
+      action: "Combinación frecuente en herbolaria sudamericana. Precaución: ambas pueden potenciar inmunosupresores.",
+      source: "Heitzman et al. Phytochemistry 2005;66(1):5-29" },
+    { a: "camu_camu", b: "maca", type: "sinergia", severity: "baja",
+      effect: "Camu camu (mega-vitamina C natural) + maca (adaptógeno energizante). Superalimentos andinos complementarios.",
+      action: "Combinación segura. Tomar ambos por la mañana para energía + antioxidantes.",
+      source: "Gonzales et al. Food Chem Toxicol 2006;44(7):1092-8" }
 ];
 
 let selected = [];

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) -->
+<!-- Source: https://botanicaandina.com/noticias/kiwicha-colesterol-ensayo-clinico-perfil-lipidico/ -->
+<!-- DOI: 10.1016/j.numecd.2025.104470 -->
+<svg viewBox="0 0 480 226" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reduccion de colesterol con kiwicha (90 dias)" style="max-width:480px;width:100%;height:auto;margin:1.5rem auto;display:block;">
+    <rect width="480" height="226" rx="12" fill="#f8f9fa" stroke="#e9ecef" stroke-width="1"/>
+    <text x="20" y="30" fill="#222" font-size="15" font-family="Arial,sans-serif" font-weight="bold">Reduccion de colesterol con kiwicha (90 dias)</text>
+    
+        <text x="20" y="50" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">LDL</text>
+        <rect x="20" y="58" width="281" height="24" rx="4" fill="#e65100" opacity="0.85"/>
+        <text x="309" y="76" fill="#555" font-size="12" font-family="Arial,sans-serif">-22% (-31,5 mg/dL)</text>
+        <text x="20" y="102" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Colesterol total</text>
+        <rect x="20" y="110" width="144" height="24" rx="4" fill="#f57c00" opacity="0.85"/>
+        <text x="172" y="128" fill="#555" font-size="12" font-family="Arial,sans-serif">-9% (-19,5 mg/dL)</text>
+        <text x="20" y="154" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">HDL</text>
+        <rect x="20" y="162" width="96" height="24" rx="4" fill="#2e7d32" opacity="0.85"/>
+        <text x="124" y="180" fill="#555" font-size="12" font-family="Arial,sans-serif">Aumento</text>
+</svg>
