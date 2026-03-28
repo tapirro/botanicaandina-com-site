@@ -213,9 +213,12 @@
 
             <div class="share-section">
                 <h3>Comparte tu resultado</h3>
+                <canvas id="resultCard" width="1080" height="1080" style="display:none"></canvas>
+                <div id="cardPreview" style="margin-bottom:1rem;text-align:center"></div>
                 <div class="share-buttons">
-                    <a class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener">Compartir en X</a>
+                    <button class="share-btn" style="background:#1a5632" onclick="downloadCard()">Descargar imagen</button>
                     <a class="share-btn whatsapp" id="shareWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener">Compartir en X</a>
                     <button class="share-btn copy" onclick="copyResults()">Copiar enlace</button>
                 </div>
             </div>
@@ -335,7 +338,7 @@
             tags_evidence: ["Ensayo clínico", "Tradición amazónica"]
         },
         {
-            id: "berberina", name: "Berberina", scientific: "Berberis vulgaris", image: null,
+            id: "berberina", name: "Berberina", scientific: "Berberis vulgaris", image: "/assets/img/plantas/berberina.webp",
             matchTags: ["diabetes", "metabolism", "cholesterol", "chronic", "capsule", "strict_evidence"],
             evidence: "Ensayos clínicos (publicados en JAMA)",
             description: "Reduce grasa visceral y mejora la resistencia a la insulina. Un ensayo en JAMA mostró 3.6 cm menos de cintura en 12 semanas. Eficacia comparable a metformina en algunos estudios.",
@@ -353,7 +356,7 @@
             tags_evidence: ["Ensayo clínico", "Tradición andina"]
         },
         {
-            id: "ayahuasca", name: "Ayahuasca", scientific: "Banisteriopsis caapi", image: null,
+            id: "ayahuasca", name: "Ayahuasca", scientific: "Banisteriopsis caapi", image: "/assets/img/plantas/ayahuasca.webp",
             matchTags: ["mood", "stress", "open_evidence", "traditional"],
             evidence: "Ensayos clínicos preliminares + revisiones sistemáticas",
             description: "Revisiones sistemáticas muestran potencial en depresión resistente y ansiedad. Los alcaloides harmala son inhibidores de MAO reversibles. Solo debe usarse en contexto ceremonial supervisado.",
@@ -371,7 +374,7 @@
             tags_evidence: ["Ensayo clínico", "Tradición amazónica"]
         },
         {
-            id: "hoja_de_coca", name: "Hoja de Coca", scientific: "Erythroxylum coca", image: null,
+            id: "hoja_de_coca", name: "Hoja de Coca", scientific: "Erythroxylum coca", image: "/assets/img/plantas/hoja-de-coca.webp",
             matchTags: ["stress", "altitude", "energy", "active", "traditional", "tea", "food"],
             evidence: "Estudios clínicos",
             description: "Reduce cortisol (hormona del estrés) en trabajadores de altura. Mejora adaptación a la altitud y energía. Usada por culturas andinas durante 8000 años. Legal como hoja en Perú, Bolivia y Colombia.",
@@ -380,7 +383,7 @@
             tags_evidence: ["Estudio piloto", "Tradición andina milenaria"]
         },
         {
-            id: "guayusa", name: "Guayusa", scientific: "Ilex guayusa", image: null,
+            id: "guayusa", name: "Guayusa", scientific: "Ilex guayusa", image: "/assets/img/plantas/guayusa.webp",
             matchTags: ["energy", "cognition", "active", "tea", "sedentary"],
             evidence: "Estudios preclínicos + ensayos preliminares",
             description: "Hoja amazónica rica en cafeína y L-teanina. Mejora la atención sin los picos de ansiedad del café. Contiene ácido clorogénico con propiedades antioxidantes.",
@@ -389,7 +392,7 @@
             tags_evidence: ["Estudio preclínico", "Tradición kichwa"]
         },
         {
-            id: "sangre_de_drago", name: "Sangre de Drago", scientific: "Croton lechleri", image: null,
+            id: "sangre_de_drago", name: "Sangre de Drago", scientific: "Croton lechleri", image: "/assets/img/plantas/sangre-de-drago.webp",
             matchTags: ["inflammation", "acute", "traditional"],
             evidence: "Estudios preclínicos + uso etnobotánico",
             description: "Resina amazónica con potente efecto cicatrizante y antiinflamatorio. Contiene taspina y proantocianidinas. El loureirin B muestra actividad anticoagulante natural.",
@@ -398,7 +401,7 @@
             tags_evidence: ["Estudio preclínico", "Tradición amazónica"]
         },
         {
-            id: "melon_amargo", name: "Melón Amargo", scientific: "Momordica charantia", image: null,
+            id: "melon_amargo", name: "Melón Amargo", scientific: "Momordica charantia", image: "/assets/img/plantas/melon-amargo.webp",
             matchTags: ["diabetes", "metabolism", "food", "open_evidence"],
             evidence: "Ensayos clínicos + metaanálisis",
             description: "Fruto tropical con efecto hipoglucemiante demostrado. Contiene charantina y polipéptido-p (análogo de insulina vegetal). Metaanálisis muestra reducción significativa de HbA1c.",
@@ -407,7 +410,7 @@
             tags_evidence: ["Metaanálisis", "Ensayo clínico"]
         },
         {
-            id: "tarwi", name: "Tarwi / Chocho", scientific: "Lupinus mutabilis", image: null,
+            id: "tarwi", name: "Tarwi / Chocho", scientific: "Lupinus mutabilis", image: "/assets/img/plantas/tarwi.webp",
             matchTags: ["microbiome", "bloating", "metabolism", "food", "traditional"],
             evidence: "Estudios clínicos",
             description: "Legumbre andina con 44% de proteína y efecto prebiótico. Mejora la composición del microbioma intestinal. Alto en fibra y bajo índice glucémico.",
@@ -416,7 +419,7 @@
             tags_evidence: ["Estudio clínico", "Alimento ancestral"]
         },
         {
-            id: "quinoa", name: "Quinoa", scientific: "Chenopodium quinoa", image: null,
+            id: "quinoa", name: "Quinoa", scientific: "Chenopodium quinoa", image: "/assets/img/plantas/quinoa.webp",
             matchTags: ["metabolism", "cholesterol", "good_digestion", "food", "active"],
             evidence: "Metaanálisis",
             description: "Pseudocereal andino, proteína completa con los 9 aminoácidos esenciales. Mejora el perfil lipídico y tiene bajo índice glucémico. Libre de gluten.",
@@ -565,6 +568,8 @@
         document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
         document.getElementById('shareWhatsapp').href = `https://wa.me/?text=${shareText}%20${shareUrl}`;
 
+        if (top.length > 0) generateResultCard(top[0]);
+
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -582,6 +587,141 @@
         document.getElementById('resultsSection').style.display = 'none';
         renderQuestion();
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function generateResultCard(plant) {
+        const canvas = document.getElementById('resultCard');
+        const ctx = canvas.getContext('2d');
+        const W = 1080, H = 1080;
+
+        // Background - warm cream gradient
+        const bg = ctx.createLinearGradient(0, 0, 0, H);
+        bg.addColorStop(0, '#F5EFE0');
+        bg.addColorStop(1, '#EDE5D3');
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+
+        // Decorative border
+        ctx.strokeStyle = '#C8B99A';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(40, 40, W - 80, H - 80);
+        ctx.strokeStyle = '#D8CFC0';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(52, 52, W - 104, H - 104);
+
+        // Top label
+        ctx.fillStyle = '#8B7B6B';
+        ctx.font = '600 22px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('MI RESULTADO DEL QUIZ', W/2, 110);
+
+        // Decorative line
+        ctx.strokeStyle = '#C8B99A';
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(300, 130); ctx.lineTo(780, 130); ctx.stroke();
+
+        // "Tu planta ideal es..."
+        ctx.fillStyle = '#5C4A3A';
+        ctx.font = 'italic 28px Georgia, serif';
+        ctx.fillText('Tu planta ideal es...', W/2, 190);
+
+        // Plant name - large
+        ctx.fillStyle = '#1a5632';
+        ctx.font = 'bold 52px Georgia, serif';
+        ctx.fillText(plant.name, W/2, 260);
+
+        // Scientific name - italic
+        ctx.fillStyle = '#8B7B6B';
+        ctx.font = 'italic 26px Georgia, serif';
+        ctx.fillText(plant.scientific, W/2, 300);
+
+        // Plant image placeholder circle
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(W/2, 480, 150, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        ctx.fillStyle = '#e8f5e9';
+        ctx.fillRect(W/2 - 150, 330, 300, 300);
+
+        // Try to load and draw plant image
+        if (plant.image) {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                ctx.drawImage(img, W/2 - 150, 330, 300, 300);
+                ctx.restore();
+                finishCard(ctx, plant, W, H);
+            };
+            img.onerror = function() {
+                ctx.restore();
+                drawPlantEmoji(ctx, W/2, 480);
+                finishCard(ctx, plant, W, H);
+            };
+            img.src = plant.image;
+        } else {
+            ctx.restore();
+            drawPlantEmoji(ctx, W/2, 480);
+            finishCard(ctx, plant, W, H);
+        }
+    }
+
+    function drawPlantEmoji(ctx, x, y) {
+        ctx.font = '80px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('🌿', x, y);
+        ctx.textBaseline = 'alphabetic';
+    }
+
+    function finishCard(ctx, plant, W, H) {
+        // Evidence tags
+        ctx.fillStyle = '#5C4A3A';
+        ctx.font = '22px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(plant.evidence, W/2, 670);
+
+        // Description (word-wrapped)
+        ctx.fillStyle = '#444';
+        ctx.font = '20px Georgia, serif';
+        const words = plant.description.split(' ');
+        let line = '', y = 720, maxW = 800;
+        for (const word of words) {
+            const test = line + word + ' ';
+            if (ctx.measureText(test).width > maxW && line) {
+                ctx.fillText(line.trim(), W/2, y);
+                line = word + ' ';
+                y += 30;
+                if (y > 870) { ctx.fillText('...', W/2, y); break; }
+            } else { line = test; }
+        }
+        if (y <= 870) ctx.fillText(line.trim(), W/2, y);
+
+        // Bottom decorative line
+        ctx.strokeStyle = '#C8B99A';
+        ctx.beginPath(); ctx.moveTo(300, 920); ctx.lineTo(780, 920); ctx.stroke();
+
+        // Branding
+        ctx.fillStyle = '#1a5632';
+        ctx.font = 'bold 24px Georgia, serif';
+        ctx.fillText('Botánica Andina', W/2, 960);
+        ctx.fillStyle = '#8B7B6B';
+        ctx.font = '18px Arial, sans-serif';
+        ctx.fillText('botanicaandina.com/herramientas/quiz', W/2, 990);
+        ctx.fillText('¿Cuál es tu planta? Haz el quiz →', W/2, 1020);
+
+        // Show preview
+        const preview = document.getElementById('cardPreview');
+        const dataUrl = document.getElementById('resultCard').toDataURL('image/png');
+        preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1)" alt="Tu resultado: ${plant.name}">`;
+    }
+
+    function downloadCard() {
+        const canvas = document.getElementById('resultCard');
+        const link = document.createElement('a');
+        link.download = 'mi-planta-andina.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
     }
 
     document.addEventListener('DOMContentLoaded', renderQuestion);
