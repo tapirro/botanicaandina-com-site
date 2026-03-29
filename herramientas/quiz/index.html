@@ -599,7 +599,7 @@
                 : '';
 
             const imgHtml = plant.image
-                ? `<img class="plant-img" src="${plant.image}" alt="${plant.name}" loading="lazy">`
+                ? `<img class="plant-img" src="${plant.image}" alt="${plant.name}" loading="lazy" decoding="async">`
                 : `<div class="plant-img-placeholder">🌿</div>`;
 
             html += `<div class="plant-result${cls}">
@@ -782,7 +782,7 @@
         // Show preview
         const preview = document.getElementById('cardPreview');
         const dataUrl = document.getElementById('resultCard').toDataURL('image/png');
-        preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1)" alt="Tu resultado: ${plant.name}" loading="lazy">`;
+        preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1)" alt="Tu resultado: ${plant.name}" loading="lazy" decoding="async">`;
     }
 
     function downloadCard() {

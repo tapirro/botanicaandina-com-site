@@ -175,6 +175,7 @@
             .stats-bar { gap: 1.2rem; padding: 1rem; }
         }
     </style>
+    <link rel="preload" as="image" href="/assets/img/tools/thumb-interacciones.svg">
 </head>
 <body>
     <nav class="site-nav">
@@ -216,7 +217,7 @@
     <div class="tools-grid">
         <a href="/herramientas/interacciones/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-interacciones.svg" alt="Verificador de interacciones plantas-medicamentos" width="140" height="140" loading="eager"></div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-interacciones.svg" alt="Verificador de interacciones plantas-medicamentos" width="140" height="140" loading="eager" fetchpriority="high"></div>
                 <div class="tool-content">
                     <span class="tool-badge popular">M&aacute;s usada</span>
                     <h2>Verificador de Interacciones Plantas &ndash; Medicamentos</h2>
@@ -236,7 +237,7 @@
 
         <a href="/herramientas/buscador/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-buscador.svg" alt="Buscador de plantas medicinales andinas" width="140" height="140" loading="lazy"></div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-buscador.svg" alt="Buscador de plantas medicinales andinas" width="140" height="140" loading="lazy" decoding="async"></div>
                 <div class="tool-content">
                     <span class="tool-badge popular">Esencial</span>
                     <h2>Buscador de Plantas Medicinales Andinas</h2>
@@ -255,7 +256,7 @@
 
         <a href="/herramientas/quiz/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-quiz.svg" alt="Quiz de plantas andinas personalizado" width="140" height="140" loading="lazy"></div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-quiz.svg" alt="Quiz de plantas andinas personalizado" width="140" height="140" loading="lazy" decoding="async"></div>
                 <div class="tool-content">
                     <span class="tool-badge new">Nuevo</span>
                     <h2>&iquest;Qu&eacute; Planta Andina Necesitas? &mdash; Quiz Personalizado</h2>
@@ -276,7 +277,7 @@
 
         <a href="/herramientas/verificador/" class="tool-card">
             <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-verificador.svg" alt="Verificador de suplementos con evidencia" width="140" height="140" loading="lazy"></div>
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-verificador.svg" alt="Verificador de suplementos con evidencia" width="140" height="140" loading="lazy" decoding="async"></div>
                 <div class="tool-content">
                     <span class="tool-badge new">Nuevo</span>
                     <h2>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica</h2>
@@ -299,7 +300,7 @@
         <a href="/herramientas/stack-checker/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-stack-checker.svg" alt="Stack Checker suplementos" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-stack-checker.svg" alt="Stack Checker suplementos" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
@@ -321,7 +322,7 @@
         <a href="/herramientas/embarazo/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-embarazo.svg" alt="Hierbas seguras en embarazo" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-embarazo.svg" alt="Hierbas seguras en embarazo" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
@@ -343,7 +344,7 @@
         <a href="/herramientas/dosis-letal/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-dosis-letal.svg" alt="Calculadora dosis letal" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-dosis-letal.svg" alt="Calculadora dosis letal" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
@@ -365,7 +366,7 @@
         <a href="/herramientas/cafeina/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-cafeina.svg" alt="Reloj de cafe&iacute;na" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-cafeina.svg" alt="Reloj de cafe&iacute;na" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Reloj de Cafe&iacute;na &mdash; &iquest;Cu&aacute;nta cafe&iacute;na tienes ahora?</h2>
@@ -386,7 +387,7 @@
         <a href="/herramientas/botiquin/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-botiquin.svg" alt="Botiqu&iacute;n natural de hierbas" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-botiquin.svg" alt="Botiqu&iacute;n natural de hierbas" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Botiqu&iacute;n Natural &mdash; Tu kit de hierbas esenciales</h2>
@@ -404,7 +405,7 @@
         <a href="/herramientas/comparador/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-comparador.svg" alt="Comparador de suplementos" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-comparador.svg" alt="Comparador de suplementos" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Comparador de Suplementos</h2>
@@ -422,7 +423,7 @@
         <a href="/herramientas/mate/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-mate.svg" alt="Calculadora de yerba mate" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-mate.svg" alt="Calculadora de yerba mate" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                 </div>
                 <div class="tool-body">
                     <h2>Calculadora de Yerba Mate</h2>
@@ -440,7 +441,7 @@
         <a href="/herramientas/seguridad/" class="tool-card">
             <div class="tool-card-content">
                 <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-seguridad.svg" alt="Supplement Safety Score" width="60" height="60" loading="lazy" style="border-radius:8px">
+                    <img src="/assets/img/tools/thumb-seguridad.svg" alt="Supplement Safety Score" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
                     <div class="tool-badges">
                         <span class="badge badge-new">Nuevo</span>
                     </div>
