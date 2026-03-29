@@ -13,23 +13,67 @@
     <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://botanicaandina.com/herramientas/botiquin/">
 <link rel="canonical" href="https://botanicaandina.com/herramientas/botiquin/">
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Verificador de Botiquín Completo",
-  "description": "Verifica todas las interacciones entre plantas medicinales y medicamentos de una vez. Genera reportes compartibles.",
-  "url": "https://botanicaandina.com/herramientas/botiquin/",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "publisher": {
-    "@type": "Organization",
-    "name": "Botánica Andina",
-    "url": "https://botanicaandina.com"
-  }
-}
-</script>
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Verificador de Botiquín Completo",
+      "description": "Verifica todas las interacciones entre plantas medicinales y medicamentos de una vez. Genera reportes compartibles.",
+      "url": "https://botanicaandina.com/herramientas/botiquin/",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Botánica Andina",
+        "url": "https://botanicaandina.com"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Verificador de Botiquín Completo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Verificador de Botiquín Completo es una herramienta gratuita que verifica TODAS las interacciones entre tus plantas medicinales y medicamentos de una vez, generando un reporte visual compartible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo uso el verificador de botiquín?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Agrega todas tus plantas medicinales y medicamentos a la lista. La herramienta detectará automáticamente las interacciones y las mostrará en un reporte visual con código de colores por severidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa el código de colores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rojo = interacción de alta severidad, Naranja = severidad moderada, Amarillo = severidad baja. Cada interacción incluye el efecto, mecanismo y referencias científicas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo compartir el reporte con mi médico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, puedes generar un enlace compartible o descargar el reporte en PDF para mostrarlo a tu médico o farmacéutico."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a202c;line-height:1.6;background:#f7fafc}

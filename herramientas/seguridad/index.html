@@ -16,19 +16,59 @@
 <meta name="twitter:title" content="Puntuación de Seguridad de Suplementos">
 <meta name="twitter:description" content="Verifica si tus suplementos son seguros juntos. Herramienta gratuita de Botánica Andina.">
 <link rel="icon" href="/favicon.ico">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebApplication",
-  "name":"Puntuación de Seguridad de Suplementos",
-  "url":"https://botanicaandina.com/herramientas/seguridad/",
-  "description":"Calcula la puntuación de seguridad de tu combinación de suplementos. Verifica interacciones entre hierbas y suplementos.",
-  "applicationCategory":"HealthApplication",
-  "operatingSystem":"Web",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-  "author":{"@type":"Organization","name":"Botánica Andina","url":"https://botanicaandina.com"}
-}
-</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Puntuación de Seguridad de Suplementos",
+      "url": "https://botanicaandina.com/herramientas/seguridad/",
+      "description": "Calcula la puntuación de seguridad de tu combinación de suplementos. Verifica interacciones entre hierbas y suplementos.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Botánica Andina",
+        "url": "https://botanicaandina.com"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Puntuador de Seguridad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Puntuador de Seguridad es una herramienta que califica el nivel de evidencia científica y seguridad de suplementos y plantas medicinales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula el puntaje?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El puntaje se basa en la calidad de la evidencia (ensayos clínicos, estudios en humanos, evidencia preclínica) y el perfil de seguridad reportado en monografías oficiales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significan las calificaciones A-F?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A = Evidencia fuerte, B = Evidencia moderada, C = Evidencia débil, D = Evidencia muy limitada, F = No hay evidencia o evidencia negativa."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{

@@ -24,43 +24,75 @@
 <link rel="icon" href="/favicon.ico">
 
 <!-- Schema.org -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "¿Cuánto Me Mata? Calculadora de Dosis Letal",
-  "url": "https://botanicaandina.com/herramientas/dosis-letal/",
-  "description": "Herramienta educativa de toxicología que calcula cuántas unidades de una hierba o suplemento serían necesarias para alcanzar la dosis letal (LD50), basándose en datos científicos extrapolados a humanos mediante el factor de conversión interespecies de la FDA.",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Any",
-  "browserRequirements": "Requires JavaScript",
-  "inLanguage": "es",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "author": {
-    "@type": "Organization",
-    "name": "Botánica Andina",
-    "url": "https://botanicaandina.com"
-  },
-  "about": {
-    "@type": "MedicalWebPage",
-    "about": {
-      "@type": "MedicalCause",
-      "name": "Toxicología de suplementos herbales"
-    }
-  },
-  "isBasedOn": [
+  "@graph": [
     {
-      "@type": "ScholarlyArticle",
-      "name": "Interspecies scaling of pharmacokinetics",
-      "publisher": "FDA"
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "¿Cuánto Me Mata? Calculadora de Dosis Letal",
+      "url": "https://botanicaandina.com/herramientas/dosis-letal/",
+      "description": "Herramienta educativa de toxicología que calcula cuántas unidades de una hierba o suplemento serían necesarias para alcanzar la dosis letal (LD50), basándose en datos científicos extrapolados a humanos mediante el factor de conversión interespecies de la FDA.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "es",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Botánica Andina",
+        "url": "https://botanicaandina.com"
+      },
+      "about": {
+        "@type": "MedicalWebPage",
+        "about": {
+          "@type": "MedicalCause",
+          "name": "Toxicología de suplementos herbales"
+        }
+      },
+      "isBasedOn": [
+        {
+          "@type": "ScholarlyArticle",
+          "name": "Interspecies scaling of pharmacokinetics",
+          "publisher": "FDA"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es el Calculador de Dosis Letal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Calculador de Dosis Letal es una herramienta educativa que muestra la toxicidad relativa de sustancias comunes comparando sus dosis letales 50 (LD50)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se interpreta el LD50?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El LD50 es la dosis que causa la muerte en 50% de una población de prueba. Valores más bajos = más tóxico. Esta herramienta es solo para fines educativos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es seguro usar estas sustancias?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Esta herramienta no es una guía de dosificación. Siempre consulta a un profesional de salud antes de tomar cualquier suplemento o medicamento."
+          }
+        }
+      ]
     }
   ]
-}
-</script>
+}</script>
 
 <style>
   :root {
