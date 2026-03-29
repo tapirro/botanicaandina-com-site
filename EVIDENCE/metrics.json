@@ -1,0 +1,32 @@
+{
+  "traffic": {
+    "organic_clicks_per_day": 8,
+    "gsc_impressions": 668,
+    "gsc_ctr_pct": 0.6,
+    "referral_traffic": "0 (unmeasured)"
+  },
+  "indexation": {
+    "pages_indexed": 73,
+    "indexation_rate_pct": 32.2,
+    "dev_to_indexable": 9,
+    "dev_to_published": 62
+  },
+  "backlinks": {
+    "external_posts_published": 236,
+    "estimated_live_backlinks": 9,
+    "referring_domains": "unknown (GSC insufficient)"
+  },
+  "content_quality": {
+    "pages_deployed": 277,
+    "content_velocity_30d": 1309,
+    "quality_score": 4.6
+  },
+  "distribution_channels": {
+    "wordpress_com": "suspended",
+    "dev_to": "unverified",
+    "medium": "recaptcha_blocked",
+    "blogger": "phone_verification_required",
+    "write_as": "broken_links",
+    "telegraph": "low_da_unknown_indexation"
+  }
+}
