@@ -231,6 +231,23 @@
     text-align: center;
   }
 
+  .hero-visuals {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto 24px;
+    flex-wrap: wrap;
+  }
+
+  .herb-icon {
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    background: linear-gradient(135deg, #E8F5E9, #D1E8E2);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
   .skull-icon {
     width: 72px;
     height: 72px;
@@ -756,6 +773,29 @@
   <a href="https://botanicaandina.com/" class="logo">🌿 Botánica Andina</a>
   <a href="https://botanicaandina.com/herramientas/">← Herramientas</a>
 </header>
+    <div class="medical-endorsement" style="background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);border:1px solid #cbd5e1;border-radius:12px;padding:1.5rem;margin:1.5rem auto;max-width:1000px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:60px;height:60px;background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div>
+                <div style="font-weight:600;color:#1e293b;font-size:1.1rem;margin-bottom:0.25rem;">Revisado por la Dirección Médica</div>
+                <div style="color:#64748b;font-size:0.9rem;line-height:1.5;">
+                    El contenido de esta herramienta ha sido revisado por profesionales de la salud basándose en evidencia científica de monografías oficiales (EMA, ESCOP) y estudios indexados en PubMed. Los datos presentados son informativos y no sustituyen el consejo médico profesional.
+                </div>
+                <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">EMA</span>
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">ESCOP</span>
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">PubMed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <!-- DISCLAIMER TOP -->
 <div class="disclaimer-banner">
@@ -795,6 +835,22 @@
       <!-- crossbones hint -->
       <line x1="20" y1="60" x2="52" y2="60" stroke="#8B0000" stroke-width="1.5" opacity="0.3" stroke-dasharray="3,2"/>
     </svg>
+
+    <!-- Botanical Icons -->
+    <div class="hero-visuals">
+      <svg class="herb-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="16" fill="#10B981" opacity="0.1"/>
+        <path d="M18 6c-2 0-4 1-6 2l-2 4c-1 1-1 2 0 3l2 2c1 1 3 2 4 3s-1-2-2-3l-2-2c0-1-1-2 0-3l2-4c2-1 4-2 6-2zm0 24c2 0 4-1 6-2l2-4c1-1 1-2 0-3l-2-2c-1-1-3-2-4-3s1 2 2 3l2 2c0 1 1 2 0 3l-2 4c-2 1-4 2-6 2z" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="herb-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="16" fill="#F59E0B" opacity="0.1"/>
+        <path d="M18 4c-3 0-6 2-8 5l-1 3c-1 2-1 4 1 5l2 2c2 1 4 2 5 2s-1-2-2-3l-1-2c0-1-1-3 0-4l1-3c2-1 5-3 8-5zM18 28c3 0 6-2 8-5l1-3c1-2 1-4-1-5l-2-2c-2-1-4-2-5-2s1 2 2 3l1 2c0 1 1 3 0 4l-1 3c-2 1-5 3-8 5z" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <svg class="herb-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="18" cy="18" r="16" fill="#8B5CF6" opacity="0.1"/>
+        <path d="M18 4c-2 0-4 1-5 3l-2 4c-1 1-1 2 0 3l3 1c1 0 2 1 3 2s-1-2-2-3l-2-2c0-1-1-2 0-3l2-4c1-1 3-2 5-3zM18 30c2 0 4-1 5-3l2-4c1-1 1-2 0-3l-3-1c-1 0-2-1-3-2s1 2 2 3l2 2c0 1 1 2 0 3l-2 4c-1 1-3 2-5 3z" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
 
     <h1>¿En qué cantidad <em>me podría matar</em><br>esta hierba o suplemento?</h1>
     <p class="subtitle">
