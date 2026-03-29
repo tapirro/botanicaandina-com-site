@@ -3,483 +3,621 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina</title>
-    <meta name="description" content="Herramientas gratuitas de salud: verificador de interacciones plantas-medicamentos, buscador de plantas medicinales andinas, y quiz personalizado. Basadas en evidencia cient&iacute;fica.">
+    <title>Bot&aacute;nica Andina &mdash; Noticias de salud basadas en evidencia</title>
+    <meta name="description" content="Plantas medicinales andinas + ciencia moderna. Gu&iacute;as de maca, u&ntilde;a de gato, quinoa y 20+ plantas con estudios cl&iacute;nicos. Verificador de interacciones gratis.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://botanicaandina.com/herramientas/">
+    <link rel="canonical" href="https://botanicaandina.com/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina">
-    <meta property="og:description" content="Verificador de interacciones, buscador de plantas y quiz personalizado. Herramientas gratuitas basadas en ciencia.">
-    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-hub.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="Bot&aacute;nica Andina &mdash; Noticias de salud basadas en evidencia">
+    <meta property="og:description" content="Portal de noticias de salud basado en evidencia cient&iacute;fica para Am&eacute;rica Latina.">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
+    <meta property="og:site_name" content="Bot&aacute;nica Andina">
     <meta property="og:locale" content="es_LA">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina">
-    <meta name="twitter:description" content="Verificador de interacciones, buscador de plantas y quiz personalizado. Gratuitas y basadas en ciencia.">
-    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-hub.jpg">
     <link rel="icon" href="/favicon.ico">
+    <link rel="preload" as="image" href="/assets/img/hero/dengue-chikungunya-vacunacion-viajeros-guia-2026.jpg" imagesrcset="/assets/img/hero/dengue-chikungunya-vacunacion-viajeros-guia-2026.webp" imagesizes="100vw" type="image/webp">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Herramientas Gratuitas de Salud",
-        "url": "https://botanicaandina.com/herramientas/",
-        "description": "Colección de herramientas interactivas gratuitas para salud y plantas medicinales, basadas en evidencia científica.",
-        "author": { "@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com" },
-        "hasPart": [
-            {
-                "@type": "WebApplication",
-                "name": "Verificador de Interacciones Plantas-Medicamentos",
-                "url": "https://botanicaandina.com/herramientas/interacciones/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Buscador de Plantas Medicinales Andinas",
-                "url": "https://botanicaandina.com/herramientas/buscador/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Quiz: ¿Qué Planta Andina Necesitas?",
-                "url": "https://botanicaandina.com/herramientas/quiz/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Verificador de Suplementos",
-                "url": "https://botanicaandina.com/herramientas/verificador/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Reloj de Cafeína",
-                "url": "https://botanicaandina.com/herramientas/cafeina/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Stack Checker — Verificador de Compatibilidad de Suplementos",
-                "url": "https://botanicaandina.com/herramientas/stack-checker/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "¿Es Seguro? — Hierbas en Embarazo y Lactancia",
-                "url": "https://botanicaandina.com/herramientas/embarazo/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "¿Puede Matarme? — Calculadora de Dosis Letal",
-                "url": "https://botanicaandina.com/herramientas/dosis-letal/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Supplement Safety Score — Puntuación de Seguridad",
-                "url": "https://botanicaandina.com/herramientas/seguridad/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Matriz de Interacciones Hierba–Medicamento",
-                "url": "https://botanicaandina.com/herramientas/matriz/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            }
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Herramientas"}
-        ]
+        "@type": "NewsMediaOrganization",
+        "name": "Bot\u00e1nica Andina",
+        "url": "https://botanicaandina.com",
+        "description": "Portal de noticias de salud basado en evidencia cient\u00edfica para Am\u00e9rica Latina",
+        "foundingDate": "2026",
+        "areaServed": "Latin America",
+        "actionableFeedbackPolicy": "https://botanicaandina.com/politica-editorial/",
+        "correctionsPolicy": "https://botanicaandina.com/politica-editorial/",
+        "ethicsPolicy": "https://botanicaandina.com/politica-editorial/",
+        "masthead": "https://botanicaandina.com/sobre-nosotros/"
     }
     </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
-        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
-        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
-        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
-        .nav-links a:hover { color: #fff; }
+        img { max-width: 100%; height: auto; }
+            .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+    .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    @media (max-width: 700px) {
+        .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+        .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    }
+        .site-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff;
+            padding: 2.5rem 1.5rem 2rem; text-align: center; }
+        .header-inner { max-width: 700px; margin: 0 auto; }
+        .site-header h1 { font-size: 2rem; letter-spacing: 1px; margin-bottom: 0.3rem; }
+        .site-tagline { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.85; }
+        .hero-feature { max-width: 1100px; margin: -1.5rem auto 0; padding: 0 1.5rem; position: relative; z-index: 10; }
+        .hero-link { display: block; border-radius: 12px; overflow: hidden; position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15); text-decoration: none; }
+        .hero-image img { width: 100%; height: 420px; object-fit: cover; display: block; }
+        .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 2rem 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: #fff; }
+        .hero-overlay h2 { font-size: 1.5rem; line-height: 1.3; margin: 0.5rem 0 0.3rem; }
+        .hero-overlay p { font-size: 0.9rem; opacity: 0.9; line-height: 1.4; }
+        .hero-date { font-size: 0.75rem; opacity: 0.7; font-family: Arial, sans-serif; }
+        .cat-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-family: Arial, sans-serif;
+            font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #fff; }
+        .cat-nav { background: #fff; border-bottom: 1px solid #eee; padding: 0.8rem 0; margin-bottom: 1rem; }
+        .cat-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; gap: 0.8rem;
+            overflow-x: auto; }
+        .cat-link { font-family: Arial, sans-serif; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 20px;
+            text-decoration: none; color: #666; background: #f5f5f5; white-space: nowrap; transition: all 0.2s; }
+        .cat-link:hover, .cat-link.active { background: #1a5632; color: #fff; }
+        .main-layout { max-width: 1100px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .section-title { font-family: Arial, sans-serif; font-size: 0.85rem; text-transform: uppercase;
+            letter-spacing: 2px; color: #888; margin-bottom: 1.5rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1a5632; }
+        .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem;
+            margin-bottom: 2rem; }
+        .article-card { background: #fff; border-radius: 8px; overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: box-shadow 0.2s; }
+        .article-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .card-image img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .card-body { padding: 1rem; }
+        .card-cat { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+            font-family: Arial, sans-serif; font-weight: 600; }
+        .card-body h3 { font-size: 0.95rem; line-height: 1.3; margin: 0.3rem 0 0.5rem; }
+        .card-body h3 a { color: #111; text-decoration: none; }
+        .card-body h3 a:hover { color: #1a5632; }
+        .card-excerpt { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 0.5rem; }
+        .card-date { font-size: 0.75rem; color: #aaa; font-family: Arial, sans-serif; }
+        .compact-section { margin-top: 1rem; }
+        .compact-section h2 { font-family: Arial, sans-serif; font-size: 0.85rem; text-transform: uppercase;
+            letter-spacing: 2px; color: #888; margin-bottom: 1rem; padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1a5632; }
+        .compact-list { display: flex; flex-direction: column; }
+        .compact-item { display: flex; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid #f0f0f0;
+            align-items: flex-start; }
+        .compact-thumb { width: 80px; height: 53px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
+        .compact-cat { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;
+            font-family: Arial, sans-serif; font-weight: 600; }
+        .compact-item h4 { font-size: 0.88rem; line-height: 1.3; margin: 0.15rem 0 0.2rem; }
+        .compact-item h4 a { color: #111; text-decoration: none; }
+        .compact-item h4 a:hover { color: #1a5632; }
+        .compact-date { font-size: 0.7rem; color: #aaa; font-family: Arial, sans-serif; }
+            .site-footer { background: #1a2e1a; color: #ccc; padding: 3rem 0 2rem; margin-top: 3rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand { font-family: Georgia, serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem; }
+    .footer-desc { font-size: 0.85rem; line-height: 1.6; color: #aaa; }
+    .footer-heading { font-family: Arial, sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin-bottom: 0.8rem; }
+    .footer-links { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: 0.4rem; }
+    .footer-links a { color: #aaa; text-decoration: none; font-size: 0.85rem; font-family: Arial, sans-serif; transition: color 0.2s; }
+    .footer-links a:hover { color: #8bc34a; }
+    .footer-bottom { border-top: 1px solid #2a3e2a; padding-top: 1.5rem; text-align: center; }
+    .footer-bottom p { font-size: 0.78rem; color: #777; font-family: Arial, sans-serif; margin: 0; }
+    @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
+        .newsletter-section { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.5rem; }
+        .newsletter-inner { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); border-radius: 12px;
+            padding: 2.5rem 2rem; text-align: center; color: #fff; }
+        .newsletter-inner h2 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+        .newsletter-inner p { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .newsletter-form { display: flex; gap: 0.5rem; max-width: 440px; margin: 0 auto; }
+        .newsletter-form input[type="email"] { flex: 1; padding: 0.75rem 1rem; border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 8px; font-size: 0.95rem; background: rgba(255,255,255,0.15); color: #fff;
+            font-family: Arial, sans-serif; outline: none; transition: border-color 0.2s; }
+        .newsletter-form input[type="email"]::placeholder { color: rgba(255,255,255,0.6); }
+        .newsletter-form input[type="email"]:focus { border-color: rgba(255,255,255,0.7); }
+        .newsletter-form button { padding: 0.75rem 1.5rem; background: #fff; color: #1a5632; border: none;
+            border-radius: 8px; font-size: 0.9rem; font-weight: bold; font-family: Arial, sans-serif;
+            cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+        .newsletter-form button:hover { background: #e8f5e9; }
+        .newsletter-form button:disabled { opacity: 0.7; cursor: not-allowed; }
+        .newsletter-msg { font-family: Arial, sans-serif; font-size: 0.85rem; margin-top: 0.8rem; min-height: 1.2em; }
+        .newsletter-privacy { font-family: Arial, sans-serif; font-size: 0.75rem; opacity: 0.6; margin-top: 0.8rem; }
+        @media (max-width: 500px) { .newsletter-form { flex-direction: column; } .newsletter-form button { width: 100%; } }
+        .tool-banner { max-width: 1100px; margin: 1.5rem auto; padding: 0 1.5rem; }
+        .tool-banner-inner { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border: 2px solid #1a5632;
+            border-radius: 12px; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.5rem;
+            text-decoration: none; color: #1a1a1a; transition: box-shadow 0.2s; }
+        .tool-banner-inner:hover { box-shadow: 0 4px 16px rgba(26,86,50,0.15); }
+        .tool-icon { font-size: 2.5rem; flex-shrink: 0; }
+        .tool-text h3 { font-size: 1.1rem; color: #1a5632; margin-bottom: 0.3rem; }
+        .tool-text p { font-size: 0.88rem; color: #555; font-family: Arial, sans-serif; line-height: 1.4; margin: 0; }
+        .tool-cta { flex-shrink: 0; padding: 0.6rem 1.5rem; background: #1a5632; color: #fff;
+            border-radius: 6px; font-family: Arial, sans-serif; font-size: 0.85rem; font-weight: bold; }
         @media (max-width: 700px) {
-            .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
-            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .tool-banner-inner { flex-direction: column; text-align: center; padding: 1.2rem; }
+            .tool-cta { align-self: stretch; text-align: center; }
         }
-
-        .page-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
-        .page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .page-header p { font-family: Arial, sans-serif; font-size: 1rem; opacity: 0.85; max-width: 650px; margin: 0 auto; }
-
-        .stats-bar { display: flex; gap: 2rem; justify-content: center; margin: -1.5rem auto 2rem; flex-wrap: wrap; position: relative; z-index: 10; background: #fff; max-width: 600px; border-radius: 12px; padding: 1.2rem 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 1.8rem; font-weight: bold; color: #1a5632; display: block; }
-        .stat-label { font-family: Arial, sans-serif; font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-        .tools-grid { max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-
-        .tool-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
-        .tool-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
-
-        .tool-card-inner { display: flex; align-items: stretch; }
-        .tool-icon-area { flex-shrink: 0; width: 140px; display: flex; align-items: center; justify-content: center; }
-        .tool-icon-area img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 0 0 12px; }
-        .tool-icon-area.green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-        .tool-icon-area.blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
-        .tool-icon-area.amber { background: linear-gradient(135deg, #fff8e1, #ffe082); }
-        .tool-content { padding: 1.5rem 1.8rem; flex: 1; }
-        .tool-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 10px; font-family: Arial, sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
-        .tool-badge.popular { background: #e8f5e9; color: #2e7d32; }
-        .tool-badge.new { background: #fff3e0; color: #e65100; }
-        .tool-content h2 { font-size: 1.2rem; margin-bottom: 0.4rem; color: #1a5632; }
-        .tool-content p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
-        .tool-features { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tool-features li { font-family: Arial, sans-serif; font-size: 0.78rem; color: #1a5632; background: #f1f8f3; padding: 0.2rem 0.6rem; border-radius: 10px; }
-        .tool-cta { display: inline-block; margin-top: 0.8rem; font-family: Arial, sans-serif; font-size: 0.85rem; color: #1a5632; font-weight: bold; }
-
-        .embed-callout { max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem; }
-        .embed-callout-inner { background: #f5f5f5; border-radius: 12px; padding: 2rem; text-align: center; }
-        .embed-callout-inner h2 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #333; }
-        .embed-callout-inner p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #666; max-width: 600px; margin: 0 auto 1rem; }
-        .embed-callout-inner a { color: #1a5632; font-weight: bold; text-decoration: none; }
-        .embed-callout-inner a:hover { text-decoration: underline; }
-
-        footer { background: #1a5632; color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
-        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
-
+        .articles-grid .article-card:nth-child(n+7) { display: none; }
+        .articles-grid.show-all .article-card:nth-child(n+7) { display: block; }
+        .compact-section.hidden-section { display: none; }
+        .compact-section.visible-section { display: block; }
+        .load-more-wrap { text-align: center; margin: 2rem 0; }
+        .load-more-btn { display: inline-block; padding: 0.8rem 2rem; background: #1a5632; color: #fff;
+            border: none; border-radius: 6px; font-family: Arial, sans-serif; font-size: 0.9rem;
+            cursor: pointer; transition: background 0.2s; text-decoration: none; }
+        .load-more-btn:hover { background: #2e7d32; }
+        .load-more-wrap.hidden { display: none; }
         @media (max-width: 700px) {
-            .page-header h1 { font-size: 1.5rem; }
-            .tool-card-inner { flex-direction: column; }
-            .tool-icon-area { width: 100%; height: 100px; }
-            .stats-bar { gap: 1.2rem; padding: 1rem; }
+            .hero-image img { height: 260px; }
+            .hero-overlay h2 { font-size: 1.15rem; }
+            .articles-grid { grid-template-columns: 1fr; }
         }
     </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Botánica Andina", "url": "https://botanicaandina.com"}</script>
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
-            <div class="nav-links">
-                <a href="/noticias/">Noticias</a>
-                <a href="/herramientas/" style="color:#fff;font-weight:bold">Herramientas</a>
-                <a href="/herramientas/interacciones/">Interacciones</a>
-                <a href="/sobre-nosotros/">Sobre Nosotros</a>
-            </div>
+        <nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+        <div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/herramientas/">Herramientas</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            <a href="/politica-editorial/">Pol&iacute;tica Editorial</a>
+            <a href="/equipo/">Equipo</a>
         </div>
-    </nav>
-
-    <header class="page-header">
-        <h1>Herramientas Gratuitas de Salud</h1>
-        <p>Herramientas interactivas basadas en evidencia cient&iacute;fica para tomar mejores decisiones sobre plantas medicinales y suplementos.</p>
+    </div>
+</nav>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1>Bot&aacute;nica Andina</h1>
+            <p class="site-tagline">Noticias de salud basadas en evidencia cient&iacute;fica</p>
+        </div>
     </header>
 
-    <div class="stats-bar">
-        <div class="stat-item">
-            <span class="stat-number">12</span>
-            <span class="stat-label">Herramientas</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">250+</span>
-            <span class="stat-label">Plantas</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">592</span>
-            <span class="stat-label">Interacciones</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Gratuito</span>
-        </div>
-    </div>
-
-    <div class="tools-grid">
-        <a href="/herramientas/interacciones/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-interacciones.svg" alt="Verificador de interacciones plantas-medicamentos" width="140" height="140" loading="eager"></div>
-                <div class="tool-content">
-                    <span class="tool-badge popular">M&aacute;s usada</span>
-                    <h2>Verificador de Interacciones Plantas &ndash; Medicamentos</h2>
-                    <p>&iquest;Tomas alg&uacute;n medicamento y quieres saber si tu planta medicinal puede interactuar? Verifica aqu&iacute; con datos de monograf&iacute;as oficiales (EMA, ESCOP) y estudios de PubMed.</p>
-                    <ul class="tool-features">
-                        <li>100 plantas</li>
-                        <li>30 clases de f&aacute;rmacos</li>
-                        <li>302 interacciones</li>
-                        <li>Niveles de severidad</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Verificar interacciones &rarr;</span>
-                </div>
+    <section class="hero-feature">
+        <a href="/noticias/dengue-chikungunya-vacunacion-viajeros-guia-2026/" class="hero-link">
+            <div class="hero-image">
+                <picture><source srcset="/assets/img/hero/dengue-chikungunya-vacunacion-viajeros-guia-2026.webp" type="image/webp"><img src="/assets/img/hero/dengue-chikungunya-vacunacion-viajeros-guia-2026.jpg" alt="Dengue y chikungunya 2026: vacunas y guía para viajeros" width="1200" height="630" loading="eager" fetchpriority="high"></picture>
+            </div>
+            <div class="hero-overlay">
+                <span class="cat-badge" style="background:#b71c1c">Salud Pública</span>
+                <h2>Dengue y chikungunya 2026: vacunas y guía para viajeros</h2>
+                <p>Guía actualizada 2026 sobre vacunación contra dengue y chikungunya para viajeros. Qué vacunas existen, quién debe vacunarse y recomendaciones.</p>
+                <span class="hero-date">22 de marzo de 2026</span>
             </div>
         </a>
-
-        <a href="/herramientas/buscador/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-buscador.svg" alt="Buscador de plantas medicinales andinas" width="140" height="140" loading="lazy"></div>
-                <div class="tool-content">
-                    <span class="tool-badge popular">Esencial</span>
-                    <h2>Buscador de Plantas Medicinales Andinas</h2>
-                    <p>Encuentra la planta medicinal adecuada seg&uacute;n tus s&iacute;ntomas o necesidades de salud. Filtra por regi&oacute;n, tipo de evidencia y condici&oacute;n m&eacute;dica.</p>
-                    <ul class="tool-features">
-                        <li>22 plantas</li>
-                        <li>B&uacute;squeda por s&iacute;ntomas</li>
-                        <li>Filtro por evidencia</li>
-                        <li>Enlaces a estudios</li>
-                    </ul>
-                    <span class="tool-cta">Buscar plantas &rarr;</span>
-                </div>
+    </section>
+    <div class="cat-nav"><div class="cat-nav-inner"><a href="/noticias/" class="cat-link active">Todas</a><a href="/noticias/" class="cat-link" style="--cat-color:#1a5632">Plantas Medicinales</a><a href="/noticias/" class="cat-link" style="--cat-color:#bf6c00">Nutrición</a><a href="/noticias/" class="cat-link" style="--cat-color:#0d47a1">Investigación</a><a href="/noticias/" class="cat-link" style="--cat-color:#b71c1c">Salud Pública</a><a href="/noticias/" class="cat-link" style="--cat-color:#4a148c">Neurociencia</a></div></div>
+    <section class="tool-banner">
+        <a href="/herramientas/interacciones/" class="tool-banner-inner">
+            <span class="tool-icon">&#9881;</span>
+            <div class="tool-text">
+                <h3>Verificador de Interacciones Plantas-Medicamentos</h3>
+                <p>Consulta gratis si tus suplementos herbales pueden interactuar con tus medicamentos. Base de datos con 100 plantas medicinales y 302 interacciones documentadas.</p>
             </div>
+            <span class="tool-cta">Usar herramienta &rarr;</span>
         </a>
-
-        <a href="/herramientas/quiz/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-quiz.svg" alt="Quiz de plantas andinas personalizado" width="140" height="140" loading="lazy"></div>
-                <div class="tool-content">
-                    <span class="tool-badge new">Nuevo</span>
-                    <h2>&iquest;Qu&eacute; Planta Andina Necesitas? &mdash; Quiz Personalizado</h2>
-                    <p>Responde 7 preguntas r&aacute;pidas sobre tu salud, estilo de vida y preferencias. Recibe una recomendaci&oacute;n personalizada con las plantas que mejor se adaptan a tu perfil.</p>
-                    <ul class="tool-features">
-                        <li>7 preguntas</li>
-                        <li>12 plantas evaluadas</li>
-                        <li>Detecta interacciones</li>
-                        <li>Compartible</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Hacer el quiz &rarr;</span>
-                </div>
+    </section>
+    <section class="tool-banner" style="margin-top:-12px">
+        <a href="/herramientas/embarazo/" class="tool-banner-inner" style="background:linear-gradient(135deg,#FFF8E1 0%,#F3E5F5 100%)">
+            <span class="tool-icon">&#x1F930;</span>
+            <div class="tool-text">
+                <h3>&iquest;Es Seguro? Hierbas en el Embarazo y Lactancia</h3>
+                <p>Verifica si una hierba o suplemento es seguro durante el embarazo o la lactancia. 37 hierbas con datos de seguridad basados en evidencia cient&iacute;fica.</p>
             </div>
+            <span class="tool-cta">Verificar &rarr;</span>
         </a>
-    </div>
-
-        <a href="/herramientas/verificador/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-verificador.svg" alt="Verificador de suplementos con evidencia" width="140" height="140" loading="lazy"></div>
-                <div class="tool-content">
-                    <span class="tool-badge new">Nuevo</span>
-                    <h2>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica</h2>
-                    <p>&iquest;Tu suplemento tiene evidencia real? Consulta calificaciones de eficacia (A&ndash;F), seguridad, interacciones y dosis para 55 suplementos populares. La primera base de datos independiente en espa&ntilde;ol.</p>
-                    <ul class="tool-features">
-                        <li>55 suplementos</li>
-                        <li>Calificaci&oacute;n A&ndash;F</li>
-                        <li>Interacciones</li>
-                        <li>Dosis</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Verificar suplemento &rarr;</span>
-                </div>
+    </section>
+    <div class="main-layout">
+        <main>
+            <h2 class="section-title">&Uacute;ltimas noticias</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <a href="/noticias/ayahuasca-cognicion-revision-sistematica-efectos/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/ayahuasca-cognicion-revision-sistematica-efectos.webp" type="image/webp"><img src="/assets/img/thumb/ayahuasca-cognicion-revision-sistematica-efectos.jpg" alt="Ayahuasca: efectos, propiedades y evidencia científica sobre cognición" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#4a148c">Neurociencia</span>
+                        <h3><a href="/noticias/ayahuasca-cognicion-revision-sistematica-efectos/">Ayahuasca: efectos, propiedades y evidencia científica sobre cognición</a></h3>
+                        <p class="card-excerpt">Primera revisión sistemática sobre los efectos cognitivos de la ayahuasca. Qué dice la ciencia, riesgos, efectos secundarios y est...</p>
+                        <span class="card-date">21 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/canihua-grano-andino-emergente-perfil-nutricional/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/canihua-grano-andino-emergente-perfil-nutricional.webp" type="image/webp"><img src="/assets/img/thumb/canihua-grano-andino-emergente-perfil-nutricional.jpg" alt="Cañihua: propiedades, beneficios y valor nutricional del grano andino" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#bf6c00">Nutrición</span>
+                        <h3><a href="/noticias/canihua-grano-andino-emergente-perfil-nutricional/">Cañihua: propiedades, beneficios y valor nutricional del grano andino</a></h3>
+                        <p class="card-excerpt">Conoce la cañihua: el grano andino con más hierro que la quinoa. Propiedades nutricionales, beneficios para la salud, recetas y dó...</p>
+                        <span class="card-date">21 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/disglucemia-riesgo-cardiometabolico-nutraceuticos/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/disglucemia-riesgo-cardiometabolico-nutraceuticos.webp" type="image/webp"><img src="/assets/img/thumb/disglucemia-riesgo-cardiometabolico-nutraceuticos.jpg" alt="Nutracéuticos para el riesgo cardiometabólico: evidencia actual" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#bf6c00">Nutrición</span>
+                        <h3><a href="/noticias/disglucemia-riesgo-cardiometabolico-nutraceuticos/">Nutracéuticos para el riesgo cardiometabólico: evidencia actual</a></h3>
+                        <p class="card-excerpt">Revisión sobre el rol de nutracéuticos en disglucemia y riesgo cardiometabólico. Cuáles tienen evidencia, dosis y recomendaciones.</p>
+                        <span class="card-date">21 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/curcuma-mucositis-oral-cancer-revision-sistematica/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/curcuma-mucositis-oral-cancer-revision-sistematica.webp" type="image/webp"><img src="/assets/img/thumb/curcuma-mucositis-oral-cancer-revision-sistematica.jpg" alt="Cúrcuma: para qué sirve, propiedades y beneficios comprobados" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h3><a href="/noticias/curcuma-mucositis-oral-cancer-revision-sistematica/">Cúrcuma: para qué sirve, propiedades y beneficios comprobados</a></h3>
+                        <p class="card-excerpt">¿Para qué sirve la cúrcuma? Revisión de sus propiedades antiinflamatorias, beneficios comprobados en mucositis oral, cómo se toma ...</p>
+                        <span class="card-date">10 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/curcumina-cancer-diabetes-estrategias-dobles/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/curcumina-cancer-diabetes-estrategias-dobles.webp" type="image/webp"><img src="/assets/img/thumb/curcumina-cancer-diabetes-estrategias-dobles.jpg" alt="Curcumina: beneficios contra el cáncer y la diabetes según la ciencia" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h3><a href="/noticias/curcumina-cancer-diabetes-estrategias-dobles/">Curcumina: beneficios contra el cáncer y la diabetes según la ciencia</a></h3>
+                        <p class="card-excerpt">Revisión científica explora el doble potencial de la curcumina contra el cáncer y la diabetes. Mecanismos, evidencia actual y limi...</p>
+                        <span class="card-date">6 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/curcumina-mejora-estado-animo-estudio/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/curcumina-mejora-estado-animo-estudio.webp" type="image/webp"><img src="/assets/img/thumb/curcumina-mejora-estado-animo-estudio.jpg" alt="Cúrcuma en cápsulas: beneficios, propiedades y evidencia científica" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#4a148c">Neurociencia</span>
+                        <h3><a href="/noticias/curcumina-mejora-estado-animo-estudio/">Cúrcuma en cápsulas: beneficios, propiedades y evidencia científica</a></h3>
+                        <p class="card-excerpt">¿Sirve la cúrcuma para mejorar el ánimo? Analizamos un ensayo clínico reciente sobre curcumina, sus beneficios reales, contraindic...</p>
+                        <span class="card-date">6 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo.webp" type="image/webp"><img src="/assets/img/thumb/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo.jpg" alt="Cúrcuma y té verde: beneficios combinados para el cerebro" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#4a148c">Neurociencia</span>
+                        <h3><a href="/noticias/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo/">Cúrcuma y té verde: beneficios combinados para el cerebro</a></h3>
+                        <p class="card-excerpt">Un ensayo clínico muestra que la combinación de cúrcuma + té verde (EGCG) elevó la proteína cerebral BDNF en 12 semanas. Beneficio...</p>
+                        <span class="card-date">6 de marzo de 2026</span>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <a href="/noticias/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se/" class="card-image">
+                        <picture><source srcset="/assets/img/thumb/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se.webp" type="image/webp"><img src="/assets/img/thumb/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se.jpg" alt="Enfermedad de Chagas: síntomas cardíacos y pronóstico" width="400" height="300" loading="lazy" decoding="async"></picture>
+                    </a>
+                    <div class="card-body">
+                        <span class="card-cat" style="color:#b71c1c">Salud Pública</span>
+                        <h3><a href="/noticias/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se/">Enfermedad de Chagas: síntomas cardíacos y pronóstico</a></h3>
+                        <p class="card-excerpt">La cardiomiopatía chagásica tiene peor pronóstico que otras cardiomiopatías según estudio publicado en JACC. Síntomas, diagnóstico...</p>
+                        <span class="card-date">6 de marzo de 2026</span>
+                    </div>
+                </article>
             </div>
-        </a>
-    </div>
-
-    <div class="tools-grid">
-        <a href="/herramientas/stack-checker/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-stack-checker.svg" alt="Stack Checker suplementos" width="60" height="60" loading="lazy" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
+            <div class="load-more-wrap" id="loadMoreWrap">
+                <button class="load-more-btn" id="loadMoreBtn">Ver m&aacute;s noticias</button>
+            </div>
+        </main>
+        <section class="compact-section hidden-section" id="compactSection">
+            <h2>M&aacute;s noticias</h2>
+            <div class="compact-list">
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/fitoterapia-sindrome-metabolico-revision.webp" type="image/webp"><img src="/assets/img/thumb/fitoterapia-sindrome-metabolico-revision.jpg" alt="Fitoterapia: plantas medicinales para el síndrome metabólico" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/fitoterapia-sindrome-metabolico-revision/">Fitoterapia: plantas medicinales para el síndrome metabólico</a></h4>
+                        <span class="compact-date">6 de marzo de 2026</span>
                     </div>
                 </div>
-                <div class="tool-body">
-                    <h2>Stack Checker &mdash; &iquest;Tus suplementos son compatibles?</h2>
-                    <p>Verifica interacciones entre suplementos, competencia por absorci&oacute;n y horarios &oacute;ptimos de toma. 78 suplementos, 102 interacciones documentadas.</p>
-                    <ul class="tool-features">
-                        <li>78 suplementos</li>
-                        <li>102 interacciones</li>
-                        <li>Horario de toma</li>
-                        <li>Embed gratis</li>
-                    </ul>
-                    <span class="tool-cta">Verificar stack &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/embarazo/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-embarazo.svg" alt="Hierbas seguras en embarazo" width="60" height="60" loading="lazy" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/curcuma-salud-periodontal-metaanalisis.webp" type="image/webp"><img src="/assets/img/thumb/curcuma-salud-periodontal-metaanalisis.jpg" alt="Cúrcuma para las encías: beneficios en salud periodontal" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/curcuma-salud-periodontal-metaanalisis/">Cúrcuma para las encías: beneficios en salud periodontal</a></h4>
+                        <span class="compact-date">4 de marzo de 2026</span>
                     </div>
                 </div>
-                <div class="tool-body">
-                    <h2>&iquest;Es Seguro? &mdash; Hierbas en Embarazo y Lactancia</h2>
-                    <p>Verifica si una hierba o suplemento es seguro durante el embarazo o la lactancia. 37 hierbas incluyendo 11 plantas andinas no disponibles en otras bases de datos.</p>
-                    <ul class="tool-features">
-                        <li>37 hierbas evaluadas</li>
-                        <li>11 plantas andinas</li>
-                        <li>Modo embarazo y lactancia</li>
-                        <li>Fuentes cient&iacute;ficas</li>
-                    </ul>
-                    <span class="tool-cta">Verificar hierba &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/dosis-letal/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-dosis-letal.svg" alt="Calculadora dosis letal" width="60" height="60" loading="lazy" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion.webp" type="image/webp"><img src="/assets/img/thumb/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion.jpg" alt="Quinoa: propiedades, beneficios nutricionales y contraindicaciones" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#bf6c00">Nutrición</span>
+                        <h4><a href="/noticias/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion/">Quinoa: propiedades, beneficios nutricionales y contraindicaciones</a></h4>
+                        <span class="compact-date">1 de marzo de 2026</span>
                     </div>
                 </div>
-                <div class="tool-body">
-                    <h2>&iquest;Puede Matarme? &mdash; Calculadora de Dosis Letal</h2>
-                    <p>Calcula cu&aacute;nto de una sustancia com&uacute;n necesitar&iacute;as para alcanzar la dosis letal (LD50). Perspectiva cient&iacute;fica sobre toxicolog&iacute;a cotidiana.</p>
-                    <ul class="tool-features">
-                        <li>25+ sustancias comunes</li>
-                        <li>Datos LD50 reales</li>
-                        <li>Ajuste por peso corporal</li>
-                        <li>Contexto visual</li>
-                    </ul>
-                    <span class="tool-cta">Calcular dosis &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/cafeina/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-cafeina.svg" alt="Reloj de cafe&iacute;na" width="60" height="60" loading="lazy" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Reloj de Cafe&iacute;na &mdash; &iquest;Cu&aacute;nta cafe&iacute;na tienes ahora?</h2>
-                    <p>Calcula cu&aacute;nta cafe&iacute;na queda en tu cuerpo. Visualizaci&oacute;n en tiempo real del metabolismo con info sobre plantas que afectan la cafe&iacute;na.</p>
-                    <ul class="tool-features">
-                        <li>14 bebidas comunes</li>
-                        <li>Gr&aacute;fico en tiempo real</li>
-                        <li>Hora segura para dormir</li>
-                        <li>Info de hierbas</li>
-                    </ul>
-                    <span class="tool-cta">Calcular ahora &rarr;</span>
-                </div>
-            </div>
-        </a>
-    </div>
-
-        <a href="/herramientas/botiquin/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-botiquin.svg" alt="Botiqu&iacute;n natural de hierbas" width="60" height="60" loading="lazy" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Botiqu&iacute;n Natural &mdash; Tu kit de hierbas esenciales</h2>
-                    <p>Arma tu botiqu&iacute;n de hierbas medicinales seg&uacute;n tus necesidades. Recomendaciones personalizadas basadas en evidencia cient&iacute;fica.</p>
-                    <ul class="tool-features">
-                        <li>Personalizado</li>
-                        <li>Basado en evidencia</li>
-                        <li>Plantas andinas</li>
-                    </ul>
-                    <span class="tool-cta">Armar botiqu&iacute;n &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/comparador/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-comparador.svg" alt="Comparador de suplementos" width="60" height="60" loading="lazy" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Comparador de Suplementos</h2>
-                    <p>Compara suplementos lado a lado: ingredientes, evidencia cient&iacute;fica, precios y beneficios. Decide con datos.</p>
-                    <ul class="tool-features">
-                        <li>Comparaci&oacute;n detallada</li>
-                        <li>Evidencia cient&iacute;fica</li>
-                        <li>Precios actualizados</li>
-                    </ul>
-                    <span class="tool-cta">Comparar ahora &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/mate/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-mate.svg" alt="Calculadora de yerba mate" width="60" height="60" loading="lazy" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Calculadora de Yerba Mate</h2>
-                    <p>Calcula la cafe&iacute;na por tipo de mate, marca y preparaci&oacute;n. Basado en datos de 47 estudios cient&iacute;ficos.</p>
-                    <ul class="tool-features">
-                        <li>47 estudios analizados</li>
-                        <li>Por marca y tipo</li>
-                        <li>Comparaci&oacute;n con caf&eacute;</li>
-                    </ul>
-                    <span class="tool-cta">Calcular mate &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/seguridad/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-seguridad.svg" alt="Supplement Safety Score" width="60" height="60" loading="lazy" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/frutas-amazonicas-potencial-anticancer-revision.webp" type="image/webp"><img src="/assets/img/thumb/frutas-amazonicas-potencial-anticancer-revision.jpg" alt="Frutas amazónicas: propiedades anticáncer según la ciencia" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#0d47a1">Investigación</span>
+                        <h4><a href="/noticias/frutas-amazonicas-potencial-anticancer-revision/">Frutas amazónicas: propiedades anticáncer según la ciencia</a></h4>
+                        <span class="compact-date">25 de febrero de 2026</span>
                     </div>
                 </div>
-                <div class="tool-body">
-                    <h2>Supplement Safety Score &mdash; Puntuaci&oacute;n de Seguridad</h2>
-                    <p>Ingresa 2&ndash;5 suplementos y obt&eacute;n una puntuaci&oacute;n de seguridad (0&ndash;100) con detalles de interacciones, tarjeta compartible y c&oacute;digo para insertar en tu sitio.</p>
-                    <ul class="tool-features">
-                        <li>50 suplementos</li>
-                        <li>52 interacciones</li>
-                        <li>Puntuaci&oacute;n 0&ndash;100</li>
-                        <li>Tarjeta compartible</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Calcular seguridad &rarr;</span>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/matriz/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <div style="width:60px;height:60px;background:linear-gradient(135deg,#1a237e,#3949ab);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">M</div>
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/luteina-zeaxantina-prevencion-miopia-adolescentes.webp" type="image/webp"><img src="/assets/img/thumb/luteina-zeaxantina-prevencion-miopia-adolescentes.jpg" alt="Luteína y zeaxantina: beneficios para la vista y prevención de miopía" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#b71c1c">Salud Pública</span>
+                        <h4><a href="/noticias/luteina-zeaxantina-prevencion-miopia-adolescentes/">Luteína y zeaxantina: beneficios para la vista y prevención de miopía</a></h4>
+                        <span class="compact-date">18 de febrero de 2026</span>
                     </div>
                 </div>
-                <div class="tool-body">
-                    <h2>Matriz de Interacciones Hierba&ndash;Medicamento</h2>
-                    <p>Explora visualmente 592 interacciones entre 204 hierbas medicinales y 53 clases de medicamentos. Filtra por hierba, medicamento o severidad.</p>
-                    <ul class="tool-features">
-                        <li>204 hierbas</li>
-                        <li>53 clases de medicamentos</li>
-                        <li>592 interacciones</li>
-                        <li>Filtros interactivos</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Explorar matriz &rarr;</span>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable.webp" type="image/webp"><img src="/assets/img/thumb/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable.jpg" alt="Dietas andinas y envejecimiento saludable: qué dice la ciencia" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#bf6c00">Nutrición</span>
+                        <h4><a href="/noticias/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable/">Dietas andinas y envejecimiento saludable: qué dice la ciencia</a></h4>
+                        <span class="compact-date">12 de febrero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/bixina-achiote-potencial-farmacologico-revision.webp" type="image/webp"><img src="/assets/img/thumb/bixina-achiote-potencial-farmacologico-revision.jpg" alt="Achiote (bixina): propiedades medicinales y potencial farmacológico" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/bixina-achiote-potencial-farmacologico-revision/">Achiote (bixina): propiedades medicinales y potencial farmacológico</a></h4>
+                        <span class="compact-date">11 de febrero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/zinc-infecciones-respiratorias-ninos-evidencia-clinica.webp" type="image/webp"><img src="/assets/img/thumb/zinc-infecciones-respiratorias-ninos-evidencia-clinica.jpg" alt="Zinc: beneficios, para qué sirve y dosis en niños y adultos" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#b71c1c">Salud Pública</span>
+                        <h4><a href="/noticias/zinc-infecciones-respiratorias-ninos-evidencia-clinica/">Zinc: beneficios, para qué sirve y dosis en niños y adultos</a></h4>
+                        <span class="compact-date">7 de febrero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g.webp" type="image/webp"><img src="/assets/img/thumb/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g.jpg" alt="Hierro en niños: beneficios para el desarrollo cognitivo" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#b71c1c">Salud Pública</span>
+                        <h4><a href="/noticias/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g/">Hierro en niños: beneficios para el desarrollo cognitivo</a></h4>
+                        <span class="compact-date">3 de febrero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo.webp" type="image/webp"><img src="/assets/img/thumb/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo.jpg" alt="Guayusa: beneficios, propiedades y para qué sirve" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#4a148c">Neurociencia</span>
+                        <h4><a href="/noticias/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo/">Guayusa: beneficios, propiedades y para qué sirve</a></h4>
+                        <span class="compact-date">30 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/sacha-inchi-curcumina-sinergia-anticancer.webp" type="image/webp"><img src="/assets/img/thumb/sacha-inchi-curcumina-sinergia-anticancer.jpg" alt="Sacha inchi: beneficios del aceite, propiedades y contraindicaciones" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#0d47a1">Investigación</span>
+                        <h4><a href="/noticias/sacha-inchi-curcumina-sinergia-anticancer/">Sacha inchi: beneficios del aceite, propiedades y contraindicaciones</a></h4>
+                        <span class="compact-date">30 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad.webp" type="image/webp"><img src="/assets/img/thumb/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad.jpg" alt="Ayahuasca terapéutica: potencial en depresión y ansiedad según la ciencia" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#4a148c">Neurociencia</span>
+                        <h4><a href="/noticias/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad/">Ayahuasca terapéutica: potencial en depresión y ansiedad según la ciencia</a></h4>
+                        <span class="compact-date">29 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/suplementos-herbales-disfuncion-erectil-metaanalisis.webp" type="image/webp"><img src="/assets/img/thumb/suplementos-herbales-disfuncion-erectil-metaanalisis.jpg" alt="Suplementos herbales para la disfunción eréctil: ¿funcionan?" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/suplementos-herbales-disfuncion-erectil-metaanalisis/">Suplementos herbales para la disfunción eréctil: ¿funcionan?</a></h4>
+                        <span class="compact-date">25 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/melon-amargo-diabetes-tipo-2-evidencia.webp" type="image/webp"><img src="/assets/img/thumb/melon-amargo-diabetes-tipo-2-evidencia.jpg" alt="Melón amargo: beneficios para la diabetes y cómo se toma" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/melon-amargo-diabetes-tipo-2-evidencia/">Melón amargo: beneficios para la diabetes y cómo se toma</a></h4>
+                        <span class="compact-date">19 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/chiric-sanango-planta-amazonica-adicciones-takiwasi.webp" type="image/webp"><img src="/assets/img/thumb/chiric-sanango-planta-amazonica-adicciones-takiwasi.jpg" alt="Chiric sanango: propiedades, usos medicinales y evidencia" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/chiric-sanango-planta-amazonica-adicciones-takiwasi/">Chiric sanango: propiedades, usos medicinales y evidencia</a></h4>
+                        <span class="compact-date">15 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/berberina-grasa-visceral-obesidad-ensayo-jama.webp" type="image/webp"><img src="/assets/img/thumb/berberina-grasa-visceral-obesidad-ensayo-jama.jpg" alt="Berberina: para qué sirve, beneficios y contraindicaciones" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/berberina-grasa-visceral-obesidad-ensayo-jama/">Berberina: para qué sirve, beneficios y contraindicaciones</a></h4>
+                        <span class="compact-date">2 de enero de 2026</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/chanca-piedra-proteccion-renal-diabetes-estudio.webp" type="image/webp"><img src="/assets/img/thumb/chanca-piedra-proteccion-renal-diabetes-estudio.jpg" alt="Chanca piedra: para qué sirve, beneficios y cómo tomarla" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/chanca-piedra-proteccion-renal-diabetes-estudio/">Chanca piedra: para qué sirve, beneficios y cómo tomarla</a></h4>
+                        <span class="compact-date">29 de diciembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/sangre-de-drago-anticoagulante-natural-loureirin.webp" type="image/webp"><img src="/assets/img/thumb/sangre-de-drago-anticoagulante-natural-loureirin.jpg" alt="Sangre de drago: para qué sirve, propiedades y beneficios" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/sangre-de-drago-anticoagulante-natural-loureirin/">Sangre de drago: para qué sirve, propiedades y beneficios</a></h4>
+                        <span class="compact-date">26 de diciembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/carotenoides-retinales-aumentan-colesterol-hdl.webp" type="image/webp"><img src="/assets/img/thumb/carotenoides-retinales-aumentan-colesterol-hdl.jpg" alt="Carotenoides: beneficios para el colesterol HDL y la visión" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#bf6c00">Nutrición</span>
+                        <h4><a href="/noticias/carotenoides-retinales-aumentan-colesterol-hdl/">Carotenoides: beneficios para el colesterol HDL y la visión</a></h4>
+                        <span class="compact-date">23 de diciembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/tarwi-chocho-microbioma-seguridad-alimentaria-andino.webp" type="image/webp"><img src="/assets/img/thumb/tarwi-chocho-microbioma-seguridad-alimentaria-andino.jpg" alt="Tarwi (chocho): beneficios, propiedades y valor nutricional" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#bf6c00">Nutrición</span>
+                        <h4><a href="/noticias/tarwi-chocho-microbioma-seguridad-alimentaria-andino/">Tarwi (chocho): beneficios, propiedades y valor nutricional</a></h4>
+                        <span class="compact-date">16 de diciembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/plantas-sudamericanas-proteccion-adn-antigenotoxicas.webp" type="image/webp"><img src="/assets/img/thumb/plantas-sudamericanas-proteccion-adn-antigenotoxicas.jpg" alt="Plantas medicinales sudamericanas que protegen el ADN" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#0d47a1">Investigación</span>
+                        <h4><a href="/noticias/plantas-sudamericanas-proteccion-adn-antigenotoxicas/">Plantas medicinales sudamericanas que protegen el ADN</a></h4>
+                        <span class="compact-date">13 de diciembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/dieta-maya-milpa-sindrome-metabolico-alternativa.webp" type="image/webp"><img src="/assets/img/thumb/dieta-maya-milpa-sindrome-metabolico-alternativa.jpg" alt="Dieta maya de la milpa: alternativa contra el síndrome metabólico" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#bf6c00">Nutrición</span>
+                        <h4><a href="/noticias/dieta-maya-milpa-sindrome-metabolico-alternativa/">Dieta maya de la milpa: alternativa contra el síndrome metabólico</a></h4>
+                        <span class="compact-date">12 de diciembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/kiwicha-colesterol-ensayo-clinico-perfil-lipidico.webp" type="image/webp"><img src="/assets/img/thumb/kiwicha-colesterol-ensayo-clinico-perfil-lipidico.jpg" alt="Kiwicha: beneficios, propiedades nutricionales y contraindicaciones" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#bf6c00">Nutrición</span>
+                        <h4><a href="/noticias/kiwicha-colesterol-ensayo-clinico-perfil-lipidico/">Kiwicha: beneficios, propiedades nutricionales y contraindicaciones</a></h4>
+                        <span class="compact-date">14 de noviembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/una-de-gato-aterosclerosis-estudio.webp" type="image/webp"><img src="/assets/img/thumb/una-de-gato-aterosclerosis-estudio.jpg" alt="Uña de gato: propiedades medicinales, beneficios y contraindicaciones" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#1a5632">Plantas Medicinales</span>
+                        <h4><a href="/noticias/una-de-gato-aterosclerosis-estudio/">Uña de gato: propiedades medicinales, beneficios y contraindicaciones</a></h4>
+                        <span class="compact-date">24 de octubre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion.webp" type="image/webp"><img src="/assets/img/thumb/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion.jpg" alt="Adaptación a la altitud: andinos, tibetanos y etíopes comparados" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#0d47a1">Investigación</span>
+                        <h4><a href="/noticias/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion/">Adaptación a la altitud: andinos, tibetanos y etíopes comparados</a></h4>
+                        <span class="compact-date">24 de septiembre de 2025</span>
+                    </div>
+                </div>
+                <div class="compact-item">
+                    <picture><source srcset="/assets/img/thumb/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto.webp" type="image/webp"><img src="/assets/img/thumb/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto.jpg" alt="Hoja de coca: beneficios medicinales, propiedades y contraindicaciones" width="80" height="53" loading="lazy" decoding="async" class="compact-thumb"></picture>
+                    <div>
+                        <span class="compact-cat" style="color:#0d47a1">Investigación</span>
+                        <h4><a href="/noticias/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto/">Hoja de coca: beneficios medicinales, propiedades y contraindicaciones</a></h4>
+                        <span class="compact-date">24 de septiembre de 2025</span>
+                    </div>
+                </div>
                 </div>
             </div>
-        </a>
-    </div>
-
-    <div class="embed-callout">
-        <div class="embed-callout-inner">
-            <h2>Integra nuestras herramientas en tu sitio web</h2>
-            <p>Todas nuestras herramientas se pueden integrar gratis con un simple c&oacute;digo iframe. Ideal para blogs de salud, farmacias, cl&iacute;nicas y herbolarios.</p>
-            <p>Cada herramienta incluye el c&oacute;digo de integraci&oacute;n en su p&aacute;gina. <a href="/herramientas/interacciones/">Ver ejemplo &rarr;</a></p>
+        </section>
+        <section class="newsletter-section" id="newsletter">
+            <div class="newsletter-inner">
+                <h2>Recibe lo mejor de la ciencia andina</h2>
+                <p>Cada semana: nuevos estudios, plantas medicinales y consejos de salud basados en evidencia. Sin spam.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" name="email" placeholder="Tu correo electr&oacute;nico" required autocomplete="email">
+                    <input type="hidden" name="_subject" value="Nueva suscripci&oacute;n — Bot&aacute;nica Andina">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="box">
+                    <button type="submit">Suscribirme</button>
+                </form>
+                <div class="newsletter-msg" id="newsletterMsg"></div>
+                <div class="newsletter-privacy">Respetamos tu privacidad. Puedes cancelar en cualquier momento.</div>
+            </div>
+        </section>
+        <footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Bot&aacute;nica Andina</div>
+                <p class="footer-desc">Portal de noticias de salud basado en evidencia cient&iacute;fica.
+                Investigaci&oacute;n sobre plantas medicinales, nutrici&oacute;n y bienestar para Am&eacute;rica Latina.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Secciones</div>
+                <ul class="footer-links">
+                    <li><a href="/noticias/">Todas las noticias</a></li>
+                    <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
+                    <li><a href="/politica-editorial/">Pol&iacute;tica editorial</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Equipo</div>
+                <ul class="footer-links">
+                    <li><a href="/equipo/">Equipo editorial</a></li>
+                    <li><a href="/equipo/dr-carlos-mendez/">Dr. Carlos M&eacute;ndez</a></li>
+                    <li><a href="/equipo/dra-lucia-paredes/">Dra. Luc&iacute;a Paredes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bot&aacute;nica Andina. Todos los derechos reservados.</p>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 <a href="/">Bot&aacute;nica Andina</a> &mdash; Informaci&oacute;n basada en evidencia cient&iacute;fica</p>
-        <p style="margin-top:0.3rem"><a href="/politica-editorial/">Pol&iacute;tica Editorial</a> &middot; <a href="/sobre-nosotros/">Sobre Nosotros</a></p>
-    </footer>
+</footer>
+    <script>
+    document.getElementById('loadMoreBtn').addEventListener('click', function() {
+        document.querySelector('.articles-grid').classList.add('show-all');
+        document.getElementById('compactSection').classList.remove('hidden-section');
+        document.getElementById('compactSection').classList.add('visible-section');
+        document.getElementById('loadMoreWrap').classList.add('hidden');
+    });
+    </script>
+    <script>
+    (function() {
+        var form = document.getElementById('newsletterForm');
+        var msg = document.getElementById('newsletterMsg');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = form.querySelector('button');
+            var email = form.querySelector('input[type="email"]').value;
+            btn.disabled = true;
+            btn.textContent = 'Enviando...';
+            msg.textContent = '';
+            fetch('https://formsubmit.co/ajax/hola@botanicaandina.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({ email: email, _subject: 'Nueva suscripción — Botánica Andina' })
+            })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.success === true || data.success === 'true') {
+                    msg.textContent = '¡Gracias! Te has suscrito correctamente.';
+                    msg.style.color = '#a5d6a7';
+                    form.reset();
+                } else {
+                    msg.textContent = 'Error al suscribir. Intenta de nuevo.';
+                    msg.style.color = '#ef9a9a';
+                }
+            })
+            .catch(function() {
+                msg.textContent = 'Error de conexión. Intenta de nuevo.';
+                msg.style.color = '#ef9a9a';
+            })
+            .finally(function() {
+                btn.disabled = false;
+                btn.textContent = 'Suscribirme';
+            });
+        });
+    })();
+    </script>
 </body>
 </html>

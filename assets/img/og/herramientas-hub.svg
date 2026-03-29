@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f8f5fa"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#1a5632"/>
+  <rect x="0" y="624" width="1200" height="6" fill="#6a1b9a"/>
+  <rect x="80" y="200" width="160" height="36" rx="18" fill="#6a1b9a"/>
+  <text x="160" y="224" text-anchor="middle" font-family="Arial,sans-serif"
+        font-size="14" fill="#fff" font-weight="bold" letter-spacing="1">HERRAMIENTAS</text>
+  <text x="80" y="280" font-family="Georgia,serif" font-size="48" fill="#1a1a1a" font-weight="bold">Herramientas Gratuitas</text><text x="80" y="338" font-family="Georgia,serif" font-size="48" fill="#1a1a1a" font-weight="bold">de Salud Natural</text>
+  <text x="80" y="416" font-family="Arial,sans-serif" font-size="22"
+        fill="#666">Quiz • Buscador • Verificador de interacciones</text>
+  <text x="80" y="560" font-family="Georgia,serif" font-size="20" fill="#1a5632"
+        font-weight="bold">Botánica Andina</text>
+  <text x="80" y="588" font-family="Arial,sans-serif" font-size="14"
+        fill="#888">botanicaandina.com/herramientas</text>
+</svg>

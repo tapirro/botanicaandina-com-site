@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todas las noticias &mdash; Bot&aacute;nica Andina</title>
+    <meta name="description" content="Archivo completo de noticias de salud basadas en evidencia cient&iacute;fica de Bot&aacute;nica Andina.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <link rel="canonical" href="https://botanicaandina.com/noticias/">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Noticias de Salud Basadas en Evidencia",
+    "url": "https://botanicaandina.com/noticias/",
+    "description": "Archivo completo de noticias de salud basadas en evidencia científica sobre plantas medicinales andinas.",
+    "author": {
+        "@type": "Organization",
+        "name": "Botánica Andina",
+        "url": "https://botanicaandina.com"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Botánica Andina",
+        "url": "https://botanicaandina.com",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://botanicaandina.com/favicon.ico"
+        }
+    },
+    "specialty": {
+        "@type": "Specialty",
+        "name": "Medicina Herbal"
+    },
+    "about": {
+        "@type": "Thing",
+        "name": "Plantas medicinales andinas y salud basada en evidencia"
+    }
+}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
+        img { max-width: 100%; height: auto; }
+            .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+    .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    @media (max-width: 700px) {
+        .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+        .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    }
+        .content { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+        h1 { font-size: 1.8rem; color: #111; margin-bottom: 0.5rem; }
+        .page-desc { font-size: 0.95rem; color: #666; margin-bottom: 2rem; padding-bottom: 1.5rem;
+            border-bottom: 2px solid #1a5632; }
+        .archive-card { display: flex; gap: 1.2rem; padding: 1.2rem 0; border-bottom: 1px solid #eee; }
+        .archive-thumb { flex-shrink: 0; width: 160px; border-radius: 8px; overflow: hidden; }
+        .archive-thumb img { width: 100%; height: 107px; object-fit: cover; display: block; }
+        .archive-body { flex: 1; }
+        .archive-cat { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+            font-family: Arial, sans-serif; font-weight: 600; }
+        .archive-body h3 { font-size: 1rem; line-height: 1.3; margin: 0.2rem 0 0.4rem; }
+        .archive-body h3 a { color: #111; text-decoration: none; }
+        .archive-body h3 a:hover { color: #1a5632; }
+        .archive-body p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 0.4rem; }
+        .archive-date { font-size: 0.75rem; color: #aaa; font-family: Arial, sans-serif; }
+            .site-footer { background: #1a2e1a; color: #ccc; padding: 3rem 0 2rem; margin-top: 3rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand { font-family: Georgia, serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem; }
+    .footer-desc { font-size: 0.85rem; line-height: 1.6; color: #aaa; }
+    .footer-heading { font-family: Arial, sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin-bottom: 0.8rem; }
+    .footer-links { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: 0.4rem; }
+    .footer-links a { color: #aaa; text-decoration: none; font-size: 0.85rem; font-family: Arial, sans-serif; transition: color 0.2s; }
+    .footer-links a:hover { color: #8bc34a; }
+    .footer-bottom { border-top: 1px solid #2a3e2a; padding-top: 1.5rem; text-align: center; }
+    .footer-bottom p { font-size: 0.78rem; color: #777; font-family: Arial, sans-serif; margin: 0; }
+    @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
+        .archive-card:nth-child(n+7) { display: none; }
+        .archive-card.show { display: flex !important; }
+        .show-more-btn { display: block; margin: 2rem auto; padding: 0.8rem 2rem; background: #1a5632;
+            color: #fff; border: none; border-radius: 6px; font-family: Arial, sans-serif;
+            font-size: 0.9rem; cursor: pointer; transition: background 0.2s; }
+        .show-more-btn:hover { background: #2d7a4a; }
+        .show-more-btn.hidden { display: none; }
+        @media (max-width: 600px) {
+            .archive-card { flex-direction: column; gap: 0.8rem; }
+            .archive-thumb { width: 100%; }
+            .archive-thumb img { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+        <nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+        <div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            <a href="/politica-editorial/">Pol&iacute;tica Editorial</a>
+            <a href="/equipo/">Equipo</a>
+        </div>
+    </div>
+</nav>
+    <div class="content">
+        <h1>Todas las noticias</h1>
+        <p class="page-desc">35 art&iacute;culos de salud basados en evidencia cient&iacute;fica</p>
+        
+            <article class="archive-card">
+                <a href="/noticias/dengue-chikungunya-vacunacion-viajeros-guia-2026/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/dengue-chikungunya-vacunacion-viajeros-guia-2026.webp" type="image/webp"><img src="/assets/img/thumb/dengue-chikungunya-vacunacion-viajeros-guia-2026.jpg" alt="Dengue y chikungunya 2026: vacunas y guía para viajeros" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#b71c1c">Salud Pública</span>
+                    <h3><a href="/noticias/dengue-chikungunya-vacunacion-viajeros-guia-2026/">Dengue y chikungunya 2026: vacunas y guía para viajeros</a></h3>
+                    <p>Guía actualizada 2026 sobre vacunación contra dengue y chikungunya para viajeros. Qué vacunas existen, quién debe vacuna...</p>
+                    <span class="archive-date">22 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/ayahuasca-cognicion-revision-sistematica-efectos/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/ayahuasca-cognicion-revision-sistematica-efectos.webp" type="image/webp"><img src="/assets/img/thumb/ayahuasca-cognicion-revision-sistematica-efectos.jpg" alt="Ayahuasca: efectos, propiedades y evidencia científica sobre cognición" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#4a148c">Neurociencia</span>
+                    <h3><a href="/noticias/ayahuasca-cognicion-revision-sistematica-efectos/">Ayahuasca: efectos, propiedades y evidencia científica sobre cognición</a></h3>
+                    <p>Primera revisión sistemática sobre los efectos cognitivos de la ayahuasca. Qué dice la ciencia, riesgos, efectos secunda...</p>
+                    <span class="archive-date">21 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/canihua-grano-andino-emergente-perfil-nutricional/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/canihua-grano-andino-emergente-perfil-nutricional.webp" type="image/webp"><img src="/assets/img/thumb/canihua-grano-andino-emergente-perfil-nutricional.jpg" alt="Cañihua: propiedades, beneficios y valor nutricional del grano andino" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/canihua-grano-andino-emergente-perfil-nutricional/">Cañihua: propiedades, beneficios y valor nutricional del grano andino</a></h3>
+                    <p>Conoce la cañihua: el grano andino con más hierro que la quinoa. Propiedades nutricionales, beneficios para la salud, re...</p>
+                    <span class="archive-date">21 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/disglucemia-riesgo-cardiometabolico-nutraceuticos/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/disglucemia-riesgo-cardiometabolico-nutraceuticos.webp" type="image/webp"><img src="/assets/img/thumb/disglucemia-riesgo-cardiometabolico-nutraceuticos.jpg" alt="Nutracéuticos para el riesgo cardiometabólico: evidencia actual" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/disglucemia-riesgo-cardiometabolico-nutraceuticos/">Nutracéuticos para el riesgo cardiometabólico: evidencia actual</a></h3>
+                    <p>Revisión sobre el rol de nutracéuticos en disglucemia y riesgo cardiometabólico. Cuáles tienen evidencia, dosis y recome...</p>
+                    <span class="archive-date">21 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/curcuma-mucositis-oral-cancer-revision-sistematica/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/curcuma-mucositis-oral-cancer-revision-sistematica.webp" type="image/webp"><img src="/assets/img/thumb/curcuma-mucositis-oral-cancer-revision-sistematica.jpg" alt="Cúrcuma: para qué sirve, propiedades y beneficios comprobados" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/curcuma-mucositis-oral-cancer-revision-sistematica/">Cúrcuma: para qué sirve, propiedades y beneficios comprobados</a></h3>
+                    <p>¿Para qué sirve la cúrcuma? Revisión de sus propiedades antiinflamatorias, beneficios comprobados en mucositis oral, cóm...</p>
+                    <span class="archive-date">10 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/curcumina-cancer-diabetes-estrategias-dobles/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/curcumina-cancer-diabetes-estrategias-dobles.webp" type="image/webp"><img src="/assets/img/thumb/curcumina-cancer-diabetes-estrategias-dobles.jpg" alt="Curcumina: beneficios contra el cáncer y la diabetes según la ciencia" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/curcumina-cancer-diabetes-estrategias-dobles/">Curcumina: beneficios contra el cáncer y la diabetes según la ciencia</a></h3>
+                    <p>Revisión científica explora el doble potencial de la curcumina contra el cáncer y la diabetes. Mecanismos, evidencia act...</p>
+                    <span class="archive-date">6 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/curcumina-mejora-estado-animo-estudio/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/curcumina-mejora-estado-animo-estudio.webp" type="image/webp"><img src="/assets/img/thumb/curcumina-mejora-estado-animo-estudio.jpg" alt="Cúrcuma en cápsulas: beneficios, propiedades y evidencia científica" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#4a148c">Neurociencia</span>
+                    <h3><a href="/noticias/curcumina-mejora-estado-animo-estudio/">Cúrcuma en cápsulas: beneficios, propiedades y evidencia científica</a></h3>
+                    <p>¿Sirve la cúrcuma para mejorar el ánimo? Analizamos un ensayo clínico reciente sobre curcumina, sus beneficios reales, c...</p>
+                    <span class="archive-date">6 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo.webp" type="image/webp"><img src="/assets/img/thumb/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo.jpg" alt="Cúrcuma y té verde: beneficios combinados para el cerebro" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#4a148c">Neurociencia</span>
+                    <h3><a href="/noticias/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo/">Cúrcuma y té verde: beneficios combinados para el cerebro</a></h3>
+                    <p>Un ensayo clínico muestra que la combinación de cúrcuma + té verde (EGCG) elevó la proteína cerebral BDNF en 12 semanas....</p>
+                    <span class="archive-date">6 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se.webp" type="image/webp"><img src="/assets/img/thumb/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se.jpg" alt="Enfermedad de Chagas: síntomas cardíacos y pronóstico" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#b71c1c">Salud Pública</span>
+                    <h3><a href="/noticias/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se/">Enfermedad de Chagas: síntomas cardíacos y pronóstico</a></h3>
+                    <p>La cardiomiopatía chagásica tiene peor pronóstico que otras cardiomiopatías según estudio publicado en JACC. Síntomas, d...</p>
+                    <span class="archive-date">6 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/fitoterapia-sindrome-metabolico-revision/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/fitoterapia-sindrome-metabolico-revision.webp" type="image/webp"><img src="/assets/img/thumb/fitoterapia-sindrome-metabolico-revision.jpg" alt="Fitoterapia: plantas medicinales para el síndrome metabólico" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/fitoterapia-sindrome-metabolico-revision/">Fitoterapia: plantas medicinales para el síndrome metabólico</a></h3>
+                    <p>Revisión de plantas medicinales para el síndrome metabólico: cuáles tienen evidencia, cuáles no y qué dice la ciencia so...</p>
+                    <span class="archive-date">6 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/curcuma-salud-periodontal-metaanalisis/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/curcuma-salud-periodontal-metaanalisis.webp" type="image/webp"><img src="/assets/img/thumb/curcuma-salud-periodontal-metaanalisis.jpg" alt="Cúrcuma para las encías: beneficios en salud periodontal" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/curcuma-salud-periodontal-metaanalisis/">Cúrcuma para las encías: beneficios en salud periodontal</a></h3>
+                    <p>Metaanálisis de 90 estudios confirma beneficios de la cúrcuma para encías y salud periodontal. Cómo usarla, evidencia y ...</p>
+                    <span class="archive-date">4 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion.webp" type="image/webp"><img src="/assets/img/thumb/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion.jpg" alt="Quinoa: propiedades, beneficios nutricionales y contraindicaciones" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion/">Quinoa: propiedades, beneficios nutricionales y contraindicaciones</a></h3>
+                    <p>Conoce las propiedades de la quinoa, su valor nutricional, beneficios metabólicos demostrados en ensayo clínico, recetas...</p>
+                    <span class="archive-date">1 de marzo de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/frutas-amazonicas-potencial-anticancer-revision/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/frutas-amazonicas-potencial-anticancer-revision.webp" type="image/webp"><img src="/assets/img/thumb/frutas-amazonicas-potencial-anticancer-revision.jpg" alt="Frutas amazónicas: propiedades anticáncer según la ciencia" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#0d47a1">Investigación</span>
+                    <h3><a href="/noticias/frutas-amazonicas-potencial-anticancer-revision/">Frutas amazónicas: propiedades anticáncer según la ciencia</a></h3>
+                    <p>Primera gran revisión científica sobre el potencial anticáncer de frutas amazónicas: açaí, camu camu, aguaje y más. Prop...</p>
+                    <span class="archive-date">25 de febrero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/luteina-zeaxantina-prevencion-miopia-adolescentes/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/luteina-zeaxantina-prevencion-miopia-adolescentes.webp" type="image/webp"><img src="/assets/img/thumb/luteina-zeaxantina-prevencion-miopia-adolescentes.jpg" alt="Luteína y zeaxantina: beneficios para la vista y prevención de miopía" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#b71c1c">Salud Pública</span>
+                    <h3><a href="/noticias/luteina-zeaxantina-prevencion-miopia-adolescentes/">Luteína y zeaxantina: beneficios para la vista y prevención de miopía</a></h3>
+                    <p>Estudio sugiere que la luteína y zeaxantina podrían frenar la miopía en adolescentes. Beneficios para los ojos, alimento...</p>
+                    <span class="archive-date">18 de febrero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable.webp" type="image/webp"><img src="/assets/img/thumb/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable.jpg" alt="Dietas andinas y envejecimiento saludable: qué dice la ciencia" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable/">Dietas andinas y envejecimiento saludable: qué dice la ciencia</a></h3>
+                    <p>Estudio sobre dietas tradicionales andinas y su relación con el envejecimiento saludable. Alimentos clave, antioxidantes...</p>
+                    <span class="archive-date">12 de febrero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/bixina-achiote-potencial-farmacologico-revision/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/bixina-achiote-potencial-farmacologico-revision.webp" type="image/webp"><img src="/assets/img/thumb/bixina-achiote-potencial-farmacologico-revision.jpg" alt="Achiote (bixina): propiedades medicinales y potencial farmacológico" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/bixina-achiote-potencial-farmacologico-revision/">Achiote (bixina): propiedades medicinales y potencial farmacológico</a></h3>
+                    <p>Revisión del potencial farmacológico de la bixina del achiote. Propiedades antioxidantes, antiinflamatorias, usos tradic...</p>
+                    <span class="archive-date">11 de febrero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/zinc-infecciones-respiratorias-ninos-evidencia-clinica/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/zinc-infecciones-respiratorias-ninos-evidencia-clinica.webp" type="image/webp"><img src="/assets/img/thumb/zinc-infecciones-respiratorias-ninos-evidencia-clinica.jpg" alt="Zinc: beneficios, para qué sirve y dosis en niños y adultos" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#b71c1c">Salud Pública</span>
+                    <h3><a href="/noticias/zinc-infecciones-respiratorias-ninos-evidencia-clinica/">Zinc: beneficios, para qué sirve y dosis en niños y adultos</a></h3>
+                    <p>Todo sobre el zinc: beneficios para el sistema inmunológico, infecciones respiratorias en niños, dosis recomendada, alim...</p>
+                    <span class="archive-date">7 de febrero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g.webp" type="image/webp"><img src="/assets/img/thumb/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g.jpg" alt="Hierro en niños: beneficios para el desarrollo cognitivo" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#b71c1c">Salud Pública</span>
+                    <h3><a href="/noticias/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g/">Hierro en niños: beneficios para el desarrollo cognitivo</a></h3>
+                    <p>Evidencia global sobre suplementos de hierro y desarrollo cognitivo infantil. Cuándo suplementar, dosis por edad y lo qu...</p>
+                    <span class="archive-date">3 de febrero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo.webp" type="image/webp"><img src="/assets/img/thumb/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo.jpg" alt="Guayusa: beneficios, propiedades y para qué sirve" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#4a148c">Neurociencia</span>
+                    <h3><a href="/noticias/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo/">Guayusa: beneficios, propiedades y para qué sirve</a></h3>
+                    <p>Descubre la guayusa: beneficios para la concentración y rendimiento cognitivo, comparación con guaraná, propiedades ener...</p>
+                    <span class="archive-date">30 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/sacha-inchi-curcumina-sinergia-anticancer/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/sacha-inchi-curcumina-sinergia-anticancer.webp" type="image/webp"><img src="/assets/img/thumb/sacha-inchi-curcumina-sinergia-anticancer.jpg" alt="Sacha inchi: beneficios del aceite, propiedades y contraindicaciones" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#0d47a1">Investigación</span>
+                    <h3><a href="/noticias/sacha-inchi-curcumina-sinergia-anticancer/">Sacha inchi: beneficios del aceite, propiedades y contraindicaciones</a></h3>
+                    <p>Descubre los beneficios del sacha inchi y su aceite: propiedades para la piel, el cabello y la salud. Estudios sobre su ...</p>
+                    <span class="archive-date">30 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad.webp" type="image/webp"><img src="/assets/img/thumb/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad.jpg" alt="Ayahuasca terapéutica: potencial en depresión y ansiedad según la ciencia" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#4a148c">Neurociencia</span>
+                    <h3><a href="/noticias/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad/">Ayahuasca terapéutica: potencial en depresión y ansiedad según la ciencia</a></h3>
+                    <p>Revisión científica evalúa el potencial terapéutico de la ayahuasca para depresión y ansiedad. Resultados, riesgos y lim...</p>
+                    <span class="archive-date">29 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/suplementos-herbales-disfuncion-erectil-metaanalisis/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/suplementos-herbales-disfuncion-erectil-metaanalisis.webp" type="image/webp"><img src="/assets/img/thumb/suplementos-herbales-disfuncion-erectil-metaanalisis.jpg" alt="Suplementos herbales para la disfunción eréctil: ¿funcionan?" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/suplementos-herbales-disfuncion-erectil-metaanalisis/">Suplementos herbales para la disfunción eréctil: ¿funcionan?</a></h3>
+                    <p>Metaanálisis evalúa la evidencia de suplementos herbales para la disfunción eréctil: maca, ginseng y otros. Qué funciona...</p>
+                    <span class="archive-date">25 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/melon-amargo-diabetes-tipo-2-evidencia/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/melon-amargo-diabetes-tipo-2-evidencia.webp" type="image/webp"><img src="/assets/img/thumb/melon-amargo-diabetes-tipo-2-evidencia.jpg" alt="Melón amargo: beneficios para la diabetes y cómo se toma" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/melon-amargo-diabetes-tipo-2-evidencia/">Melón amargo: beneficios para la diabetes y cómo se toma</a></h3>
+                    <p>El melón amargo redujo la HbA1c de 7.82% a 6.34% en 70 pacientes. Conoce sus beneficios para la diabetes tipo 2, cómo se...</p>
+                    <span class="archive-date">19 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/chiric-sanango-planta-amazonica-adicciones-takiwasi/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/chiric-sanango-planta-amazonica-adicciones-takiwasi.webp" type="image/webp"><img src="/assets/img/thumb/chiric-sanango-planta-amazonica-adicciones-takiwasi.jpg" alt="Chiric sanango: propiedades, usos medicinales y evidencia" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/chiric-sanango-planta-amazonica-adicciones-takiwasi/">Chiric sanango: propiedades, usos medicinales y evidencia</a></h3>
+                    <p>Conoce el chiric sanango, la planta amazónica investigada como terapia para adicciones en el centro Takiwasi. Propiedade...</p>
+                    <span class="archive-date">15 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/berberina-grasa-visceral-obesidad-ensayo-jama/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/berberina-grasa-visceral-obesidad-ensayo-jama.webp" type="image/webp"><img src="/assets/img/thumb/berberina-grasa-visceral-obesidad-ensayo-jama.jpg" alt="Berberina: para qué sirve, beneficios y contraindicaciones" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/berberina-grasa-visceral-obesidad-ensayo-jama/">Berberina: para qué sirve, beneficios y contraindicaciones</a></h3>
+                    <p>Descubre qué es la berberina, sus beneficios comprobados para reducir grasa visceral según un ensayo del JAMA, cómo se t...</p>
+                    <span class="archive-date">2 de enero de 2026</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/chanca-piedra-proteccion-renal-diabetes-estudio/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/chanca-piedra-proteccion-renal-diabetes-estudio.webp" type="image/webp"><img src="/assets/img/thumb/chanca-piedra-proteccion-renal-diabetes-estudio.jpg" alt="Chanca piedra: para qué sirve, beneficios y cómo tomarla" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/chanca-piedra-proteccion-renal-diabetes-estudio/">Chanca piedra: para qué sirve, beneficios y cómo tomarla</a></h3>
+                    <p>Guía completa sobre la chanca piedra: beneficios para los riñones comprobados en un estudio reciente, cómo se toma, cont...</p>
+                    <span class="archive-date">29 de diciembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/sangre-de-drago-anticoagulante-natural-loureirin/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/sangre-de-drago-anticoagulante-natural-loureirin.webp" type="image/webp"><img src="/assets/img/thumb/sangre-de-drago-anticoagulante-natural-loureirin.jpg" alt="Sangre de drago: para qué sirve, propiedades y beneficios" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/sangre-de-drago-anticoagulante-natural-loureirin/">Sangre de drago: para qué sirve, propiedades y beneficios</a></h3>
+                    <p>Descubre la sangre de drago: para qué sirve esta resina amazónica, propiedades anticoagulantes descubiertas por la cienc...</p>
+                    <span class="archive-date">26 de diciembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/carotenoides-retinales-aumentan-colesterol-hdl/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/carotenoides-retinales-aumentan-colesterol-hdl.webp" type="image/webp"><img src="/assets/img/thumb/carotenoides-retinales-aumentan-colesterol-hdl.jpg" alt="Carotenoides: beneficios para el colesterol HDL y la visión" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/carotenoides-retinales-aumentan-colesterol-hdl/">Carotenoides: beneficios para el colesterol HDL y la visión</a></h3>
+                    <p>Estudio revela que los carotenoides retinales aumentan el colesterol HDL bueno. Alimentos ricos en carotenoides, luteína...</p>
+                    <span class="archive-date">23 de diciembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/tarwi-chocho-microbioma-seguridad-alimentaria-andino/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/tarwi-chocho-microbioma-seguridad-alimentaria-andino.webp" type="image/webp"><img src="/assets/img/thumb/tarwi-chocho-microbioma-seguridad-alimentaria-andino.jpg" alt="Tarwi (chocho): beneficios, propiedades y valor nutricional" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/tarwi-chocho-microbioma-seguridad-alimentaria-andino/">Tarwi (chocho): beneficios, propiedades y valor nutricional</a></h3>
+                    <p>Todo sobre el tarwi o chocho: el superalimento andino con alto contenido proteico. Beneficios, propiedades, microbioma y...</p>
+                    <span class="archive-date">16 de diciembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/plantas-sudamericanas-proteccion-adn-antigenotoxicas/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/plantas-sudamericanas-proteccion-adn-antigenotoxicas.webp" type="image/webp"><img src="/assets/img/thumb/plantas-sudamericanas-proteccion-adn-antigenotoxicas.jpg" alt="Plantas medicinales sudamericanas que protegen el ADN" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#0d47a1">Investigación</span>
+                    <h3><a href="/noticias/plantas-sudamericanas-proteccion-adn-antigenotoxicas/">Plantas medicinales sudamericanas que protegen el ADN</a></h3>
+                    <p>Investigación revela plantas sudamericanas con potencial protector del ADN. Cuáles son, qué compuestos tienen y qué dice...</p>
+                    <span class="archive-date">13 de diciembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/dieta-maya-milpa-sindrome-metabolico-alternativa/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/dieta-maya-milpa-sindrome-metabolico-alternativa.webp" type="image/webp"><img src="/assets/img/thumb/dieta-maya-milpa-sindrome-metabolico-alternativa.jpg" alt="Dieta maya de la milpa: alternativa contra el síndrome metabólico" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/dieta-maya-milpa-sindrome-metabolico-alternativa/">Dieta maya de la milpa: alternativa contra el síndrome metabólico</a></h3>
+                    <p>La dieta maya basada en maíz, frijol y calabaza puede combatir el síndrome metabólico. Evidencia científica, recetas y c...</p>
+                    <span class="archive-date">12 de diciembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/kiwicha-colesterol-ensayo-clinico-perfil-lipidico/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/kiwicha-colesterol-ensayo-clinico-perfil-lipidico.webp" type="image/webp"><img src="/assets/img/thumb/kiwicha-colesterol-ensayo-clinico-perfil-lipidico.jpg" alt="Kiwicha: beneficios, propiedades nutricionales y contraindicaciones" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#bf6c00">Nutrición</span>
+                    <h3><a href="/noticias/kiwicha-colesterol-ensayo-clinico-perfil-lipidico/">Kiwicha: beneficios, propiedades nutricionales y contraindicaciones</a></h3>
+                    <p>Todo sobre la kiwicha (amaranto): beneficios para el colesterol según ensayo clínico, propiedades nutricionales, cómo pr...</p>
+                    <span class="archive-date">14 de noviembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/una-de-gato-aterosclerosis-estudio/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/una-de-gato-aterosclerosis-estudio.webp" type="image/webp"><img src="/assets/img/thumb/una-de-gato-aterosclerosis-estudio.jpg" alt="Uña de gato: propiedades medicinales, beneficios y contraindicaciones" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#1a5632">Plantas Medicinales</span>
+                    <h3><a href="/noticias/una-de-gato-aterosclerosis-estudio/">Uña de gato: propiedades medicinales, beneficios y contraindicaciones</a></h3>
+                    <p>Guía sobre la uña de gato peruana: propiedades medicinales comprobadas, beneficios antiinflamatorios, estudio sobre ater...</p>
+                    <span class="archive-date">24 de octubre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion.webp" type="image/webp"><img src="/assets/img/thumb/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion.jpg" alt="Adaptación a la altitud: andinos, tibetanos y etíopes comparados" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#0d47a1">Investigación</span>
+                    <h3><a href="/noticias/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion/">Adaptación a la altitud: andinos, tibetanos y etíopes comparados</a></h3>
+                    <p>Cómo se adaptaron tres pueblos a vivir sobre los 3000 metros: andinos, tibetanos y etíopes. Mecanismos biológicos, hemog...</p>
+                    <span class="archive-date">24 de septiembre de 2025</span>
+                </div>
+            </article>
+            <article class="archive-card">
+                <a href="/noticias/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto/" class="archive-thumb">
+                    <picture><source srcset="/assets/img/thumb/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto.webp" type="image/webp"><img src="/assets/img/thumb/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto.jpg" alt="Hoja de coca: beneficios medicinales, propiedades y contraindicaciones" width="200" height="133" loading="lazy" decoding="async"></picture>
+                </a>
+                <div class="archive-body">
+                    <span class="archive-cat" style="color:#0d47a1">Investigación</span>
+                    <h3><a href="/noticias/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto/">Hoja de coca: beneficios medicinales, propiedades y contraindicaciones</a></h3>
+                    <p>Beneficios de la hoja de coca según la ciencia: reduce el cortisol en mineros andinos. Propiedades medicinales, usos tra...</p>
+                    <span class="archive-date">24 de septiembre de 2025</span>
+                </div>
+            </article>
+        <button class="show-more-btn" onclick="document.querySelectorAll('.archive-card').forEach(c=>c.classList.add('show'));this.classList.add('hidden')">Ver las 35 noticias</button>
+    </div>
+        <footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">Bot&aacute;nica Andina</div>
+                <p class="footer-desc">Portal de noticias de salud basado en evidencia cient&iacute;fica.
+                Investigaci&oacute;n sobre plantas medicinales, nutrici&oacute;n y bienestar para Am&eacute;rica Latina.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Secciones</div>
+                <ul class="footer-links">
+                    <li><a href="/noticias/">Todas las noticias</a></li>
+                    <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
+                    <li><a href="/politica-editorial/">Pol&iacute;tica editorial</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Equipo</div>
+                <ul class="footer-links">
+                    <li><a href="/equipo/">Equipo editorial</a></li>
+                    <li><a href="/equipo/dr-carlos-mendez/">Dr. Carlos M&eacute;ndez</a></li>
+                    <li><a href="/equipo/dra-lucia-paredes/">Dra. Luc&iacute;a Paredes</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bot&aacute;nica Andina. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

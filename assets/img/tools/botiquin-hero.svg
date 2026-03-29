@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1024 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Verificador de Botiquín Completo - Analiza todas las interacciones de tu botiquín">
+  <defs>
+    <linearGradient id="bbg" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#f0e8d8"/>
+      <stop offset="100%" stop-color="#ebe0ce"/>
+    </linearGradient>
+    <linearGradient id="bgreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e7d4f"/>
+      <stop offset="100%" stop-color="#1a5632"/>
+    </linearGradient>
+    <linearGradient id="bcross" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+    <filter id="bshadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="320" fill="url(#bbg)"/>
+
+  <!-- Subtle aged paper effect -->
+  <g opacity="0.03">
+    <circle cx="200" cy="100" r="150" fill="#8b7355"/>
+    <circle cx="700" cy="200" r="180" fill="#8b7355"/>
+    <circle cx="500" cy="50" r="100" fill="#8b7355"/>
+  </g>
+
+  <!-- Left: Medicine cabinet / botiquín illustration -->
+  <g transform="translate(60, 40)" filter="url(#bshadow)">
+    <!-- Cabinet body -->
+    <rect x="0" y="20" width="140" height="200" rx="8" fill="#d7cbb8" stroke="#b8a88f" stroke-width="1.5"/>
+    <!-- Cabinet door -->
+    <rect x="8" y="28" width="124" height="184" rx="4" fill="#e8dcc8"/>
+    <!-- Cross -->
+    <rect x="55" y="70" width="30" height="80" rx="3" fill="url(#bgreen)"/>
+    <rect x="35" y="95" width="70" height="30" rx="3" fill="url(#bgreen)"/>
+    <!-- Cross white inner -->
+    <rect x="60" y="78" width="20" height="64" rx="2" fill="url(#bcross)" opacity="0.9"/>
+    <rect x="42" y="102" width="56" height="16" rx="2" fill="url(#bcross)" opacity="0.9"/>
+    <!-- Handle -->
+    <circle cx="130" cy="120" r="5" fill="#b8a88f" stroke="#a0896a" stroke-width="1"/>
+
+    <!-- Items peeking out -->
+    <!-- Bottle -->
+    <rect x="15" y="170" width="18" height="30" rx="3" fill="#81c784" opacity="0.6"/>
+    <rect x="17" y="167" width="14" height="6" rx="2" fill="#4caf50" opacity="0.7"/>
+    <!-- Jar -->
+    <rect x="42" y="175" width="22" height="25" rx="4" fill="#ffcc80" opacity="0.6"/>
+    <rect x="44" y="172" width="18" height="5" rx="2" fill="#ffa726" opacity="0.7"/>
+    <!-- Box -->
+    <rect x="72" y="178" width="20" height="18" rx="2" fill="#90caf9" opacity="0.5"/>
+    <!-- Tube -->
+    <rect x="100" y="172" width="12" height="28" rx="6" fill="#e0e0e0" opacity="0.5"/>
+    <rect x="102" y="168" width="8" height="6" rx="1" fill="#bdbdbd" opacity="0.6"/>
+  </g>
+
+  <!-- Center: Scanning/analysis visualization -->
+  <g transform="translate(350, 70)">
+    <!-- Analysis rings -->
+    <circle cx="130" cy="90" r="80" fill="none" stroke="#1a5632" stroke-width="1" opacity="0.15" stroke-dasharray="6,4"/>
+    <circle cx="130" cy="90" r="60" fill="none" stroke="#1a5632" stroke-width="1.5" opacity="0.2" stroke-dasharray="4,3"/>
+    <circle cx="130" cy="90" r="40" fill="none" stroke="#2e7d4f" stroke-width="2" opacity="0.25"/>
+
+    <!-- Items being analyzed (orbiting) -->
+    <!-- Herb -->
+    <g transform="translate(130, 10)">
+      <circle r="14" fill="#e8f5e9" stroke="#2e7d4f" stroke-width="1.5"/>
+      <path d="M-4,4 Q0,-6 4,4 Q0,0 -4,4Z" fill="#4caf50"/>
+    </g>
+    <!-- Pill -->
+    <g transform="translate(200, 60)">
+      <circle r="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+      <rect x="-6" y="-3" width="12" height="6" rx="3" fill="#1565c0" opacity="0.6"/>
+    </g>
+    <!-- Capsule -->
+    <g transform="translate(195, 130)">
+      <circle r="14" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+      <rect x="-4" y="-7" width="8" height="14" rx="4" fill="#ff9800" opacity="0.6"/>
+    </g>
+    <!-- Vitamin -->
+    <g transform="translate(130, 170)">
+      <circle r="14" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+      <text x="0" y="4" text-anchor="middle" fill="#c62828" font-size="10" font-weight="bold" font-family="serif">D</text>
+    </g>
+    <!-- Mineral -->
+    <g transform="translate(60, 130)">
+      <circle r="14" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
+      <text x="0" y="4" text-anchor="middle" fill="#7b1fa2" font-size="9" font-weight="bold" font-family="serif">Mg</text>
+    </g>
+    <!-- Tea -->
+    <g transform="translate(65, 55)">
+      <circle r="14" fill="#e8f5e9" stroke="#2e7d4f" stroke-width="1.5"/>
+      <path d="M-5,2 Q-3,-5 0,-6 Q3,-5 5,2 L3,5 -3,5Z" fill="#66bb6a" opacity="0.7"/>
+    </g>
+
+    <!-- Connection lines (interactions detected) -->
+    <line x1="130" y1="30" x2="185" y2="55" stroke="#e65100" stroke-width="1" opacity="0.3" stroke-dasharray="3,2"/>
+    <line x1="185" y1="125" x2="145" y2="158" stroke="#c62828" stroke-width="1.5" opacity="0.4" stroke-dasharray="3,2"/>
+    <line x1="75" y1="125" x2="120" y2="158" stroke="#2e7d4f" stroke-width="1" opacity="0.3" stroke-dasharray="3,2"/>
+
+    <!-- Center result -->
+    <circle cx="130" cy="90" r="22" fill="#1a5632"/>
+    <text x="130" y="86" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold" font-family="Georgia, serif">592</text>
+    <text x="130" y="99" text-anchor="middle" fill="#e8f5e9" font-size="7" font-family="Georgia, serif">checked</text>
+  </g>
+
+  <!-- Right: Report card preview -->
+  <g transform="translate(730, 55)" filter="url(#bshadow)">
+    <!-- Report paper -->
+    <rect x="0" y="0" width="180" height="210" rx="6" fill="#fff" stroke="#e0d8c8" stroke-width="1"/>
+    <!-- Header stripe -->
+    <rect x="0" y="0" width="180" height="35" rx="6" fill="url(#bgreen)"/>
+    <rect x="0" y="25" width="180" height="10" fill="url(#bgreen)"/>
+    <text x="90" y="22" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold" font-family="Georgia, serif">Reporte de Botiquín</text>
+
+    <!-- Score circle -->
+    <circle cx="90" cy="75" r="25" fill="#e8f5e9" stroke="#2e7d4f" stroke-width="2"/>
+    <text x="90" y="72" text-anchor="middle" fill="#1a5632" font-size="16" font-weight="bold" font-family="Georgia, serif">B+</text>
+    <text x="90" y="85" text-anchor="middle" fill="#2e7d4f" font-size="7" font-family="Georgia, serif">seguridad</text>
+
+    <!-- Report lines -->
+    <g opacity="0.5">
+      <rect x="15" y="115" width="70" height="5" rx="2" fill="#e0e0e0"/>
+      <rect x="15" y="128" width="100" height="5" rx="2" fill="#e0e0e0"/>
+      <rect x="15" y="141" width="85" height="5" rx="2" fill="#e0e0e0"/>
+    </g>
+
+    <!-- Severity bars -->
+    <rect x="15" y="160" width="40" height="8" rx="3" fill="#c62828" opacity="0.7"/>
+    <text x="60" y="168" fill="#666" font-size="7" font-family="sans-serif">2 alta</text>
+    <rect x="15" y="175" width="60" height="8" rx="3" fill="#e65100" opacity="0.7"/>
+    <text x="80" y="183" fill="#666" font-size="7" font-family="sans-serif">3 moderada</text>
+    <rect x="15" y="190" width="30" height="8" rx="3" fill="#2e7d4f" opacity="0.7"/>
+    <text x="50" y="198" fill="#666" font-size="7" font-family="sans-serif">1 baja</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(512, 15)">
+    <text x="0" y="0" fill="#1a5632" font-size="24" font-weight="bold" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">Verificador de Botiquín</text>
+    <text x="0" y="26" fill="#5d4e37" font-size="13" font-family="Georgia, 'Times New Roman', serif" text-anchor="middle">Analiza todas las interacciones de una vez</text>
+    <line x1="-80" y1="40" x2="80" y2="40" stroke="#c4956a" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Bottom border -->
+  <rect x="0" y="310" width="1024" height="10" fill="#1a5632" opacity="0.15"/>
+</svg>
