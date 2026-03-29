@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg-curcuma-salu" x1="0%" y1="0%" x2="100%" y2="100%"
+        gradientTransform="rotate(256)">
+      <stop offset="0%" stop-color="hsl(140, 25%, 95%)"/>
+      <stop offset="100%" stop-color="hsl(160, 30%, 88%)"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg-curcuma-salu)"/>
+  <circle cx="136" cy="288" r="36" fill="hsl(120, 50%, 70%)" opacity="0.08"/><circle cx="307" cy="193" r="54" fill="hsl(135, 50%, 70%)" opacity="0.14"/><circle cx="493" cy="286" r="73" fill="hsl(150, 50%, 70%)" opacity="0.20"/><circle cx="516" cy="298" r="33" fill="hsl(125, 50%, 70%)" opacity="0.08"/><circle cx="409" cy="124" r="53" fill="hsl(140, 50%, 70%)" opacity="0.14"/><circle cx="390.0" cy="180.0" r="112.00000000000001" fill="hsl(140, 40%, 85%)" opacity="0.3"/><circle cx="390.0" cy="180.0" r="72.0" fill="hsl(140, 45%, 92%)" opacity="0.5"/><line x1="33" y1="0" x2="600" y2="372" stroke="hsl(140, 30%, 80%)" stroke-width="2" opacity="0.08"/>
+</svg>

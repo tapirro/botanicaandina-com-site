@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: &iquest;Qu&eacute; planta andina necesitas? &mdash; Bot&aacute;nica Andina</title>
+    <meta name="description" content="Responde 7 preguntas y descubre qu&eacute; planta medicinal andina puede ayudarte. Recomendaciones basadas en evidencia cient&iacute;fica de PubMed y monograf&iacute;as oficiales.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/quiz/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Quiz: &iquest;Qu&eacute; planta andina necesitas?">
+    <meta property="og:description" content="Descubre qu&eacute; planta medicinal andina puede ayudarte seg&uacute;n tus necesidades de salud. Basado en evidencia cient&iacute;fica.">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-quiz.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_LA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Quiz: &iquest;Qu&eacute; planta andina necesitas?">
+    <meta name="twitter:description" content="Descubre qu&eacute; planta medicinal andina puede ayudarte seg&uacute;n tus necesidades de salud.">
+    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-quiz.jpg">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Quiz: ¿Qué planta andina necesitas?",
+    "url": "https://botanicaandina.com/herramientas/quiz/",
+    "description": "Quiz interactivo que recomienda plantas medicinales andinas según las necesidades de salud del usuario, basado en evidencia científica.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Botánica Andina",
+      "url": "https://botanicaandina.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Descubrir tu planta medicinal ideal",
+    "description": "Aprende a usar el quiz de plantas para encontrar qué hierbas se adaptan a tu biografía y necesidades.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Responde las preguntas",
+        "text": "Responde 10 preguntas sobre tu estilo de vida, síntomas y preferencias."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Revisa tu perfil",
+        "text": "El sistema analizará tus respuestas y generará tu perfil de usuario."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Descubre tus plantas ideales",
+        "text": "Recibirás una lista personalizada de 3-5 plantas recomendadas con explicaciones."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Explora los detalles",
+        "text": "Haz clic en cada planta para ver mecanismos, dosis, interacciones y evidencia científica."
+      }
+    ],
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Respuestas honestas sobre tu salud"
+      }
+    ]
+  }
+]</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://botanicaandina.com/herramientas/"},
+            {"@type": "ListItem", "position": 3, "name": "Quiz de Plantas Andinas"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo funciona el quiz de plantas andinas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El quiz consta de 7 preguntas sobre tus necesidades de salud, estilo de vida y preferencias. Según tus respuestas, el algoritmo recomienda la planta medicinal andina más adecuada para ti, con enlaces a estudios científicos que respaldan la recomendación."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Las recomendaciones del quiz reemplazan una consulta médica?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. El quiz es una herramienta informativa basada en evidencia científica publicada. Las recomendaciones no sustituyen el consejo de un profesional de salud. Siempre consulta con tu médico antes de iniciar cualquier suplemento."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué plantas medicinales puede recomendar el quiz?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El quiz puede recomendar plantas como maca para energía y rendimiento, uña de gato para inmunidad, muña para digestión, hercampuri para el hígado, y otras plantas andinas y amazónicas según tu perfil de salud."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
+        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
+        .nav-links a:hover { color: #fff; }
+        @media (max-width: 700px) {
+            .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        }
+
+        .tool-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 2.5rem 1.5rem 2rem; text-align: center; }
+        .tool-header h1 { font-size: 1.7rem; margin-bottom: 0.5rem; }
+        .tool-header p { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+
+        .quiz-container { max-width: 700px; margin: 2rem auto; padding: 0 1.5rem; }
+
+        .progress-bar { background: #e0e0e0; border-radius: 20px; height: 8px; margin-bottom: 2rem; overflow: hidden; }
+        .progress-fill { background: linear-gradient(90deg, #1a5632, #4caf50); height: 100%; border-radius: 20px; transition: width 0.4s ease; }
+        .progress-text { text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; color: #888; margin-bottom: 0.5rem; }
+
+        .question-card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); animation: fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .question-card h2 { font-size: 1.2rem; margin-bottom: 0.3rem; color: #1a5632; }
+        .question-card .q-subtitle { font-family: Arial, sans-serif; font-size: 0.85rem; color: #888; margin-bottom: 1.2rem; }
+
+        .options { display: flex; flex-direction: column; gap: 0.7rem; }
+        .option-btn { display: flex; align-items: center; gap: 0.8rem; padding: 1rem 1.2rem; border: 2px solid #e0e0e0; border-radius: 10px; background: #fff; cursor: pointer; font-family: Georgia, serif; font-size: 0.95rem; color: #333; text-align: left; transition: all 0.2s; }
+        .option-btn:hover { border-color: #1a5632; background: #f1f8f3; }
+        .option-btn.selected { border-color: #1a5632; background: #e8f5e9; }
+        .option-icon { font-size: 1.4rem; flex-shrink: 0; width: 2rem; text-align: center; }
+
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 1.5rem; gap: 1rem; }
+        .btn-back { padding: 0.7rem 1.5rem; background: #f5f5f5; border: 1px solid #ddd; border-radius: 8px; font-family: Georgia, serif; font-size: 0.9rem; cursor: pointer; color: #555; }
+        .btn-back:hover { background: #eee; }
+        .btn-next { padding: 0.7rem 1.5rem; background: #1a5632; color: #fff; border: none; border-radius: 8px; font-family: Georgia, serif; font-size: 0.9rem; cursor: pointer; margin-left: auto; }
+        .btn-next:hover { background: #2e7d32; }
+        .btn-next:disabled { background: #ccc; cursor: not-allowed; }
+
+        .results-section { display: none; animation: fadeIn 0.4s ease; }
+        .result-heading { text-align: center; margin-bottom: 2rem; }
+        .result-heading h2 { font-size: 1.5rem; color: #1a5632; margin-bottom: 0.3rem; }
+        .result-heading p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #666; }
+
+        .plant-result { background: #fff; border-radius: 12px; padding: 1.8rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 1.2rem; border-left: 4px solid #1a5632; display: flex; gap: 1.2rem; align-items: flex-start; }
+        .plant-result.secondary { border-left-color: #4caf50; }
+        .plant-img { width: 100px; height: 100px; border-radius: 10px; object-fit: cover; flex-shrink: 0; }
+        .plant-img-placeholder { width: 100px; height: 100px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); }
+        .plant-info { flex: 1; min-width: 0; }
+        @media (max-width: 600px) { .plant-result { flex-direction: column; } .plant-img, .plant-img-placeholder { width: 80px; height: 80px; } }
+        .plant-rank { font-family: Arial, sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1.5px; color: #1a5632; margin-bottom: 0.3rem; }
+        .plant-result h3 { font-size: 1.15rem; margin-bottom: 0.2rem; }
+        .plant-result .scientific { font-style: italic; font-size: 0.85rem; color: #888; margin-bottom: 0.8rem; }
+        .plant-result .match-reason { font-family: Arial, sans-serif; font-size: 0.88rem; color: #444; line-height: 1.6; margin-bottom: 0.8rem; }
+        .plant-result .evidence-tag { display: inline-block; padding: 0.2rem 0.6rem; background: #e8f5e9; border-radius: 12px; font-family: Arial, sans-serif; font-size: 0.75rem; color: #2e7d32; margin-right: 0.4rem; margin-bottom: 0.3rem; }
+        .plant-result .read-more { display: inline-block; margin-top: 0.5rem; color: #1a5632; font-family: Arial, sans-serif; font-size: 0.85rem; text-decoration: none; font-weight: bold; }
+        .plant-result .read-more:hover { text-decoration: underline; }
+
+        .disclaimer { background: #fff8e1; border-radius: 8px; padding: 1.2rem 1.5rem; margin-top: 2rem; font-size: 0.85rem; color: #795548; border: 1px solid #ffe082; }
+        .disclaimer strong { color: #5d4037; }
+
+        .share-section { text-align: center; margin-top: 2rem; padding: 1.5rem; background: #f5f5f5; border-radius: 8px; }
+        .share-section h3 { font-size: 0.95rem; margin-bottom: 0.8rem; color: #555; }
+        .share-buttons { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+        .share-btn { padding: 0.5rem 1rem; border-radius: 8px; border: none; font-family: Arial, sans-serif; font-size: 0.82rem; cursor: pointer; text-decoration: none; color: #fff; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.copy { background: #555; }
+        .share-btn:hover { opacity: 0.9; }
+
+        .retry-btn { display: block; margin: 1.5rem auto 0; padding: 0.8rem 2rem; background: #1a5632; color: #fff; border: none; border-radius: 8px; font-family: Georgia, serif; font-size: 1rem; cursor: pointer; }
+        .retry-btn:hover { background: #2e7d32; }
+
+        .embed-section { background: #f5f5f5; border-radius: 8px; padding: 1.2rem 1.5rem; margin-top: 1.5rem; }
+        .embed-section h3 { font-size: 0.9rem; margin-bottom: 0.5rem; color: #555; }
+        .embed-code { font-family: 'Courier New', monospace; font-size: 0.75rem; background: #fff; padding: 0.8rem; border-radius: 6px; border: 1px solid #ddd; word-break: break-all; color: #333; }
+        .copy-embed { margin-top: 0.5rem; padding: 0.4rem 1rem; background: #1a5632; color: #fff; border: none; border-radius: 6px; font-family: Arial, sans-serif; font-size: 0.8rem; cursor: pointer; }
+
+        footer { background: #1a5632; color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; margin-top: 3rem; text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .tool-header h1 { font-size: 1.3rem; }
+            .question-card { padding: 1.2rem; }
+            .option-btn { padding: 0.8rem 1rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+            <div class="nav-links">
+                <a href="/noticias/">Noticias</a>
+                <a href="/herramientas/buscador/">Buscador</a>
+                <a href="/herramientas/interacciones/">Interacciones</a>
+                <a href="/herramientas/quiz/" style="color:#fff;font-weight:bold">Quiz</a>
+                <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tool-header">
+        <h1>&iquest;Qu&eacute; planta andina necesitas?</h1>
+        <p>Responde 7 preguntas r&aacute;pidas y descubre qu&eacute; plantas medicinales andinas pueden ayudarte. Recomendaciones basadas en estudios cient&iacute;ficos.</p>
+    </header>
+
+    <div class="quiz-container">
+        <div id="quizArea">
+            <div class="progress-text" id="progressText">Pregunta 1 de 7</div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:14.3%"></div></div>
+            <div class="question-card" id="questionCard"></div>
+            <div class="nav-buttons">
+                <button class="btn-back" id="btnBack" onclick="prevQuestion()" style="display:none">Anterior</button>
+                <button class="btn-next" id="btnNext" onclick="nextQuestion()" disabled>Siguiente</button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection">
+            <div class="result-heading">
+                <h2>Tus plantas recomendadas</h2>
+                <p>Basado en tus respuestas, estas son las plantas con mayor evidencia para tu perfil:</p>
+            </div>
+            <div id="resultsContainer"></div>
+
+            <div class="disclaimer">
+                <strong>Aviso importante:</strong> Este quiz es informativo y educativo.
+                <strong>No reemplaza la consulta m&eacute;dica.</strong>
+                Las recomendaciones se basan en estudios publicados en PubMed, pero cada persona es diferente.
+                Consulte a un profesional de salud antes de tomar cualquier suplemento herbal.
+            </div>
+
+            <div class="share-section">
+                <h3>Comparte tu resultado</h3>
+                <canvas id="resultCard" width="1080" height="1080" style="display:none"></canvas>
+                <div id="cardPreview" style="margin-bottom:1rem;text-align:center"></div>
+                <div class="share-buttons">
+                    <button class="share-btn" style="background:#1a5632" onclick="downloadCard()">Descargar imagen</button>
+                    <a class="share-btn whatsapp" id="shareWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener">Compartir en X</a>
+                    <button class="share-btn copy" onclick="copyResults()">Copiar enlace</button>
+                </div>
+            </div>
+
+            <button class="retry-btn" onclick="restartQuiz()">Repetir el quiz</button>
+
+            <div class="embed-section">
+                <h3>Integra este quiz en tu sitio web</h3>
+                <div class="embed-code">&lt;iframe src="https://botanicaandina.com/herramientas/quiz/" width="100%" height="800" frameborder="0" title="Quiz: &iquest;Qu&eacute; planta andina necesitas?"&gt;&lt;/iframe&gt;</div>
+                <button class="copy-embed" onclick="navigator.clipboard.writeText(document.querySelector('.embed-code').textContent)">Copiar c&oacute;digo</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <a href="/">Bot&aacute;nica Andina</a> &mdash; Informaci&oacute;n basada en evidencia cient&iacute;fica</p>
+        <p style="margin-top:0.3rem"><a href="/politica-editorial/">Pol&iacute;tica Editorial</a> &middot; <a href="/sobre-nosotros/">Sobre Nosotros</a></p>
+    </footer>
+
+    <script>
+    const QUESTIONS = [
+        {
+            id: "concern",
+            question: "¿Cuál es tu principal preocupación de salud?",
+            subtitle: "Elige la que más te identifique",
+            options: [
+                { icon: "🦴", text: "Dolor articular o inflamación", tags: ["inflammation", "pain"] },
+                { icon: "🧠", text: "Estrés, ansiedad o ánimo bajo", tags: ["mood", "stress"] },
+                { icon: "🫀", text: "Salud cardiovascular o colesterol", tags: ["cardio", "cholesterol"] },
+                { icon: "🩸", text: "Azúcar en sangre o metabolismo", tags: ["diabetes", "metabolism"] },
+                { icon: "🛡️", text: "Defensas e inmunidad", tags: ["immunity"] },
+                { icon: "⚡", text: "Energía y rendimiento mental", tags: ["energy", "cognition"] }
+            ]
+        },
+        {
+            id: "duration",
+            question: "¿Hace cuánto tiempo tienes esta preocupación?",
+            subtitle: "Esto ayuda a recomendar plantas según la evidencia disponible",
+            options: [
+                { icon: "📅", text: "Menos de 1 mes (reciente)", tags: ["acute"] },
+                { icon: "📆", text: "1-6 meses", tags: ["subacute"] },
+                { icon: "🗓️", text: "Más de 6 meses (crónico)", tags: ["chronic"] }
+            ]
+        },
+        {
+            id: "medications",
+            question: "¿Tomas algún medicamento actualmente?",
+            subtitle: "Algunas plantas pueden interactuar con fármacos",
+            options: [
+                { icon: "💊", text: "Sí, tomo medicamentos regularmente", tags: ["medicated"] },
+                { icon: "🚫", text: "No tomo medicamentos", tags: ["no_meds"] },
+                { icon: "❓", text: "Prefiero no decir", tags: [] }
+            ]
+        },
+        {
+            id: "lifestyle",
+            question: "¿Cómo describirías tu estilo de vida?",
+            subtitle: "Tu rutina influye en qué plantas pueden funcionar mejor",
+            options: [
+                { icon: "🏃", text: "Activo: ejercicio regular, buena alimentación", tags: ["active"] },
+                { icon: "💻", text: "Sedentario: mucho tiempo sentado, estrés laboral", tags: ["sedentary", "stress"] },
+                { icon: "⛰️", text: "Vivo en zona de altitud (>2500 msnm)", tags: ["altitude"] },
+                { icon: "🌡️", text: "Tengo una condición crónica que limita mi actividad", tags: ["chronic_condition"] }
+            ]
+        },
+        {
+            id: "digestion",
+            question: "¿Cómo está tu digestión?",
+            subtitle: "La salud intestinal influye en la absorción de cualquier suplemento",
+            options: [
+                { icon: "✅", text: "Sin problemas digestivos", tags: ["good_digestion"] },
+                { icon: "🔥", text: "Acidez o reflujo frecuente", tags: ["reflux"] },
+                { icon: "💨", text: "Hinchazón o gases frecuentes", tags: ["bloating", "microbiome"] },
+                { icon: "🩺", text: "Problemas renales o hepáticos", tags: ["renal", "liver"] }
+            ]
+        },
+        {
+            id: "preference",
+            question: "¿Qué formato prefieres para tomar suplementos?",
+            subtitle: "Las plantas se presentan en diferentes formas",
+            options: [
+                { icon: "🍵", text: "Infusiones o tés", tags: ["tea"] },
+                { icon: "💊", text: "Cápsulas o comprimidos", tags: ["capsule"] },
+                { icon: "🥗", text: "Incorporado en la comida", tags: ["food"] },
+                { icon: "🤷", text: "Me da igual el formato", tags: [] }
+            ]
+        },
+        {
+            id: "evidence",
+            question: "¿Qué tan importante es la evidencia científica para ti?",
+            subtitle: "Todas nuestras recomendaciones tienen respaldo, pero varían en nivel",
+            options: [
+                { icon: "🔬", text: "Solo quiero plantas con ensayos clínicos en humanos", tags: ["strict_evidence"] },
+                { icon: "📊", text: "Acepto evidencia preclínica si es prometedora", tags: ["open_evidence"] },
+                { icon: "🌿", text: "Me interesa más la tradición + ciencia combinadas", tags: ["traditional"] }
+            ]
+        }
+    ];
+
+    const PLANTS = [
+        {
+            id: "curcuma", name: "Cúrcuma / Curcumina", scientific: "Curcuma longa", image: "/assets/img/plantas/curcuma.webp",
+            matchTags: ["inflammation", "pain", "chronic", "cardio", "diabetes", "capsule", "food"],
+            evidence: "Ensayos clínicos (40+ meta-análisis)",
+            description: "La curcumina reduce marcadores de inflamación (PCR, TNF-α) y dolor articular. En un ensayo con 120 pacientes, logró 40% menos dolor en 8 semanas. Absorción 20x mayor con pimienta negra.",
+            articles: ["/noticias/curcuma-mucositis-oral-cancer-revision-sistematica/", "/noticias/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo/"],
+            warnings: ["Puede interactuar con anticoagulantes y antidiabéticos"],
+            tags_evidence: ["Metaanálisis", "Ensayo clínico", "EMA"]
+        },
+        {
+            id: "una_de_gato", name: "Uña de Gato", scientific: "Uncaria tomentosa", image: "/assets/img/plantas/una-de-gato.webp",
+            matchTags: ["inflammation", "immunity", "chronic", "pain", "traditional", "tea", "capsule"],
+            evidence: "Ensayos clínicos + tradición andina",
+            description: "Planta amazónica con efecto antiinflamatorio e inmunomodulador. Un estudio mostró reducción de aterosclerosis. Usada tradicionalmente por comunidades amazónicas durante siglos.",
+            articles: ["/noticias/una-de-gato-aterosclerosis-estudio/"],
+            warnings: ["Puede interactuar con inmunosupresores y anticoagulantes"],
+            tags_evidence: ["Ensayo clínico", "Tradición amazónica"]
+        },
+        {
+            id: "berberina", name: "Berberina", scientific: "Berberis vulgaris", image: "/assets/img/plantas/berberina.webp",
+            matchTags: ["diabetes", "metabolism", "cholesterol", "chronic", "capsule", "strict_evidence"],
+            evidence: "Ensayos clínicos (publicados en JAMA)",
+            description: "Reduce grasa visceral y mejora la resistencia a la insulina. Un ensayo en JAMA mostró 3.6 cm menos de cintura en 12 semanas. Eficacia comparable a metformina en algunos estudios.",
+            articles: ["/noticias/berberina-grasa-visceral-obesidad-ensayo-jama/"],
+            warnings: ["Puede potenciar el efecto de antidiabéticos (riesgo de hipoglucemia)"],
+            tags_evidence: ["JAMA", "Ensayo clínico"]
+        },
+        {
+            id: "maca", name: "Maca", scientific: "Lepidium meyenii", image: "/assets/img/plantas/maca.webp",
+            matchTags: ["energy", "mood", "stress", "altitude", "active", "food", "capsule", "traditional"],
+            evidence: "Ensayos clínicos",
+            description: "Raíz andina que mejora energía, libido y adaptación a la altitud. Cultivada sobre 4000 msnm en los Andes peruanos. Contiene macamidas únicas que modulan el sistema endocannabinoide.",
+            articles: [],
+            warnings: ["Generalmente bien tolerada. Precaución con trastornos hormonales."],
+            tags_evidence: ["Ensayo clínico", "Tradición andina"]
+        },
+        {
+            id: "ayahuasca", name: "Ayahuasca", scientific: "Banisteriopsis caapi", image: "/assets/img/plantas/ayahuasca.webp",
+            matchTags: ["mood", "stress", "open_evidence", "traditional"],
+            evidence: "Ensayos clínicos preliminares + revisiones sistemáticas",
+            description: "Revisiones sistemáticas muestran potencial en depresión resistente y ansiedad. Los alcaloides harmala son inhibidores de MAO reversibles. Solo debe usarse en contexto ceremonial supervisado.",
+            articles: ["/noticias/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad/", "/noticias/ayahuasca-cognicion-revision-sistematica-efectos/"],
+            warnings: ["NUNCA combinar con antidepresivos (riesgo de síndrome serotoninérgico)", "Solo en contexto ceremonial supervisado"],
+            tags_evidence: ["Revisión sistemática", "Ensayo clínico"]
+        },
+        {
+            id: "chanca_piedra", name: "Chanca Piedra", scientific: "Phyllanthus niruri", image: "/assets/img/plantas/chanca-piedra.webp",
+            matchTags: ["renal", "diabetes", "chronic", "tea", "traditional"],
+            evidence: "Ensayos clínicos + tradición amazónica",
+            description: "Protege la función renal en pacientes diabéticos. Un estudio mostró reducción significativa de proteinuria. Tradicionalmente usada como 'rompe piedras' para cálculos renales.",
+            articles: ["/noticias/chanca-piedra-proteccion-renal-diabetes-estudio/"],
+            warnings: ["Puede potenciar el efecto de antidiabéticos y antihipertensivos"],
+            tags_evidence: ["Ensayo clínico", "Tradición amazónica"]
+        },
+        {
+            id: "hoja_de_coca", name: "Hoja de Coca", scientific: "Erythroxylum coca", image: "/assets/img/plantas/hoja-de-coca.webp",
+            matchTags: ["stress", "altitude", "energy", "active", "traditional", "tea", "food"],
+            evidence: "Estudios clínicos",
+            description: "Reduce cortisol (hormona del estrés) en trabajadores de altura. Mejora adaptación a la altitud y energía. Usada por culturas andinas durante 8000 años. Legal como hoja en Perú, Bolivia y Colombia.",
+            articles: ["/noticias/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto/"],
+            warnings: ["Disponibilidad legal varía por país", "No confundir con derivados procesados"],
+            tags_evidence: ["Estudio piloto", "Tradición andina milenaria"]
+        },
+        {
+            id: "guayusa", name: "Guayusa", scientific: "Ilex guayusa", image: "/assets/img/plantas/guayusa.webp",
+            matchTags: ["energy", "cognition", "active", "tea", "sedentary"],
+            evidence: "Estudios preclínicos + ensayos preliminares",
+            description: "Hoja amazónica rica en cafeína y L-teanina. Mejora la atención sin los picos de ansiedad del café. Contiene ácido clorogénico con propiedades antioxidantes.",
+            articles: ["/noticias/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo/"],
+            warnings: ["Contiene cafeína — evitar por la noche"],
+            tags_evidence: ["Estudio preclínico", "Tradición kichwa"]
+        },
+        {
+            id: "sangre_de_drago", name: "Sangre de Drago", scientific: "Croton lechleri", image: "/assets/img/plantas/sangre-de-drago.webp",
+            matchTags: ["inflammation", "acute", "traditional"],
+            evidence: "Estudios preclínicos + uso etnobotánico",
+            description: "Resina amazónica con potente efecto cicatrizante y antiinflamatorio. Contiene taspina y proantocianidinas. El loureirin B muestra actividad anticoagulante natural.",
+            articles: ["/noticias/sangre-de-drago-anticoagulante-natural-loureirin/"],
+            warnings: ["Puede interactuar con anticoagulantes"],
+            tags_evidence: ["Estudio preclínico", "Tradición amazónica"]
+        },
+        {
+            id: "melon_amargo", name: "Melón Amargo", scientific: "Momordica charantia", image: "/assets/img/plantas/melon-amargo.webp",
+            matchTags: ["diabetes", "metabolism", "food", "open_evidence"],
+            evidence: "Ensayos clínicos + metaanálisis",
+            description: "Fruto tropical con efecto hipoglucemiante demostrado. Contiene charantina y polipéptido-p (análogo de insulina vegetal). Metaanálisis muestra reducción significativa de HbA1c.",
+            articles: ["/noticias/melon-amargo-diabetes-tipo-2-evidencia/"],
+            warnings: ["Puede potenciar el efecto de antidiabéticos"],
+            tags_evidence: ["Metaanálisis", "Ensayo clínico"]
+        },
+        {
+            id: "tarwi", name: "Tarwi / Chocho", scientific: "Lupinus mutabilis", image: "/assets/img/plantas/tarwi.webp",
+            matchTags: ["microbiome", "bloating", "metabolism", "food", "traditional"],
+            evidence: "Estudios clínicos",
+            description: "Legumbre andina con 44% de proteína y efecto prebiótico. Mejora la composición del microbioma intestinal. Alto en fibra y bajo índice glucémico.",
+            articles: ["/noticias/tarwi-chocho-microbioma-seguridad-alimentaria-andino/"],
+            warnings: ["Debe desamargarse correctamente antes del consumo"],
+            tags_evidence: ["Estudio clínico", "Alimento ancestral"]
+        },
+        {
+            id: "quinoa", name: "Quinoa", scientific: "Chenopodium quinoa", image: "/assets/img/plantas/quinoa.webp",
+            matchTags: ["metabolism", "cholesterol", "good_digestion", "food", "active"],
+            evidence: "Metaanálisis",
+            description: "Pseudocereal andino, proteína completa con los 9 aminoácidos esenciales. Mejora el perfil lipídico y tiene bajo índice glucémico. Libre de gluten.",
+            articles: [],
+            warnings: ["Generalmente segura para todos"],
+            tags_evidence: ["Metaanálisis", "Superfood"]
+        }
+    ];
+
+    let currentQuestion = 0;
+    let answers = {};
+
+    function renderQuestion() {
+        const q = QUESTIONS[currentQuestion];
+        const selected = answers[q.id];
+        let html = `<h2>${q.question}</h2><p class="q-subtitle">${q.subtitle}</p><div class="options">`;
+        q.options.forEach((opt, i) => {
+            const sel = selected === i ? ' selected' : '';
+            html += `<button class="option-btn${sel}" onclick="selectOption(${i})">
+                <span class="option-icon">${opt.icon}</span>
+                <span>${opt.text}</span>
+            </button>`;
+        });
+        html += '</div>';
+        document.getElementById('questionCard').innerHTML = html;
+
+        document.getElementById('progressText').textContent = `Pregunta ${currentQuestion + 1} de ${QUESTIONS.length}`;
+        document.getElementById('progressFill').style.width = ((currentQuestion + 1) / QUESTIONS.length * 100) + '%';
+        document.getElementById('btnBack').style.display = currentQuestion > 0 ? 'block' : 'none';
+        document.getElementById('btnNext').disabled = selected === undefined;
+        document.getElementById('btnNext').textContent = currentQuestion === QUESTIONS.length - 1 ? 'Ver resultados' : 'Siguiente';
+    }
+
+    function selectOption(idx) {
+        const q = QUESTIONS[currentQuestion];
+        answers[q.id] = idx;
+        document.querySelectorAll('.option-btn').forEach((btn, i) => {
+            btn.classList.toggle('selected', i === idx);
+        });
+        document.getElementById('btnNext').disabled = false;
+    }
+
+    function nextQuestion() {
+        if (currentQuestion < QUESTIONS.length - 1) {
+            currentQuestion++;
+            renderQuestion();
+        } else {
+            showResults();
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestion > 0) {
+            currentQuestion--;
+            renderQuestion();
+        }
+    }
+
+    function getUserTags() {
+        const tags = [];
+        QUESTIONS.forEach(q => {
+            const idx = answers[q.id];
+            if (idx !== undefined && q.options[idx].tags) {
+                tags.push(...q.options[idx].tags);
+            }
+        });
+        return tags;
+    }
+
+    function scorePlants(userTags) {
+        const medicated = userTags.includes('medicated');
+        const strictEvidence = userTags.includes('strict_evidence');
+
+        return PLANTS.map(plant => {
+            let score = 0;
+            userTags.forEach(tag => {
+                if (plant.matchTags.includes(tag)) score += 2;
+            });
+
+            if (strictEvidence && (plant.evidence.includes('Ensayos clínicos') || plant.evidence.includes('Metaanálisis') || plant.evidence.includes('JAMA'))) {
+                score += 3;
+            }
+
+            if (medicated && plant.warnings.some(w => w.toLowerCase().includes('interactuar'))) {
+                score -= 2;
+            }
+
+            return { ...plant, score };
+        }).filter(p => p.score > 0).sort((a, b) => b.score - a.score);
+    }
+
+    function showResults() {
+        const userTags = getUserTags();
+        const ranked = scorePlants(userTags);
+        const top = ranked.slice(0, 3);
+
+        document.getElementById('quizArea').style.display = 'none';
+        document.getElementById('resultsSection').style.display = 'block';
+
+        const labels = ['Tu mejor opción', 'También recomendada', 'Alternativa interesante'];
+        let html = '';
+        top.forEach((plant, i) => {
+            const cls = i === 0 ? '' : ' secondary';
+            const warningsHtml = plant.warnings.map(w => `<span style="display:block;font-family:Arial,sans-serif;font-size:0.8rem;color:#e65100;margin-top:0.3rem">⚠️ ${w}</span>`).join('');
+            const tagsHtml = plant.tags_evidence.map(t => `<span class="evidence-tag">${t}</span>`).join('');
+            const articleLinks = plant.articles.length > 0
+                ? plant.articles.map(a => `<a href="${a}" class="read-more">Leer estudio completo →</a>`).join(' ')
+                : '';
+
+            const imgHtml = plant.image
+                ? `<img class="plant-img" src="${plant.image}" alt="${plant.name}" loading="lazy">`
+                : `<div class="plant-img-placeholder">🌿</div>`;
+
+            html += `<div class="plant-result${cls}">
+                ${imgHtml}
+                <div class="plant-info">
+                    <div class="plant-rank">${labels[i] || 'Otra opción'}</div>
+                    <h3>${plant.name}</h3>
+                    <div class="scientific">${plant.scientific}</div>
+                    <div class="match-reason">${plant.description}</div>
+                    <div>${tagsHtml}</div>
+                    ${warningsHtml}
+                    <div style="margin-top:0.5rem">${articleLinks}</div>
+                </div>
+            </div>`;
+        });
+
+        if (top.length === 0) {
+            html = '<div style="text-align:center;padding:2rem;background:#fff;border-radius:12px"><p>No encontramos una coincidencia fuerte. Prueba nuestro <a href="/herramientas/buscador/" style="color:#1a5632;font-weight:bold">buscador de plantas</a> para una búsqueda más detallada.</p></div>';
+        }
+
+        const medicated = userTags.includes('medicated');
+        if (medicated) {
+            html += `<div style="background:#ffebee;border-radius:8px;padding:1.2rem;margin-top:1rem;border:1px solid #ffcdd2;font-size:0.88rem;color:#c62828">
+                <strong>Importante:</strong> Indicaste que tomas medicamentos. Antes de usar cualquier planta medicinal,
+                verifica las interacciones en nuestro <a href="/herramientas/interacciones/" style="color:#c62828;font-weight:bold">verificador de interacciones</a>
+                y consulta con tu médico.
+            </div>`;
+        }
+
+        document.getElementById('resultsContainer').innerHTML = html;
+
+        const topName = top.length > 0 ? top[0].name : 'plantas andinas';
+        const shareText = encodeURIComponent(`Descubrí que ${topName} es la planta andina ideal para mí. ¿Cuál es la tuya? 🌿`);
+        const shareUrl = encodeURIComponent('https://botanicaandina.com/herramientas/quiz/');
+        document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+        document.getElementById('shareWhatsapp').href = `https://wa.me/?text=${shareText}%20${shareUrl}`;
+
+        if (top.length > 0) generateResultCard(top[0]);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function copyResults() {
+        navigator.clipboard.writeText('https://botanicaandina.com/herramientas/quiz/');
+        const btn = document.querySelector('.share-btn.copy');
+        btn.textContent = '¡Copiado!';
+        setTimeout(() => { btn.textContent = 'Copiar enlace'; }, 2000);
+    }
+
+    function restartQuiz() {
+        currentQuestion = 0;
+        answers = {};
+        document.getElementById('quizArea').style.display = 'block';
+        document.getElementById('resultsSection').style.display = 'none';
+        renderQuestion();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function generateResultCard(plant) {
+        const canvas = document.getElementById('resultCard');
+        const ctx = canvas.getContext('2d');
+        const W = 1080, H = 1080;
+
+        // Background - warm cream gradient
+        const bg = ctx.createLinearGradient(0, 0, 0, H);
+        bg.addColorStop(0, '#F5EFE0');
+        bg.addColorStop(1, '#EDE5D3');
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, W, H);
+
+        // Decorative border
+        ctx.strokeStyle = '#C8B99A';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(40, 40, W - 80, H - 80);
+        ctx.strokeStyle = '#D8CFC0';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(52, 52, W - 104, H - 104);
+
+        // Top label
+        ctx.fillStyle = '#8B7B6B';
+        ctx.font = '600 22px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('MI RESULTADO DEL QUIZ', W/2, 110);
+
+        // Decorative line
+        ctx.strokeStyle = '#C8B99A';
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(300, 130); ctx.lineTo(780, 130); ctx.stroke();
+
+        // "Tu planta ideal es..."
+        ctx.fillStyle = '#5C4A3A';
+        ctx.font = 'italic 28px Georgia, serif';
+        ctx.fillText('Tu planta ideal es...', W/2, 190);
+
+        // Plant name - large
+        ctx.fillStyle = '#1a5632';
+        ctx.font = 'bold 52px Georgia, serif';
+        ctx.fillText(plant.name, W/2, 260);
+
+        // Scientific name - italic
+        ctx.fillStyle = '#8B7B6B';
+        ctx.font = 'italic 26px Georgia, serif';
+        ctx.fillText(plant.scientific, W/2, 300);
+
+        // Plant image placeholder circle
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(W/2, 480, 150, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        ctx.fillStyle = '#e8f5e9';
+        ctx.fillRect(W/2 - 150, 330, 300, 300);
+
+        // Try to load and draw plant image
+        if (plant.image) {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                ctx.drawImage(img, W/2 - 150, 330, 300, 300);
+                ctx.restore();
+                finishCard(ctx, plant, W, H);
+            };
+            img.onerror = function() {
+                ctx.restore();
+                drawPlantEmoji(ctx, W/2, 480);
+                finishCard(ctx, plant, W, H);
+            };
+            img.src = plant.image;
+        } else {
+            ctx.restore();
+            drawPlantEmoji(ctx, W/2, 480);
+            finishCard(ctx, plant, W, H);
+        }
+    }
+
+    function drawPlantEmoji(ctx, x, y) {
+        ctx.font = '80px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('🌿', x, y);
+        ctx.textBaseline = 'alphabetic';
+    }
+
+    function finishCard(ctx, plant, W, H) {
+        // Evidence tags
+        ctx.fillStyle = '#5C4A3A';
+        ctx.font = '22px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(plant.evidence, W/2, 670);
+
+        // Description (word-wrapped)
+        ctx.fillStyle = '#444';
+        ctx.font = '20px Georgia, serif';
+        const words = plant.description.split(' ');
+        let line = '', y = 720, maxW = 800;
+        for (const word of words) {
+            const test = line + word + ' ';
+            if (ctx.measureText(test).width > maxW && line) {
+                ctx.fillText(line.trim(), W/2, y);
+                line = word + ' ';
+                y += 30;
+                if (y > 870) { ctx.fillText('...', W/2, y); break; }
+            } else { line = test; }
+        }
+        if (y <= 870) ctx.fillText(line.trim(), W/2, y);
+
+        // Bottom decorative line
+        ctx.strokeStyle = '#C8B99A';
+        ctx.beginPath(); ctx.moveTo(300, 920); ctx.lineTo(780, 920); ctx.stroke();
+
+        // Branding
+        ctx.fillStyle = '#1a5632';
+        ctx.font = 'bold 24px Georgia, serif';
+        ctx.fillText('Botánica Andina', W/2, 960);
+        ctx.fillStyle = '#8B7B6B';
+        ctx.font = '18px Arial, sans-serif';
+        ctx.fillText('botanicaandina.com/herramientas/quiz', W/2, 990);
+        ctx.fillText('¿Cuál es tu planta? Haz el quiz →', W/2, 1020);
+
+        // Show preview
+        const preview = document.getElementById('cardPreview');
+        const dataUrl = document.getElementById('resultCard').toDataURL('image/png');
+        preview.innerHTML = `<img src="${dataUrl}" style="max-width:100%;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.1)" alt="Tu resultado: ${plant.name}" loading="lazy">`;
+    }
+
+    function downloadCard() {
+        const canvas = document.getElementById('resultCard');
+        const link = document.createElement('a');
+        link.download = 'mi-planta-andina.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderQuestion);
+    </script>
+<noscript>
+<div style="max-width:900px;margin:2rem auto;padding:1rem;font-family:Georgia,serif;">
+<h2>Quiz: &iquest;Qu&eacute; planta andina necesitas? &mdash; Bot&aacute;nica Andina</h2>
+<p>Responde 7 preguntas y descubre qu&eacute; planta medicinal andina puede ayudarte. Recomendaciones basadas en evidencia cient&iacute;fica de PubMed y monograf&iacute;as oficiales.</p>
+<h3>Quiz: ¿Qué Planta Andina Necesitas?</h3>
+<p>Responde 7 preguntas sobre tu salud y estilo de vida. El algoritmo analiza tus respuestas
+y recomienda las plantas medicinales andinas con mejor evidencia para tus necesidades.</p>
+<h3>Categorías de Preguntas</h3>
+<ul>
+<li>Nivel de energía y fatiga</li>
+<li>Calidad de sueño</li>
+<li>Estrés y ansiedad</li>
+<li>Dolor e inflamación</li>
+<li>Digestión</li>
+<li>Inmunidad</li>
+<li>Objetivos específicos (deporte, memoria, libido)</li>
+</ul>
+<h3>Plantas en la Base de Datos</h3>
+<p>Maca, uña de gato, quinoa, aguaymanto, muña, coca, camu camu, sacha inchi, lúcuma,
+kiwicha, yacón, hercampuri, chuchuhuasi, sangre de grado, y más.
+Cada recomendación incluye nivel de evidencia y dosis sugerida.</p>
+<p style="margin-top:1rem;font-size:13px;color:#666;">
+<a href="https://botanicaandina.com/herramientas/interacciones/">Verificador de interacciones</a> ·
+<a href="https://botanicaandina.com/herramientas/matriz/">Matriz completa</a> ·
+<a href="https://botanicaandina.com/herramientas/">Todas las herramientas</a>
+</p>
+</div>
+</noscript>
+</body>
+</html>
