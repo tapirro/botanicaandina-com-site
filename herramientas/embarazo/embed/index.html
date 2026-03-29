@@ -511,6 +511,7 @@ body.embed-mode .methodology { display: none; }
 .share-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px var(--shadow); }
 .share-wa { background: #25D366; color: #fff; }
 .share-copy { background: var(--cream-dark); color: var(--text); border: 1px solid var(--border); }
+.share-img { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; }
 
 @media (max-width: 600px) {
   .safety-badges { grid-template-columns: 1fr; }
@@ -602,12 +603,18 @@ body.embed-mode .methodology { display: none; }
         <button onclick="shareWhatsApp()" class="share-btn share-wa" title="Compartir por WhatsApp">
           &#128172; WhatsApp
         </button>
+        <button onclick="downloadPassport()" class="share-btn share-img" title="Descargar imagen para compartir">
+          &#127384; Descargar Imagen
+        </button>
         <button onclick="copyShareLink()" class="share-btn share-copy" title="Copiar enlace">
           &#128279; Copiar enlace
         </button>
       </div>
       <div id="share-copied" style="display:none;color:var(--green);font-size:13px;margin-top:4px;">&#10003; Enlace copiado</div>
     </div>
+
+    <!-- Hidden canvas for passport image generation -->
+    <canvas id="passport-canvas" width="1080" height="1920" style="display:none;"></canvas>
 
     <div class="disclaimer-box">
       <strong>Aviso importante:</strong> Esta herramienta es educativa y no reemplaza la consulta médica. Siempre consulte con su profesional de salud antes de usar cualquier hierba durante el embarazo o la lactancia.
@@ -886,6 +893,144 @@ function copyShareLink() {
     el.style.display = 'block';
     setTimeout(() => el.style.display = 'none', 2000);
   });
+}
+
+function drawPassportCard() {
+  const canvas = document.getElementById('passport-canvas');
+  const ctx = canvas.getContext('2d');
+  const w = 1080, h = 1920;
+
+  // Background
+  const gradient = ctx.createLinearGradient(0, 0, w, h);
+  gradient.addColorStop(0, '#faf5f0');
+  gradient.addColorStop(1, '#f0ece0');
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, w, h);
+
+  // Header
+  ctx.fillStyle = '#1a5632';
+  ctx.fillRect(0, 0, w, 250);
+
+  // Title
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 60px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('Pasaporte de Hierbas Seguras', w / 2, 100);
+  ctx.font = '40px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillText('Embarazo y Lactancia', w / 2, 170);
+
+  // Botánica Andina brand
+  ctx.fillStyle = '#e8f5e9';
+  ctx.font = '24px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillText('Botánica Andina', w / 2, 215);
+
+  // Get current result data
+  const s = document.getElementById('share-section').dataset;
+  const herb = s.herb || 'Hierba';
+  const pregnancy = s.pregnancy || '---';
+  const breastfeeding = s.breastfeeding || '---';
+
+  // Safety indicator
+  ctx.fillStyle = '#fff';
+  ctx.font = '35px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillText('Hierba verificada:', w / 2, 320);
+
+  ctx.fillStyle = '#1a5632';
+  ctx.font = 'bold 48px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillText(herb, w / 2, 390);
+
+  // Safety badges
+  const startY = 480;
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(100, startY - 30, w - 200, 200);
+
+  ctx.font = '32px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillStyle = '#1a5632';
+  ctx.fillText('Embarazo:', 200, startY + 40);
+
+  ctx.font = 'bold 32px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  if (pregnancy.includes('Generalmente segura')) {
+    ctx.fillStyle = '#2e7d32';
+    ctx.fillText('✓ Generalmente segura', 450, startY + 40);
+  } else if (pregnancy.includes('precaución')) {
+    ctx.fillStyle = '#f57c00';
+    ctx.fillText('⚠ Usar con precaución', 450, startY + 40);
+  } else if (pregnancy.includes('EVITAR')) {
+    ctx.fillStyle = '#c62828';
+    ctx.fillText('✗ EVITAR', 450, startY + 40);
+  } else {
+    ctx.fillStyle = '#757575';
+    ctx.fillText('? No hay datos', 450, startY + 40);
+  }
+
+  ctx.font = '32px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillStyle = '#1a5632';
+  ctx.fillText('Lactancia:', 200, startY + 110);
+
+  ctx.font = 'bold 32px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  if (breastfeeding.includes('Generalmente segura')) {
+    ctx.fillStyle = '#2e7d32';
+    ctx.fillText('✓ Generalmente segura', 450, startY + 110);
+  } else if (breastfeeding.includes('precaución')) {
+    ctx.fillStyle = '#f57c00';
+    ctx.fillText('⚠ Usar con precaución', 450, startY + 110);
+  } else if (breastfeeding.includes('EVITAR')) {
+    ctx.fillStyle = '#c62828';
+    ctx.fillText('✗ EVITAR', 450, startY + 110);
+  } else {
+    ctx.fillStyle = '#757575';
+    ctx.fillText('? No hay datos', 450, startY + 110);
+  }
+
+  // Info box
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(100, 800, w - 200, 300);
+  ctx.strokeStyle = '#d4c5a9';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(100, 800, w - 200, 300);
+
+  ctx.fillStyle = '#1a5632';
+  ctx.font = 'bold 28px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('¿Qué significa esto?', 130, 860);
+
+  ctx.font = '24px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillStyle = '#4a5568';
+  ctx.fillText('Esta información se basa en evidencia', 130, 910);
+  ctx.fillText('científica de revisiones sistemáticas,', 130, 950);
+  ctx.fillText('LactMed y guías clínicas.', 130, 990);
+  ctx.fillText('No reemplaza el consejo médico.', 130, 1030);
+
+  // Disclaimer
+  ctx.fillStyle = '#c62828';
+  ctx.fillRect(100, 1200, w - 200, 150);
+
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 26px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('IMPORTANTE', w / 2, 1250);
+
+  ctx.font = '24px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillText('Siempre consulta con tu médico o', w / 2, 1295);
+  ctx.fillText('matrona antes de usar cualquier hierba', w / 2, 1330);
+
+  // Footer
+  ctx.fillStyle = '#fff';
+  ctx.font = '20px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillText('botanicaandina.com/herramientas/embarazo', w / 2, 1800);
+  ctx.font = '18px -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif';
+  ctx.fillStyle = '#757575';
+  ctx.fillText('Verificado: ' + new Date().toLocaleDateString('es-ES'), w / 2, 1840);
+
+  return canvas;
+}
+
+function downloadPassport() {
+  const canvas = drawPassportCard();
+  const link = document.createElement('a');
+  link.download = 'pasaporte-hierbas-embarazo.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
 }
 
 function toggleFaq(el) {
