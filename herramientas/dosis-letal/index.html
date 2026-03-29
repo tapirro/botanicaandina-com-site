@@ -24,75 +24,117 @@
 <link rel="icon" href="/favicon.ico">
 
 <!-- Schema.org -->
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "¿Cuánto Me Mata? Calculadora de Dosis Letal",
-      "url": "https://botanicaandina.com/herramientas/dosis-letal/",
-      "description": "Herramienta educativa de toxicología que calcula cuántas unidades de una hierba o suplemento serían necesarias para alcanzar la dosis letal (LD50), basándose en datos científicos extrapolados a humanos mediante el factor de conversión interespecies de la FDA.",
-      "applicationCategory": "HealthApplication",
-      "operatingSystem": "Any",
-      "browserRequirements": "Requires JavaScript",
-      "inLanguage": "es",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Organization",
-        "name": "Botánica Andina",
-        "url": "https://botanicaandina.com"
-      },
-      "about": {
-        "@type": "MedicalWebPage",
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "¿Cuánto Me Mata? Calculadora de Dosis Letal",
+        "url": "https://botanicaandina.com/herramientas/dosis-letal/",
+        "description": "Herramienta educativa de toxicología que calcula cuántas unidades de una hierba o suplemento serían necesarias para alcanzar la dosis letal (LD50), basándose en datos científicos extrapolados a humanos mediante el factor de conversión interespecies de la FDA.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "inLanguage": "es",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Botánica Andina",
+          "url": "https://botanicaandina.com"
+        },
         "about": {
-          "@type": "MedicalCause",
-          "name": "Toxicología de suplementos herbales"
-        }
+          "@type": "MedicalWebPage",
+          "about": {
+            "@type": "MedicalCause",
+            "name": "Toxicología de suplementos herbales"
+          }
+        },
+        "isBasedOn": [
+          {
+            "@type": "ScholarlyArticle",
+            "name": "Interspecies scaling of pharmacokinetics",
+            "publisher": "FDA"
+          }
+        ]
       },
-      "isBasedOn": [
-        {
-          "@type": "ScholarlyArticle",
-          "name": "Interspecies scaling of pharmacokinetics",
-          "publisher": "FDA"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué es el Calculador de Dosis Letal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El Calculador de Dosis Letal es una herramienta educativa que muestra la toxicidad relativa de sustancias comunes comparando sus dosis letales 50 (LD50)."
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es el Calculador de Dosis Letal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El Calculador de Dosis Letal es una herramienta educativa que muestra la toxicidad relativa de sustancias comunes comparando sus dosis letales 50 (LD50)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se interpreta el LD50?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El LD50 es la dosis que causa la muerte en 50% de una población de prueba. Valores más bajos = más tóxico. Esta herramienta es solo para fines educativos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es seguro usar estas sustancias?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Esta herramienta no es una guía de dosificación. Siempre consulta a un profesional de salud antes de tomar cualquier suplemento o medicamento."
+            }
           }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo se interpreta el LD50?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "El LD50 es la dosis que causa la muerte en 50% de una población de prueba. Valores más bajos = más tóxico. Esta herramienta es solo para fines educativos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es seguro usar estas sustancias?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Esta herramienta no es una guía de dosificación. Siempre consulta a un profesional de salud antes de tomar cualquier suplemento o medicamento."
-          }
-        }
-      ]
-    }
-  ]
-}</script>
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Calcular dosis letal educativa de hierbas",
+    "description": "Usa la calculadora de toxicología basada en datos LD50 científicos para entender riesgos de sobredosis educativa.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Elige la hierba o suplemento",
+        "text": "Selecciona de la lista la hierba o suplemento que deseas analizar. La base de datos incluye LD50 de productos comunes."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Ingresa tu peso corporal",
+        "text": "Escribe tu peso en kilogramos. La dosis letal depende directamente de tu masa corporal."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Elige la unidad de consumo",
+        "text": "Selecciona cómo consumes normalmente el producto: tazas, cápsulas, gramos o miligramos. El cálculo se adapta a tu forma habitual."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Revisa el resultado educativo",
+        "text": "La calculadora muestra cuántas dosis serían necesarias para alcanzar niveles peligrosos. Este es un cálculo educativo basado en LD50 animal extrapolado a humanos."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Entiende las limitaciones",
+        "text": "La LD50 es una medida de toxicidad aguda, no crónica. Los herbales pueden tener efectos adversos a dosis mucho menores. Consulta fuentes confiables y profesionales."
+      }
+    ]
+  }
+]
+  </script>
 
 <style>
   :root {
