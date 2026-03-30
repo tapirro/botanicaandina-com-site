@@ -552,5 +552,87 @@
         // Auto-detect and set embed code
         updateEmbedCode();
     </script>
+
+    <div class="share-section" style="margin-top: 2rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
+        <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2c3e50;">Compartir esta herramienta</h3>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button onclick="shareTo('twitter')" style="padding: 0.5rem 1rem; background: #1DA1F2; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-9.42 0 4.48 4.48 0 0 0-3.14-1.53 7.74 7.74 0 0 1-6.8-6.63V5.5h4.15v4.8a5.12 5.12 0 0 1 5.12 5.12h1.76v6.25a7.9 7.9 0 0 1-7.85 6.79h-4.1v9.2h3.96a6.7 6.7 0 0 1 6.7-6.7V5.5h3.1l.68-4.18h-3.78V3a3.25 3.25 0 0 1-3.25-3.25H5.4V1h3.38C13.66 1 15 2.34 15 5.38v4.22h4.23l.68 4.18h-4.91v15.08a9.2 9.2 0 0 1-9.2 9.2H3a9.2 9.2 0 0 1-9.2-9.2z"/></svg>
+                Twitter
+            </button>
+            <button onclick="shareTo('facebook')" style="padding: 0.5rem 1rem; background: #1877F2; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 1.686.235 1.686.235v2.953H5.874c-.335 0-.533.223-.533.638v2.648c0 .414.198.638.533.638h.661v4.373h3.924C21.383 20.433 24 16.614 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button onclick="shareTo('whatsapp')" style="padding: 0.5rem 1rem; background: #25D366; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.673-.148-.276 0-.375.101-.468.244-.086.133-.527.352-.917.662-.267.208-.458.414-.581.747-.122.334-.184.662-.184.991 0 .558.224 1.028.634 1.363.06.057.129.098.207.117.065-.018.083-.072.124-.155-.041-.082-.128-.247-.259-.49-.38-.451-.37-.956-.933-1.633-1.388-.288-.207-.568-.442-.842-.691-.272-.246-.495-.424-.688-.544-.411-.287-.617-.44-.617-.44 0-.037.02-.087.044-.129.074-.014.041-.04.104-.053-.19-.013-.086-.002-.196.009-.243.021-.086.021-.194.007-.324-.014-.13-.021-.27-.004-.418-.016-.15-.012-.314-.018-.492-.006-.18.011-.377.018-.596.006-.218.013-.459.005-.72-.008-.26-.015-.543-.026-.863-.011-.319-.019-.66-.024-1.022.011-.36.021-.726.032-1.097.011-.371.021-.744.032-1.124.011-.379.023-.756.032-1.144.011-.386.021-.776.032-1.172.012-.397.022-.789.032-1.194.012-.404.021-.809.032-1.228.012-.42.021-.842.032-1.278.012-.435.022-.874.031-1.333.012-.459.021-.919.031-1.4.012-.481.022-.966.031-1.486.012-.52.021-1.044.031-1.585.012-.54.022-1.087.031-1.672.012-.584.021-1.172.031-1.795.011-.624.022-1.254.032-1.925.012-.67.021-1.345.031-2.07.012-.724.022-1.452.031-2.23.012-.779.021-1.568.031-2.393.012-.825.022-1.66.031-2.557.012-.897.021-1.8.032-2.722.011-.922.022-1.851.032-2.818.012-.967.021-1.943.031-2.957.012-1.022.022-2.052.031-3.127.012-1.069.021-2.149.031-3.26.012-1.106.021-2.22.031-3.36.012-1.131.022-2.268.031-3.424.012-1.147.022-2.293.031-3.453.012-1.145.021-2.296.031-3.445.012-1.115.022-2.238.031-3.378.011-1.069.022-2.148.031-3.25.012-.998.021-2.002.031-3.056.012-.935.022-1.877.031-2.882.012-.897.021-1.796.031-2.76.012-.873.022-1.752.031-2.686.012-.856.021-1.715.031-2.639.012-.836.022-1.676.031-2.58.012-.845.021-1.694.031-2.605.012-.874.022-1.753.031-2.7.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.65z"/></svg>
+                WhatsApp
+            </button>
+            <button onclick="copyLink()" id="copyBtn" style="padding: 0.5rem 1rem; background: #6b7280; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
+                📋 Copiar enlace
+            </button>
+        </div>
+    </div>
+    <div class="embed-section" style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-radius: 12px; border: 1px solid #bbf7d0;">
+        <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #166534;">Incrustar en tu sitio</h3>
+        <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #374151;">Copia el código para incrustar esta herramienta:</p>
+        <textarea id="embedCode" readonly style="width: 100%; height: 80px; padding: 0.5rem; border: 1px solid #bbf7d0; border-radius: 6px; font-family: monospace; font-size: 0.85rem; background: #fff;" onclick="this.select();"></textarea>
+        <button onclick="copyEmbed()" id="copyEmbedBtn" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: #16a34a; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
+            📋 Copiar código
+        </button>
+    </div>
+
+    <script>
+        function shareTo(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(document.title);
+            let shareUrl;
+
+            switch(platform) {
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${text} ${url}`;
+                    break;
+            }
+
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = '✓ ¡Copiado!';
+            btn.style.background = '#16a34a';
+            setTimeout(() => {
+                btn.textContent = '📋 Copiar enlace';
+                btn.style.background = '#6b7280';
+            }, 2000);
+        }
+
+        function copyEmbed() {
+            const embedCode = document.getElementById('embedCode');
+            navigator.clipboard.writeText(embedCode.value);
+            const btn = document.getElementById('copyEmbedBtn');
+            btn.textContent = '✓ ¡Copiado!';
+            setTimeout(() => {
+                btn.textContent = '📋 Copiar código';
+            }, 2000);
+        }
+
+        // Generate embed code
+        window.addEventListener('DOMContentLoaded', function() {
+            const embedCode = document.getElementById('embedCode');
+            if (embedCode) {
+                const toolUrl = window.location.href;
+                const toolName = document.title;
+                embedCode.value = `<iframe src="${toolUrl}" width="100%" height="600" frameborder="0" title="${toolName}"></iframe>`;
+            }
+        });
+    </script>
 </body>
 </html>
