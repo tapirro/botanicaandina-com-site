@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://botanicaandina.com/sitemap.xml
-Sitemap: https://botanicaandina.com/sitemap-news.xml
