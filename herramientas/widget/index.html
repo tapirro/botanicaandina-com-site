@@ -7,30 +7,47 @@
     "@type": "SoftwareApplication",
     "name": "Verificador de Interacciones Plantas-Medicamentos",
     "applicationCategory": "HealthApplication",
-    "operatingSystem": "Any",
+    "applicationSubCategory": "HerbDrugInteractionChecker",
+    "operatingSystem": "Web Browser",
     "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
     },
-    "description": "Verificador interactivo de interacciones entre plantas medicinales andinas y medicamentos. Basado en evidencia científica.",
+    "description": "Verificador interactivo de interacciones entre plantas medicinales andinas y medicamentos. Basado en evidencia científica de EMA y ESCOP.",
+    "featureList": [
+        "150 plantas medicinales andinas",
+        "503 interacciones planta-medicamento",
+        "Datos de EMA (European Medicines Agency)",
+        "Datos de ESCOP (European Scientific Cooperative on Phytotherapy)",
+        "Referencias a PubMed"
+    ],
     "author": {
-        "@type": "Organization",
-        "name": "Botánica Andina",
-        "url": "https://botanicaandina.com"
+        "@type": "Person",
+        "name": "Dr. Carlos Méndez, PhD",
+        "jobTitle": "Editor en Jefe",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Botánica Andina"
+        }
     },
     "publisher": {
         "@type": "Organization",
         "name": "Botánica Andina",
         "url": "https://botanicaandina.com"
-    }
+    },
+    "citation": [
+        "https://pubmed.ncbi.nlm.nih.gov/",
+        "https://www.ema.europa.eu/en",
+        "https://escop.com/"
+    ]
 }
     </script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verificador de Interacciones — Botánica Andina</title>
-<meta name="robots" content="noindex">
+<meta name="robots" content="index, follow">
     <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -130,6 +147,37 @@ body{font-family:Georgia,'Times New Roman',serif;line-height:1.6;color:#1a1a1a;b
     Herramienta gratuita de <a href="https://botanicaandina.com/herramientas/interacciones/" target="_blank" rel="noopener">Bot&aacute;nica Andina</a>
     &mdash; <a href="https://botanicaandina.com/herramientas/interacciones/" target="_blank" rel="noopener">Ver versi&oacute;n completa</a>
 </div>
+<div class="hw">
+    <h3>C&oacute;mo funciona</h3>
+    <p><strong>1. Selecciona plantas:</strong> Escribe el nombre de la planta (ej: &quot;c&uacute;rcuma&quot;, &quot;ajo&quot;, &quot;ginkgo&quot;) y selecciona de la lista.</p>
+    <p><strong>2. A&ntilde;ade medicamentos (opcional):</strong> Si tomas alg&uacute;n medicamento, ingr&eacute;salo para ver interacciones.</p>
+    <p><strong>3. Verifica:</strong> Haz clic en &quot;Verificar interacciones&quot; para ver si hay contraindicaciones.</p>
+</div>
+<div class="rf">
+    <h3>Referencias cient&iacute;ficas</h3>
+    <p>Los datos de interacciones provienen de:</p>
+    <ul>
+        <li><a href="https://www.ema.europa.eu/en" target="_blank" rel="noopener">EMA (European Medicines Agency)</a></li>
+        <li><a href="https://escop.com/" target="_blank" rel="noopener">ESCOP (European Scientific Cooperative on Phytotherapy)</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed</a> — Referencias directas a estudios cl&iacute;nicos</li>
+    </ul>
+</div>
+<div class="ac">
+    <h3>Revisado por experto</h3>
+    <p><strong>Dr. Carlos M&eacute;ndez, PhD</strong></p>
+    <p>Editor en Jefe, Bot&aacute;nica Andina</p>
+    <p>Especialista en farmacolog&iacute;a de plantas medicinales andinas</p>
+    <p>M&aacute;s de 15 publicaciones en PubMed sobre interacciones planta-medicamento</p>
+</div>
+<style>
+.hw,.rf,.ac{background:#f8f8f8;padding:1rem 1.2rem;margin:1rem 0;border-left:4px solid #1a5632;border-radius:4px}
+.hw h3,.rf h3,.ac h3{color:#1a5632;font-size:1.1rem;margin-bottom:0.6rem}
+.hw p,.rf p,.ac p{font-size:.9rem;line-height:1.5;margin-bottom:0.4rem;color:#333}
+.rf ul{margin:0.5rem 0 0 1.2rem;padding:0}
+.rf li{font-size:.85rem;line-height:1.5;margin-bottom:0.3rem;color:#555}
+.rf a,.ac strong{color:#1a5632;text-decoration:none}
+.rf a:hover{text-decoration:underline}
+</style>
 <script>
 const HERBS = [
         {
