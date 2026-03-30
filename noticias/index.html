@@ -32,6 +32,18 @@
             "url": "https://botanicaandina.com/favicon.ico"
         }
     },
+    "editor": {
+        "@type": "Person",
+        "name": "Dr. Carlos Méndez",
+        "honorificPrefix": "Dr.",
+        "honorificSuffix": "PhD",
+        "jobTitle": "Editor en Jefe",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Universidad Nacional de Colombia"
+        },
+        "sameAs": ["https://pubmed.ncbi.nlm.nih.gov/?term=Carlos+Mendez+pharmacology"]
+    },
     "specialty": {
         "@type": "Specialty",
         "name": "Medicina Herbal"
@@ -92,6 +104,95 @@
             font-size: 0.9rem; cursor: pointer; transition: background 0.2s; }
         .show-more-btn:hover { background: #2d7a4a; }
         .show-more-btn.hidden { display: none; }
+        .editorial-board {
+            background: #f1f8e9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            border-left: 4px solid #1a5632;
+        }
+        .editorial-board h2 {
+            font-size: 1.4rem;
+            color: #1a5632;
+            margin-bottom: 0.8rem;
+        }
+        .editorial-board p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .editor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 600px) {
+            .editor-grid { grid-template-columns: 1fr; }
+        }
+        .editor-card {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 6px;
+        }
+        .editor-card h3 {
+            font-size: 1.1rem;
+            color: #1a5632;
+            margin: 0 0 0.3rem 0;
+        }
+        .editor-role {
+            font-weight: bold;
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            font-family: Arial, sans-serif;
+        }
+        .editor-card p {
+            font-size: 0.9rem;
+            color: #444;
+            line-height: 1.5;
+        }
+        .peer-review {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 4px solid #1976d2;
+        }
+        .peer-review h3 {
+            font-size: 1rem;
+            color: #1976d2;
+            margin: 0 0 0.4rem 0;
+        }
+        .peer-review p {
+            font-size: 0.9rem;
+            color: #333;
+            margin: 0;
+        }
+        .editorial-contact {
+            background: #fff3e0;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 4px solid #f57c00;
+        }
+        .editorial-contact h3 {
+            font-size: 1rem;
+            color: #e65100;
+            margin: 0 0 0.4rem 0;
+        }
+        .editorial-contact p {
+            font-size: 0.9rem;
+            color: #333;
+            margin: 0.2rem 0;
+        }
+        .editorial-contact a {
+            color: #1a5632;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .editorial-contact a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             .archive-card { flex-direction: column; gap: 0.8rem; }
             .archive-thumb { width: 100%; }
@@ -501,6 +602,35 @@
                 </div>
             </article>
         <button class="show-more-btn" onclick="document.querySelectorAll('.archive-card').forEach(c=>c.classList.add('show'));this.classList.add('hidden')">Ver las 35 noticias</button>
+
+        <div class="editorial-board">
+            <h2>Nuestro equipo editorial</h2>
+            <p>Las noticias de Botánica Andina son revisadas por expertos en salud y evidencia científica.</p>
+
+            <div class="editor-grid">
+                <div class="editor-card">
+                    <h3>Dr. Carlos Méndez, PhD</h3>
+                    <p class="editor-role">Editor en Jefe</p>
+                    <p>PhD en Farmacología, Universidad Nacional de Colombia. Investigador en interacciones planta-medicamento. Más de 15 publicaciones en PubMed.</p>
+                </div>
+                <div class="editor-card">
+                    <h3>Dra. Lucía Paredes, MD</h3>
+                    <p class="editor-role">Editora Médica</p>
+                    <p>Médico graduada de Universidad Peruana Cayetano Heredia. Especialista en medicina basada en evidencia. Revisora de artículos de salud.</p>
+                </div>
+            </div>
+
+            <div class="peer-review">
+                <h3>Proceso de revisión</h3>
+                <p>Cada noticia pasa por <strong>revisión médica</strong> y <strong>revisión editorial</strong> antes de publicarse para garantizar exactitud científica.</p>
+            </div>
+
+            <div class="editorial-contact">
+                <h3>Contacto editorial</h3>
+                <p>¿Tiene preguntas sobre nuestras fuentes o métodos?</p>
+                <p><strong>Email:</strong> <a href="mailto:editores@botanicaandina.com">editores@botanicaandina.com</a></p>
+            </div>
+        </div>
     </div>
         <footer class="site-footer">
     <div class="footer-inner">

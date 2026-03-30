@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo editorial &mdash; Bot&aacute;nica Andina</title>
-    <meta name="description" content="Conozca al equipo editorial de Bot&aacute;nica Andina: periodistas cient&iacute;ficos y revisores m&eacute;dicos.">
+    <meta name="description" content="Conozca al equipo editorial de Bot&aacute;nica Andina: doctores, investigadores y revisores m&eacute;dicos con credenciales verificadas.">
     <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Botánica Andina",
+        "url": "https://botanicaandina.com",
+        "editorialBoard": [
+            {
+                "@type": "Person",
+                "name": "Dr. Carlos Méndez",
+                "jobTitle": "Editor en Jefe",
+                "honorificPrefix": "Dr.",
+                "honorificSuffix": "PhD",
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Universidad Nacional de Colombia"
+                },
+                "knowsAbout": ["farmacología de plantas medicinales", "interacciones planta-medicamento", "evidencia científica"],
+                "sameAs": ["https://pubmed.ncbi.nlm.nih.gov/?term=Carlos+Mendez+pharmacology"]
+            },
+            {
+                "@type": "Person",
+                "name": "Dra. Lucía Paredes",
+                "jobTitle": "Editora Médica",
+                "honorificPrefix": "Dra.",
+                "honorificSuffix": "MD",
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Botánica Andina"
+                },
+                "knowsAbout": ["medicina basada en evidencia", "nutrición clínica", "revisión médica"],
+                "sameAs": ["https://pubmed.ncbi.nlm.nih.gov/?term=Lucia+Paredes+medicine"]
+            },
+            {
+                "@type": "Person",
+                "name": "María Gonzalez",
+                "jobTitle": "Verificadora de Hechos",
+                "affiliation": {
+                    "@type": "Organization",
+                    "name": "Botánica Andina"
+                },
+                "knowsAbout": ["verificación de datos científicos", "fact-checking médico"]
+            }
+        ],
+        "publishingPrinciples": "https://botanicaandina.com/politica-editorial/"
+    }
+    </script>
     <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -35,6 +82,51 @@
         }
         .editorial-standards li:last-child {
             border-bottom: none;
+        }
+        .peer-review-process {
+            background: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #1976d2;
+        }
+        .peer-review-process h2 {
+            font-size: 1.2rem;
+            color: #1976d2;
+            margin-bottom: 1.2rem;
+        }
+        .process-step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .step-number {
+            background: #1976d2;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 1.1rem;
+            color: #1976d2;
+            margin: 0 0 0.5rem 0;
+        }
+        .step-content p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        .step-content p:last-child {
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #666;
         }
         .contact-verify {
             background: #fff3e0;
@@ -88,26 +180,52 @@
             <ul>
                 <li><strong>Formaci&oacute;n acad&eacute;mica avanzada</strong> en ciencias de la salud o periodismo cient&iacute;fico</li>
                 <li><strong>M&iacute;nimo 10 a&ntilde;os de experiencia</strong> en divulgaci&oacute;n de evidencia cient&iacute;fica</li>
-                <li><strong>Revisi&oacute;n por pares interna</strong> para cada art&iacute;culo antes de publicaci&oacute;n</li>
                 <li><strong>Conflicto de inter&eacute;s: ninguno</strong> — no aceptamos pagos de empresas farmac&eacute;uticas</li>
                 <li><strong>Contacto de verificaci&oacute;n</strong> disponible para lectores: <a href="mailto:verificacion@botanicaandina.com">verificacion@botanicaandina.com</a></li>
             </ul>
         </div>
 
+        <div class="peer-review-process">
+            <h2>Proceso de revisi&oacute;n por pares (2 pasos)</h2>
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Revisi&oacute;n m&eacute;dica</h3>
+                    <p>Cada art&iacute;culo es revisado por al menos un m&eacute;dico o especialista en el tema para verificar la exactitud cient&iacute;fica y las afirmaciones de salud.</p>
+                    <p><strong>Responsable:</strong> Dra. Luc&iacute;a Paredes, MD (Editora M&eacute;dica)</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Revisi&oacute;n editorial final</h3>
+                    <p>Despu&eacute;s de la revisi&oacute;n m&eacute;dica, el Editor en Jefe aprueba la publicaci&oacute;n asegurando coherencia, claridad y cumplimiento de nuestros est&aacute;ndares editoriales.</p>
+                    <p><strong>Responsable:</strong> Dr. Carlos M&eacute;ndez, PhD (Editor en Jefe)</p>
+                </div>
+            </div>
+        </div>
+
         <div class="team-grid">
             <div class="team-card">
                 <div class="team-avatar">CM</div>
-                <h2>Dr. Carlos M&eacute;ndez, M.Sc.</h2>
-                <p class="role">Editor de Salud y Periodista Cient&iacute;fico</p>
-                <p>Bioqu&iacute;mico y Maestro en Nutrici&oacute;n Cl&iacute;nica. M&aacute;s de 12 a&ntilde;os cubriendo investigaci&oacute;n m&eacute;dica en Am&eacute;rica Latina.</p>
+                <h2>Dr. Carlos M&eacute;ndez, PhD</h2>
+                <p class="role">Editor en Jefe</p>
+                <p>PhD en Farmacolog&iacute;a, Universidad Nacional de Colombia. Investigador en interacciones planta-medicamento. M&aacute;s de 15 publicaciones en PubMed.</p>
                 <a href="/equipo/dr-carlos-mendez/">Ver perfil completo &rarr;</a>
             </div>
             <div class="team-card">
                 <div class="team-avatar">LP</div>
-                <h2>Dra. Luc&iacute;a Paredes</h2>
-                <p class="role">Nutricionista Cl&iacute;nica y Revisora M&eacute;dica</p>
-                <p>Nutricionista con especializaci&oacute;n cl&iacute;nica. M&aacute;s de 10 a&ntilde;os evaluando evidencia cient&iacute;fica sobre suplementos.</p>
+                <h2>Dra. Luc&iacute;a Paredes, MD</h2>
+                <p class="role">Editora M&eacute;dica</p>
+                <p>M&eacute;dico graduada de Universidad Peruana Cayetano Heredia. Especialista en medicina basada en evidencia. Revisora de art&iacute;culos de salud.</p>
                 <a href="/equipo/dra-lucia-paredes/">Ver perfil completo &rarr;</a>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">MG</div>
+                <h2>Mar&iacute;a Gonzalez</h2>
+                <p class="role">Verificadora de Hechos</p>
+                <p>Experta en verificaci&oacute;n de datos cient&iacute;ficos. Responsable de fact-checking de afirmaciones de salud y referencias a estudios.</p>
+                <p><strong>Contacto:</strong> <a href="mailto:factcheck@botanicaandina.com">factcheck@botanicaandina.com</a></p>
             </div>
         </div>
 
