@@ -1,0 +1,105 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.8; color: #1a1a1a; background: #fafaf7; }
+.site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+.nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+@media (max-width: 700px) {
+.nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+.nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
+.content { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1 { font-size: 1.8rem; color: #111; margin-bottom: 0.5rem; }
+.page-desc { font-size: 0.95rem; color: #666; margin-bottom: 2rem; padding-bottom: 1.5rem;
+border-bottom: 2px solid #1a5632; }
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.team-card { border: 1px solid #e5e5e0; border-radius: 12px; padding: 2rem; background: #fff;
+text-align: center; transition: box-shadow 0.2s; }
+.team-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.team-avatar { width: 80px; height: 80px; background: #1a5632; border-radius: 50%;
+display: inline-flex; align-items: center; justify-content: center;
+color: #fff; font-family: Arial, sans-serif; font-weight: bold; font-size: 1.5rem;
+margin-bottom: 1rem; }
+.team-card h2 { font-size: 1.1rem; margin-bottom: 0.3rem; color: #111; }
+.team-card .role { color: #1a5632; font-size: 0.85rem; margin-bottom: 0.8rem;
+font-family: Arial, sans-serif; }
+.team-card p { font-size: 0.88rem; margin-bottom: 0.8rem; color: #555; text-align: left; }
+.team-card a { color: #1a5632; text-decoration: none; font-size: 0.85rem;
+font-family: Arial, sans-serif; font-weight: 600; }
+.team-card a:hover { text-decoration: underline; }
+.site-footer { background: #1a2e1a; color: #ccc; padding: 3rem 0 2rem; margin-top: 3rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+.footer-brand { font-family: Georgia, serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem; }
+.footer-desc { font-size: 0.85rem; line-height: 1.6; color: #aaa; }
+.footer-heading { font-family: Arial, sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin-bottom: 0.8rem; }
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: 0.4rem; }
+.footer-links a { color: #aaa; text-decoration: none; font-size: 0.85rem; font-family: Arial, sans-serif; transition: color 0.2s; }
+.footer-links a:hover { color: #8bc34a; }
+.footer-bottom { border-top: 1px solid #2a3e2a; padding-top: 1.5rem; text-align: center; }
+.footer-bottom p { font-size: 0.78rem; color: #777; font-family: Arial, sans-serif; margin: 0; }
+@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; } }
+img { max-width: 100%; height: auto; }
+.archive-card { display: flex; gap: 1.2rem; padding: 1.2rem 0; border-bottom: 1px solid #eee; }
+.archive-card:nth-child(n+11) { display: none; }
+.content.show-all .archive-card:nth-child(n+11) { display: flex; }
+.load-more-wrap { text-align: center; margin: 2rem 0; }
+.load-more-btn { display: inline-block; padding: 0.8rem 2rem; background: #1a5632; color: #fff; border: none; border-radius: 8px; font-family: Arial, sans-serif; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; }
+.load-more-btn:hover { background: #2e7d32; }
+.load-more-wrap.hidden { display: none; }
+.archive-thumb { flex-shrink: 0; width: 160px; border-radius: 8px; overflow: hidden; }
+.archive-thumb img { width: 100%; height: 107px; object-fit: cover; display: block; }
+.archive-body { flex: 1; }
+.archive-cat { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+font-family: Arial, sans-serif; font-weight: 600; }
+.archive-body h3 { font-size: 1rem; line-height: 1.3; margin: 0.2rem 0 0.4rem; }
+.archive-body h3 a { color: #111; text-decoration: none; }
+.archive-body h3 a:hover { color: #1a5632; }
+.archive-body p { font-size: 0.85rem; color: #666; line-height: 1.5; margin-bottom: 0.4rem; }
+.archive-date { font-size: 0.75rem; color: #aaa; font-family: Arial, sans-serif; }
+@media (max-width: 600px) {
+.archive-card { flex-direction: column; gap: 0.8rem; }
+.archive-thumb { width: 100%; }
+.archive-thumb img { height: 180px; }
+}
+.container { max-width: 720px; margin: 0 auto; padding: 2rem 1.5rem; }
+header { border-bottom: 3px solid #1a5632; padding-bottom: 1rem; margin-bottom: 2rem; }
+.site-name { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #1a5632; font-family: Arial, sans-serif; }
+.profile { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
+.profile-photo { width: 160px; height: 160px; background: #e8e8e0; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #999; font-family: Arial, sans-serif; font-size: 0.8rem; }
+.profile-info h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.profile-info .title { color: #1a5632; font-size: 1rem; font-family: Arial, sans-serif; margin-bottom: 1rem; }
+h2 { font-size: 1.3rem; margin: 2rem 0 1rem; color: #1a5632; }
+p { margin-bottom: 1.2rem; }
+ul { margin: 0 0 1.5rem 1.5rem; }
+li { margin-bottom: 0.5rem; }
+.back-link { font-family: Arial, sans-serif; font-size: 0.9rem; margin-top: 2rem; }
+.back-link a { color: #1a5632; text-decoration: none; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.8rem; color: #999; font-family: Arial, sans-serif; }
+.team-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: #333; }
+ol, ul { margin: 0 0 1.5rem 1.5rem; }
+.updated { font-size: 0.85rem; color: #666; font-family: Arial, sans-serif; margin-bottom: 2rem; }
+.page-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 2.5rem 1.5rem; text-align: center; }
+.page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.page-header p { font-family: Arial, sans-serif; font-size: 0.95rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+.license-banner { background: #e8f5e9; border-left: 4px solid #1a5632; padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin-bottom: 2rem; font-family: Arial, sans-serif; font-size: 0.9rem; }
+.license-banner strong { color: #1a5632; }
+.license-banner a { color: #1a5632; }
+.infographic-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+.infographic-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; }
+.infographic-card .svg-container { padding: 1.5rem; background: #fafaf7; display: flex; justify-content: center; align-items: center; min-height: 200px; }
+.infographic-card svg { max-width: 100%; height: auto; }
+.infographic-card .card-body { padding: 1rem 1.5rem 1.5rem; }
+.infographic-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; color: #1a5632; }
+.infographic-card .source { font-family: Arial, sans-serif; font-size: 0.8rem; color: #666; margin-bottom: 0.5rem; }
+.infographic-card .source a { color: #1a5632; }
+.infographic-card .download-link { display: inline-block; font-family: Arial, sans-serif; font-size: 0.85rem; color: #1a5632; text-decoration: none; border: 1px solid #1a5632; padding: 0.3rem 0.8rem; border-radius: 4px; }
+.infographic-card .download-link:hover { background: #1a5632; color: #fff; }
+.site-footer a { color: rgba(255,255,255,0.85); }
+a { color: #1a5632; }
+.site-footer p { font-size: 0.8rem; color: #999; font-family: Arial, sans-serif; }

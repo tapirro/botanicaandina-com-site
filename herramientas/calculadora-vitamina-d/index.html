@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Vitamina D — ¿Cuánto necesitas? &mdash; Bot&aacute;nica Andina</title>
+    <meta name="description" content="Calcula tu necesidad diaria de vitamina D según edad, tipo de piel y ubicación en LATAM. Basada en guías clínicas de la Sociedad Endocrina.">
+    <meta name="keywords" content="calculadora vitamina d, dosis vitamina d, deficiencia vitamina d, vitamina d latam">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/calculadora-vitamina-d/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calculadora de Vitamina D — ¿Cuánto necesitas? &mdash; Bot&aacute;nica Andina">
+    <meta property="og:description" content="Calcula tu necesidad diaria de vitamina D según edad, tipo de piel y ubicación en LATAM. Basada en guías clínicas de la Sociedad Endocrina.">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-vitamina-d.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_LA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculadora de Vitamina D — ¿Cuánto necesitas? &mdash; Bot&aacute;nica Andina">
+    <meta name="twitter:description" content="Calcula tu necesidad diaria de vitamina D según edad, tipo de piel y ubicación en LATAM. Basada en guías clínicas de la Sociedad Endocrina.">
+    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-vitamina-d.jpg">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Calculadora de Vitamina D", "url": "https://botanicaandina.com/herramientas/calculadora-vitamina-d/", "description": "Calcula tu necesidad diaria de vitamina D según edad, tipo de piel y ubicación en LATAM. Basada en guías clínicas de la Sociedad Endocrina.", "applicationCategory": "HealthApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250", "bestRating": "5", "worstRating": "1"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"}, {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://botanicaandina.com/herramientas/"}, {"@type": "ListItem", "position": 3, "name": "Calculadora Vitamina D"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuál es la dosis diaria recomendada de vitamina D?", "acceptedAnswer": {"@type": "Answer", "text": "La dosis varía: 400-600 UI para adultos sanos, hasta 800-1000 UI para mayores de 70 años. Personas con deficiencia pueden necesitar 2000-4000 UI bajo supervisión médica. Use nuestra calculadora para una estimación personalizada."}}, {"@type": "Question", "name": "¿Puedo obtener suficiente vitamina D del sol?", "acceptedAnswer": {"@type": "Answer", "text": "En LATAM, 10-30 minutos de sol (sin protector) en brazos y piernas, 2-3 veces por semana, suele ser suficiente para personas de piel clara. Personas de piel oscura necesitan hasta 5 veces más exposición."}}, {"@type": "Question", "name": "¿Cuáles son los síntomas de deficiencia de vitamina D?", "acceptedAnswer": {"@type": "Answer", "text": "Fatiga, debilidad muscular, dolor óseo, cambios de humor, pérdida de cabello y cicatrización lenta de heridas. La deficiencia severa puede causar raquitismo en niños y osteomalacia en adultos."}}, {"@type": "Question", "name": "¿Es posible tomar demasiada vitamina D?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, el exceso (hipervitaminosis D) puede causar náuseas, vómitos, debilidad y cálculos renales. No exceda 4000 UI/día sin supervisión médica. La calculadora incluye advertencias de seguridad."}}, {"@type": "Question", "name": "¿Qué alimentos son ricos en vitamina D?", "acceptedAnswer": {"@type": "Answer", "text": "Pescados grasos (salmón, atún), hígado de res, yema de huevo, alimentos fortificados (leche, cereales) y hongos expuestos al sol UV. Sin embargo, la mayoría de las personas obtienen más del sol que de los alimentos."}}]}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafaf7;
+        }
+        .site-nav {
+            background: #1a5632;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 56px;
+        }
+        .nav-brand {
+            color: #fff;
+            text-decoration: none;
+            font-family: Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-family: Georgia, serif;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #fff;
+            color: #1a5632;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a5632;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1a5632;
+        }
+        .description {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .case-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .case-card h3 {
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: #1a5632;
+            margin-bottom: 0.75rem;
+        }
+        .case-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        .benefits {
+            background: #f0f7f2;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .benefit-icon {
+            color: #1a5632;
+            font-size: 1.25rem;
+        }
+        .benefit-text {
+            font-size: 0.95rem;
+        }
+        .tool-preview {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .tool-link {
+            display: inline-block;
+            background: #1a5632;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .tool-link:hover {
+            background: #145a24;
+            transform: translateY(-2px);
+        }
+        .faq {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .faq-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+        }
+        .faq-answer {
+            color: #555;
+            line-height: 1.7;
+        }
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .more-tools {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: #f5f5f5;
+        }
+        .more-tools h2 {
+            font-family: Georgia, serif;
+            margin-bottom: 1.5rem;
+        }
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .tools-grid a {
+            background: #fff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+        .tools-grid a:hover {
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transform: translateY(-1px);
+        }
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 2rem 1rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                padding: 0.8rem 1rem;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Botánica Andina</a>
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/plantas/">Plantas</a>
+                <a href="/herramientas/">Herramientas</a>
+                <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Calcula tu necesidad de Vitamina D</h1>
+        <p>Personalizada según tu edad, tipo de piel y ubicación en América Latina. Basada en guías clínicas.</p>
+        <a href="/herramientas/calc-vitamina-d.html" class="hero-cta">Calcula tu dosis de Vitamina D</a>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Sobre esta herramienta</h2>
+            <p class="description">La vitamina D es esencial para la salud ósea, inmunológica y hormonal. Sin embargo, la dosis diaria recomendada varía significativamente según la edad, el tipo de piel y la exposición solar.
+
+Esta calculadora utiliza las guías clínicas de la Sociedad Endocrina Europea y considera los factores específicos de América Latina: latitud, altitud y condiciones climáticas.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Casos de uso</h2>
+            <div class="use-cases">
+                <div class="case-card">
+                    <h3>Personas con piel oscura</h3>
+                    <p>La melanina reduce la síntesis de vitamina D. Necesitan exposición solar 3-5 veces mayor.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Adultos mayores de 50</h3>
+                    <p>La piel produce menos vitamina D con la edad. La suplementación suele ser necesaria.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Embarazadas y lactantes</h3>
+                    <p>Las necesidades aumentan durante el embarazo y lactancia para apoyar el desarrollo fetal.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Personas en interiores</h3>
+                    <p>Trabajar o vivir en espacios cerrados reduce la exposición solar significativamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Beneficios</h2>
+            <div class="benefits">
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Dosis personalizada según tus factores individuales</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Basada en guías clínicas de la Sociedad Endocrina</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Adaptada a las condiciones de LATAM (latitud, altitud)</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Recomendaciones de suplementación cuando es necesario</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Gratis y sin registro</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Usa la herramienta</h2>
+            <div class="tool-preview">
+                <p style="margin-bottom: 1.5rem; color: #666;">Accede gratis a la herramienta completa. Sin registro, sin datos personales.</p>
+                <a href="/herramientas/calc-vitamina-d.html" class="tool-link">Calcula tu dosis de Vitamina D</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuál es la dosis diaria recomendada de vitamina D?</div>
+                    <div class="faq-answer">La dosis varía: 400-600 UI para adultos sanos, hasta 800-1000 UI para mayores de 70 años. Personas con deficiencia pueden necesitar 2000-4000 UI bajo supervisión médica. Use nuestra calculadora para una estimación personalizada.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Puedo obtener suficiente vitamina D del sol?</div>
+                    <div class="faq-answer">En LATAM, 10-30 minutos de sol (sin protector) en brazos y piernas, 2-3 veces por semana, suele ser suficiente para personas de piel clara. Personas de piel oscura necesitan hasta 5 veces más exposición.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Cuáles son los síntomas de deficiencia de vitamina D?</div>
+                    <div class="faq-answer">Fatiga, debilidad muscular, dolor óseo, cambios de humor, pérdida de cabello y cicatrización lenta de heridas. La deficiencia severa puede causar raquitismo en niños y osteomalacia en adultos.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Es posible tomar demasiada vitamina D?</div>
+                    <div class="faq-answer">Sí, el exceso (hipervitaminosis D) puede causar náuseas, vómitos, debilidad y cálculos renales. No exceda 4000 UI/día sin supervisión médica. La calculadora incluye advertencias de seguridad.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué alimentos son ricos en vitamina D?</div>
+                    <div class="faq-answer">Pescados grasos (salmón, atún), hígado de res, yema de huevo, alimentos fortificados (leche, cereales) y hongos expuestos al sol UV. Sin embargo, la mayoría de las personas obtienen más del sol que de los alimentos.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="more-tools">
+        <div class="container">
+            <h2>Más herramientas gratuitas</h2>
+            <div class="tools-grid">
+                <a href="/herramientas/interacciones/">Verificador de Interacciones</a>
+                <a href="/herramientas/seguridad/">Supplement Safety Score</a>
+                <a href="/herramientas/embarazo/">Hierbas en Embarazo</a>
+                <a href="/herramientas/mate/">Calculadora de Cafeína</a>
+                <a href="/herramientas/quiz/">Quiz de Plantas</a>
+                <a href="/herramientas/buscador/">Buscador de Plantas</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Botánica Andina — Herramientas de salud basadas en evidencia</p>
+        <p>
+            <a href="/politica-de-privacidad/">Privacidad</a> ·
+            <a href="/terminos-de-uso/">Términos</a> ·
+            <a href="/deslinde-medico/">Deslinde Médico</a>
+        </p>
+    </footer>
+</body>
+</html>

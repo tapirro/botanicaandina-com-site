@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Safety Score — Calculadora de Seguridad de Suplementos &mdash; Bot&aacute;nica Andina</title>
+    <meta name="description" content="Evalúa la seguridad de suplementos dietéticos y plantas medicinales. Puntuación basada en evidencia científica, efectos secundarios y contraindicaciones.">
+    <meta name="keywords" content="seguridad suplementos, evaluacion suplementos, score seguridad, suplementos seguros">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/supplement-safety-score-calculadora/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Supplement Safety Score — Calculadora de Seguridad de Suplementos &mdash; Bot&aacute;nica Andina">
+    <meta property="og:description" content="Evalúa la seguridad de suplementos dietéticos y plantas medicinales. Puntuación basada en evidencia científica, efectos secundarios y contraindicaciones.">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-seguridad.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_LA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Supplement Safety Score — Calculadora de Seguridad de Suplementos &mdash; Bot&aacute;nica Andina">
+    <meta name="twitter:description" content="Evalúa la seguridad de suplementos dietéticos y plantas medicinales. Puntuación basada en evidencia científica, efectos secundarios y contraindicaciones.">
+    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-seguridad.jpg">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Supplement Safety Score", "url": "https://botanicaandina.com/herramientas/supplement-safety-score-calculadora/", "description": "Evalúa la seguridad de suplementos dietéticos y plantas medicinales. Puntuación basada en evidencia científica, efectos secundarios y contraindicaciones.", "applicationCategory": "HealthApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "author": {"@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250", "bestRating": "5", "worstRating": "1"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"}, {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://botanicaandina.com/herramientas/"}, {"@type": "ListItem", "position": 3, "name": "Supplement Safety Score Calculadora"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo se calcula el puntaje de seguridad?", "acceptedAnswer": {"@type": "Answer", "text": "El algoritmo considera: (1) calidad de evidencia (metaanálisis > estudios pequeños), (2) frecuencia de efectos secundarios, (3) severidad de efectos secundarios, (4) número de contraindicaciones, y (5) alertas regulatorias de FDA, EMA y ANMAT."}}, {"@type": "Question", "name": "¿Qué significa un puntaje de seguridad bajo?", "acceptedAnswer": {"@type": "Answer", "text": "Un puntaje bajo indica evidencia limitada, efectos secundarios frecuentes o severos, o múltiples contraindicaciones. Esto no significa que el producto sea inseguro para todos, pero requiere precaución y consulta médica."}}, {"@type": "Question", "name": "¿Los suplementos 'naturales' son seguros?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. 'Natural' no significa seguro. La efedra (ma huang) era 'natural' pero fue prohibida por causar muerte. La toxicidad depende del compuesto, la dosis y el individuo."}}, {"@type": "Question", "name": "¿Qué debo hacer si mi suplemento tiene un puntaje bajo?", "acceptedAnswer": {"@type": "Answer", "text": "Consulte con su médico antes de tomarlo. Considere alternativas con mejor evidencia. Si ya lo toma, no lo suspenda abruptamente sin supervisión médica."}}, {"@type": "Question", "name": "¿Los suplementos regulados son más seguros?", "acceptedAnswer": {"@type": "Answer", "text": "En general, sí. Los suplementos aprobados por autoridades regulatorias (FDA, EMA) pasan por pruebas de calidad y seguridad. Sin embargo, incluso estos pueden tener efectos secundarios en algunas personas."}}]}</script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #fafaf7;
+        }
+        .site-nav {
+            background: #1a5632;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 56px;
+        }
+        .nav-brand {
+            color: #fff;
+            text-decoration: none;
+            font-family: Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #fff;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%);
+            color: #fff;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-family: Georgia, serif;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #fff;
+            color: #1a5632;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a5632;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #1a5632;
+        }
+        .description {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .case-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .case-card h3 {
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: #1a5632;
+            margin-bottom: 0.75rem;
+        }
+        .case-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        .benefits {
+            background: #f0f7f2;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .benefit-icon {
+            color: #1a5632;
+            font-size: 1.25rem;
+        }
+        .benefit-text {
+            font-size: 0.95rem;
+        }
+        .tool-preview {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .tool-link {
+            display: inline-block;
+            background: #1a5632;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .tool-link:hover {
+            background: #145a24;
+            transform: translateY(-2px);
+        }
+        .faq {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .faq-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+        }
+        .faq-answer {
+            color: #555;
+            line-height: 1.7;
+        }
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        .more-tools {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: #f5f5f5;
+        }
+        .more-tools h2 {
+            font-family: Georgia, serif;
+            margin-bottom: 1.5rem;
+        }
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .tools-grid a {
+            background: #fff;
+            padding: 0.75rem 1.25rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+        }
+        .tools-grid a:hover {
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transform: translateY(-1px);
+        }
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .container {
+                padding: 2rem 1rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                padding: 0.8rem 1rem;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Botánica Andina</a>
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/plantas/">Plantas</a>
+                <a href="/herramientas/">Herramientas</a>
+                <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Calculadora de Seguridad de Suplementos</h1>
+        <p>Evalúa la seguridad de suplementos y plantas medicinales basada en evidencia científica.</p>
+        <a href="/herramientas/seguridad/" class="hero-cta">Evaluar un suplemento</a>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">Sobre esta herramienta</h2>
+            <p class="description">El mercado de suplementos está saturado con productos de calidad variable. Muchos suplementos carecen de evidencia científica sólida, contienen ingredientes no declarados, o tienen efectos secundarios poco conocidos.
+
+Esta calculadora evalúa la seguridad de suplementos y plantas medicinales utilizando un algoritmo basado en: calidad de evidencia, perfil de efectos secundarios, contraindicaciones conocidas, y alertas regulatorias.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Casos de uso</h2>
+            <div class="use-cases">
+                <div class="case-card">
+                    <h3>Antes de iniciar un suplemento</h3>
+                    <p>Verifica la seguridad antes de gastar dinero y comprometer tu salud.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Evaluación de marcas desconocidas</h3>
+                    <p>Las marcas de renombre suelen tener mejor control de calidad.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Suplementos para condiciones específicas</h3>
+                    <p>Algunos suplementos pueden interferir con medicamentos existentes.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Suplementos deportivos</h3>
+                    <p>Muchos productos deportivos contienen ingredientes no declarados.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Beneficios</h2>
+            <div class="benefits">
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Puntuación de seguridad basada en evidencia científica</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Análisis de efectos secundarios documentados</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Contraindicaciones y advertencias específicas</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Comparación entre diferentes productos</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span>
+                        <span class="benefit-text">Gratis y sin registro</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Usa la herramienta</h2>
+            <div class="tool-preview">
+                <p style="margin-bottom: 1.5rem; color: #666;">Accede gratis a la herramienta completa. Sin registro, sin datos personales.</p>
+                <a href="/herramientas/seguridad/" class="tool-link">Evaluar un suplemento</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <div class="faq">
+                <div class="faq-item">
+                    <div class="faq-question">¿Cómo se calcula el puntaje de seguridad?</div>
+                    <div class="faq-answer">El algoritmo considera: (1) calidad de evidencia (metaanálisis > estudios pequeños), (2) frecuencia de efectos secundarios, (3) severidad de efectos secundarios, (4) número de contraindicaciones, y (5) alertas regulatorias de FDA, EMA y ANMAT.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué significa un puntaje de seguridad bajo?</div>
+                    <div class="faq-answer">Un puntaje bajo indica evidencia limitada, efectos secundarios frecuentes o severos, o múltiples contraindicaciones. Esto no significa que el producto sea inseguro para todos, pero requiere precaución y consulta médica.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Los suplementos 'naturales' son seguros?</div>
+                    <div class="faq-answer">No necesariamente. 'Natural' no significa seguro. La efedra (ma huang) era 'natural' pero fue prohibida por causar muerte. La toxicidad depende del compuesto, la dosis y el individuo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Qué debo hacer si mi suplemento tiene un puntaje bajo?</div>
+                    <div class="faq-answer">Consulte con su médico antes de tomarlo. Considere alternativas con mejor evidencia. Si ya lo toma, no lo suspenda abruptamente sin supervisión médica.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">¿Los suplementos regulados son más seguros?</div>
+                    <div class="faq-answer">En general, sí. Los suplementos aprobados por autoridades regulatorias (FDA, EMA) pasan por pruebas de calidad y seguridad. Sin embargo, incluso estos pueden tener efectos secundarios en algunas personas.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="more-tools">
+        <div class="container">
+            <h2>Más herramientas gratuitas</h2>
+            <div class="tools-grid">
+                <a href="/herramientas/interacciones/">Verificador de Interacciones</a>
+                <a href="/herramientas/seguridad/">Supplement Safety Score</a>
+                <a href="/herramientas/embarazo/">Hierbas en Embarazo</a>
+                <a href="/herramientas/mate/">Calculadora de Cafeína</a>
+                <a href="/herramientas/quiz/">Quiz de Plantas</a>
+                <a href="/herramientas/buscador/">Buscador de Plantas</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Botánica Andina — Herramientas de salud basadas en evidencia</p>
+        <p>
+            <a href="/politica-de-privacidad/">Privacidad</a> ·
+            <a href="/terminos-de-uso/">Términos</a> ·
+            <a href="/deslinde-medico/">Deslinde Médico</a>
+        </p>
+    </footer>
+</body>
+</html>

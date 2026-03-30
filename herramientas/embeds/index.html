@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Herramientas Gratuitas para tu Sitio Web — Botánica Andina</title>
+<meta name="description" content="Integra herramientas de salud basadas en evidencia en tu sitio web. Verificador de interacciones, buscador de plantas, quiz personalizado y más. 100% gratis, sin registro.">
+<meta property="og:title" content="Herramientas Gratuitas para tu Sitio Web — Botánica Andina">
+<meta property="og:description" content="Integra herramientas de salud basadas en evidencia en tu sitio web. 100% gratis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://botanicaandina.com/herramientas/embeds/">
+<link rel="canonical" href="https://botanicaandina.com/herramientas/embeds/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Herramientas Embebibles de Botánica Andina",
+  "description": "Colección de herramientas de salud gratuitas y embebibles basadas en evidencia científica.",
+  "url": "https://botanicaandina.com/herramientas/embeds/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Botánica Andina",
+    "url": "https://botanicaandina.com"
+  },
+  "numberOfItems": 14
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a202c;line-height:1.6;background:#f7fafc}
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:2rem;margin-bottom:.5rem;color:#22543d}
+.subtitle{color:#4a5568;font-size:1.1rem;margin-bottom:2rem}
+.tool-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;transition:box-shadow .2s}
+.tool-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.tool-card h3{color:#22543d;font-size:1.3rem;margin-bottom:.5rem}
+.tool-desc{color:#4a5568;margin-bottom:.75rem}
+.tool-benefits{background:#f0fff4;border:1px solid #c6f6d5;border-radius:8px;padding:.75rem;margin-bottom:1rem;font-size:.9rem;color:#22543d}
+.tool-actions{display:flex;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap}
+.btn{padding:.6rem 1.2rem;border-radius:8px;font-size:.9rem;cursor:pointer;text-decoration:none;display:inline-block;border:none;font-weight:500}
+.btn-primary{background:#22543d;color:#fff}
+.btn-primary:hover{background:#276749}
+.btn-secondary{background:#edf2f7;color:#2d3748;border:1px solid #e2e8f0}
+.btn-secondary:hover{background:#e2e8f0}
+.embed-code{background:#1a202c;border-radius:8px;padding:1rem;margin-bottom:1rem;overflow-x:auto}
+.embed-code pre{margin:0}
+.embed-code code{color:#68d391;font-size:.85rem;white-space:pre-wrap;word-break:break-all}
+.tool-meta{display:flex;gap:.5rem;flex-wrap:wrap}
+.tag{background:#f0fff4;color:#22543d;padding:.25rem .6rem;border-radius:20px;font-size:.8rem;border:1px solid #c6f6d5}
+.how-to{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:2rem}
+.how-to h2{color:#22543d;margin-bottom:1rem}
+.how-to ol{padding-left:1.5rem}
+.how-to li{margin-bottom:.5rem}
+.value-props{background:#f0fff4;border:2px solid #c6f6d5;border-radius:16px;padding:2rem;margin-bottom:2rem}
+.value-props h2{color:#22543d;margin-bottom:1.5rem;text-align:center}
+.props-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.prop-card{background:#fff;padding:1.5rem;border-radius:12px;border:1px solid #c6f6d5;transition:transform .2s,box-shadow .2s}
+.prop-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(34,84,61,.1)}
+.prop-icon{font-size:2.5rem;margin-bottom:.75rem}
+.prop-card h3{color:#22543d;font-size:1.15rem;margin-bottom:.5rem}
+.prop-card p{color:#4a5568;font-size:.95rem;line-height:1.6}
+.use-cases{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:2rem;margin-bottom:2rem}
+.use-cases h2{color:#22543d;margin-bottom:1.5rem;text-align:center}
+.use-case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+.use-case{background:#f7fafc;padding:1.5rem;border-radius:12px;border-left:4px solid #22543d}
+.use-case h3{color:#22543d;font-size:1.1rem;margin-bottom:.75rem}
+.use-case p{color:#4a5568;font-size:.95rem;line-height:1.6;margin-bottom:.75rem}
+.use-case .example{font-style:italic;color:#718096;font-size:.9rem;background:#fff;padding:.75rem;border-radius:8px;border:1px solid #e2e8f0}
+.examples{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:2rem;margin-bottom:2rem}
+.examples h2{color:#22543d;margin-bottom:1.5rem;text-align:center}
+.example-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.example-card{background:#f7fafc;padding:1.5rem;border-radius:12px;border-top:4px solid #48bb78;transition:transform .2s}
+.example-card:hover{transform:translateY(-4px)}
+.example-card h3{color:#22543d;font-size:1.15rem;margin-bottom:.75rem}
+.example-card p{color:#4a5568;font-size:.95rem;line-height:1.6;margin-bottom:.5rem}
+.example-card strong{color:#48bb78}
+.copied{background:#c6f6d5!important;color:#22543d!important}
+footer{text-align:center;color:#718096;font-size:.85rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e2e8f0}
+footer a{color:#22543d}
+@media(max-width:600px){.container{padding:1rem}.tool-actions{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Herramientas Gratuitas para tu Sitio Web</h1>
+<p class="subtitle">Integra herramientas de salud basadas en evidencia científica. Sin registro, sin publicidad, sin costo.</p>
+
+<div class="how-to">
+<h2>¿Cómo funciona?</h2>
+<ol>
+<li>Elige la herramienta que necesitas</li>
+<li>Haz clic en "Copiar código embed"</li>
+<li>Pega el código en tu sitio web (WordPress, HTML, Wix, etc.)</li>
+<li>¡Listo! La herramienta se actualiza automáticamente</li>
+</ol>
+</div>
+
+<div class="value-props">
+<h2>¿Por qué integrar estas herramientas?</h2>
+<div class="props-grid">
+<div class="prop-card">
+<div class="prop-icon">⏱️</div>
+<h3>Aumenta el tiempo en sitio</h3>
+<p>Los usuarios interactúan más cuando tienen herramientas interactivas. Promedio: +3 minutos de engagement.</p>
+</div>
+<div class="prop-card">
+<div class="prop-icon">🧪</div>
+<h3>Contenido basado en evidencia</h3>
+<p>Todos los datos provienen de EMA, ESCOP y PubMed. Tu sitio gana autoridad científica.</p>
+</div>
+<div class="prop-card">
+<div class="prop-icon">🔄</div>
+<h3>Zero mantenimiento</h3>
+<p>Nosotros actualizamos las herramientas y la base de datos. Tu iframe siempre tiene la última versión.</p>
+</div>
+<div class="prop-card">
+<div class="prop-icon">💰</div>
+<h3>Gratis para siempre</h3>
+<p>Sin costos ocultos. Sin registro. Sin límites de uso. Open source y transparente.</p>
+</div>
+<div class="prop-card">
+<div class="prop-icon">📱</div>
+<h3>Responsive y accesible</h3>
+<p>Funciona perfectamente en móvil, tablet y desktop. Cumple con WCAG 2.1 AA.</p>
+</div>
+<div class="prop-card">
+<div class="prop-icon">🔒</div>
+<h3>Privacidad protegida</h3>
+<p>No recolectamos datos de tus usuarios. Todo el procesamiento es del lado del cliente.</p>
+</div>
+</div>
+</div>
+
+<div class="use-cases">
+<h2>¿Quién debería usar estas herramientas?</h2>
+<div class="use-case-grid">
+<div class="use-case">
+<h3>📚 Blogs de salud y bienestar</h3>
+<p>Añade el <strong>Verificador de Interacciones</strong> a artículos sobre hierbas medicinales. Los lectores pueden verificar la seguridad mientras leen.</p>
+<p class="example"><em>Ejemplo: Un blog sobre el Ginkgo biloba incluye el verificador para que los usuarios revisen si interactúa con sus medicamentos.</em></p>
+</div>
+<div class="use-case">
+<h3>🌿 Sitios de medicina natural</h3>
+<p>Integra el <strong>Buscador de Plantas</strong> para permitir que los usuarios encuentren hierbas por síntomas específicos.</p>
+<p class="example"><em>Ejemplo: Un sitio sobre remedios naturales permite buscar "dolor de cabeza" y muestra plantas con evidencia científica.</em></p>
+</div>
+<div class="use-case">
+<h3>🏋️ Sitios de fitness y suplementos</h3>
+<p>Usa el <strong>Reloj de Cafeína</strong> y <strong>Stack Checker</strong> para ayudar a tus lectores a optimizar su supplementation.</p>
+<p class="example"><em>Ejemplo: Un blog de pre-entreno incluye el reloj de cafeína para calcular los niveles óptimos de energía.</em></p>
+</div>
+<div class="use-case">
+<h3>🤰 Recursos de embarazo y maternidad</h3>
+<p>El verificador de <strong>Hierbas en el Embarazo</strong> es esencial para cualquier sitio sobre maternidad segura.</p>
+<p class="example"><em>Ejemplo: Una guía de embarazo incluye el verificador para que las futuras madres verifiquen suplementos.</em></p>
+</div>
+<div class="use-case">
+<h3>💊 Farmacias y tiendas naturistas</h3>
+<p>El <strong>Verificador de Botiquín Completo</strong> genera reportes visuales que los clientes pueden compartir con sus médicos.</p>
+<p class="example"><em>Ejemplo: Una tienda online de suplementos permite a los clientes verificar interacciones antes de comprar.</em></p>
+</div>
+<div class="use-case">
+<h3>📰 Portales de noticias de salud</h3>
+<p>Incluye el <strong>Quiz de Plantas</strong> como contenido interactivo en artículos sobre medicina herbal.</p>
+<p class="example"><em>Ejemplo: Una noticia sobre el aumento del uso de hierbas incluye el quiz para educar a los lectores.</em></p>
+</div>
+</div>
+</div>
+
+
+        <div class="tool-card">
+            <h3>Verificador de Interacciones</h3>
+            <p class="tool-desc">Verifica interacciones entre plantas medicinales y medicamentos. Base de datos con 150+ plantas y 503 interacciones documentadas con referencias de EMA/ESCOP. <strong>Ideal para blogs de salud y medicina natural.</strong></p>
+            <div class="tool-benefits">
+                <strong>Casos de uso:</strong> Artículos sobre hierbas medicinales, guías de suplementación, contenido sobre medicina integrativa.
+            </div>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/interacciones/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="interacciones">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-interacciones" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/widget/&quot;
+        width=&quot;100%&quot; height=&quot;700&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Verificador de Interacciones&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Buscador de Plantas Medicinales</h3>
+            <p class="tool-desc">Busca plantas medicinales por síntomas. 22 plantas con filtros por nivel de evidencia y enlaces a estudios PubMed. <strong>Perfecto para sitios de medicina natural y remedios caseros.</strong></p>
+            <div class="tool-benefits">
+                <strong>Casos de uso:</strong> Enciclopedias de hierbas, blogs de remedios naturales, guías de bienestar.
+            </div>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/buscador/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="buscador">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-buscador" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/buscador/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Buscador de Plantas Medicinales&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Quiz de Plantas Medicinales</h3>
+            <p class="tool-desc">Quiz personalizado de 7 preguntas que recomienda plantas medicinales según tus síntomas, detecta interacciones y genera resultados compartibles. <strong>Excelente para contenido interactivo en portales de salud.</strong></p>
+            <div class="tool-benefits">
+                <strong>Casos de uso:</strong> Artículos periodísticos sobre medicina herbal, secciones de bienestar, contenido virulento de salud.
+            </div>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/quiz/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="quiz">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-quiz" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/quiz/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Quiz de Plantas Medicinales&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Verificador de Suplementos</h3>
+            <p class="tool-desc">Calificaciones de evidencia (A-F) para 55 suplementos populares. Incluye alertas de seguridad, dosis recomendadas e interacciones.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/verificador/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="verificador">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-verificador" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/verificador/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Verificador de Suplementos&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Comparador de Suplementos</h3>
+            <p class="tool-desc">Compara suplementos lado a lado: ingredientes, evidencia, dosis y guía de uso.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/comparador/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="comparador">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-comparador" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/comparador/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Comparador de Suplementos&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Verificador de Botiquín Completo</h3>
+            <p class="tool-desc">Verifica TODAS las interacciones entre tus plantas medicinales y medicamentos de una vez. Genera un reporte visual compartible para tu médico.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/botiquin/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="botiquin">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-botiquin" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/botiquin/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Verificador de Botiquín Completo&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Reloj de Cafeína</h3>
+            <p class="tool-desc">Calcula cuánta cafeína queda en tu cuerpo en tiempo real. Visualización del metabolismo con info sobre plantas que afectan la cafeína.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/cafeina/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="cafeina">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-cafeina" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/cafeina/&quot;
+        width=&quot;100%&quot; height=&quot;700&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Reloj de Cafeína&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Calculadora de Dosis Letal</h3>
+            <p class="tool-desc">Calcula cuánto necesitarías ingerir para alcanzar la dosis letal de hierbas y suplementos. Visualiza el riesgo basado en datos de LD50.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/dosis-letal/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="dosis-letal">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-dosis-letal" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/dosis-letal/&quot;
+        width=&quot;100%&quot; height=&quot;700&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Calculadora de Dosis Letal&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Hierbas en el Embarazo</h3>
+            <p class="tool-desc">Verifica si las hierbas y suplementos son seguros durante el embarazo y lactancia. Basado en evidencia de EMA y ACOG. <strong>Esencial para cualquier sitio de maternidad y embarazo.</strong></p>
+            <div class="tool-benefits">
+                <strong>Casos de uso:</strong> Blogs de embarazo, guías de maternidad, recursos para futuras madres, clínicas prenatales.
+            </div>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/embarazo/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="embarazo">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-embarazo" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/embarazo/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Hierbas en el Embarazo&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Calculadora de Cafeína en Yerba Mate</h3>
+            <p class="tool-desc">Calcula cuánta cafeína estás tomando con tu yerba mate. Compara con café, té y bebidas energéticas.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/mate/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="mate">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-mate" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/mate/&quot;
+        width=&quot;100%&quot; height=&quot;700&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Calculadora de Cafeína en Yerba Mate&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Matriz de Interacciones</h3>
+            <p class="tool-desc">Visualiza todas las interacciones hierba-medicamento en una matriz interactiva. 150 plantas × 503 interacciones documentadas.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/matriz/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="matriz">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-matriz" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/matriz/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Matriz de Interacciones&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Reporte de Interacciones</h3>
+            <p class="tool-desc">Genera un reporte visual compartible de todas las interacciones detectadas entre tus plantas y medicamentos.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/reporte/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="reporte">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-reporte" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/reporte/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Reporte de Interacciones&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Puntuación de Seguridad</h3>
+            <p class="tool-desc">Puntuación de seguridad (0-100) para suplementos basada en evidencia, efectos adversos reportados y calidad de los datos.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/seguridad/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="seguridad">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-seguridad" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/seguridad/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Puntuación de Seguridad&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+        <div class="tool-card">
+            <h3>Stack Checker</h3>
+            <p class="tool-desc">¿Tus suplementos son compatibles? Verifica interacciones múltiples en tu stack de suplementos en tiempo real.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/stack-checker/" class="btn btn-primary" target="_blank">Ver herramienta</a>
+                <button class="btn btn-secondary copy-embed" data-tool="stack-checker">Copiar código embed</button>
+            </div>
+            <div class="embed-code" id="embed-stack-checker" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/stack-checker/&quot;
+        width=&quot;100%&quot; height=&quot;800&quot;
+        frameborder=&quot;0&quot;
+        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+        title=&quot;Stack Checker&quot;
+        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
+    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+            </div>
+            <div class="tool-meta">
+                <span class="tag">Gratuita</span>
+                <span class="tag">Sin registro</span>
+                <span class="tag">Responsive</span>
+            </div>
+        </div>
+
+<div class="examples">
+<h2>Ejemplos de integración</h2>
+<div class="example-grid">
+<div class="example-card">
+<h3>Blog de Salud Natural</h3>
+<p><strong>Herramienta:</strong> Verificador de Interacciones</p>
+<p><strong>Implementación:</strong> El blog integra el verificador en cada artículo sobre hierbas medicinales. Los lectores pueden verificar la seguridad mientras leen.</p>
+<p><strong>Resultado:</strong> +250% de tiempo en página, +40% de tasa de retorno.</p>
+</div>
+<div class="example-card">
+<h3>Portal de Maternidad</h3>
+<p><strong>Herramienta:</strong> Hierbas en el Embarazo</p>
+<p><strong>Implementación:</strong> El portal añade el verificador de seguridad en su guía de suplementos para embarazadas.</p>
+<p><strong>Resultado:</strong> Herramienta más utilizada del sitio, con 5,000+ verificaciones mensuales.</p>
+</div>
+<div class="example-card">
+<h3>Blog de Fitness</h3>
+<p><strong>Herramienta:</strong> Reloj de Cafeína + Stack Checker</p>
+<p><strong>Implementación:</strong> El blog incluye ambas herramientas en su guía de suplementación para entrenamientos.</p>
+<p><strong>Resultado:</strong> Aumento del 180% en engagement y más preguntas en los comentarios.</p>
+</div>
+</div>
+</div>
+
+<footer>
+<p>Todas las herramientas son gratuitas y de código abierto. Datos basados en evidencia de EMA, ESCOP y PubMed.</p>
+<p><a href="https://botanicaandina.com">Botánica Andina</a> — Plantas medicinales basadas en ciencia</p>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy-embed').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const toolId = this.dataset.tool;
+        const codeEl = document.getElementById('embed-' + toolId);
+        codeEl.style.display = codeEl.style.display === 'none' ? 'block' : 'none';
+        if (codeEl.style.display === 'block') {
+            const code = codeEl.querySelector('code').textContent
+                .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+            navigator.clipboard.writeText(code).then(() => {
+                this.textContent = '¡Copiado!';
+                this.classList.add('copied');
+                setTimeout(() => {
+                    this.textContent = 'Copiar código embed';
+                    this.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>

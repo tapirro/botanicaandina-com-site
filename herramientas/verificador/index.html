@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica | Bot&aacute;nica Andina</title>
+    <meta name="description" content="Consulta la evidencia cient&iacute;fica de 55 suplementos populares. Calificaciones de eficacia, seguridad, interacciones y dosis respaldadas por estudios cl&iacute;nicos. Gratuito y en espa&ntilde;ol.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/verificador/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Verificador de Suplementos &mdash; &iquest;Tu suplemento tiene evidencia?">
+    <meta property="og:description" content="Base de datos gratuita con 55 suplementos calificados por nivel de evidencia cient&iacute;fica. Eficacia, seguridad, interacciones y dosis.">
+    <meta property="og:url" content="https://botanicaandina.com/herramientas/verificador/">
+    <meta property="og:locale" content="es_LA">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Verificador de Suplementos",
+    "url": "https://botanicaandina.com/herramientas/verificador/",
+    "description": "Base de datos de evidencia científica para 55 suplementos populares. Calificaciones de eficacia, seguridad, interacciones y dosis.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Botánica Andina",
+      "url": "https://botanicaandina.com"
+    },
+    "inLanguage": "es"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Verificar evidencia de suplementos",
+    "description": "Aprende a usar el verificador para consultar la evidencia científica de cualquier suplemento.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Escribe el suplemento",
+        "text": "En el campo de búsqueda, escribe el nombre del suplemento (ej: curcuma, omega-3, vitamina D)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Revisa el grado de evidencia",
+        "text": "El sistema mostrará el grado: A (fuerte), B (moderada), C (débil), D (insuficiente)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Lee las fuentes",
+        "text": "Haz clic para ver las fuentes: EMA, ESCOP, Cochrane, PubMed."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Verifica interacciones",
+        "text": "Revisa las contraindicaciones e interacciones antes de tomar el suplemento."
+      }
+    ],
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Nombre del suplemento"
+      }
+    ]
+  }
+]</script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://botanicaandina.com/herramientas/"},
+            {"@type": "ListItem", "position": 3, "name": "Verificador de Suplementos"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Cómo se califican los suplementos en el verificador?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cada suplemento recibe una calificación de A (evidencia fuerte) a F (sin evidencia o evidencia negativa), basada en la cantidad y calidad de estudios clínicos publicados en PubMed. Se evalúan eficacia, seguridad, interacciones conocidas y dosis respaldadas por investigación."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cuántos suplementos están incluidos en la base de datos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Actualmente la base de datos incluye 55 suplementos populares, desde vitaminas y minerales hasta extractos herbales y aminoácidos. Cada entrada contiene información sobre eficacia, seguridad, interacciones y dosis recomendada según la evidencia disponible."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Puedo verificar si un suplemento tiene interacciones con medicamentos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Cada ficha de suplemento incluye una sección de interacciones conocidas con medicamentos y otros suplementos, basada en literatura científica. Sin embargo, siempre consulta con tu médico o farmacéutico antes de combinar suplementos con medicamentos."
+                }
+            }
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
+        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
+        .nav-links a:hover { color: #fff; }
+        @media (max-width: 700px) {
+            .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        }
+
+        .page-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+        .page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .page-header p { font-family: Arial, sans-serif; font-size: 1rem; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+
+        .stats-bar { display: flex; gap: 2rem; justify-content: center; margin: -1.5rem auto 2rem; flex-wrap: wrap; position: relative; z-index: 10; background: #fff; max-width: 650px; border-radius: 12px; padding: 1.2rem 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 1.8rem; font-weight: bold; color: #1a5632; display: block; }
+        .stat-label { font-family: Arial, sans-serif; font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+        .search-section { max-width: 800px; margin: 0 auto 1.5rem; padding: 0 1.5rem; }
+        .search-box { width: 100%; padding: 0.9rem 1.2rem 0.9rem 2.8rem; border: 2px solid #c8e6c9; border-radius: 10px; font-family: Georgia, serif; font-size: 1rem; outline: none; transition: border-color 0.2s; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E") 0.9rem center no-repeat; }
+        .search-box:focus { border-color: #1a5632; }
+        .search-box::placeholder { color: #aaa; }
+
+        .filter-row { max-width: 800px; margin: 0 auto 1.5rem; padding: 0 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .filter-btn { font-family: Arial, sans-serif; font-size: 0.78rem; padding: 0.35rem 0.8rem; border: 1.5px solid #c8e6c9; border-radius: 20px; background: #fff; color: #555; cursor: pointer; transition: all 0.2s; }
+        .filter-btn:hover, .filter-btn.active { background: #1a5632; color: #fff; border-color: #1a5632; }
+
+        .results-count { max-width: 800px; margin: 0 auto 0.8rem; padding: 0 1.5rem; font-family: Arial, sans-serif; font-size: 0.82rem; color: #888; }
+
+        .supplements-grid { max-width: 800px; margin: 0 auto 3rem; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+
+        .supp-card { background: #fff; border-radius: 10px; box-shadow: 0 1px 8px rgba(0,0,0,0.06); overflow: hidden; cursor: pointer; transition: box-shadow 0.2s; }
+        .supp-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+        .supp-header { display: flex; align-items: center; padding: 1rem 1.2rem; gap: 1rem; }
+        .supp-grade { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 1.4rem; font-weight: bold; color: #fff; flex-shrink: 0; }
+        .grade-A { background: #2e7d32; }
+        .grade-B { background: #558b2f; }
+        .grade-C { background: #f9a825; color: #333; }
+        .grade-D { background: #e65100; }
+        .grade-F { background: #c62828; }
+        .supp-info { flex: 1; min-width: 0; }
+        .supp-name { font-size: 1.05rem; font-weight: bold; color: #1a5632; }
+        .supp-aka { font-family: Arial, sans-serif; font-size: 0.75rem; color: #999; }
+        .supp-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.3rem; }
+        .supp-tag { font-family: Arial, sans-serif; font-size: 0.68rem; padding: 0.1rem 0.45rem; border-radius: 8px; background: #f1f8f3; color: #2e7d32; }
+        .supp-tag.caution { background: #fff3e0; color: #e65100; }
+        .supp-arrow { font-size: 1.2rem; color: #ccc; transition: transform 0.2s; flex-shrink: 0; }
+        .supp-card.open .supp-arrow { transform: rotate(90deg); }
+
+        .supp-details { display: none; padding: 0 1.2rem 1.2rem; border-top: 1px solid #f0f0f0; }
+        .supp-card.open .supp-details { display: block; }
+        .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+        @media (max-width: 600px) { .detail-grid { grid-template-columns: 1fr; } }
+        .detail-box { background: #fafaf7; border-radius: 8px; padding: 0.8rem 1rem; }
+        .detail-label { font-family: Arial, sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 0.3rem; }
+        .detail-value { font-size: 0.9rem; }
+        .detail-value ul { margin: 0.3rem 0 0 1.2rem; }
+        .detail-value li { font-size: 0.85rem; margin-bottom: 0.15rem; }
+
+        .evidence-bar { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.8rem; }
+        .ev-track { flex: 1; height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden; }
+        .ev-fill { height: 100%; border-radius: 3px; }
+        .ev-label { font-family: Arial, sans-serif; font-size: 0.72rem; color: #888; white-space: nowrap; }
+
+        .sources-note { max-width: 800px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+        .sources-inner { background: #fff8e1; border-radius: 10px; padding: 1.2rem 1.5rem; }
+        .sources-inner h3 { font-size: 0.95rem; margin-bottom: 0.4rem; color: #795548; }
+        .sources-inner p { font-family: Arial, sans-serif; font-size: 0.82rem; color: #795548; }
+        .sources-inner a { color: #1a5632; }
+
+        .embed-section { max-width: 800px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+        .embed-inner { background: #f5f5f5; border-radius: 10px; padding: 1.5rem; text-align: center; }
+        .embed-inner h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+        .embed-inner p { font-family: Arial, sans-serif; font-size: 0.85rem; color: #666; margin-bottom: 0.8rem; }
+        .embed-code { background: #1a1a1a; color: #8bc34a; padding: 0.8rem 1rem; border-radius: 8px; font-family: monospace; font-size: 0.78rem; text-align: left; overflow-x: auto; cursor: pointer; position: relative; }
+        .embed-code:hover::after { content: 'Copiar'; position: absolute; top: 0.4rem; right: 0.6rem; background: #333; color: #fff; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem; }
+        .copied-msg { font-family: Arial, sans-serif; font-size: 0.78rem; color: #2e7d32; margin-top: 0.4rem; display: none; }
+
+        footer { background: #1a5632; color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+        @media (max-width: 700px) {
+            .page-header h1 { font-size: 1.5rem; }
+            .stats-bar { gap: 1.2rem; padding: 1rem; }
+            .supp-header { padding: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+            <div class="nav-links">
+                <a href="/noticias/">Noticias</a>
+                <a href="/herramientas/">Herramientas</a>
+                <a href="/herramientas/interacciones/">Interacciones</a>
+                <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Verificador de Suplementos</h1>
+        <p>&iquest;Tu suplemento tiene evidencia cient&iacute;fica? Consulta calificaciones de eficacia, seguridad e interacciones para 55 suplementos populares.</p>
+    </header>
+    <div class="medical-endorsement" style="background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);border:1px solid #cbd5e1;border-radius:12px;padding:1.5rem;margin:1.5rem auto;max-width:1000px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:60px;height:60px;background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div>
+                <div style="font-weight:600;color:#1e293b;font-size:1.1rem;margin-bottom:0.25rem;">Revisado por la Dirección Médica</div>
+                <div style="color:#64748b;font-size:0.9rem;line-height:1.5;">
+                    El contenido de esta herramienta ha sido revisado por profesionales de la salud basándose en evidencia científica de monografías oficiales (EMA, ESCOP) y estudios indexados en PubMed. Los datos presentados son informativos y no sustituyen el consejo médico profesional.
+                </div>
+                <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">EMA</span>
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">ESCOP</span>
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">PubMed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number" id="totalCount">55</span>
+            <span class="stat-label">Suplementos</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Niveles de evidencia</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">A&ndash;F</span>
+            <span class="stat-label">Calificaci&oacute;n</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Gratuito</span>
+        </div>
+    </div>
+
+    <div class="search-section">
+        <input type="text" class="search-box" id="searchInput" placeholder="Buscar suplemento... Ej: omega-3, vitamina D, c&uacute;rcuma">
+    </div>
+
+    <div class="filter-row" id="filterRow">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="A">Grado A</button>
+        <button class="filter-btn" data-filter="B">Grado B</button>
+        <button class="filter-btn" data-filter="C">Grado C</button>
+        <button class="filter-btn" data-filter="D">Grado D</button>
+        <button class="filter-btn" data-filter="cat-vitaminas">Vitaminas</button>
+        <button class="filter-btn" data-filter="cat-minerales">Minerales</button>
+        <button class="filter-btn" data-filter="cat-plantas">Plantas</button>
+        <button class="filter-btn" data-filter="cat-aminoacidos">Amino&aacute;cidos</button>
+        <button class="filter-btn" data-filter="cat-otros">Otros</button>
+    </div>
+
+    <div class="results-count" id="resultsCount"></div>
+    <div class="supplements-grid" id="suppGrid"></div>
+
+    <div class="sources-note">
+        <div class="sources-inner">
+            <h3>&#x1F4DA; Fuentes y metodolog&iacute;a</h3>
+            <p>Las calificaciones se basan en la cantidad y calidad de ensayos cl&iacute;nicos en humanos, revisiones sistem&aacute;ticas y metaan&aacute;lisis publicados. Fuentes principales: <strong>PubMed</strong>, <strong>Cochrane Library</strong>, <strong>Natural Medicines Comprehensive Database</strong>, <strong>Examine.com</strong>, y monograf&iacute;as de la <strong>EMA/ESCOP</strong>.</p>
+            <p style="margin-top:0.5rem"><strong>Grado A</strong> = evidencia fuerte (m&uacute;ltiples ensayos controlados). <strong>B</strong> = buena evidencia. <strong>C</strong> = evidencia moderada/mixta. <strong>D</strong> = evidencia limitada/preliminar. <strong>F</strong> = sin evidencia o evidencia negativa.</p>
+            <p style="margin-top:0.5rem">Esta herramienta es informativa. No reemplaza la consulta con un profesional de salud. <a href="/politica-editorial/">Pol&iacute;tica editorial &rarr;</a></p>
+        </div>
+    </div>
+
+    <div class="embed-section">
+        <div class="embed-inner">
+            <h3>Integra este verificador en tu sitio</h3>
+            <p>Copia el c&oacute;digo iframe para agregar el verificador a tu blog, farmacia o cl&iacute;nica.</p>
+            <div class="embed-code" id="embedCode" onclick="copyEmbed()">&lt;iframe src="https://botanicaandina.com/herramientas/verificador/" width="100%" height="800" frameborder="0" title="Verificador de Suplementos"&gt;&lt;/iframe&gt;</div>
+            <div class="copied-msg" id="copiedMsg">&iexcl;Copiado al portapapeles!</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <a href="/">Bot&aacute;nica Andina</a> &mdash; Informaci&oacute;n basada en evidencia cient&iacute;fica</p>
+        <p style="margin-top:0.3rem"><a href="/herramientas/">Herramientas</a> &middot; <a href="/politica-editorial/">Pol&iacute;tica Editorial</a> &middot; <a href="/sobre-nosotros/">Sobre Nosotros</a></p>
+    </footer>
+
+<script>
+const DB=[
+{n:"Vitamina D",aka:"Colecalciferol, D3",g:"A",cat:"vitaminas",ev:92,uses:["Salud &oacute;sea","Inmunidad","Prevenci&oacute;n de fracturas"],safety:"Muy segura a dosis &le;4000 UI/d&iacute;a. Toxicidad rara pero posible a dosis muy altas (&gt;10000 UI/d&iacute;a).",interactions:["Diur&eacute;ticos tiaz&iacute;dicos (hipercalcemia)","Corticosteroides (reducen absorci&oacute;n)","Estatinas (interacci&oacute;n menor)"],dose:"600&ndash;2000 UI/d&iacute;a (adultos). Hasta 4000 UI seg&uacute;n deficiencia.",studies:"M&aacute;s de 80 ensayos cl&iacute;nicos controlados y 20+ metaan&aacute;lisis confirman beneficios para salud &oacute;sea."},
+{n:"Omega-3 (EPA/DHA)",aka:"Aceite de pescado",g:"A",cat:"otros",ev:90,uses:["Triglic&eacute;ridos elevados","Salud cardiovascular","Inflamaci&oacute;n"],safety:"Seguro. Puede causar eructos, sabor a pescado. Precauci&oacute;n con anticoagulantes a dosis altas.",interactions:["Anticoagulantes (warfarina, heparina)","Antihipertensivos (efecto aditivo)"],dose:"1&ndash;4 g/d&iacute;a de EPA+DHA seg&uacute;n indicaci&oacute;n.",studies:"Evidencia s&oacute;lida para reducci&oacute;n de triglic&eacute;ridos (25-30%). REDUCE-IT demostr&oacute; beneficio cardiovascular con EPA puro."},
+{n:"Magnesio",aka:"Citrato, glicinato, &oacute;xido de magnesio",g:"A",cat:"minerales",ev:88,uses:["Calambres musculares","Sue&ntilde;o","Migra&ntilde;a","Presi&oacute;n arterial"],safety:"Seguro en formas queladas. &Oacute;xido de magnesio puede causar diarrea. L&iacute;mite: 350 mg/d&iacute;a suplementario.",interactions:["Antibi&oacute;ticos (reduce absorci&oacute;n de tetraciclinas)","Bisfosfonatos (separar 2h)","Diur&eacute;ticos"],dose:"200&ndash;400 mg/d&iacute;a. Glicinato preferido para sue&ntilde;o, citrato para digesti&oacute;n.",studies:"Metaan&aacute;lisis confirman reducci&oacute;n de presi&oacute;n arterial (-2 mmHg) y frecuencia de migra&ntilde;as."},
+{n:"Probióticos",aka:"Lactobacillus, Bifidobacterium",g:"A",cat:"otros",ev:85,uses:["Diarrea por antibi&oacute;ticos","Salud intestinal","S&iacute;ndrome de intestino irritable"],safety:"Muy seguros. Precauci&oacute;n en inmunosuprimidos. Efectos iniciales: gases, hinchaz&oacute;n.",interactions:["Antibi&oacute;ticos (tomar separados 2h)","Inmunosupresores (precauci&oacute;n te&oacute;rica)"],dose:"1&ndash;50 mil millones UFC/d&iacute;a seg&uacute;n cepa e indicaci&oacute;n.",studies:"Cochrane confirma reducci&oacute;n de diarrea asociada a antibi&oacute;ticos (RR 0.58). Cepas espec&iacute;ficas para cada indicaci&oacute;n."},
+{n:"Zinc",aka:"Gluconato, picolinato de zinc",g:"A",cat:"minerales",ev:84,uses:["Inmunidad","Resfriados","Cicatrizaci&oacute;n","Acn&eacute;"],safety:"Seguro hasta 40 mg/d&iacute;a. Dosis altas cr&oacute;nicas causan deficiencia de cobre. N&aacute;useas en ayunas.",interactions:["Antibi&oacute;ticos quinolonas (reducen absorci&oacute;n)","Penicilamina","Suplementos de hierro (competencia)"],dose:"15&ndash;30 mg/d&iacute;a. Para resfriados: pastillas de 75 mg/d&iacute;a por 5 d&iacute;as.",studies:"Metaan&aacute;lisis: pastillas de zinc reducen duraci&oacute;n del resfriado en ~33%."},
+{n:"Vitamina C",aka:"&Aacute;cido asc&oacute;rbico",g:"B",cat:"vitaminas",ev:78,uses:["Inmunidad","Antioxidante","Absorci&oacute;n de hierro"],safety:"Muy segura. Dosis &gt;2000 mg pueden causar diarrea y c&aacute;lculos renales en susceptibles.",interactions:["Anticoagulantes (altas dosis)","Aluminio (aumenta absorci&oacute;n)","Quimioterapia (controvertido)"],dose:"200&ndash;1000 mg/d&iacute;a.",studies:"Reduce duraci&oacute;n del resfriado ~8% en adultos. No previene resfriados excepto en estr&eacute;s f&iacute;sico intenso."},
+{n:"Curcumina",aka:"C&uacute;rcuma, Curcuma longa",g:"B",cat:"plantas",ev:75,uses:["Inflamaci&oacute;n","Dolor articular","Depresi&oacute;n leve"],safety:"Segura. Baja biodisponibilidad sin piperina. Precauci&oacute;n con c&aacute;lculos biliares.",interactions:["Anticoagulantes (efecto aditivo)","Antidiab&eacute;ticos (puede potenciar)","Ciclosporina"],dose:"500&ndash;1500 mg/d&iacute;a de extracto estandarizado con piperina.",studies:"Ensayos muestran eficacia similar a ibuprofeno para osteoartritis. Metaan&aacute;lisis confirman efecto antiinflamatorio moderado."},
+{n:"Vitamina B12",aka:"Cianocobalamina, metilcobalamina",g:"A",cat:"vitaminas",ev:82,uses:["Anemia megaloblástica","Función neurológica","Fatiga"],safety:"Muy segura incluso a dosis altas. Exceso se elimina por orina.",interactions:["Metformina (reduce absorci&oacute;n)","Inhibidores de bomba de protones","Colchicina"],dose:"250&ndash;1000 mcg/d&iacute;a. Sublingual o inyectable si hay malabsorci&oacute;n.",studies:"Deficiencia com&uacute;n en vegetarianos/veganos y mayores de 50. Suplementaci&oacute;n corrige anemia y s&iacute;ntomas neurol&oacute;gicos."},
+{n:"Hierro",aka:"Sulfato ferroso, bisglicinato de hierro",g:"A",cat:"minerales",ev:90,uses:["Anemia ferrop&eacute;nica","Fatiga","Rendimiento f&iacute;sico"],safety:"Efectos GI comunes (n&aacute;useas, estre&ntilde;imiento). T&oacute;xico en sobredosis. Solo suplementar con deficiencia confirmada.",interactions:["Antibi&oacute;ticos (separar 2h)","Lev&oacute;tiroxina (separar 4h)","Calcio (reduce absorci&oacute;n)","T&eacute;, caf&eacute; (reducen absorci&oacute;n)"],dose:"30&ndash;200 mg/d&iacute;a de hierro elemental seg&uacute;n severidad.",studies:"Est&aacute;ndar de tratamiento para anemia ferrop&eacute;nica. Ensayos confirman restauraci&oacute;n de hemoglobina en 8-12 semanas."},
+{n:"Melatonina",aka:"N-acetil-5-metoxitriptamina",g:"B",cat:"otros",ev:76,uses:["Insomnio","Jet lag","Regulaci&oacute;n circadiana"],safety:"Segura a corto plazo. Somnolencia diurna posible. Precauci&oacute;n en ni&ntilde;os (uso prolongado no estudiado).",interactions:["Sedantes/benzodiacepinas (efecto aditivo)","Anticoagulantes","Antihipertensivos","Antidiab&eacute;ticos"],dose:"0.5&ndash;5 mg, 30&ndash;60 min antes de dormir.",studies:"Eficaz para jet lag y latencia de sue&ntilde;o. Reducci&oacute;n de ~7 min en tiempo para dormirse."},
+{n:"Ashwagandha",aka:"Withania somnifera",g:"B",cat:"plantas",ev:72,uses:["Estr&eacute;s/ansiedad","Testosterona","Rendimiento f&iacute;sico"],safety:"Generalmente segura. Casos raros de hepatotoxicidad reportados. Evitar en embarazo y enfermedades tiroideas.",interactions:["Sedantes (efecto aditivo)","Medicamentos tiroideos","Inmunosupresores"],dose:"300&ndash;600 mg/d&iacute;a de extracto KSM-66 o Sensoril.",studies:"Metaan&aacute;lisis muestra reducci&oacute;n significativa de cortisol y ansiedad (escala HAM-A). Peque&ntilde;o aumento de testosterona en hombres."},
+{n:"Creatina",aka:"Monohidrato de creatina",g:"A",cat:"aminoacidos",ev:95,uses:["Fuerza muscular","Rendimiento deportivo","Cognici&oacute;n"],safety:"Uno de los suplementos m&aacute;s estudiados. Seguro a largo plazo. No da&ntilde;a ri&ntilde;ones en personas sanas.",interactions:["Cafe&iacute;na (puede reducir efecto erg&oacute;genico)","Nefrot&oacute;xicos (precauci&oacute;n)"],dose:"3&ndash;5 g/d&iacute;a de monohidrato. Fase de carga opcional (20 g/d&iacute;a x 5 d&iacute;as).",studies:"M&aacute;s de 500 estudios. Aumenta fuerza ~8% y masa muscular. Beneficios cognitivos emergentes en privaci&oacute;n de sue&ntilde;o."},
+{n:"Coenzima Q10",aka:"CoQ10, Ubiquinona",g:"B",cat:"otros",ev:70,uses:["Salud cardiovascular","Migraña","Fatiga por estatinas"],safety:"Muy segura. Efectos adversos raros y leves.",interactions:["Anticoagulantes (reduce efecto de warfarina)","Antihipertensivos (efecto aditivo)","Estatinas (pueden reducir CoQ10)"],dose:"100&ndash;300 mg/d&iacute;a con comida grasa (mejor absorci&oacute;n).",studies:"Q-SYMBIO mostr&oacute; reducci&oacute;n de eventos cardiovasculares en insuficiencia card&iacute;aca. Moderada evidencia para migra&ntilde;a."},
+{n:"Vitamina K2",aka:"Menaquinona, MK-7",g:"B",cat:"vitaminas",ev:68,uses:["Salud &oacute;sea","Salud cardiovascular","Calcificaci&oacute;n arterial"],safety:"Segura. Precauci&oacute;n importante con anticoagulantes.",interactions:["Warfarina (CONTRAINDICADO — antagoniza efecto)","Anticoagulantes orales"],dose:"100&ndash;200 mcg/d&iacute;a de MK-7.",studies:"Evidencia moderada para reducci&oacute;n de calcificaci&oacute;n arterial. Estudio de 3 a&ntilde;os mostr&oacute; mejora en rigidez arterial."},
+{n:"Berberina",aka:"Berberis, Coptis",g:"B",cat:"plantas",ev:74,uses:["Glucosa sangu&iacute;nea","Colesterol","S&iacute;ndrome metab&oacute;lico"],safety:"Efectos GI comunes. No usar en embarazo. Puede causar hipoglucemia.",interactions:["Metformina (efecto aditivo — riesgo hipoglucemia)","Ciclosporina (aumenta niveles)","Anticoagulantes","CYP3A4/CYP2D6 sustratos"],dose:"500 mg 2&ndash;3 veces/d&iacute;a con comidas.",studies:"Metaan&aacute;lisis: reduce HbA1c similar a metformina (-0.7%). Reduce LDL ~25 mg/dL."},
+{n:"Colágeno",aka:"Col&aacute;geno hidrolizado, p&eacute;ptidos de col&aacute;geno",g:"B",cat:"aminoacidos",ev:65,uses:["Piel","Articulaciones","Cabello y u&ntilde;as"],safety:"Muy seguro. Sabor/olor puede molestar.",interactions:["Sin interacciones significativas conocidas"],dose:"5&ndash;15 g/d&iacute;a de p&eacute;ptidos hidrolizados.",studies:"Metaan&aacute;lisis muestra mejora en elasticidad de piel e hidrataci&oacute;n. Evidencia moderada para dolor articular."},
+{n:"Vitamina B Complex",aka:"B1, B2, B3, B5, B6, B7, B9, B12",g:"B",cat:"vitaminas",ev:72,uses:["Energ&iacute;a","Metabolismo","Sistema nervioso"],safety:"Seguro. B6 &gt;100 mg/d&iacute;a puede causar neuropat&iacute;a. B3 (niacina) causa rubor facial.",interactions:["Levodopa (B6 reduce eficacia)","Metotrexato","Fenitó&iacute;na"],dose:"Seg&uacute;n formulaci&oacute;n. B6 &le;50 mg, B12 &ge;250 mcg.",studies:"Evidencia clara para deficiencias. Beneficio limitado en personas sin deficiencia."},
+{n:"Calcio",aka:"Carbonato, citrato de calcio",g:"B",cat:"minerales",ev:80,uses:["Salud &oacute;sea","Prevenci&oacute;n de osteoporosis"],safety:"Riesgo de c&aacute;lculos renales y posible riesgo cardiovascular a dosis altas. Preferir fuentes alimentarias.",interactions:["Levotiroxina (separar 4h)","Hierro (separar 2h)","Antibi&oacute;ticos","Bisfosfonatos"],dose:"500&ndash;600 mg/dosis (no m&aacute;s de 600 mg a la vez). Total &le;1200 mg/d&iacute;a.",studies:"Previene p&eacute;rdida &oacute;sea pero controv&eacute;rsia sobre riesgo cardiovascular. Mejor con vitamina D y K2."},
+{n:"&Aacute;cido f&oacute;lico",aka:"Vitamina B9, folato, metilfolato",g:"A",cat:"vitaminas",ev:92,uses:["Embarazo (defectos tubo neural)","Anemia","Homociste&iacute;na"],safety:"Seguro. Dosis &gt;1 mg pueden enmascarar deficiencia de B12.",interactions:["Metotrexato (antagonista)","Anticonvulsivos (reducen folato)","Sulfasalazina"],dose:"400&ndash;800 mcg/d&iacute;a. 4 mg/d&iacute;a si antecedente de defecto tubo neural.",studies:"Evidencia definitiva: reduce defectos del tubo neural ~70%. Suplementaci&oacute;n universal recomendada en embarazo."},
+{n:"Selenio",aka:"Selenometionina, selenito de sodio",g:"B",cat:"minerales",ev:65,uses:["Tiroides","Antioxidante","Inmunidad"],safety:"Margen estrecho. Toxicidad (selenosis) a &gt;400 mcg/d&iacute;a. S&iacute;ntomas: ca&iacute;da de cabello, u&ntilde;as quebradizas.",interactions:["Estatinas (efecto aditivo antioxidante)","Cisplatino"],dose:"55&ndash;200 mcg/d&iacute;a. No exceder 400 mcg.",studies:"SELECT trial no mostr&oacute; beneficio para c&aacute;ncer de pr&oacute;stata. Beneficio claro en deficiencia (tiroides)."},
+{n:"Glucosamina",aka:"Sulfato de glucosamina",g:"C",cat:"otros",ev:55,uses:["Osteoartritis de rodilla","Dolor articular"],safety:"Segura. Derivada de mariscos (alergia). Puede afectar glucosa en diab&eacute;ticos.",interactions:["Warfarina (puede potenciar efecto)","Antidiab&eacute;ticos"],dose:"1500 mg/d&iacute;a de sulfato de glucosamina.",studies:"Resultados mixtos. GAIT trial negativo. Estudios europeos con sulfato cristalino muestran beneficio moderado. Cochrane: efecto peque&ntilde;o."},
+{n:"Ginkgo biloba",aka:"Ginkgo, maidenhair tree",g:"C",cat:"plantas",ev:52,uses:["Memoria","Circulaci&oacute;n","Tinnitus"],safety:"Generalmente seguro. Puede causar sangrado. Evitar antes de cirug&iacute;a.",interactions:["Anticoagulantes (RIESGO — efecto aditivo)","Anticonvulsivos","ISRS","Trazodona"],dose:"120&ndash;240 mg/d&iacute;a de extracto EGb 761.",studies:"GuidAge y GEM trials negativos para prevenci&oacute;n de demencia. Beneficio marginal en demencia existente."},
+{n:"Equin&aacute;cea",aka:"Echinacea purpurea",g:"C",cat:"plantas",ev:50,uses:["Resfriados","Inmunidad"],safety:"Segura a corto plazo. Reacciones al&eacute;rgicas posibles (familia Asteraceae).",interactions:["Inmunosupresores (efecto opuesto)","CYP3A4 sustratos"],dose:"Extracto estandarizado: 2.4 mL/d&iacute;a o 300&ndash;500 mg 3x/d&iacute;a al inicio de s&iacute;ntomas.",studies:"Resultados inconsistentes. Peque&ntilde;a reducci&oacute;n en duraci&oacute;n (~0.5 d&iacute;as) pero no en incidencia."},
+{n:"Saw Palmetto",aka:"Serenoa repens",g:"C",cat:"plantas",ev:48,uses:["Hiperplasia prost&aacute;tica benigna","S&iacute;ntomas urinarios"],safety:"Seguro. Efectos GI leves.",interactions:["Anticoagulantes (te&oacute;rico)","Antiandrogenos","Anticonceptivos hormonales"],dose:"320 mg/d&iacute;a de extracto lip&oacute;filo.",studies:"STEP y CAMUS trials negativos. Evidencia insuficiente para recomendar. Popular pero no respaldado."},
+{n:"Valeriana",aka:"Valeriana officinalis",g:"C",cat:"plantas",ev:50,uses:["Insomnio","Ansiedad leve"],safety:"Segura a corto plazo. Olor desagradable. Somnolencia.",interactions:["Sedantes/benzodiacepinas (efecto aditivo)","Alcohol","CYP3A4 sustratos"],dose:"300&ndash;600 mg de extracto, 30&ndash;120 min antes de dormir.",studies:"Evidencia inconsistente. Metaan&aacute;lisis sugiere beneficio subjetivo peque&ntilde;o. No superior a placebo en medidas objetivas."},
+{n:"Vitamina E",aka:"Alfa-tocoferol",g:"C",cat:"vitaminas",ev:45,uses:["Antioxidante","Salud cardiovascular"],safety:"Precauci&oacute;n a dosis altas (&gt;400 UI). Metaan&aacute;lisis sugiere aumento de mortalidad. Riesgo de sangrado.",interactions:["Anticoagulantes (RIESGO — efecto aditivo)","Estatinas (puede reducir HDL)","Quimioterapia"],dose:"15 mg/d&iacute;a (ingesta recomendada). Suplementaci&oacute;n NO recomendada sin deficiencia.",studies:"SELECT, HOPE, ATBC: sin beneficio cardiovascular. Posible da&ntilde;o a dosis altas. Excepci&oacute;n: NASH (800 UI)."},
+{n:"Garcinia cambogia",aka:"HCA, &aacute;cido hidroxic&iacute;trico",g:"D",cat:"plantas",ev:25,uses:["P&eacute;rdida de peso"],safety:"Casos de hepatotoxicidad reportados. Efectos GI. FDA advirti&oacute; sobre productos contaminados.",interactions:["Antidiab&eacute;ticos","Estatinas (da&ntilde;o hep&aacute;tico aditivo)"],dose:"500&ndash;1500 mg/d&iacute;a antes de comidas.",studies:"Metaan&aacute;lisis: p&eacute;rdida de ~0.9 kg vs placebo. Cl&iacute;nicamente irrelevante. No recomendado."},
+{n:"DHEA",aka:"Dehidroepiandrosterona",g:"C",cat:"otros",ev:45,uses:["Envejecimiento","Libido","Depresi&oacute;n"],safety:"Hormona. Efectos androg&eacute;nicos (acn&eacute;, vello). Puede promover c&aacute;nceres hormonodependientes.",interactions:["Tamoxifeno","Inhibidores de aromatasa","Terapia hormonal","Insulina"],dose:"25&ndash;50 mg/d&iacute;a bajo supervisi&oacute;n m&eacute;dica.",studies:"Evidencia mixta. Peque&ntilde;os beneficios en mayores de 70 con niveles bajos. No recomendado sin indicaci&oacute;n."},
+{n:"Resveratrol",aka:"Trans-resveratrol",g:"C",cat:"otros",ev:40,uses:["Antioxidante","Antienvejecimiento","Salud cardiovascular"],safety:"Seguro a dosis bajas. Efecto estrog&eacute;nico d&eacute;bil.",interactions:["Anticoagulantes","CYP1A2, CYP3A4 sustratos","Estatinas"],dose:"150&ndash;500 mg/d&iacute;a.",studies:"Prometedor en estudios celulares/animales. Poca evidencia en humanos. Biodisponibilidad muy baja."},
+{n:"Moringa",aka:"Moringa oleifera, &aacute;rbol milagroso",g:"D",cat:"plantas",ev:30,uses:["Nutrici&oacute;n","Antioxidante","Glucosa"],safety:"Hoja segura como alimento. Semillas/ra&iacute;z: precauci&oacute;n. Posible efecto uterot&oacute;nico.",interactions:["Levotiroxina (posible interferencia)","Antidiab&eacute;ticos","Antihipertensivos"],dose:"Sin dosis estandarizada. 1&ndash;2 cucharaditas de polvo de hoja.",studies:"Mayormente estudios animales y observacionales. Ensayos cl&iacute;nicos peque&ntilde;os y de baja calidad."},
+{n:"Esp&iacute;ritu de menta",aka:"Aceite de menta, Mentha piperita",g:"B",cat:"plantas",ev:70,uses:["S&iacute;ndrome de intestino irritable","Dolor abdominal","Digesti&oacute;n"],safety:"Seguro en c&aacute;psulas enteros&oacute;lubres. Reflujo si no es c&aacute;psula ent&eacute;rica.",interactions:["Ciclosporina (aumenta niveles)","Anti&aacute;cidos (liberaci&oacute;n prematura de c&aacute;psula)"],dose:"0.2&ndash;0.4 mL de aceite ent&eacute;rico 3x/d&iacute;a.",studies:"Metaan&aacute;lisis Cochrane: eficaz para dolor abdominal en SII (NNT=3). Evidencia s&oacute;lida."},
+{n:"Beta-alanina",aka:"&Aacute;cido 3-aminopropanoico",g:"B",cat:"aminoacidos",ev:72,uses:["Rendimiento deportivo","Resistencia muscular","Fatiga"],safety:"Segura. Parestesias (hormigueo) transitorias frecuentes y benignas.",interactions:["Sin interacciones significativas conocidas"],dose:"3.2&ndash;6.4 g/d&iacute;a divididos en dosis peque&ntilde;as.",studies:"Metaan&aacute;lisis confirma mejora en ejercicios de 1&ndash;4 min. Sin efecto en fuerza m&aacute;xima."},
+{n:"L-teanina",aka:"&gamma;-glutamiletilam&iacute;da",g:"B",cat:"aminoacidos",ev:65,uses:["Relajaci&oacute;n","Concentraci&oacute;n","Ansiedad"],safety:"Muy segura. Presente naturalmente en t&eacute;.",interactions:["Antihipertensivos (puede potenciar)","Estimulantes (efecto modulador)"],dose:"100&ndash;400 mg/d&iacute;a.",studies:"Aumenta ondas alfa cerebrales. Peque&ntilde;os ensayos muestran reducci&oacute;n de estr&eacute;s y mejora de atenci&oacute;n combinada con cafe&iacute;na."},
+{n:"Maca",aka:"Lepidium meyenii",g:"C",cat:"plantas",ev:48,uses:["Libido","Energ&iacute;a","Fertilidad"],safety:"Segura como alimento. Puede afectar hormonas tiroideas en deficiencia de yodo.",interactions:["Terapia hormonal (te&oacute;rico)","Medicamentos tiroideos"],dose:"1.5&ndash;3 g/d&iacute;a de polvo gelatinizado.",studies:"Ensayos peque&ntilde;os sugieren mejora en deseo sexual. No afecta testosterona. Evidencia limitada."},
+{n:"U&ntilde;a de Gato",aka:"Uncaria tomentosa",g:"C",cat:"plantas",ev:45,uses:["Inflamaci&oacute;n","Inmunidad","Artritis"],safety:"Generalmente segura. Evitar en embarazo y enfermedades autoinmunes.",interactions:["Anticoagulantes","Antihipertensivos","Inmunosupresores"],dose:"60&ndash;350 mg/d&iacute;a de extracto estandarizado.",studies:"Evidencia preliminar para artritis reumatoide. Estudios peque&ntilde;os y de corta duraci&oacute;n. Uso tradicional amplio."},
+{n:"Chanca Piedra",aka:"Phyllanthus niruri",g:"C",cat:"plantas",ev:50,uses:["C&aacute;lculos renales","H&iacute;gado","Diur&eacute;tico"],safety:"Segura a corto plazo. Puede bajar glucosa y presi&oacute;n arterial.",interactions:["Antidiab&eacute;ticos","Antihipertensivos","Diur&eacute;ticos","Litio"],dose:"500&ndash;1000 mg/d&iacute;a de extracto.",studies:"Ensayos muestran efecto lit&oacute;litico moderado. Metaan&aacute;lisis limitado. Uso tradicional andino amplio."},
+{n:"Muña",aka:"Minthostachys mollis",g:"D",cat:"plantas",ev:25,uses:["Digesti&oacute;n","Infecciones","Altitud"],safety:"Segura como infusi&oacute;n. Aceite esencial: no ingerir puro.",interactions:["Sin interacciones documentadas"],dose:"Infusi&oacute;n: 2&ndash;3 tazas/d&iacute;a.",studies:"Solo estudios in vitro y uso etnobotánico. Sin ensayos cl&iacute;nicos publicados."},
+{n:"Rhodiola rosea",aka:"Ra&iacute;z de oro, roseroot",g:"B",cat:"plantas",ev:62,uses:["Fatiga","Estr&eacute;s","Rendimiento cognitivo"],safety:"Segura. Puede causar insomnio si se toma tarde.",interactions:["Antidepresivos ISRS (s&iacute;ndrome serotonin&eacute;rgico te&oacute;rico)","Antidiab&eacute;ticos","Antihipertensivos"],dose:"200&ndash;600 mg/d&iacute;a de extracto SHR-5 (3% rosavin, 1% salidrosido).",studies:"Ensayos muestran reducci&oacute;n de fatiga en estr&eacute;s. Evidencia moderada. EMA: uso tradicional aceptado."},
+{n:"Biotina",aka:"Vitamina B7, vitamina H",g:"C",cat:"vitaminas",ev:40,uses:["Cabello","Uñas","Piel"],safety:"Muy segura. PRECAUCI&Oacute;N: interfiere con an&aacute;lisis de laboratorio (troponina, hormonas tiroideas).",interactions:["An&aacute;lisis de laboratorio (resultados falsos — suspender 48h antes)"],dose:"2.5&ndash;5 mg/d&iacute;a para cabello/u&ntilde;as.",studies:"Beneficio solo en deficiencia (rara). Sin evidencia de beneficio en personas sin deficiencia."},
+{n:"Vitamina A",aka:"Retinol, betacaroteno",g:"B",cat:"vitaminas",ev:70,uses:["Visi&oacute;n","Inmunidad","Piel"],safety:"T&oacute;xico en exceso (retinol). Teratog&eacute;nico. Betacaroteno seguro pero aumenta riesgo de c&aacute;ncer pulmonar en fumadores.",interactions:["Retinoides (toxicidad aditiva)","Anticoagulantes","Tetraciclinas (hipertensi&oacute;n intracraneal)"],dose:"700&ndash;900 mcg RAE/d&iacute;a. No exceder 3000 mcg de retinol.",studies:"Esencial. Suplementación salva vidas en deficiencia. No suplementar sin indicación en países desarrollados."},
+{n:"S-adenosilmetionina",aka:"SAMe",g:"B",cat:"aminoacidos",ev:65,uses:["Depresi&oacute;n","Osteoartritis","H&iacute;gado"],safety:"Seguro. Puede causar ansiedad, insomnio, malestar GI. Evitar en trastorno bipolar (riesgo de man&iacute;a).",interactions:["Antidepresivos (s&iacute;ndrome serotonin&eacute;rgico)","Levodopa","Tramadol"],dose:"800&ndash;1600 mg/d&iacute;a para depresi&oacute;n. 600&ndash;1200 mg para artritis.",studies:"Eficacia similar a antidepresivos tric&iacute;clicos en algunos ensayos. Metaan&aacute;lisis Cochrane: evidencia moderada."},
+{n:"N-acetilciste&iacute;na",aka:"NAC",g:"B",cat:"aminoacidos",ev:68,uses:["Antioxidante","Mucol&iacute;tico","Salud mental"],safety:"Seguro. Puede causar n&aacute;useas. Ant&iacute;doto para intoxicaci&oacute;n por paracetamol.",interactions:["Nitroglicerina (potencia efecto hipotensor)","Carbón activado (reduce absorci&oacute;n)"],dose:"600&ndash;1800 mg/d&iacute;a divididos.",studies:"Eficaz como mucol&iacute;tico y ant&iacute;doto. Evidencia emergente para trastornos psiqui&aacute;tricos (tricotiloman&iacute;a, TOC)."},
+{n:"Astaxantina",aka:"Haematococcus pluvialis",g:"C",cat:"otros",ev:45,uses:["Antioxidante","Piel","Rendimiento f&iacute;sico"],safety:"Segura. Puede causar coloraci&oacute;n rojiza de piel a dosis altas.",interactions:["Antihipertensivos (efecto aditivo)","Anticoagulantes (te&oacute;rico)"],dose:"4&ndash;12 mg/d&iacute;a.",studies:"Antioxidante potente en laboratorio. Ensayos cl&iacute;nicos peque&ntilde;os con resultados prometedores para piel y fatiga."},
+{n:"Espirulina",aka:"Arthrospira platensis",g:"C",cat:"otros",ev:48,uses:["Nutrici&oacute;n","Colesterol","Antioxidante"],safety:"Segura si de fuente certificada. Riesgo de contaminación con microcistinas.",interactions:["Inmunosupresores (estimula inmunidad)","Anticoagulantes"],dose:"1&ndash;8 g/d&iacute;a.",studies:"Peque&ntilde;os ensayos muestran reducci&oacute;n de LDL (~10 mg/dL). Nutritiva pero no milagrosa."},
+{n:"Psyllium",aka:"Plantago ovata, c&aacute;scara de ispagula",g:"A",cat:"otros",ev:88,uses:["Estre&ntilde;imiento","Colesterol","Control gluc&eacute;mico"],safety:"Seguro. Beber abundante agua. Puede causar gases iniciales.",interactions:["Medicamentos orales (puede retrasar absorci&oacute;n — separar 2h)","Litio","Carbamacepina"],dose:"5&ndash;10 g/d&iacute;a en 250 mL de agua.",studies:"Metaan&aacute;lisis confirma reducci&oacute;n de LDL (~7 mg/dL) y mejora de regularidad intestinal. FDA aprueba claim de salud card&iacute;aca."},
+{n:"Ajo",aka:"Allium sativum, extracto de ajo envejecido",g:"B",cat:"plantas",ev:68,uses:["Presi&oacute;n arterial","Colesterol","Inmunidad"],safety:"Seguro. Olor. Precauci&oacute;n antes de cirug&iacute;a (sangrado).",interactions:["Anticoagulantes (efecto aditivo)","Saquinavir (reduce niveles)","Isoniazida"],dose:"600&ndash;1200 mg/d&iacute;a de extracto envejecido (Kyolic).",studies:"Metaan&aacute;lisis: reduce presi&oacute;n sist&oacute;lica ~3-4 mmHg. Efecto modesto en colesterol."},
+{n:"Jengibre",aka:"Zingiber officinale",g:"B",cat:"plantas",ev:72,uses:["N&aacute;useas","Digesti&oacute;n","Inflamaci&oacute;n"],safety:"Seguro. Puede causar acidez. Precauci&oacute;n con c&aacute;lculos biliares.",interactions:["Anticoagulantes (efecto aditivo menor)","Antidiab&eacute;ticos"],dose:"250&ndash;1000 mg/d&iacute;a. Para n&aacute;useas: 250 mg cada 6h.",studies:"Cochrane: eficaz para n&aacute;useas del embarazo y postquir&uacute;rgicas. NNT=4."},
+{n:"Cardo mariano",aka:"Silybum marianum, silimarina",g:"C",cat:"plantas",ev:55,uses:["H&iacute;gado","Hepatoprotecci&oacute;n","Detox"],safety:"Seguro. Efectos GI leves. Efecto estrog&eacute;nico d&eacute;bil.",interactions:["CYP2C9 sustratos","Raloxifeno","Metotrexato"],dose:"200&ndash;400 mg/d&iacute;a de silimarina (extracto estandarizado 70-80%).",studies:"Resultados mixtos para hepatitis y cirrosis. HALT-C trial negativo. Uso como complemento, no tratamiento principal."},
+{n:"5-HTP",aka:"5-hidroxitript&oacute;fano",g:"C",cat:"aminoacidos",ev:48,uses:["Depresi&oacute;n","Sue&ntilde;o","Apetito"],safety:"Precauci&oacute;n con s&iacute;ndrome serotonin&eacute;rgico. No combinar con ISRS sin supervisi&oacute;n.",interactions:["ISRS/ISRSN (S&Iacute;NDROME SEROTONIN&Eacute;RGICO)","Tramadol","Triptanos","Carbidopa"],dose:"50&ndash;300 mg/d&iacute;a.",studies:"Ensayos peque&ntilde;os muestran beneficio moderado. Precursor de serotonina. Evidencia limitada."},
+{n:"Tribulus terrestris",aka:"Abrojo, puncture vine",g:"D",cat:"plantas",ev:22,uses:["Testosterona","Libido","Rendimiento"],safety:"Seguro a corto plazo. No aumenta testosterona a pesar de claims.",interactions:["Antidiab&eacute;ticos","Antihipertensivos"],dose:"250&ndash;750 mg/d&iacute;a.",studies:"M&uacute;ltiples ensayos negativos para aumento de testosterona. Posible efecto leve en libido sin cambio hormonal."},
+{n:"Ginseng",aka:"Panax ginseng, ginseng coreano",g:"B",cat:"plantas",ev:62,uses:["Energ&iacute;a","Cognici&oacute;n","Disfunci&oacute;n er&eacute;ctil"],safety:"Seguro a corto plazo. Puede causar insomnio, taquicardia.",interactions:["Warfarina (reduce efecto)","Antidiab&eacute;ticos","IMAO","Estimulantes"],dose:"200&ndash;400 mg/d&iacute;a de extracto G115 (4% ginsen&oacute;sidos).",studies:"Metaan&aacute;lisis muestra peque&ntilde;a mejora en cognici&oacute;n y fatiga. Evidencia moderada para glucosa en ayunas."},
+{n:"Yodo",aka:"Yoduro de potasio",g:"B",cat:"minerales",ev:75,uses:["Tiroides","Desarrollo fetal"],safety:"Exceso causa disfunci&oacute;n tiroidea. Margen estrecho.",interactions:["Litio (hipotiroidismo aditivo)","Antitiroides (efecto opuesto)","Amiodarona"],dose:"150&ndash;250 mcg/d&iacute;a (embarazo: 250 mcg).",studies:"Esencial. Deficiencia causa bocio y cretinismo. Sal yodada erradica deficiencia. No suplementar sin deficiencia."},
+{n:"Ácido alfa-lipoico",aka:"ALA, &aacute;cido ti&oacute;ctico",g:"C",cat:"otros",ev:52,uses:["Neuropat&iacute;a diab&eacute;tica","Antioxidante","Glucosa"],safety:"Seguro. Puede causar hipoglucemia en diab&eacute;ticos.",interactions:["Antidiab&eacute;ticos (efecto aditivo)","Levotiroxina","Quimioterapia (cisplatino)"],dose:"300&ndash;600 mg/d&iacute;a.",studies:"NATHAN y ALADIN trials muestran mejora de neuropat&iacute;a diab&eacute;tica. Evidencia moderada IV, limitada oral."},
+{n:"Prote&iacute;na de suero",aka:"Whey protein",g:"A",cat:"aminoacidos",ev:88,uses:["S&iacute;ntesis muscular","Recuperaci&oacute;n","Saciedad"],safety:"Seguro. Intolerancia en alergia a l&aacute;cteos/lactosa.",interactions:["Levodopa (competencia de absorci&oacute;n)","Alopurinol"],dose:"20&ndash;40 g/dosis post-ejercicio.",studies:"Evidencia robusta. Estimula s&iacute;ntesis proteica muscular. Metaan&aacute;lisis confirma +1.1 kg masa magra con entrenamiento."},
+{n:"Vitamina D + K2",aka:"Combinaci&oacute;n D3+MK-7",g:"B",cat:"vitaminas",ev:70,uses:["Salud &oacute;sea","Calcificaci&oacute;n arterial","Absorci&oacute;n de calcio"],safety:"Segura en dosis recomendadas. Mismas precauciones que D y K2 individuales.",interactions:["Warfarina (K2 lo antagoniza)","Diur&eacute;ticos tiaz&iacute;dicos"],dose:"1000&ndash;2000 UI D3 + 100&ndash;200 mcg MK-7.",studies:"L&oacute;gica bioqu&iacute;mica s&oacute;lida (D3 aumenta calcio, K2 lo dirige a huesos). Ensayos directos de la combinaci&oacute;n limitados."},
+{n:"Café verde",aka:"Extracto de caf&eacute; verde, &aacute;cido clorog&eacute;nico",g:"D",cat:"plantas",ev:28,uses:["P&eacute;rdida de peso","Glucosa"],safety:"Contiene cafe&iacute;na. Efectos similares al caf&eacute;.",interactions:["Estimulantes","Antihipertensivos","Antidiab&eacute;ticos"],dose:"200&ndash;400 mg/d&iacute;a de extracto (45% &aacute;cido clorog&eacute;nico).",studies:"Estudios retractados (Vinson 2012). Evidencia restante pobre. FTC demand&oacute; a fabricantes por claims fraudulentos."},
+{n:"Cetonas de frambuesa",aka:"Raspberry ketones",g:"D",cat:"otros",ev:10,uses:["P&eacute;rdida de peso"],safety:"Sin datos de seguridad en humanos.",interactions:["Desconocidas"],dose:"Sin dosis establecida.",studies:"CERO ensayos cl&iacute;nicos en humanos. Solo un estudio in vitro y uno en ratones. Marketing puro sin ciencia."}
+];
+
+let activeFilter='all';
+const grid=document.getElementById('suppGrid');
+const searchInput=document.getElementById('searchInput');
+const resultsCount=document.getElementById('resultsCount');
+
+function normalize(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();}
+
+function render(){
+    const q=normalize(searchInput.value);
+    const filtered=DB.filter(s=>{
+        const matchSearch=!q||normalize(s.n).includes(q)||normalize(s.aka).includes(q)||s.uses.some(u=>normalize(u).includes(q));
+        const matchFilter=activeFilter==='all'
+            ||(activeFilter.startsWith('cat-')?s.cat===activeFilter.slice(4):s.g===activeFilter);
+        return matchSearch&&matchFilter;
+    });
+    resultsCount.textContent=`Mostrando ${filtered.length} de ${DB.length} suplementos`;
+    grid.innerHTML=filtered.map((s,i)=>`
+        <div class="supp-card" onclick="this.classList.toggle('open')">
+            <div class="supp-header">
+                <div class="supp-grade grade-${s.g}">${s.g}</div>
+                <div class="supp-info">
+                    <div class="supp-name">${s.n}</div>
+                    <div class="supp-aka">${s.aka}</div>
+                    <div class="supp-tags">
+                        ${s.uses.map(u=>`<span class="supp-tag">${u}</span>`).join('')}
+                        ${s.interactions&&s.interactions.length>1?'<span class="supp-tag caution">Interacciones</span>':''}
+                    </div>
+                </div>
+                <div class="supp-arrow">&#x25B6;</div>
+            </div>
+            <div class="supp-details">
+                <div class="evidence-bar">
+                    <span class="ev-label">Evidencia</span>
+                    <div class="ev-track"><div class="ev-fill grade-${s.g}" style="width:${s.ev}%"></div></div>
+                    <span class="ev-label">${s.ev}/100</span>
+                </div>
+                <div class="detail-grid">
+                    <div class="detail-box">
+                        <div class="detail-label">Usos principales</div>
+                        <div class="detail-value"><ul>${s.uses.map(u=>`<li>${u}</li>`).join('')}</ul></div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="detail-label">Dosis</div>
+                        <div class="detail-value">${s.dose}</div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="detail-label">Seguridad</div>
+                        <div class="detail-value">${s.safety}</div>
+                    </div>
+                    <div class="detail-box">
+                        <div class="detail-label">Interacciones</div>
+                        <div class="detail-value"><ul>${s.interactions.map(i=>`<li>${i}</li>`).join('')}</ul></div>
+                    </div>
+                </div>
+                <div class="detail-box" style="margin-top:1rem">
+                    <div class="detail-label">Evidencia cient&iacute;fica</div>
+                    <div class="detail-value">${s.studies}</div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+searchInput.addEventListener('input',render);
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        activeFilter=btn.dataset.filter;
+        render();
+    });
+});
+
+function copyEmbed(){
+    const code=document.getElementById('embedCode').textContent;
+    navigator.clipboard.writeText(code).then(()=>{
+        const msg=document.getElementById('copiedMsg');
+        msg.style.display='block';
+        setTimeout(()=>msg.style.display='none',2000);
+    });
+}
+
+render();
+</script>
+<noscript>
+<div style="max-width:900px;margin:2rem auto;padding:1rem;font-family:Georgia,serif;">
+<h2>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica | Bot&aacute;nica Andina</h2>
+<p>Consulta la evidencia cient&iacute;fica de 55 suplementos populares. Calificaciones de eficacia, seguridad, interacciones y dosis respaldadas por estudios cl&iacute;nicos. Gratuito y en espa&ntilde;ol.</p>
+<h3>Base de Datos de Evidencia Científica</h3>
+<p>Consulta 55 suplementos populares calificados por nivel de evidencia. Cada suplemento
+tiene puntuaciones en eficacia, seguridad, calidad de evidencia e interacciones.</p>
+<h3>Escala de Calificación</h3>
+<ul>
+<li><strong>A (Excelente):</strong> múltiples ensayos clínicos aleatorizados y meta-análisis</li>
+<li><strong>B (Buena):</strong> al menos 1 ensayo clínico aleatorizado de calidad</li>
+<li><strong>C (Moderada):</strong> estudios observacionales o ensayos de baja calidad</li>
+<li><strong>D (Insuficiente):</strong> solo estudios in vitro, en animales, o reportes de casos</li>
+</ul>
+<h3>Suplementos Mejor Calificados</h3>
+<ul>
+<li><strong>Omega-3 (EPA/DHA):</strong> A — cardiovascular, triglicéridos, antiinflamatorio</li>
+<li><strong>Vitamina D:</strong> A — salud ósea, inmunidad</li>
+<li><strong>Probióticos:</strong> A — salud digestiva (cepas específicas)</li>
+<li><strong>Cúrcuma (curcumina):</strong> B — antiinflamatorio, dolor articular</li>
+<li><strong>Maca:</strong> B — energía, libido, menopausia</li>
+</ul>
+<p style="margin-top:1rem;font-size:13px;color:#666;">
+<a href="https://botanicaandina.com/herramientas/interacciones/">Verificador de interacciones</a> ·
+<a href="https://botanicaandina.com/herramientas/matriz/">Matriz completa</a> ·
+<a href="https://botanicaandina.com/herramientas/">Todas las herramientas</a>
+</p>
+</div>
+</noscript>
+<img src="/assets/img/tools/thumb-verificador.svg" alt="verificador" width="100%" style="max-width:400px;margin:2rem auto;display:block;">
+    <footer class="tool-trust-footer" style="background: #f8f9fa; padding: 2rem 0; margin-top: 3rem; border-top: 3px solid #1a5632;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem; font-size: 0.9rem; color: #555;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem;">
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Última Actualización</h4>
+                    <p style="margin: 0;">29 de March de 2026</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Revisado Por</h4>
+                    <p style="margin: 0;">Equipo Editorial &mdash; Botánica Andina</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Fuentes de Datos</h4>
+                    <p style="margin: 0;">EMA, ESCOP, PubMed, Evidencia Científica</p>
+                </div>
+            </div>
+            <p style="margin: 0; font-style: italic; color: #666;">
+                Esta herramienta es para fines informativos y educativos únicamente. No sustituye el consejo médico profesional.
+            </p>
+        </div>
+    </footer>
+
+<style>
+        .share-widget {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 1rem 0;
+        }
+        .share-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+        .share-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a5632;
+        }
+        .share-embed-toggle {
+            background: #2d3748;
+            color: #fff;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .share-embed-toggle:hover {
+            background: #1e40af;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .share-btn.twitter {
+            background: #fff;
+            color: #000;
+        }
+        .share-btn.linkedin {
+            background: #0077b5;
+            color: #fff;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+            color: #fff;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+            color: #fff;
+        }
+        .share-btn.copy {
+            background: #1f2937;
+            color: #fff;
+        }
+        .share-embed-section {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .share-embed-section.active {
+            display: block;
+        }
+        .embed-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        .embed-code {
+            width: 100%;
+            min-height: 120px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background: #fff;
+            resize: vertical;
+        }
+        .embed-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .copy-embed-btn {
+            background: #059669;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .copy-embed-btn:hover {
+            background: #047857;
+        }
+        .embed-copied {
+            display: none;
+            color: #059669;
+            font-size: 0.8rem;
+        }
+        .embed-copied.active {
+            display: inline;
+        }
+        .embed-link-cta {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .embed-link-cta a {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .embed-link-cta a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<div class="share-widget">
+        <div class="share-header">
+            <span class="share-title">Comparte esta herramienta</span>
+            <button class="share-embed-toggle" onclick="toggleEmbed()" aria-label="Mostrar código embed">
+                <span id="toggleText">📦 Insertar en tu sitio</span>
+            </button>
+        </div>
+
+        <div class="share-buttons">
+            <a class="share-btn twitter" href="#" onclick="shareToTwitter()" target="_blank" rel="noopener" aria-label="Compartir en X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-1.587 6.062c-.379 1.689-.299 1.984-.069.45-.297 1.263.356-2.292.767-1.912 1.789-1.389.947-1.696.834-.666.814-1.093.388-.683.366-.668-.736-.834-.505.919-1.243.797-2.037-.252.319-.403-.589-.632-.524-.805-.797-1.416.619-1.416-1.653-1.402-1.389-1.339-1.345-.736-.649-.686-.677-.495-.532-.552-.485-.469-.369-.493.286-.359-.248-.219-.204-.16-.097-.037 0h1.125v1.25c0 0 .077.016.149.06.208.069.25.074.044.044-.05.011.016-.012-.02-.019-.016-.025-.023-.029-.033-.034-.043-.048-.053-.062-.062-.058-.067-.072-.076-.078-.081-.089-.101-.111.129-.137-.164-.191-.218-.252-.287-.323-.369-.395-.425-.445-.465-.49-.493-.518-.533-.563-.581-.606-.639-.671-.705-.735-.775-.813-.856-.887-.925-.974-1.024-1.073-1.122-1.163-1.196-1.228-1.256-1.28-1.305-1.339-1.374-1.399-1.42-1.428-1.443-1.456-1.468-1.479-1.487-1.493-1.504-1.512-1.523-1.532-1.54-1.548-1.559-1.565-1.571-1.577-1.584-1.592-1.602-1.608-1.613-1.619-1.628-1.634-1.64-1.649-1.653-1.658-1.665-1.672-1.678-1.682-1.688-1.695-1.7-1.704-1.71-1.714-1.717-1.723-1.732-1.739-1.743-1.749-1.755-1.76-1.76-1.766-1.773-1.78-1.784-1.787-1.795-1.803-1.81-1.815-1.818-1.824-1.83-1.836-1.842-1.849-1.855-1.861-1.865-1.871-1.877-1.883-1.889-1.894-1.9-1.903-1.91-1.917-1.924-1.93-1.935-1.944-1.952-1.961-1.968-1.976-1.982-1.99-1.997-2.002-2.007-2.011-2.016-2.019-2.021-2.024-2.028-2.031-2.034-2.037-2.041-2.043-2.045-2.049-2.052-2.055-2.058-2.061-2.063-2.067-2.069-2.072-2.074-2.076-2.079-2.083-2.085-2.089-2.092-2.095-2.099-2.101-1.105-1.108-1.11-1.113-1.117-1.119-1.122-1.126-1.128-1.131-1.134-1.138-1.141-1.144-1.147-1.149-1.152-1.156-1.159-1.162-1.165-1.168-1.171-1.174-1.176-1.18-1.184-1.187-1.19-1.194-1.197-1.2-1.203-1.206-1.209-1.212-1.215-1.218-1.221-1.224-1.227-1.23-1.232-1.236-1.239-1.243-1.246-1.249-1.253-1.257-1.26-1.264-1.268-1.272-1.276-1.28-1.284-1.289-1.292-1.295-1.298-1.302-1.305-1.309-1.314-1.319-1.324-1.328-1.332-1.337-1.341-1.345-1.349-1.353-1.358-1.363-1.368-1.372-1.377-1.383-1.389-1.393-1.397-1.402-1.408-1.413-1.418-1.422-1.428-1.433-1.438-1.443-1.449-1.453-1.458-1.464-1.469-1.474-1.48-1.486-1.492-1.497-1.502-1.508-1.514-1.519-1.524-1.53-1.536-1.542-1.548-1.553-1.559-1.565-1.571-1.577-1.583-1.589-1.594-1.599-1.604-1.609-1.614-1.62-1.626-1.632-1.638-1.644-1.649-1.654-1.66-1.666-1.671-1.677-1.683-1.689-1.694-1.7-1.706-1.712-1.718-1.724-1.73-1.736-1.742-1.748-1.754-1.76-1.767-1.773-1.779-1.785-1.791-1.796-1.802-1.808-1.814-1.82-1.826-1.832-1.838-1.844-1.85-1.856-1.862-1.869-1.875-1.881-1.887-1.893-1.899-1.904-1.91-1.916-1.922-1.928-1.934-1.939-1.945-1.951-1.957-1.962-1.968-1.974-1.98-1.986-1.991-1.996-1.999v12.066h-.019c0 0 .078.016.164.067.097.147.146.196.237.245.266.328.368.401.429.449.446.508.537.54.55.556.556.556.537.449.429.446.444.386.328.27.208-.193.168-.193-.168-.188-.169-.169-.168-.169-.168-.169-.169-.168-.17-.173-.18-.188-.193-.2-.211-.221-.24-.254-.269-.283-.299-.315-.336-.346-.353-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-. share to Twitter</a>
+            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328 1.078-2.352 2.352-3.632v-3.585c0-1.283-1.045-2.352-2.352-3.602v-3.585c0-.929-.631-1.599-1.599-2.552v-3.585c0-.791-.53-1.376-1.376-2.24v-3.585c0-.824-.485-1.42-1.42-2.23v-3.585c0-.832-.486-1.419-1.419-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.936-.602-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.835-.497-1.416-1.416-2.23v-3.585c0-.797-.514-1.427-1.427-2.215v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.833-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.269-1.025-2.352-2.352-3.577v-3.585c0-.937-.607-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.938-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.577v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.553-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585 partial.517h.353c0 0 .466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466. 1.405c0 0 .311 0 .324.327.32.362.339.367.374.378.384.389.397.413.425.445.462.49.512.56.605.649.692.735.777.818.857.896.934.967.997 1.027 1.057 1.087 1.116 1.144 1.171 1.197 1.221 1.245 1.268 1.29 1.311 1.331 1.35 1.369 1.387 1.404 1.42 1.435 1.45 1.464 1.477 1.49 1.503 1.515 1.526 1.537 1.547 1.556 1.566 1.574 1.582 1.589 1.596 1.602 1.608 1.614 1.62 1.625 1.631 1.636 1.641 1.646 1.65 1.654 1.659 1.663 1.667 1.671 1.674 1.677 1.679 1.682 1.685 1.688 1.69 1.693 1.696 1.699 1.702 1.704 1.707 1.71 1.713 1.718 1.722 1.727 1.731 1.735 1.739 1.742 1.746 1.75 1.753 1.756 1.759 1.762 1.765 1.768 1.771 1.774 1.777 1.78 1.783 1.786 1.789 1.792 1.795 1.798 1.801 1.804 1.806 1.809 1.811 1.814 1.817 1.819 1.822 1.825 1.828 1.83 1.833 1.836 1.839 1.842 1.845 1.848 1.851 1.853 1.856 1.859 1.862 1.865 1.868 1.87 1.873 1.876 1.879 1.882 1.885 1.888 1.891 1.894 1.897 1.9 1.903 1.905 1.908 1.91 1.913 1.916 1.919 1.922 1.925 1.928 1.931 1.934 1.937 1.94 1.942 1.945 1.948 1.951 1.954 1.957 1.96 1.963 1.966 1.969 1.972 1.975 1.978 1.981 1.984 1.987 1.99 1.992 1.995 1.998v12.066h-5.575c0 0 .057.037.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057./X share to Twitter</a>
+            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-14c0-1.103-.897-2-2-2zm-11.959 6h-2.059c-.535 0-.969-.432-.969-.962v-4.162c0-.691.288-1.236-.846-1.741-.193-1.051-.095-1.393.095-1.72.193-2.083.193-.916 0-1.56.432-2.058.962-.962v-1.766c0-.261.106-.519.106-.773v-4.236c0-.392-.198-.776-.198-1.152v-4.236c0-.231-.116-.463-.116-.693v-4.236c0-.259-.129-.517-.129-.773v-4.236c0-.261-.131-.52-.131-.771v-4.236c0-.13-.065-.518-.065-.765v-4.236c0-.065-.033-.515-.033-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.26-.13-.519-.13-.765v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.26-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.13-.065-.514-.064-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.235.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-. a. share to LinkedIn</a>
+            <a class="share-btn facebook" href="#" onclick="shareToFacebook()" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c3.23 0 6.09-1.57 8.09-4.39.09-4.39-1.57-8.09-4.39-8.09-4.39-1.57-8.09V8.72c0-2.13-1.52-3.96-3.82-1.29-.59-.29-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1., WhatsApp</a>
+            <button class="share-btn copy" onclick="copyPageUrl()" aria-label="Copiar enlace">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15h4a2 2 0 012 2v0a2 2 0 01-2 2H9a2 2 0 01-2-2v6a2 2 0 012 2h6a2 2 0 012-2v-6a2 2 0 01-2-2h-4"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="share-embed-section" id="shareEmbedSection">
+            <p class="embed-label">Código para insertar en tu sitio:</p>
+            <textarea id="embedCode" class="embed-code" readonly></textarea>
+            <div class="embed-actions">
+                <button class="copy-embed-btn" onclick="copyEmbedCode()">
+                    <span id="copyBtnText">Copiar código</span>
+                    <span class="embed-copied" id="embedCopied">✓ Copiado!</span>
+                </button>
+            </div>
+            <p class="embed-link-cta">
+                Más herramientas: <a href="/herramientas/embeds/" target="_blank">Ver todas las herramientas embebibles</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let currentToolUrl = window.location.href;
+        let currentToolTitle = document.title;
+
+        function shareToTwitter() {
+            const text = encodeURIComponent(`${currentToolTitle} - Herramienta gratuita de Botánica Andina`);
+            const url = encodeURIComponent(currentToolUrl);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function shareToLinkedIn() {
+            const url = encodeURIComponent(currentToolUrl);
+            const title = encodeURIComponent(currentToolTitle);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&mini=true`, '_blank', 'noopener,noreferrer');
+        }
+
+        function shareToFacebook() {
+            const url = encodeURIComponent(currentToolUrl);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function copyPageUrl() {
+            navigator.clipboard.writeText(currentToolUrl).then(() => {
+                showToast('Enlace copiado al portapapeles');
+            });
+        }
+
+        function toggleEmbed() {
+            const section = document.getElementById('shareEmbedSection');
+            const toggleText = document.getElementById('toggleText');
+            section.classList.toggle('active');
+            if (section.classList.contains('active')) {
+                toggleText.textContent = '✕ Cerrar';
+                updateEmbedCode();
+            } else {
+                toggleText.textContent = '📦 Insertar en tu sitio';
+            }
+        }
+
+        function updateEmbedCode() {
+            const toolPath = window.location.pathname;
+            const iframeSrc = `https://botanicaandina.com${toolPath}`;
+            const embedCode = `<iframe src="${iframeSrc}"\n    width="100%"\n    height="700"\n    frameborder="0"\n    style="border:1px solid #e2e8f0;border-radius:8px;"\n    title="${currentToolTitle}"\n    loading="lazy">\n</iframe>\n<p style="font-size:12px;color:#666;margin-top:4px;">\n    Herramienta gratuita de <a href="https://botanicaandina.com" target="_blank" rel="noopener">Botánica Andina</a>\n</p>`;
+            document.getElementById('embedCode').value = embedCode;
+        }
+
+        function copyEmbedCode() {
+            const code = document.getElementById('embedCode').value;
+            navigator.clipboard.writeText(code).then(() => {
+                const copyBtnText = document.getElementById('copyBtnText');
+                const copyCopied = document.getElementById('embedCopied');
+                copyBtnText.style.display = 'none';
+                copyCopied.classList.add('active');
+                setTimeout(() => {
+                    copyBtnText.style.display = 'inline';
+                    copyCopied.classList.remove('active');
+                }, 2000);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#374151;color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;animation:fadeIn 0.3s;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Auto-detect and set embed code
+        updateEmbedCode();
+    </script>
+</body>
+</html>

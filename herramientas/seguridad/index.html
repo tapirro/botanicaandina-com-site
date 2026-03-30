@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puntuación de Seguridad de Suplementos — Botánica Andina</title>
+<meta name="description" content="Calcula gratis la puntuación de seguridad de tu combinación de suplementos. Verifica interacciones entre hierbas y suplementos.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://botanicaandina.com/herramientas/seguridad/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Puntuación de Seguridad de Suplementos — Botánica Andina">
+<meta property="og:description" content="Calcula gratis la puntuación de seguridad de tu combinación de suplementos. Verifica interacciones entre hierbas y suplementos.">
+<meta property="og:url" content="https://botanicaandina.com/herramientas/seguridad/">
+<meta property="og:locale" content="es_LA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Puntuación de Seguridad de Suplementos">
+<meta name="twitter:description" content="Verifica si tus suplementos son seguros juntos. Herramienta gratuita de Botánica Andina.">
+<link rel="icon" href="/favicon.ico">
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Puntuación de Seguridad de Suplementos",
+        "url": "https://botanicaandina.com/herramientas/seguridad/",
+        "description": "Calcula la puntuación de seguridad de tu combinación de suplementos. Verifica interacciones entre hierbas y suplementos.",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Botánica Andina",
+          "url": "https://botanicaandina.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es el Puntuador de Seguridad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El Puntuador de Seguridad es una herramienta que califica el nivel de evidencia científica y seguridad de suplementos y plantas medicinales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo se calcula el puntaje?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El puntaje se basa en la calidad de la evidencia (ensayos clínicos, estudios en humanos, evidencia preclínica) y el perfil de seguridad reportado en monografías oficiales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué significan las calificaciones A-F?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A = Evidencia fuerte, B = Evidencia moderada, C = Evidencia débil, D = Evidencia muy limitada, F = No hay evidencia o evidencia negativa."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Verificar seguridad de plantas medicinales",
+    "description": "Aprende a usar el verificador de seguridad para conocer contraindicaciones y advertencias de plantas.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Escribe la planta",
+        "text": "En el campo de búsqueda, escribe el nombre de la planta medicinal (ej: sábila, kava, efedra)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Revisa el nivel de seguridad",
+        "text": "El sistema mostrará: Segura, Precaución, Contraindicada, o No evaluada."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Lee las advertencias",
+        "text": "Revisa poblaciones en riesgo (embarazo, lactancia, niños, enfermedades crónicas)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Verifica interacciones",
+        "text": "Consulta las interacciones con medicamentos antes de consumir la planta."
+      }
+    ],
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Nombre de la planta medicinal"
+      }
+    ]
+  }
+]</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#2e7d32;--green-light:#4caf50;--green-bg:#e8f5e9;
+  --blue:#1a237e;--blue-light:#3949ab;
+  --cream:#faf8f5;--white:#fff;
+  --red:#c62828;--red-bg:#ffebee;
+  --amber:#f57f17;--amber-bg:#fff8e1;
+  --text:#263238;--text-secondary:#546e7a;
+  --shadow:0 2px 12px rgba(0,0,0,0.08);
+  --radius:12px;
+}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+.container{max-width:720px;margin:0 auto;padding:1.5rem}
+
+/* Nav */
+nav{background:var(--blue);padding:0.75rem 1.5rem;display:flex;align-items:center;gap:0.75rem}
+nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem}
+nav a:hover{color:#fff}
+nav .brand{font-weight:700;color:#fff;font-size:1rem}
+nav .sep{color:rgba(255,255,255,0.4)}
+
+/* Header */
+.header{text-align:center;padding:2.5rem 1rem 1.5rem}
+.header h1{font-size:clamp(1.5rem,4vw,2rem);color:var(--blue);margin-bottom:0.5rem;font-weight:800}
+.header p{color:var(--text-secondary);font-size:clamp(0.9rem,2.5vw,1.05rem);max-width:480px;margin:0 auto}
+
+/* Input area */
+.input-area{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;margin-bottom:1.5rem}
+.input-area h2{font-size:1rem;color:var(--blue);margin-bottom:1rem;font-weight:700}
+.search-wrap{position:relative;margin-bottom:1rem}
+.search-wrap input{width:100%;padding:0.75rem 1rem;border:2px solid #e0e0e0;border-radius:8px;font-size:1rem;outline:none;transition:border 0.2s}
+.search-wrap input:focus{border-color:var(--green)}
+.dropdown{position:absolute;top:100%;left:0;right:0;background:var(--white);border:1px solid #e0e0e0;border-radius:0 0 8px 8px;max-height:200px;overflow-y:auto;z-index:10;display:none;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.dropdown.open{display:block}
+.dropdown div{padding:0.6rem 1rem;cursor:pointer;font-size:0.9rem;transition:background 0.15s}
+.dropdown div:hover,.dropdown div.highlighted{background:var(--green-bg)}
+.dropdown div small{color:var(--text-secondary);font-size:0.75rem;display:block}
+
+/* Tags */
+.tags{display:flex;flex-wrap:wrap;gap:0.5rem;min-height:2rem;margin-bottom:1rem}
+.tag{display:inline-flex;align-items:center;gap:0.4rem;background:var(--green-bg);color:var(--green);padding:0.35rem 0.75rem;border-radius:20px;font-size:0.85rem;font-weight:600;animation:tagIn 0.25s ease}
+.tag button{background:none;border:none;color:var(--green);cursor:pointer;font-size:1rem;line-height:1;padding:0 0.1rem}
+.tag button:hover{color:var(--red)}
+@keyframes tagIn{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+
+.hint{font-size:0.8rem;color:var(--text-secondary)}
+.btn-calc{display:block;width:100%;padding:0.85rem;background:var(--green);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s}
+.btn-calc:hover{background:var(--green-light)}
+.btn-calc:active{transform:scale(0.98)}
+.btn-calc:disabled{background:#bdbdbd;cursor:not-allowed}
+
+/* Results */
+.results{display:none;animation:fadeIn 0.4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* Gauge */
+.gauge-wrap{text-align:center;padding:2rem 1rem;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:1.5rem}
+.gauge-container{position:relative;width:220px;height:130px;margin:0 auto 1rem}
+.gauge-bg{fill:none;stroke:#e0e0e0;stroke-width:16;stroke-linecap:round}
+.gauge-fill{fill:none;stroke-width:16;stroke-linecap:round;transition:stroke-dashoffset 1.5s cubic-bezier(0.4,0,0.2,1),stroke 0.5s}
+.score-num{font-size:3rem;font-weight:900;line-height:1}
+.score-label{font-size:1rem;font-weight:700;margin-top:0.25rem}
+.score-desc{color:var(--text-secondary);font-size:0.9rem;margin-top:0.5rem;max-width:400px;margin-left:auto;margin-right:auto}
+
+/* Interactions list */
+.interactions-list{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;margin-bottom:1.5rem}
+.interactions-list h3{font-size:1rem;color:var(--blue);margin-bottom:1rem}
+.interaction-item{padding:1rem;border-radius:8px;margin-bottom:0.75rem;border-left:4px solid}
+.interaction-item.alta{background:var(--red-bg);border-color:var(--red)}
+.interaction-item.moderada{background:var(--amber-bg);border-color:var(--amber)}
+.interaction-item.baja{background:#e3f2fd;border-color:#1565c0}
+.interaction-item .pair{font-weight:700;font-size:0.95rem;margin-bottom:0.25rem}
+.interaction-item .severity{display:inline-block;padding:0.15rem 0.5rem;border-radius:4px;font-size:0.7rem;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:0.4rem}
+.severity.alta{background:var(--red)}.severity.moderada{background:var(--amber)}.severity.baja{background:#1565c0}
+.interaction-item .effect{font-size:0.85rem;color:var(--text-secondary)}
+.no-issues{text-align:center;padding:2rem;background:var(--green-bg);border-radius:var(--radius)}
+.no-issues p{color:var(--green);font-weight:700;font-size:1.1rem}
+
+/* Share/Embed */
+.share-section{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem;margin-bottom:1.5rem}
+.share-section h3{font-size:1rem;color:var(--blue);margin-bottom:1rem}
+.share-btns{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1rem}
+.share-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border-radius:8px;font-size:0.85rem;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.share-btn:hover{opacity:0.85}
+.share-btn.copy{background:#e3f2fd;color:#1565c0}
+.share-btn.twitter{background:#e8f5e9;color:var(--green)}
+.share-btn.download{background:#f3e5f5;color:#7b1fa2}
+.embed-code{margin-top:1rem}
+.embed-code label{font-size:0.85rem;font-weight:600;color:var(--text-secondary);display:block;margin-bottom:0.5rem}
+.embed-code textarea{width:100%;height:60px;padding:0.5rem;font-family:monospace;font-size:0.8rem;border:1px solid #e0e0e0;border-radius:6px;resize:none;background:#fafafa}
+.copied{position:fixed;top:1rem;right:1rem;background:var(--green);color:#fff;padding:0.5rem 1rem;border-radius:8px;font-size:0.85rem;font-weight:600;z-index:100;animation:fadeIn 0.3s ease}
+
+/* Disclaimer */
+.disclaimer{text-align:center;font-size:0.75rem;color:var(--text-secondary);padding:1rem;border-top:1px solid #e0e0e0;margin-top:1rem}
+
+/* Footer */
+footer{text-align:center;padding:2rem 1rem;font-size:0.8rem;color:var(--text-secondary)}
+footer a{color:var(--green);text-decoration:none;font-weight:600}
+
+/* Canvas (hidden) */
+#shareCanvas{display:none}
+
+@media(max-width:480px){
+  .container{padding:1rem}
+  .gauge-container{width:180px;height:110px}
+  .score-num{font-size:2.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://botanicaandina.com/" class="brand">Botánica Andina</a>
+  <span class="sep">›</span>
+  <a href="https://botanicaandina.com/herramientas/">Herramientas</a>
+  <span class="sep">›</span>
+  <a href="#">Seguridad</a>
+</nav>
+
+<div class="container">
+
+<div class="header">
+  <h1>Puntuación de Seguridad de tu Stack</h1>
+  <p>Verifica si tus suplementos son seguros juntos. Selecciona entre 2 y 5 suplementos para calcular tu puntuación.</p>
+</div>
+
+<div class="input-area">
+  <h2>Selecciona tus suplementos</h2>
+  <div class="tags" id="tags"></div>
+  <div class="search-wrap">
+    <input type="text" id="searchInput" placeholder="Buscar suplemento o hierba..." autocomplete="off">
+    <div class="dropdown" id="dropdown"></div>
+  </div>
+  <p class="hint" id="hint">Selecciona al menos 2 suplementos (máximo 5)</p>
+  <button class="btn-calc" id="calcBtn" disabled>Calcular Puntuación de Seguridad</button>
+</div>
+
+<div class="results" id="results">
+  <div class="gauge-wrap" id="gaugeWrap">
+    <div class="gauge-container">
+      <svg viewBox="0 0 200 120" width="100%" height="100%">
+        <path d="M 20 100 A 80 80 0 0 1 180 100" class="gauge-bg"/>
+        <path d="M 20 100 A 80 80 0 0 1 180 100" class="gauge-fill" id="gaugeFill"/>
+      </svg>
+      <div style="position:absolute;bottom:0;left:0;right:0;text-align:center">
+        <div class="score-num" id="scoreNum">—</div>
+      </div>
+    </div>
+    <div class="score-label" id="scoreLabel"></div>
+    <div class="score-desc" id="scoreDesc"></div>
+  </div>
+
+  <div id="interactionsList"></div>
+
+  <div class="share-section" id="shareSection">
+    <h3>Compartir resultado</h3>
+    <div class="share-btns">
+      <button class="share-btn copy" onclick="copyLink()">📋 Copiar enlace</button>
+      <button class="share-btn twitter" onclick="shareTwitter()">𝕏 Compartir</button>
+      <button class="share-btn download" onclick="downloadCard()">⬇ Descargar imagen</button>
+    </div>
+    <div class="embed-code">
+      <label>Insertar en tu sitio web:</label>
+      <textarea readonly id="embedCode">&lt;iframe src="https://botanicaandina.com/herramientas/seguridad/" width="100%" height="700" frameborder="0" title="Puntuación de Seguridad de Suplementos"&gt;&lt;/iframe&gt;</textarea>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ Esta herramienta es solo informativa y no reemplaza el consejo médico profesional.<br>
+    Consulta siempre a un profesional de salud antes de combinar suplementos o medicamentos.
+  </div>
+</div>
+
+</div>
+
+<footer>
+  Powered by <a href="https://botanicaandina.com/">Botánica Andina</a> ·
+  <a href="https://botanicaandina.com/herramientas/interacciones/">Verificador de Interacciones</a> ·
+  <a href="https://botanicaandina.com/herramientas/verificador/">Verificador de Suplementos</a>
+</footer>
+
+<canvas id="shareCanvas" width="600" height="400"></canvas>
+
+<script>
+// === SUPPLEMENT DATABASE ===
+const SUPPLEMENTS = [
+  {id:"ashwagandha",name:"Ashwagandha",cat:"Adaptógeno"},
+  {id:"valeriana",name:"Valeriana",cat:"Relajante"},
+  {id:"hierba_san_juan",name:"Hierba de San Juan",cat:"Antidepresivo natural"},
+  {id:"ginkgo",name:"Ginkgo Biloba",cat:"Circulación"},
+  {id:"curcuma",name:"Cúrcuma / Curcumina",cat:"Antiinflamatorio"},
+  {id:"omega3",name:"Omega-3 / Aceite de pescado",cat:"Ácidos grasos"},
+  {id:"magnesio",name:"Magnesio",cat:"Mineral"},
+  {id:"vitamina_d",name:"Vitamina D",cat:"Vitamina"},
+  {id:"vitamina_c",name:"Vitamina C",cat:"Vitamina"},
+  {id:"vitamina_e",name:"Vitamina E",cat:"Vitamina"},
+  {id:"vitamina_k",name:"Vitamina K",cat:"Vitamina"},
+  {id:"hierro",name:"Hierro",cat:"Mineral"},
+  {id:"zinc",name:"Zinc",cat:"Mineral"},
+  {id:"calcio",name:"Calcio",cat:"Mineral"},
+  {id:"selenio",name:"Selenio",cat:"Mineral"},
+  {id:"coq10",name:"Coenzima Q10",cat:"Antioxidante"},
+  {id:"gaba",name:"GABA",cat:"Aminoácido"},
+  {id:"lteanina",name:"L-Teanina",cat:"Aminoácido"},
+  {id:"melatonina",name:"Melatonina",cat:"Sueño"},
+  {id:"echinacea",name:"Equinácea",cat:"Inmunidad"},
+  {id:"ajo",name:"Ajo / Extracto de ajo",cat:"Cardiovascular"},
+  {id:"ginseng",name:"Ginseng",cat:"Adaptógeno"},
+  {id:"saw_palmetto",name:"Saw Palmetto",cat:"Próstata"},
+  {id:"colageno",name:"Colágeno",cat:"Belleza"},
+  {id:"biotina",name:"Biotina",cat:"Belleza"},
+  {id:"probioticos",name:"Probióticos",cat:"Digestión"},
+  {id:"berberina",name:"Berberina",cat:"Glucosa"},
+  {id:"maca",name:"Maca",cat:"Energía"},
+  {id:"una_de_gato",name:"Uña de Gato",cat:"Antiinflamatorio"},
+  {id:"te_verde",name:"Extracto de Té Verde",cat:"Metabolismo"},
+  {id:"lcarnitina",name:"L-Carnitina",cat:"Metabolismo"},
+  {id:"creatina",name:"Creatina",cat:"Rendimiento"},
+  {id:"glucosamina",name:"Glucosamina",cat:"Articulaciones"},
+  {id:"acido_hialuronico",name:"Ácido Hialurónico",cat:"Belleza"},
+  {id:"spirulina",name:"Espirulina",cat:"Superalimento"},
+  {id:"moringa",name:"Moringa",cat:"Nutrición"},
+  {id:"kava",name:"Kava",cat:"Relajante"},
+  {id:"rhodiola",name:"Rhodiola Rosea",cat:"Adaptógeno"},
+  {id:"tribulus",name:"Tribulus Terrestris",cat:"Hormonal"},
+  {id:"cardo_mariano",name:"Cardo Mariano",cat:"Hígado"},
+  {id:"dong_quai",name:"Dong Quai",cat:"Hormonal"},
+  {id:"fenogreco",name:"Fenogreco",cat:"Glucosa"},
+  {id:"jengibre",name:"Jengibre",cat:"Digestión"},
+  {id:"canela",name:"Canela",cat:"Glucosa"},
+  {id:"oregano_aceite",name:"Aceite de Orégano",cat:"Inmunidad"},
+  {id:"quercetina",name:"Quercetina",cat:"Antioxidante"},
+  {id:"resveratrol",name:"Resveratrol",cat:"Antioxidante"},
+  {id:"nac",name:"NAC (N-Acetilcisteína)",cat:"Antioxidante"},
+  {id:"5htp",name:"5-HTP",cat:"Serotonina"},
+  {id:"luteina",name:"Luteína",cat:"Visión"}
+];
+
+// === INTERACTION DATABASE ===
+const INTERACTIONS = [
+  {a:"hierba_san_juan",b:"omega3",sev:"moderada",eff:"Hierba de San Juan puede reducir la eficacia de omega-3 al acelerar su metabolismo hepático."},
+  {a:"hierba_san_juan",b:"melatonina",sev:"moderada",eff:"Ambos afectan la serotonina. Posible exceso serotoninérgico."},
+  {a:"hierba_san_juan",b:"5htp",sev:"alta",eff:"Riesgo de síndrome serotoninérgico. Ambos aumentan serotonina por mecanismos diferentes."},
+  {a:"hierba_san_juan",b:"gaba",sev:"moderada",eff:"Efectos sedantes aditivos. Puede causar somnolencia excesiva."},
+  {a:"hierba_san_juan",b:"valeriana",sev:"moderada",eff:"Sedación aditiva. Hierba de San Juan induce enzimas que metabolizan valeriana."},
+  {a:"hierba_san_juan",b:"coq10",sev:"baja",eff:"Hierba de San Juan puede reducir niveles de CoQ10 al inducir CYP3A4."},
+  {a:"hierba_san_juan",b:"kava",sev:"alta",eff:"Riesgo de hepatotoxicidad combinada. Ambos afectan el hígado."},
+  {a:"hierba_san_juan",b:"ginkgo",sev:"moderada",eff:"Hierba de San Juan puede reducir la biodisponibilidad de ginkgo via inducción enzimática."},
+  {a:"ginkgo",b:"omega3",sev:"alta",eff:"Ambos tienen propiedades anticoagulantes. Riesgo aumentado de sangrado."},
+  {a:"ginkgo",b:"ajo",sev:"alta",eff:"Efecto anticoagulante aditivo. Riesgo significativo de hemorragia."},
+  {a:"ginkgo",b:"vitamina_e",sev:"moderada",eff:"Vitamina E y ginkgo ambos inhiben la agregación plaquetaria. Riesgo de sangrado."},
+  {a:"ginkgo",b:"curcuma",sev:"moderada",eff:"Efecto anticoagulante aditivo. Monitorear signos de sangrado."},
+  {a:"omega3",b:"ajo",sev:"moderada",eff:"Ambos tienen propiedades anticoagulantes. Efecto aditivo sobre sangrado."},
+  {a:"omega3",b:"vitamina_e",sev:"baja",eff:"Efecto antiplaquetario leve combinado. Generalmente seguro en dosis normales."},
+  {a:"omega3",b:"curcuma",sev:"moderada",eff:"Curcumina potencia el efecto anticoagulante de omega-3."},
+  {a:"curcuma",b:"hierro",sev:"moderada",eff:"Curcumina puede quelatar hierro y reducir su absorción intestinal."},
+  {a:"curcuma",b:"berberina",sev:"baja",eff:"Ambos afectan enzimas hepáticas CYP. Posible alteración mutua del metabolismo."},
+  {a:"hierro",b:"calcio",sev:"moderada",eff:"Calcio inhibe significativamente la absorción de hierro. Tomar con 2+ horas de separación."},
+  {a:"hierro",b:"zinc",sev:"moderada",eff:"Compiten por los mismos transportadores intestinales. Reducen absorción mutua."},
+  {a:"hierro",b:"te_verde",sev:"moderada",eff:"Los taninos del té verde reducen significativamente la absorción de hierro."},
+  {a:"hierro",b:"vitamina_c",sev:"baja",eff:"INTERACCIÓN POSITIVA: Vitamina C mejora la absorción de hierro. Combinar es beneficioso."},
+  {a:"calcio",b:"magnesio",sev:"baja",eff:"Compiten por absorción si se toman juntos. Separar dosis o usar proporciones 2:1."},
+  {a:"calcio",b:"zinc",sev:"baja",eff:"Calcio puede reducir levemente la absorción de zinc. Separar dosis."},
+  {a:"calcio",b:"vitamina_d",sev:"baja",eff:"INTERACCIÓN POSITIVA: Vitamina D mejora absorción de calcio. Combinar es beneficioso."},
+  {a:"magnesio",b:"vitamina_d",sev:"baja",eff:"INTERACCIÓN POSITIVA: Magnesio es necesario para activar vitamina D. Combinar es beneficioso."},
+  {a:"valeriana",b:"melatonina",sev:"moderada",eff:"Sedación aditiva. Puede causar somnolencia excesiva al día siguiente."},
+  {a:"valeriana",b:"kava",sev:"alta",eff:"Sedación excesiva y riesgo de hepatotoxicidad combinada."},
+  {a:"valeriana",b:"gaba",sev:"moderada",eff:"Valeriana actúa sobre receptores GABA. Efecto sedante aditivo."},
+  {a:"valeriana",b:"5htp",sev:"moderada",eff:"Sedación aditiva. 5-HTP aumenta serotonina, valeriana actúa sobre GABA."},
+  {a:"kava",b:"gaba",sev:"alta",eff:"Sedación profunda y riesgo de depresión respiratoria. Ambos potencian GABA."},
+  {a:"kava",b:"melatonina",sev:"moderada",eff:"Sedación excesiva combinada."},
+  {a:"kava",b:"5htp",sev:"moderada",eff:"Kava puede potenciar los efectos serotoninérgicos de 5-HTP."},
+  {a:"ginseng",b:"ginkgo",sev:"baja",eff:"Combinación común. Leve riesgo de sangrado en personas susceptibles."},
+  {a:"ginseng",b:"ajo",sev:"baja",eff:"Ambos pueden afectar la coagulación. Riesgo bajo en dosis normales."},
+  {a:"ashwagandha",b:"valeriana",sev:"baja",eff:"Sedación aditiva leve. Generalmente bien tolerado."},
+  {a:"ashwagandha",b:"gaba",sev:"baja",eff:"Ambos tienen efecto calmante. Efecto aditivo leve."},
+  {a:"ashwagandha",b:"rhodiola",sev:"baja",eff:"Ambos son adaptógenos. Combinación generalmente segura y complementaria."},
+  {a:"5htp",b:"melatonina",sev:"moderada",eff:"5-HTP es precursor de serotonina/melatonina. Posible exceso de melatonina."},
+  {a:"berberina",b:"fenogreco",sev:"moderada",eff:"Ambos reducen glucosa. Riesgo de hipoglucemia combinada."},
+  {a:"berberina",b:"canela",sev:"baja",eff:"Efecto hipoglucémico aditivo leve. Monitorear glucosa."},
+  {a:"te_verde",b:"lcarnitina",sev:"baja",eff:"Combinación común para metabolismo. Sin interacciones significativas conocidas."},
+  {a:"cardo_mariano",b:"curcuma",sev:"baja",eff:"Ambos son hepatoprotectores. Combinación complementaria."},
+  {a:"vitamina_k",b:"omega3",sev:"moderada",eff:"Vitamina K promueve coagulación, omega-3 la inhibe. Efectos contrapuestos."},
+  {a:"vitamina_k",b:"ginkgo",sev:"moderada",eff:"Efectos opuestos sobre coagulación. Puede reducir eficacia de ambos."},
+  {a:"dong_quai",b:"ajo",sev:"moderada",eff:"Ambos tienen propiedades anticoagulantes. Riesgo de sangrado."},
+  {a:"dong_quai",b:"ginkgo",sev:"moderada",eff:"Efecto anticoagulante aditivo. Monitorear signos de sangrado."},
+  {a:"echinacea",b:"cardo_mariano",sev:"baja",eff:"Posible interacción en enzimas hepáticas CYP. Riesgo bajo."},
+  {a:"nac",b:"vitamina_c",sev:"baja",eff:"INTERACCIÓN POSITIVA: Ambos antioxidantes con mecanismos complementarios."},
+  {a:"selenio",b:"vitamina_e",sev:"baja",eff:"INTERACCIÓN POSITIVA: Selenio y vitamina E trabajan sinérgicamente como antioxidantes."},
+  {a:"quercetina",b:"vitamina_c",sev:"baja",eff:"INTERACCIÓN POSITIVA: Quercetina mejora la biodisponibilidad de vitamina C."},
+  {a:"probioticos",b:"oregano_aceite",sev:"moderada",eff:"Aceite de orégano es antimicrobiano y puede reducir la eficacia de probióticos."},
+  {a:"spirulina",b:"hierro",sev:"baja",eff:"Espirulina contiene hierro. Riesgo de exceso si se combina con suplemento de hierro."},
+];
+
+// === STATE ===
+let selected = [];
+let hlIndex = -1;
+
+// === DOM ===
+const searchInput = document.getElementById('searchInput');
+const dropdown = document.getElementById('dropdown');
+const tagsEl = document.getElementById('tags');
+const calcBtn = document.getElementById('calcBtn');
+const results = document.getElementById('results');
+const hint = document.getElementById('hint');
+
+// === SEARCH & SELECT ===
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.toLowerCase().trim();
+  if (!q) { dropdown.classList.remove('open'); return; }
+  const matches = SUPPLEMENTS.filter(s =>
+    !selected.includes(s.id) &&
+    (s.name.toLowerCase().includes(q) || s.cat.toLowerCase().includes(q))
+  ).slice(0, 8);
+  if (!matches.length) { dropdown.classList.remove('open'); return; }
+  dropdown.innerHTML = matches.map((s, i) =>
+    `<div data-id="${s.id}" class="${i===0?'highlighted':''}">${s.name}<small>${s.cat}</small></div>`
+  ).join('');
+  hlIndex = 0;
+  dropdown.classList.add('open');
+  dropdown.querySelectorAll('div').forEach(d => {
+    d.addEventListener('click', () => addSupplement(d.dataset.id));
+  });
+});
+
+searchInput.addEventListener('keydown', (e) => {
+  const items = dropdown.querySelectorAll('div');
+  if (!items.length) return;
+  if (e.key === 'ArrowDown') { e.preventDefault(); hlIndex = Math.min(hlIndex + 1, items.length - 1); updateHL(items); }
+  if (e.key === 'ArrowUp') { e.preventDefault(); hlIndex = Math.max(hlIndex - 1, 0); updateHL(items); }
+  if (e.key === 'Enter' && hlIndex >= 0) { e.preventDefault(); items[hlIndex]?.click(); }
+  if (e.key === 'Escape') dropdown.classList.remove('open');
+});
+
+function updateHL(items) {
+  items.forEach((it, i) => it.classList.toggle('highlighted', i === hlIndex));
+}
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.search-wrap')) dropdown.classList.remove('open');
+});
+
+function addSupplement(id) {
+  if (selected.includes(id) || selected.length >= 5) return;
+  selected.push(id);
+  searchInput.value = '';
+  dropdown.classList.remove('open');
+  renderTags();
+  updateBtn();
+}
+
+function removeSupplement(id) {
+  selected = selected.filter(s => s !== id);
+  renderTags();
+  updateBtn();
+  results.style.display = 'none';
+}
+
+function renderTags() {
+  tagsEl.innerHTML = selected.map(id => {
+    const s = SUPPLEMENTS.find(x => x.id === id);
+    return `<span class="tag">${s.name}<button onclick="removeSupplement('${id}')">&times;</button></span>`;
+  }).join('');
+}
+
+function updateBtn() {
+  const n = selected.length;
+  calcBtn.disabled = n < 2;
+  hint.textContent = n === 0 ? 'Selecciona al menos 2 suplementos (máximo 5)'
+    : n === 1 ? 'Selecciona al menos 1 suplemento más'
+    : n >= 5 ? 'Máximo alcanzado (5 suplementos)'
+    : `${n} suplementos seleccionados — listo para calcular`;
+}
+
+// === CALCULATE ===
+calcBtn.addEventListener('click', calculate);
+
+function calculate() {
+  const found = [];
+  for (let i = 0; i < selected.length; i++) {
+    for (let j = i + 1; j < selected.length; j++) {
+      const a = selected[i], b = selected[j];
+      const match = INTERACTIONS.find(x =>
+        (x.a === a && x.b === b) || (x.a === b && x.b === a)
+      );
+      if (match) found.push({ ...match, nameA: getName(a), nameB: getName(b) });
+    }
+  }
+
+  let score = 100;
+  found.forEach(f => {
+    if (f.sev === 'alta') score -= 30;
+    else if (f.sev === 'moderada') score -= 15;
+    else score -= 5;
+  });
+  score = Math.max(0, score);
+
+  // Bonus for positive interactions
+  const positives = found.filter(f => f.eff.includes('POSITIVA'));
+
+  results.style.display = 'block';
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  animateGauge(score);
+  renderInteractions(found);
+}
+
+function getName(id) {
+  return SUPPLEMENTS.find(s => s.id === id)?.name || id;
+}
+
+// === GAUGE ANIMATION ===
+function animateGauge(score) {
+  const fill = document.getElementById('gaugeFill');
+  const numEl = document.getElementById('scoreNum');
+  const labelEl = document.getElementById('scoreLabel');
+  const descEl = document.getElementById('scoreDesc');
+
+  // Arc length
+  const totalLen = 251.3; // approximate for this arc
+  fill.style.strokeDasharray = totalLen;
+  fill.style.strokeDashoffset = totalLen;
+
+  const targetOffset = totalLen - (totalLen * score / 100);
+  const color = score >= 80 ? '#2e7d32' : score >= 50 ? '#f57f17' : '#c62828';
+  fill.style.stroke = color;
+
+  requestAnimationFrame(() => {
+    fill.style.strokeDashoffset = targetOffset;
+  });
+
+  // Animate number
+  let current = 0;
+  const step = Math.max(1, Math.floor(score / 40));
+  const interval = setInterval(() => {
+    current += step;
+    if (current >= score) { current = score; clearInterval(interval); }
+    numEl.textContent = current;
+    numEl.style.color = color;
+  }, 30);
+
+  // Label
+  if (score >= 80) {
+    labelEl.textContent = '✅ Combinación Segura';
+    labelEl.style.color = '#2e7d32';
+    descEl.textContent = 'Tu stack de suplementos no presenta interacciones significativas. Combinación generalmente segura.';
+  } else if (score >= 50) {
+    labelEl.textContent = '⚠️ Precaución Recomendada';
+    labelEl.style.color = '#f57f17';
+    descEl.textContent = 'Se encontraron interacciones moderadas. Consulta con un profesional antes de combinar estos suplementos.';
+  } else {
+    labelEl.textContent = '🚨 Riesgo Elevado';
+    labelEl.style.color = '#c62828';
+    descEl.textContent = 'Se encontraron interacciones severas. No combines estos suplementos sin supervisión médica.';
+  }
+}
+
+// === RENDER INTERACTIONS ===
+function renderInteractions(found) {
+  const container = document.getElementById('interactionsList');
+  if (!found.length) {
+    container.innerHTML = '<div class="no-issues"><p>✅ No se encontraron interacciones conocidas</p><p style="font-size:0.85rem;color:#546e7a;font-weight:400">Tu combinación parece segura según nuestra base de datos.</p></div>';
+    return;
+  }
+
+  const sorted = [...found].sort((a, b) => {
+    const order = { alta: 0, moderada: 1, baja: 2 };
+    return order[a.sev] - order[b.sev];
+  });
+
+  container.innerHTML = `<div class="interactions-list"><h3>Interacciones encontradas (${found.length})</h3>` +
+    sorted.map(f => `
+      <div class="interaction-item ${f.sev}">
+        <div class="pair">${f.nameA} + ${f.nameB}</div>
+        <span class="severity ${f.sev}">${f.sev === 'alta' ? '● Alta' : f.sev === 'moderada' ? '● Moderada' : '● Baja'}</span>
+        <div class="effect">${f.eff}</div>
+      </div>
+    `).join('') + '</div>';
+}
+
+// === SHARE FUNCTIONS ===
+function copyLink() {
+  navigator.clipboard.writeText('https://botanicaandina.com/herramientas/seguridad/').then(() => showToast('Enlace copiado'));
+}
+
+function shareTwitter() {
+  const score = document.getElementById('scoreNum').textContent;
+  const text = `Mi stack de suplementos tiene una puntuación de seguridad de ${score}/100 🌿 Verifica el tuyo gratis:`;
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://botanicaandina.com/herramientas/seguridad/')}`, '_blank');
+}
+
+function downloadCard() {
+  const canvas = document.getElementById('shareCanvas');
+  const ctx = canvas.getContext('2d');
+  const score = parseInt(document.getElementById('scoreNum').textContent);
+  const color = score >= 80 ? '#2e7d32' : score >= 50 ? '#f57f17' : '#c62828';
+  const label = score >= 80 ? 'Combinación Segura' : score >= 50 ? 'Precaución Recomendada' : 'Riesgo Elevado';
+
+  // Background
+  ctx.fillStyle = '#faf8f5';
+  ctx.fillRect(0, 0, 600, 400);
+
+  // Header bar
+  ctx.fillStyle = '#1a237e';
+  ctx.fillRect(0, 0, 600, 60);
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 18px system-ui';
+  ctx.fillText('Botánica Andina — Puntuación de Seguridad', 20, 38);
+
+  // Score circle
+  ctx.beginPath();
+  ctx.arc(300, 200, 80, 0, Math.PI * 2);
+  ctx.fillStyle = color + '15';
+  ctx.fill();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 8;
+  ctx.stroke();
+
+  ctx.fillStyle = color;
+  ctx.font = 'bold 56px system-ui';
+  ctx.textAlign = 'center';
+  ctx.fillText(score, 300, 218);
+
+  ctx.fillStyle = '#546e7a';
+  ctx.font = '16px system-ui';
+  ctx.fillText('/ 100', 300, 245);
+
+  // Label
+  ctx.fillStyle = color;
+  ctx.font = 'bold 20px system-ui';
+  ctx.fillText(label, 300, 310);
+
+  // Supplements
+  ctx.fillStyle = '#263238';
+  ctx.font = '14px system-ui';
+  const names = selected.map(id => getName(id)).join(' · ');
+  ctx.fillText(names, 300, 345);
+
+  // Footer
+  ctx.fillStyle = '#90a4ae';
+  ctx.font = '12px system-ui';
+  ctx.fillText('botanicaandina.com/herramientas/seguridad/', 300, 385);
+
+  // Download
+  const link = document.createElement('a');
+  link.download = 'seguridad-suplementos.png';
+  link.href = canvas.toDataURL();
+  link.click();
+}
+
+function showToast(msg) {
+  const t = document.createElement('div');
+  t.className = 'copied';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 2000);
+}
+</script>
+<noscript>
+<div style="max-width:900px;margin:2rem auto;padding:1rem;font-family:Georgia,serif;">
+<h2>Puntuación de Seguridad de Suplementos — Botánica Andina</h2>
+<p>Calcula gratis la puntuación de seguridad de tu combinación de suplementos. Verifica interacciones entre hierbas y suplementos.</p>
+<h3>Puntuación de Seguridad de Suplementos</h3>
+<p>Ingresa tu combinación de suplementos y obtén una puntuación de seguridad del 0 al 100.
+La puntuación considera interacciones cruzadas, dosis, y perfil de seguridad individual.</p>
+<h3>Cómo Se Calcula</h3>
+<ul>
+<li><strong>90-100:</strong> Combinación segura, sin interacciones conocidas</li>
+<li><strong>70-89:</strong> Precaución menor, posibles interacciones leves</li>
+<li><strong>50-69:</strong> Precaución, interacciones moderadas detectadas</li>
+<li><strong>0-49:</strong> Riesgo, interacciones graves — consulta médica recomendada</li>
+</ul>
+<h3>Factores Evaluados</h3>
+<p>Interacciones farmacocinéticas (CYP450), interacciones farmacodinámicas (efectos aditivos),
+contraindicaciones por condición médica, y dosis acumulativas de principios activos similares.</p>
+<p style="margin-top:1rem;font-size:13px;color:#666;">
+<a href="https://botanicaandina.com/herramientas/interacciones/">Verificador de interacciones</a> ·
+<a href="https://botanicaandina.com/herramientas/matriz/">Matriz completa</a> ·
+<a href="https://botanicaandina.com/herramientas/">Todas las herramientas</a>
+</p>
+</div>
+</noscript>
+<img src="/assets/img/tools/thumb-seguridad.svg" alt="seguridad" width="100%" style="max-width:400px;margin:2rem auto;display:block;">
+    <footer class="tool-trust-footer" style="background: #f8f9fa; padding: 2rem 0; margin-top: 3rem; border-top: 3px solid #1a5632;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem; font-size: 0.9rem; color: #555;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem;">
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Última Actualización</h4>
+                    <p style="margin: 0;">29 de March de 2026</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Revisado Por</h4>
+                    <p style="margin: 0;">Equipo Editorial &mdash; Botánica Andina</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Fuentes de Datos</h4>
+                    <p style="margin: 0;">EMA, ESCOP, PubMed, Evidencia Científica</p>
+                </div>
+            </div>
+            <p style="margin: 0; font-style: italic; color: #666;">
+                Esta herramienta es para fines informativos y educativos únicamente. No sustituye el consejo médico profesional.
+            </p>
+        </div>
+    </footer>
+
+<style>
+        .share-widget {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 1rem 0;
+        }
+        .share-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+        .share-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a5632;
+        }
+        .share-embed-toggle {
+            background: #2d3748;
+            color: #fff;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .share-embed-toggle:hover {
+            background: #1e40af;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .share-btn.twitter {
+            background: #fff;
+            color: #000;
+        }
+        .share-btn.linkedin {
+            background: #0077b5;
+            color: #fff;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+            color: #fff;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+            color: #fff;
+        }
+        .share-btn.copy {
+            background: #1f2937;
+            color: #fff;
+        }
+        .share-embed-section {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .share-embed-section.active {
+            display: block;
+        }
+        .embed-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        .embed-code {
+            width: 100%;
+            min-height: 120px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background: #fff;
+            resize: vertical;
+        }
+        .embed-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .copy-embed-btn {
+            background: #059669;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .copy-embed-btn:hover {
+            background: #047857;
+        }
+        .embed-copied {
+            display: none;
+            color: #059669;
+            font-size: 0.8rem;
+        }
+        .embed-copied.active {
+            display: inline;
+        }
+        .embed-link-cta {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .embed-link-cta a {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .embed-link-cta a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<div class="share-widget">
+        <div class="share-header">
+            <span class="share-title">Comparte esta herramienta</span>
+            <button class="share-embed-toggle" onclick="toggleEmbed()" aria-label="Mostrar código embed">
+                <span id="toggleText">📦 Insertar en tu sitio</span>
+            </button>
+        </div>
+
+        <div class="share-buttons">
+            <a class="share-btn twitter" href="#" onclick="shareToTwitter()" target="_blank" rel="noopener" aria-label="Compartir en X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-1.587 6.062c-.379 1.689-.299 1.984-.069.45-.297 1.263.356-2.292.767-1.912 1.789-1.389.947-1.696.834-.666.814-1.093.388-.683.366-.668-.736-.834-.505.919-1.243.797-2.037-.252.319-.403-.589-.632-.524-.805-.797-1.416.619-1.416-1.653-1.402-1.389-1.339-1.345-.736-.649-.686-.677-.495-.532-.552-.485-.469-.369-.493.286-.359-.248-.219-.204-.16-.097-.037 0h1.125v1.25c0 0 .077.016.149.06.208.069.25.074.044.044-.05.011.016-.012-.02-.019-.016-.025-.023-.029-.033-.034-.043-.048-.053-.062-.062-.058-.067-.072-.076-.078-.081-.089-.101-.111.129-.137-.164-.191-.218-.252-.287-.323-.369-.395-.425-.445-.465-.49-.493-.518-.533-.563-.581-.606-.639-.671-.705-.735-.775-.813-.856-.887-.925-.974-1.024-1.073-1.122-1.163-1.196-1.228-1.256-1.28-1.305-1.339-1.374-1.399-1.42-1.428-1.443-1.456-1.468-1.479-1.487-1.493-1.504-1.512-1.523-1.532-1.54-1.548-1.559-1.565-1.571-1.577-1.584-1.592-1.602-1.608-1.613-1.619-1.628-1.634-1.64-1.649-1.653-1.658-1.665-1.672-1.678-1.682-1.688-1.695-1.7-1.704-1.71-1.714-1.717-1.723-1.732-1.739-1.743-1.749-1.755-1.76-1.76-1.766-1.773-1.78-1.784-1.787-1.795-1.803-1.81-1.815-1.818-1.824-1.83-1.836-1.842-1.849-1.855-1.861-1.865-1.871-1.877-1.883-1.889-1.894-1.9-1.903-1.91-1.917-1.924-1.93-1.935-1.944-1.952-1.961-1.968-1.976-1.982-1.99-1.997-2.002-2.007-2.011-2.016-2.019-2.021-2.024-2.028-2.031-2.034-2.037-2.041-2.043-2.045-2.049-2.052-2.055-2.058-2.061-2.063-2.067-2.069-2.072-2.074-2.076-2.079-2.083-2.085-2.089-2.092-2.095-2.099-2.101-1.105-1.108-1.11-1.113-1.117-1.119-1.122-1.126-1.128-1.131-1.134-1.138-1.141-1.144-1.147-1.149-1.152-1.156-1.159-1.162-1.165-1.168-1.171-1.174-1.176-1.18-1.184-1.187-1.19-1.194-1.197-1.2-1.203-1.206-1.209-1.212-1.215-1.218-1.221-1.224-1.227-1.23-1.232-1.236-1.239-1.243-1.246-1.249-1.253-1.257-1.26-1.264-1.268-1.272-1.276-1.28-1.284-1.289-1.292-1.295-1.298-1.302-1.305-1.309-1.314-1.319-1.324-1.328-1.332-1.337-1.341-1.345-1.349-1.353-1.358-1.363-1.368-1.372-1.377-1.383-1.389-1.393-1.397-1.402-1.408-1.413-1.418-1.422-1.428-1.433-1.438-1.443-1.449-1.453-1.458-1.464-1.469-1.474-1.48-1.486-1.492-1.497-1.502-1.508-1.514-1.519-1.524-1.53-1.536-1.542-1.548-1.553-1.559-1.565-1.571-1.577-1.583-1.589-1.594-1.599-1.604-1.609-1.614-1.62-1.626-1.632-1.638-1.644-1.649-1.654-1.66-1.666-1.671-1.677-1.683-1.689-1.694-1.7-1.706-1.712-1.718-1.724-1.73-1.736-1.742-1.748-1.754-1.76-1.767-1.773-1.779-1.785-1.791-1.796-1.802-1.808-1.814-1.82-1.826-1.832-1.838-1.844-1.85-1.856-1.862-1.869-1.875-1.881-1.887-1.893-1.899-1.904-1.91-1.916-1.922-1.928-1.934-1.939-1.945-1.951-1.957-1.962-1.968-1.974-1.98-1.986-1.991-1.996-1.999v12.066h-.019c0 0 .078.016.164.067.097.147.146.196.237.245.266.328.368.401.429.449.446.508.537.54.55.556.556.556.537.449.429.446.444.386.328.27.208-.193.168-.193-.168-.188-.169-.169-.168-.169-.168-.169-.169-.168-.17-.173-.18-.188-.193-.2-.211-.221-.24-.254-.269-.283-.299-.315-.336-.346-.353-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-. share to Twitter</a>
+            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328 1.078-2.352 2.352-3.632v-3.585c0-1.283-1.045-2.352-2.352-3.602v-3.585c0-.929-.631-1.599-1.599-2.552v-3.585c0-.791-.53-1.376-1.376-2.24v-3.585c0-.824-.485-1.42-1.42-2.23v-3.585c0-.832-.486-1.419-1.419-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.936-.602-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.835-.497-1.416-1.416-2.23v-3.585c0-.797-.514-1.427-1.427-2.215v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.833-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.269-1.025-2.352-2.352-3.577v-3.585c0-.937-.607-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.938-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.577v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.553-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585 partial.517h.353c0 0 .466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466. 1.405c0 0 .311 0 .324.327.32.362.339.367.374.378.384.389.397.413.425.445.462.49.512.56.605.649.692.735.777.818.857.896.934.967.997 1.027 1.057 1.087 1.116 1.144 1.171 1.197 1.221 1.245 1.268 1.29 1.311 1.331 1.35 1.369 1.387 1.404 1.42 1.435 1.45 1.464 1.477 1.49 1.503 1.515 1.526 1.537 1.547 1.556 1.566 1.574 1.582 1.589 1.596 1.602 1.608 1.614 1.62 1.625 1.631 1.636 1.641 1.646 1.65 1.654 1.659 1.663 1.667 1.671 1.674 1.677 1.679 1.682 1.685 1.688 1.69 1.693 1.696 1.699 1.702 1.704 1.707 1.71 1.713 1.718 1.722 1.727 1.731 1.735 1.739 1.742 1.746 1.75 1.753 1.756 1.759 1.762 1.765 1.768 1.771 1.774 1.777 1.78 1.783 1.786 1.789 1.792 1.795 1.798 1.801 1.804 1.806 1.809 1.811 1.814 1.817 1.819 1.822 1.825 1.828 1.83 1.833 1.836 1.839 1.842 1.845 1.848 1.851 1.853 1.856 1.859 1.862 1.865 1.868 1.87 1.873 1.876 1.879 1.882 1.885 1.888 1.891 1.894 1.897 1.9 1.903 1.905 1.908 1.91 1.913 1.916 1.919 1.922 1.925 1.928 1.931 1.934 1.937 1.94 1.942 1.945 1.948 1.951 1.954 1.957 1.96 1.963 1.966 1.969 1.972 1.975 1.978 1.981 1.984 1.987 1.99 1.992 1.995 1.998v12.066h-5.575c0 0 .057.037.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057./X share to Twitter</a>
+            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-14c0-1.103-.897-2-2-2zm-11.959 6h-2.059c-.535 0-.969-.432-.969-.962v-4.162c0-.691.288-1.236-.846-1.741-.193-1.051-.095-1.393.095-1.72.193-2.083.193-.916 0-1.56.432-2.058.962-.962v-1.766c0-.261.106-.519.106-.773v-4.236c0-.392-.198-.776-.198-1.152v-4.236c0-.231-.116-.463-.116-.693v-4.236c0-.259-.129-.517-.129-.773v-4.236c0-.261-.131-.52-.131-.771v-4.236c0-.13-.065-.518-.065-.765v-4.236c0-.065-.033-.515-.033-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.26-.13-.519-.13-.765v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.26-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.13-.065-.514-.064-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.235.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-. a. share to LinkedIn</a>
+            <a class="share-btn facebook" href="#" onclick="shareToFacebook()" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c3.23 0 6.09-1.57 8.09-4.39.09-4.39-1.57-8.09-4.39-8.09-4.39-1.57-8.09V8.72c0-2.13-1.52-3.96-3.82-1.29-.59-.29-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1., WhatsApp</a>
+            <button class="share-btn copy" onclick="copyPageUrl()" aria-label="Copiar enlace">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15h4a2 2 0 012 2v0a2 2 0 01-2 2H9a2 2 0 01-2-2v6a2 2 0 012 2h6a2 2 0 012-2v-6a2 2 0 01-2-2h-4"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="share-embed-section" id="shareEmbedSection">
+            <p class="embed-label">Código para insertar en tu sitio:</p>
+            <textarea id="embedCode" class="embed-code" readonly></textarea>
+            <div class="embed-actions">
+                <button class="copy-embed-btn" onclick="copyEmbedCode()">
+                    <span id="copyBtnText">Copiar código</span>
+                    <span class="embed-copied" id="embedCopied">✓ Copiado!</span>
+                </button>
+            </div>
+            <p class="embed-link-cta">
+                Más herramientas: <a href="/herramientas/embeds/" target="_blank">Ver todas las herramientas embebibles</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let currentToolUrl = window.location.href;
+        let currentToolTitle = document.title;
+
+        function shareToTwitter() {
+            const text = encodeURIComponent(`${currentToolTitle} - Herramienta gratuita de Botánica Andina`);
+            const url = encodeURIComponent(currentToolUrl);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function shareToLinkedIn() {
+            const url = encodeURIComponent(currentToolUrl);
+            const title = encodeURIComponent(currentToolTitle);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&mini=true`, '_blank', 'noopener,noreferrer');
+        }
+
+        function shareToFacebook() {
+            const url = encodeURIComponent(currentToolUrl);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function copyPageUrl() {
+            navigator.clipboard.writeText(currentToolUrl).then(() => {
+                showToast('Enlace copiado al portapapeles');
+            });
+        }
+
+        function toggleEmbed() {
+            const section = document.getElementById('shareEmbedSection');
+            const toggleText = document.getElementById('toggleText');
+            section.classList.toggle('active');
+            if (section.classList.contains('active')) {
+                toggleText.textContent = '✕ Cerrar';
+                updateEmbedCode();
+            } else {
+                toggleText.textContent = '📦 Insertar en tu sitio';
+            }
+        }
+
+        function updateEmbedCode() {
+            const toolPath = window.location.pathname;
+            const iframeSrc = `https://botanicaandina.com${toolPath}`;
+            const embedCode = `<iframe src="${iframeSrc}"\n    width="100%"\n    height="700"\n    frameborder="0"\n    style="border:1px solid #e2e8f0;border-radius:8px;"\n    title="${currentToolTitle}"\n    loading="lazy">\n</iframe>\n<p style="font-size:12px;color:#666;margin-top:4px;">\n    Herramienta gratuita de <a href="https://botanicaandina.com" target="_blank" rel="noopener">Botánica Andina</a>\n</p>`;
+            document.getElementById('embedCode').value = embedCode;
+        }
+
+        function copyEmbedCode() {
+            const code = document.getElementById('embedCode').value;
+            navigator.clipboard.writeText(code).then(() => {
+                const copyBtnText = document.getElementById('copyBtnText');
+                const copyCopied = document.getElementById('embedCopied');
+                copyBtnText.style.display = 'none';
+                copyCopied.classList.add('active');
+                setTimeout(() => {
+                    copyBtnText.style.display = 'inline';
+                    copyCopied.classList.remove('active');
+                }, 2000);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#374151;color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;animation:fadeIn 0.3s;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Auto-detect and set embed code
+        updateEmbedCode();
+    </script>
+</body>
+</html>

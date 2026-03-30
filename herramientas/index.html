@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina</title>
+    <meta name="description" content="Herramientas gratuitas de salud: verificador de interacciones plantas-medicamentos, buscador de plantas medicinales andinas, y quiz personalizado. Basadas en evidencia cient&iacute;fica.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://botanicaandina.com/herramientas/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina">
+    <meta property="og:description" content="Verificador de interacciones, buscador de plantas y quiz personalizado. Herramientas gratuitas basadas en ciencia.">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-hub.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_LA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina">
+    <meta name="twitter:description" content="Verificador de interacciones, buscador de plantas y quiz personalizado. Gratuitas y basadas en ciencia.">
+    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-hub.jpg">
+    <link rel="icon" href="/favicon.ico">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Herramientas Gratuitas de Salud",
+        "url": "https://botanicaandina.com/herramientas/",
+        "description": "Colección de herramientas interactivas gratuitas para salud y plantas medicinales, basadas en evidencia científica.",
+        "author": { "@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com" },
+        "hasPart": [
+            {
+                "@type": "WebApplication",
+                "name": "Verificador de Interacciones Plantas-Medicamentos",
+                "url": "https://botanicaandina.com/herramientas/interacciones/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Buscador de Plantas Medicinales Andinas",
+                "url": "https://botanicaandina.com/herramientas/buscador/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Quiz: ¿Qué Planta Andina Necesitas?",
+                "url": "https://botanicaandina.com/herramientas/quiz/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Verificador de Suplementos",
+                "url": "https://botanicaandina.com/herramientas/verificador/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Reloj de Cafeína",
+                "url": "https://botanicaandina.com/herramientas/cafeina/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Stack Checker — Verificador de Compatibilidad de Suplementos",
+                "url": "https://botanicaandina.com/herramientas/stack-checker/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "¿Es Seguro? — Hierbas en Embarazo y Lactancia",
+                "url": "https://botanicaandina.com/herramientas/embarazo/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "¿Puede Matarme? — Calculadora de Dosis Letal",
+                "url": "https://botanicaandina.com/herramientas/dosis-letal/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Supplement Safety Score — Puntuación de Seguridad",
+                "url": "https://botanicaandina.com/herramientas/seguridad/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            },
+            {
+                "@type": "WebApplication",
+                "name": "Matriz de Interacciones Hierba–Medicamento",
+                "url": "https://botanicaandina.com/herramientas/matriz/",
+                "applicationCategory": "HealthApplication",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Herramientas"}
+        ]
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
+        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
+        .nav-links a:hover { color: #fff; }
+        @media (max-width: 700px) {
+            .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        }
+
+        .page-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+        .page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .page-header p { font-family: Arial, sans-serif; font-size: 1rem; opacity: 0.85; max-width: 650px; margin: 0 auto; }
+
+        .stats-bar { display: flex; gap: 2rem; justify-content: center; margin: -1.5rem auto 2rem; flex-wrap: wrap; position: relative; z-index: 10; background: #fff; max-width: 600px; border-radius: 12px; padding: 1.2rem 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 1.8rem; font-weight: bold; color: #1a5632; display: block; }
+        .stat-label { font-family: Arial, sans-serif; font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+        .tools-grid { max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+
+        .tool-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
+        .tool-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+
+        .tool-card-inner { display: flex; align-items: stretch; }
+        .tool-icon-area { flex-shrink: 0; width: 140px; display: flex; align-items: center; justify-content: center; }
+        .tool-icon-area img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 0 0 12px; }
+        .tool-icon-area.green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+        .tool-icon-area.blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+        .tool-icon-area.amber { background: linear-gradient(135deg, #fff8e1, #ffe082); }
+        .tool-content { padding: 1.5rem 1.8rem; flex: 1; }
+        .tool-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 10px; font-family: Arial, sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+        .tool-badge.popular { background: #e8f5e9; color: #2e7d32; }
+        .tool-badge.new { background: #fff3e0; color: #e65100; }
+        .tool-content h2 { font-size: 1.2rem; margin-bottom: 0.4rem; color: #1a5632; }
+        .tool-content p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
+        .tool-features { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tool-features li { font-family: Arial, sans-serif; font-size: 0.78rem; color: #1a5632; background: #f1f8f3; padding: 0.2rem 0.6rem; border-radius: 10px; }
+        .tool-cta { display: inline-block; margin-top: 0.8rem; font-family: Arial, sans-serif; font-size: 0.85rem; color: #1a5632; font-weight: bold; }
+
+        .embed-btn { display: inline-block; margin-top: 0.5rem; padding: 0.4rem 0.8rem; background: #f1f8f3; color: #1a5632; font-family: Arial, sans-serif; font-size: 0.78rem; border-radius: 8px; text-decoration: none; border: 1px solid #c6e2b5; }
+        .embed-btn:hover { background: #e8f5e9; border-color: #2e7d32; }
+
+        .embed-callout { max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+        .embed-callout-inner { background: #f5f5f5; border-radius: 12px; padding: 2rem; text-align: center; }
+        .embed-callout-inner h2 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #333; }
+        .embed-callout-inner p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #666; max-width: 600px; margin: 0 auto 1rem; }
+        .embed-callout-inner a { color: #1a5632; font-weight: bold; text-decoration: none; }
+        .embed-callout-inner a:hover { text-decoration: underline; }
+
+        .cta-banner { background: linear-gradient(135deg, #1a5632 0%, #2d7a4e 100%); padding: 3rem 1.5rem; margin: 2rem 0; }
+        .cta-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .cta-banner h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.8rem; color: #fff; margin-bottom: 1rem; }
+        .cta-banner p { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
+        .cta-button { display: inline-block; background: #fff; color: #1a5632; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+        footer { background: #1a5632; color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+        @media (max-width: 700px) {
+            .page-header h1 { font-size: 1.5rem; }
+            .tool-card-inner { flex-direction: column; }
+            .tool-icon-area { width: 100%; height: 100px; }
+            .stats-bar { gap: 1.2rem; padding: 1rem; }
+        }
+    </style>
+    <link rel="preload" as="image" href="/assets/img/tools/thumb-interacciones.svg">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+            <div class="nav-links">
+                <a href="/noticias/">Noticias</a>
+                <a href="/herramientas/" style="color:#fff;font-weight:bold">Herramientas</a>
+                <a href="/herramientas/interacciones/">Interacciones</a>
+                <a href="/sobre-nosotros/">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Herramientas Gratuitas de Salud</h1>
+        <p>Herramientas interactivas basadas en evidencia cient&iacute;fica para tomar mejores decisiones sobre plantas medicinales y suplementos.</p>
+    </header>
+
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number">15</span>
+            <span class="stat-label">Herramientas</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">250+</span>
+            <span class="stat-label">Plantas</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">592</span>
+            <span class="stat-label">Interacciones</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Gratuito</span>
+        </div>
+    </div>
+
+    <div class="cta-banner">
+        <div class="cta-content">
+            <h2>¿Tienes un sitio web? Integra nuestras herramientas gratis</h2>
+            <p>Todas nuestras herramientas son embebibles y gratuitas. Copia el código iframe y añádelas a tu sitio en segundos.</p>
+            <a href="/herramientas/embeds/" class="cta-button">Ver códigos embed (14 herramientas)</a>
+        </div>
+    </div>
+
+    <div class="tools-grid">
+        <a href="/herramientas/interacciones/" class="tool-card">
+            <div class="tool-card-inner">
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-interacciones.svg" alt="Verificador de interacciones plantas-medicamentos" width="140" height="140" loading="eager" fetchpriority="high"></div>
+                <div class="tool-content">
+                    <span class="tool-badge popular">M&aacute;s usada</span>
+                    <h2>Verificador de Interacciones Plantas &ndash; Medicamentos</h2>
+                    <p>&iquest;Tomas alg&uacute;n medicamento y quieres saber si tu planta medicinal puede interactuar? Verifica aqu&iacute; con datos de monograf&iacute;as oficiales (EMA, ESCOP) y estudios de PubMed.</p>
+                    <ul class="tool-features">
+                        <li>100 plantas</li>
+                        <li>30 clases de f&aacute;rmacos</li>
+                        <li>302 interacciones</li>
+                        <li>Niveles de severidad</li>
+                        <li>Embeddable</li>
+                    </ul>
+                    <span class="tool-cta">Verificar interacciones &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="/herramientas/buscador/" class="tool-card">
+            <div class="tool-card-inner">
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-buscador.svg" alt="Buscador de plantas medicinales andinas" width="140" height="140" loading="lazy" decoding="async"></div>
+                <div class="tool-content">
+                    <span class="tool-badge popular">Esencial</span>
+                    <h2>Buscador de Plantas Medicinales Andinas</h2>
+                    <p>Encuentra la planta medicinal adecuada seg&uacute;n tus s&iacute;ntomas o necesidades de salud. Filtra por regi&oacute;n, tipo de evidencia y condici&oacute;n m&eacute;dica.</p>
+                    <ul class="tool-features">
+                        <li>22 plantas</li>
+                        <li>B&uacute;squeda por s&iacute;ntomas</li>
+                        <li>Filtro por evidencia</li>
+                        <li>Enlaces a estudios</li>
+                    </ul>
+                    <span class="tool-cta">Buscar plantas &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="/herramientas/quiz/" class="tool-card">
+            <div class="tool-card-inner">
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-quiz.svg" alt="Quiz de plantas andinas personalizado" width="140" height="140" loading="lazy" decoding="async"></div>
+                <div class="tool-content">
+                    <span class="tool-badge new">Nuevo</span>
+                    <h2>&iquest;Qu&eacute; Planta Andina Necesitas? &mdash; Quiz Personalizado</h2>
+                    <p>Responde 7 preguntas r&aacute;pidas sobre tu salud, estilo de vida y preferencias. Recibe una recomendaci&oacute;n personalizada con las plantas que mejor se adaptan a tu perfil.</p>
+                    <ul class="tool-features">
+                        <li>7 preguntas</li>
+                        <li>12 plantas evaluadas</li>
+                        <li>Detecta interacciones</li>
+                        <li>Compartible</li>
+                        <li>Embeddable</li>
+                    </ul>
+                    <span class="tool-cta">Hacer el quiz &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+        <a href="/herramientas/verificador/" class="tool-card">
+            <div class="tool-card-inner">
+                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-verificador.svg" alt="Verificador de suplementos con evidencia" width="140" height="140" loading="lazy" decoding="async"></div>
+                <div class="tool-content">
+                    <span class="tool-badge new">Nuevo</span>
+                    <h2>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica</h2>
+                    <p>&iquest;Tu suplemento tiene evidencia real? Consulta calificaciones de eficacia (A&ndash;F), seguridad, interacciones y dosis para 55 suplementos populares. La primera base de datos independiente en espa&ntilde;ol.</p>
+                    <ul class="tool-features">
+                        <li>55 suplementos</li>
+                        <li>Calificaci&oacute;n A&ndash;F</li>
+                        <li>Interacciones</li>
+                        <li>Dosis</li>
+                        <li>Embeddable</li>
+                    </ul>
+                    <span class="tool-cta">Verificar suplemento &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="tools-grid">
+        <a href="/herramientas/stack-checker/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-stack-checker.svg" alt="Stack Checker suplementos" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                    <div class="tool-badges">
+                        <span class="badge badge-new">Nuevo</span>
+                    </div>
+                </div>
+                <div class="tool-body">
+                    <h2>Stack Checker &mdash; &iquest;Tus suplementos son compatibles?</h2>
+                    <p>Verifica interacciones entre suplementos, competencia por absorci&oacute;n y horarios &oacute;ptimos de toma. 78 suplementos, 102 interacciones documentadas.</p>
+                    <ul class="tool-features">
+                        <li>78 suplementos</li>
+                        <li>102 interacciones</li>
+                        <li>Horario de toma</li>
+                        <li>Embed gratis</li>
+                    </ul>
+                    <span class="tool-cta">Verificar stack &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+        <a href="/herramientas/embarazo/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-embarazo.svg" alt="Hierbas seguras en embarazo" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                    <div class="tool-badges">
+                        <span class="badge badge-new">Nuevo</span>
+                    </div>
+                </div>
+                <div class="tool-body">
+                    <h2>&iquest;Es Seguro? &mdash; Hierbas en Embarazo y Lactancia</h2>
+                    <p>Verifica si una hierba o suplemento es seguro durante el embarazo o la lactancia. 37 hierbas incluyendo 11 plantas andinas no disponibles en otras bases de datos.</p>
+                    <ul class="tool-features">
+                        <li>37 hierbas evaluadas</li>
+                        <li>11 plantas andinas</li>
+                        <li>Modo embarazo y lactancia</li>
+                        <li>Fuentes cient&iacute;ficas</li>
+                    </ul>
+                    <span class="tool-cta">Verificar hierba &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+        <a href="/herramientas/dosis-letal/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-dosis-letal.svg" alt="Calculadora dosis letal" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                    <div class="tool-badges">
+                        <span class="badge badge-new">Nuevo</span>
+                    </div>
+                </div>
+                <div class="tool-body">
+                    <h2>&iquest;Puede Matarme? &mdash; Calculadora de Dosis Letal</h2>
+                    <p>Calcula cu&aacute;nto de una sustancia com&uacute;n necesitar&iacute;as para alcanzar la dosis letal (LD50). Perspectiva cient&iacute;fica sobre toxicolog&iacute;a cotidiana.</p>
+                    <ul class="tool-features">
+                        <li>25+ sustancias comunes</li>
+                        <li>Datos LD50 reales</li>
+                        <li>Ajuste por peso corporal</li>
+                        <li>Contexto visual</li>
+                    </ul>
+                    <span class="tool-cta">Calcular dosis &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+        <a href="/herramientas/cafeina/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-cafeina.svg" alt="Reloj de cafe&iacute;na" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                </div>
+                <div class="tool-body">
+                    <h2>Reloj de Cafe&iacute;na &mdash; &iquest;Cu&aacute;nta cafe&iacute;na tienes ahora?</h2>
+                    <p>Calcula cu&aacute;nta cafe&iacute;na queda en tu cuerpo. Visualizaci&oacute;n en tiempo real del metabolismo con info sobre plantas que afectan la cafe&iacute;na.</p>
+                    <ul class="tool-features">
+                        <li>14 bebidas comunes</li>
+                        <li>Gr&aacute;fico en tiempo real</li>
+                        <li>Hora segura para dormir</li>
+                        <li>Info de hierbas</li>
+                    </ul>
+                    <span class="tool-cta">Calcular ahora &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+        <a href="/herramientas/botiquin/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-botiquin.svg" alt="Botiqu&iacute;n natural de hierbas" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                </div>
+                <div class="tool-body">
+                    <h2>Botiqu&iacute;n Natural &mdash; Tu kit de hierbas esenciales</h2>
+                    <p>Arma tu botiqu&iacute;n de hierbas medicinales seg&uacute;n tus necesidades. Recomendaciones personalizadas basadas en evidencia cient&iacute;fica.</p>
+                    <ul class="tool-features">
+                        <li>Personalizado</li>
+                        <li>Basado en evidencia</li>
+                        <li>Plantas andinas</li>
+                    </ul>
+                    <span class="tool-cta">Armar botiqu&iacute;n &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+        <a href="/herramientas/comparador/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-comparador.svg" alt="Comparador de suplementos" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                </div>
+                <div class="tool-body">
+                    <h2>Comparador de Suplementos</h2>
+                    <p>Compara suplementos lado a lado: ingredientes, evidencia cient&iacute;fica, precios y beneficios. Decide con datos.</p>
+                    <ul class="tool-features">
+                        <li>Comparaci&oacute;n detallada</li>
+                        <li>Evidencia cient&iacute;fica</li>
+                        <li>Precios actualizados</li>
+                    </ul>
+                    <span class="tool-cta">Comparar ahora &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+        <a href="/herramientas/mate/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-mate.svg" alt="Calculadora de yerba mate" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                </div>
+                <div class="tool-body">
+                    <h2>Calculadora de Yerba Mate</h2>
+                    <p>Calcula la cafe&iacute;na por tipo de mate, marca y preparaci&oacute;n. Basado en datos de 47 estudios cient&iacute;ficos.</p>
+                    <ul class="tool-features">
+                        <li>47 estudios analizados</li>
+                        <li>Por marca y tipo</li>
+                        <li>Comparaci&oacute;n con caf&eacute;</li>
+                    </ul>
+                    <span class="tool-cta">Calcular mate &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+
+        <a href="/herramientas/calc-vitamina-d.html" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <svg width="60" height="60" viewBox="0 0 60 60" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff">
+                        <path d="M30 15c-3 0 15h20c0-9-2c8 0 9s-10.5c9 2c8 0 9h-9" fill="currentColor" stroke-width="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="42" cy="30" r="3" fill="#f59e0b"/>
+                        <text x="42" y="35" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Vit D</text>
+                    </svg>
+                    <div class="tool-badges">
+                        <span class="badge badge-new">Nuevo</span>
+                    </div>
+                </div>
+                <div class="tool-body">
+                    <h2>Calculadora de Vitamina D &mdash; Solar</h2>
+                    <p>Calcula tu necesidad diaria de vitamina D seg&uacute;n tu edad, tipo de piel y ubicaci&oacute;n en LATAM. Basado en Institute of Medicine 2011 + datos de UVB por ciudad.</p>
+                    <ul class="tool-features">
+                        <li>Por grupo de edad</li>
+                        <li>Por tipo de piel (5 tipos)</li>
+                        <li>10 ciudades LATAM</li>
+                        <li>UVB real por ubicaci&oacute;n</li>
+                        <li>Dosis recomendada (400-2000 UI)</li>
+                        <li>Visual: s&iacute;ntesis solar vs necesidad</li>
+                    </ul>
+                    <span class="tool-cta">Calcular ahora &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </a>
+        </a>
+        <a href="/herramientas/seguridad/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <img src="/assets/img/tools/thumb-seguridad.svg" alt="Supplement Safety Score" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
+                    <div class="tool-badges">
+                        <span class="badge badge-new">Nuevo</span>
+                    </div>
+                </div>
+                <div class="tool-body">
+                    <h2>Supplement Safety Score &mdash; Puntuaci&oacute;n de Seguridad</h2>
+                    <p>Ingresa 2&ndash;5 suplementos y obt&eacute;n una puntuaci&oacute;n de seguridad (0&ndash;100) con detalles de interacciones, tarjeta compartible y c&oacute;digo para insertar en tu sitio.</p>
+                    <ul class="tool-features">
+                        <li>50 suplementos</li>
+                        <li>52 interacciones</li>
+                        <li>Puntuaci&oacute;n 0&ndash;100</li>
+                        <li>Tarjeta compartible</li>
+                        <li>Embeddable</li>
+                    </ul>
+                    <span class="tool-cta">Calcular seguridad &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+        <a href="/herramientas/matriz/" class="tool-card">
+            <div class="tool-card-content">
+                <div class="tool-header">
+                    <div style="width:60px;height:60px;background:linear-gradient(135deg,#1a237e,#3949ab);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">M</div>
+                    <div class="tool-badges">
+                        <span class="badge badge-new">Nuevo</span>
+                    </div>
+                </div>
+                <div class="tool-body">
+                    <h2>Matriz de Interacciones Hierba&ndash;Medicamento</h2>
+                    <p>Explora visualmente 592 interacciones entre 204 hierbas medicinales y 53 clases de medicamentos. Filtra por hierba, medicamento o severidad.</p>
+                    <ul class="tool-features">
+                        <li>204 hierbas</li>
+                        <li>53 clases de medicamentos</li>
+                        <li>592 interacciones</li>
+                        <li>Filtros interactivos</li>
+                        <li>Embeddable</li>
+                    </ul>
+                    <span class="tool-cta">Explorar matriz &rarr;</span>
+                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="embed-callout">
+        <div class="embed-callout-inner">
+            <h2>Integra nuestras herramientas en tu sitio web</h2>
+            <p>Todas nuestras herramientas se pueden integrar gratis con un simple c&oacute;digo iframe. Ideal para blogs de salud, farmacias, cl&iacute;nicas y herbolarios.</p>
+            <p>Cada herramienta incluye el c&oacute;digo de integraci&oacute;n en su p&aacute;gina. <a href="/herramientas/interacciones/">Ver ejemplo &rarr;</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <a href="/">Bot&aacute;nica Andina</a> &mdash; Informaci&oacute;n basada en evidencia cient&iacute;fica</p>
+        <p style="margin-top:0.3rem"><a href="/politica-editorial/">Pol&iacute;tica Editorial</a> &middot; <a href="/sobre-nosotros/">Sobre Nosotros</a></p>
+    </footer>
+</body>
+</html>

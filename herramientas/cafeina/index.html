@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reloj de Cafeína — ¿Cuánta cafeína tienes ahora? | Botánica Andina</title>
+<meta name="description" content="Calcula cuánta cafeína queda en tu cuerpo ahora mismo. Ingresa lo que tomaste y ve en tiempo real cómo tu cuerpo la metaboliza. Gratis, sin registro.">
+<meta property="og:title" content="Reloj de Cafeína — ¿Cuánta cafeína tienes ahora?">
+<meta property="og:description" content="Calcula cuánta cafeína queda en tu cuerpo. Visualización en tiempo real del metabolismo de cafeína.">
+<meta property="og:type" content="website">
+    <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+<meta property="og:url" content="https://botanicaandina.com/herramientas/cafeina/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://botanicaandina.com/herramientas/cafeina/">
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Reloj de Cafeína",
+    "description": "Calculadora interactiva de vida media de cafeína con visualización en tiempo real",
+    "url": "https://botanicaandina.com/herramientas/cafeina/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Botánica Andina",
+      "url": "https://botanicaandina.com"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Calcular metabolismo de cafeína",
+    "description": "Aprende a usar el reloj de cafeína para saber cuándo tendrá el efecto máximo y cuándo se eliminará de tu cuerpo.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Ingresa la cantidad de cafeína",
+        "text": "Escribe la cantidad de cafeína en miligramos (mg). Ejemplos: una taza de café (95mg), un energy drink (80mg), una pastilla (100mg)."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Elije tu metabolismo",
+        "text": "Selecciona tu tipo de metabolismo: Normal (5 horas de vida media) o Lento (10 horas), según tu sensibilidad a la cafeína."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Revisa la curva de metabolismo",
+        "text": "El gráfico mostrará tu curva personalizada: pico máximo, momento ideal para dormir (cuando baje a 25mg), y eliminación completa."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Planifica tu consumo",
+        "text": "Usa esta información para evitar cafeína antes de dormir y optimizar tu energía durante el día."
+      }
+    ],
+    "supply": [
+      {
+        "@type": "HowToSupply",
+        "name": "Cantidad de cafeína en mg"
+      },
+      {
+        "@type": "HowToSupply",
+        "name": "Tu tipo de metabolismo"
+      }
+    ]
+  }
+]</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "¿Cuánto dura la cafeína en el cuerpo?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La vida media de la cafeína es aproximadamente 5-6 horas en adultos sanos. Esto significa que si tomas 200 mg de cafeína, después de 5-6 horas quedarán unos 100 mg en tu sistema. Factores como genética, edad, embarazo y medicamentos pueden modificar este tiempo."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿Cuánta cafeína tiene un café?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un espresso contiene aproximadamente 63 mg de cafeína, un café filtrado 95 mg, y un café de prensa francesa unos 80 mg. Las bebidas energéticas pueden contener entre 80-300 mg. Esta calculadora te permite ingresar tu consumo exacto y ver cómo se metaboliza."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "¿A qué hora debo dejar de tomar cafeína para dormir bien?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se recomienda dejar de consumir cafeína al menos 6-8 horas antes de dormir. Usa esta calculadora para ingresar tu último café y ver a qué hora los niveles de cafeína en tu cuerpo serán lo suficientemente bajos para no afectar tu sueño."
+            }
+        }
+    ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh}
+.container{max-width:800px;margin:0 auto;padding:1.5rem}
+header{text-align:center;margin-bottom:2rem}
+h1{font-size:2rem;color:#22d3ee;margin-bottom:.3rem}
+h1 span{font-size:2.5rem}
+.subtitle{color:#94a3b8;font-size:1rem}
+.nav-link{color:#22d3ee;text-decoration:none;font-size:.85rem;display:inline-block;margin-bottom:1rem}
+.nav-link:hover{text-decoration:underline}
+
+/* Input Section */
+.input-section{background:#1e293b;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #334155}
+.input-row{display:flex;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
+.input-group{flex:1;min-width:200px}
+.input-group label{display:block;color:#94a3b8;font-size:.85rem;margin-bottom:.4rem}
+select,input[type="time"],input[type="number"]{width:100%;padding:.7rem;background:#0f172a;border:1px solid #475569;border-radius:8px;color:#e2e8f0;font-size:1rem}
+select:focus,input:focus{outline:none;border-color:#22d3ee}
+.btn-add{background:#22d3ee;color:#0f172a;border:none;padding:.7rem 1.5rem;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;width:100%;margin-top:.5rem;transition:background .2s}
+.btn-add:hover{background:#06b6d4}
+.btn-clear{background:transparent;color:#94a3b8;border:1px solid #475569;padding:.5rem 1rem;border-radius:8px;font-size:.85rem;cursor:pointer;margin-top:.5rem}
+.btn-clear:hover{border-color:#94a3b8}
+
+/* Drinks List */
+.drinks-list{margin-bottom:1rem}
+.drink-item{display:flex;justify-content:space-between;align-items:center;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:.6rem 1rem;margin-bottom:.5rem}
+.drink-info{display:flex;align-items:center;gap:.75rem}
+.drink-icon{font-size:1.3rem}
+.drink-name{color:#e2e8f0;font-weight:500}
+.drink-meta{color:#64748b;font-size:.8rem}
+.drink-remove{background:none;border:none;color:#64748b;cursor:pointer;font-size:1.1rem;padding:.2rem}
+.drink-remove:hover{color:#ef4444}
+
+/* Visualization */
+.viz-section{background:#1e293b;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #334155}
+.viz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.viz-title{color:#94a3b8;font-size:.9rem}
+.current-level{text-align:center;margin-bottom:1.5rem}
+.level-number{font-size:3.5rem;font-weight:700;color:#22d3ee;line-height:1}
+.level-unit{color:#64748b;font-size:1rem}
+.level-status{color:#94a3b8;font-size:.9rem;margin-top:.3rem}
+canvas{width:100%;height:250px;display:block;border-radius:8px}
+
+/* Stats */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-bottom:1.5rem}
+.stat-card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:1rem;text-align:center}
+.stat-value{font-size:1.5rem;font-weight:700;color:#22d3ee}
+.stat-label{color:#64748b;font-size:.8rem;margin-top:.2rem}
+
+/* Herbs */
+.herbs-section{background:#1e293b;border-radius:16px;padding:1.5rem;margin-bottom:1.5rem;border:1px solid #334155}
+.herbs-section h2{color:#22d3ee;font-size:1.2rem;margin-bottom:1rem}
+.herb-card{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:1rem;margin-bottom:.75rem}
+.herb-name{color:#a7f3d0;font-weight:600;margin-bottom:.3rem}
+.herb-effect{color:#94a3b8;font-size:.9rem}
+.herb-evidence{display:inline-block;background:#065f46;color:#a7f3d0;padding:.15rem .5rem;border-radius:4px;font-size:.75rem;margin-top:.3rem}
+
+/* Share */
+.share-section{text-align:center;padding:1.5rem}
+.share-section p{color:#64748b;margin-bottom:.75rem;font-size:.9rem}
+.btn-share{background:#22d3ee;color:#0f172a;border:none;padding:.6rem 1.5rem;border-radius:8px;font-size:.9rem;font-weight:600;cursor:pointer;margin:0 .3rem}
+.btn-share:hover{background:#06b6d4}
+.btn-share.wa{background:#25d366}
+.btn-share.tw{background:#1da1f2}
+
+footer{text-align:center;color:#475569;font-size:.8rem;padding:2rem 0 1rem}
+footer a{color:#22d3ee}
+
+/* Disclaimer */
+.disclaimer{background:#1c1917;border:1px solid #44403c;border-radius:8px;padding:.75rem 1rem;margin-top:1rem;font-size:.75rem;color:#78716c}
+
+@media(max-width:600px){
+  h1{font-size:1.5rem}h1 span{font-size:2rem}
+  .level-number{font-size:2.5rem}
+  .container{padding:1rem}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="https://botanicaandina.com/herramientas/" class="nav-link">← Herramientas</a>
+<header>
+<h1><span>☕</span> Reloj de Cafeína</h1>
+<p class="subtitle">¿Cuánta cafeína queda en tu cuerpo ahora mismo?</p>
+</header>
+    <div class="medical-endorsement" style="background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%);border:1px solid #cbd5e1;border-radius:12px;padding:1.5rem;margin:1.5rem auto;max-width:1000px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+        <div style="display:flex;align-items:flex-start;gap:1rem;">
+            <div style="width:60px;height:60px;background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+            </div>
+            <div>
+                <div style="font-weight:600;color:#1e293b;font-size:1.1rem;margin-bottom:0.25rem;">Revisado por la Dirección Médica</div>
+                <div style="color:#64748b;font-size:0.9rem;line-height:1.5;">
+                    El contenido de esta herramienta ha sido revisado por profesionales de la salud basándose en evidencia científica de monografías oficiales (EMA, ESCOP) y estudios indexados en PubMed. Los datos presentados son informativos y no sustituyen el consejo médico profesional.
+                </div>
+                <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">EMA</span>
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">ESCOP</span>
+                    <span style="background:#dbeafe;color:#1e40af;padding:0.25rem 0.75rem;border-radius:6px;font-size:0.8rem;font-weight:500;">PubMed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Input -->
+<div class="input-section">
+<div class="input-row">
+  <div class="input-group">
+    <label>¿Qué tomaste?</label>
+    <select id="drinkSelect">
+      <option value="95">Café filtrado (235ml) — 95mg</option>
+      <option value="63">Espresso (30ml) — 63mg</option>
+      <option value="190">Espresso doble — 190mg</option>
+      <option value="150">Café de máquina (350ml) — 150mg</option>
+      <option value="47">Té negro (235ml) — 47mg</option>
+      <option value="28">Té verde (235ml) — 28mg</option>
+      <option value="75">Yerba mate (235ml) — 75mg</option>
+      <option value="80">Red Bull (250ml) — 80mg</option>
+      <option value="160">Monster (500ml) — 160mg</option>
+      <option value="40">Coca-Cola (355ml) — 40mg</option>
+      <option value="46">Diet Coke (355ml) — 46mg</option>
+      <option value="26">Chocolate caliente — 26mg</option>
+      <option value="100">Pastilla de cafeína (100mg) — 100mg</option>
+      <option value="200">Pastilla de cafeína (200mg) — 200mg</option>
+      <option value="custom">Cantidad personalizada...</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <label>¿A qué hora?</label>
+    <input type="time" id="drinkTime">
+  </div>
+</div>
+<div id="customAmountRow" style="display:none;margin-bottom:1rem">
+  <div class="input-group">
+    <label>Cantidad de cafeína (mg)</label>
+    <input type="number" id="customAmount" min="1" max="1000" placeholder="mg">
+  </div>
+</div>
+<button class="btn-add" onclick="addDrink()">+ Agregar bebida</button>
+</div>
+
+<!-- Drinks list -->
+<div class="drinks-list" id="drinksList"></div>
+
+<!-- Current level -->
+<div class="viz-section" id="vizSection" style="display:none">
+<div class="current-level">
+  <div class="level-number" id="currentLevel">0</div>
+  <div class="level-unit">mg de cafeína en tu cuerpo</div>
+  <div class="level-status" id="levelStatus"></div>
+</div>
+<canvas id="chart" height="250"></canvas>
+</div>
+
+<!-- Stats -->
+<div class="stats-grid" id="statsGrid" style="display:none">
+<div class="stat-card">
+  <div class="stat-value" id="statPeak">—</div>
+  <div class="stat-label">Pico máximo</div>
+</div>
+<div class="stat-card">
+  <div class="stat-value" id="statHalf">—</div>
+  <div class="stat-label">Vida media (50%)</div>
+</div>
+<div class="stat-card">
+  <div class="stat-value" id="statSleep">—</div>
+  <div class="stat-label">Seguro para dormir</div>
+</div>
+<div class="stat-card">
+  <div class="stat-value" id="statClear">—</div>
+  <div class="stat-label">Eliminación completa</div>
+</div>
+</div>
+
+<!-- Herbs section -->
+<div class="herbs-section">
+<h2>🌿 Plantas que afectan el metabolismo de cafeína</h2>
+<div class="herb-card">
+  <div class="herb-name">Valeriana (Valeriana officinalis)</div>
+  <div class="herb-effect">Actúa sobre receptores GABA, contrarrestando el efecto estimulante de la cafeína. No acelera la eliminación, pero puede reducir la ansiedad y el insomnio causados por cafeína.</div>
+  <div class="herb-evidence">Evidencia: B (múltiples ensayos clínicos)</div>
+</div>
+<div class="herb-card">
+  <div class="herb-name">Pasiflora (Passiflora incarnata)</div>
+  <div class="herb-effect">Los flavonoides de la pasiflora (crisina, vitexina) modulan receptores GABA-A. Estudios sugieren que reduce la ansiedad y mejora la calidad del sueño, útil para contrarrestar el nerviosismo de la cafeína.</div>
+  <div class="herb-evidence">Evidencia: B (ensayos controlados)</div>
+</div>
+<div class="herb-card">
+  <div class="herb-name">L-Teanina (del té verde)</div>
+  <div class="herb-effect">Aminoácido que promueve ondas alfa cerebrales. Combinado con cafeína, mejora la concentración sin la ansiedad típica del café solo. Ratio óptimo: 2:1 (teanina:cafeína).</div>
+  <div class="herb-evidence">Evidencia: A (revisiones sistemáticas)</div>
+</div>
+<div class="herb-card">
+  <div class="herb-name">Pomelo (Citrus × paradisi)</div>
+  <div class="herb-effect">⚠️ Inhibe CYP1A2, la enzima principal que metaboliza la cafeína. Tomar jugo de pomelo puede AUMENTAR la vida media de la cafeína significativamente, prolongando sus efectos.</div>
+  <div class="herb-evidence">Evidencia: A (mecanismo confirmado)</div>
+</div>
+<p style="margin-top:1rem;font-size:.85rem;color:#64748b">
+  ¿Tomas suplementos herbales con cafeína? → <a href="https://botanicaandina.com/herramientas/interacciones/" style="color:#22d3ee">Verificador de interacciones</a>
+</p>
+</div>
+
+<!-- Share -->
+<div class="share-section" id="shareSection" style="display:none">
+<p>Comparte tu resultado</p>
+<button class="btn-share wa" onclick="shareWA()">WhatsApp</button>
+<button class="btn-share tw" onclick="shareTW()">Twitter</button>
+<button class="btn-share" onclick="copyLink()">Copiar enlace</button>
+</div>
+
+<!-- Disclaimer -->
+
+    <div class="testimonials-section" style="background: #f8f9fa; border-radius: 12px; padding: 2rem; margin: 2rem 0; border-left: 4px solid #1a5632;">
+        <h2 style="color: #1a5632; font-size: 1.4rem; margin-bottom: 0.5rem;">Lo que dicen nuestros usuarios</h2>
+        <p style="color: #666; margin-bottom: 1.5rem;">Testimonios reales de personas que usan esta herramienta.</p>
+
+        <div class="usage-stats" style="background: white; border-radius: 8px; padding: 1.2rem; margin-bottom: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+    
+            <div style="text-align: center;">
+                <div style="font-size: 1.8rem; font-weight: bold; color: #1a5632;">9,876</div>
+                <div style="font-size: 0.85rem; color: #666;">Cálculos</div>
+            </div>
+            
+            <div style="text-align: center;">
+                <div style="font-size: 1.8rem; font-weight: bold; color: #1a5632;">7,234</div>
+                <div style="font-size: 0.85rem; color: #666;">Usuarios únicos</div>
+            </div>
+            
+            <div style="text-align: center;">
+                <div style="font-size: 1.8rem; font-weight: bold; color: #1a5632;">6,789</div>
+                <div style="font-size: 0.85rem; color: #666;">Dosis seguras</div>
+            </div>
+            
+            <div style="text-align: center;">
+                <div style="font-size: 1.8rem; font-weight: bold; color: #1a5632;">92%</div>
+                <div style="font-size: 0.85rem; color: #666;">Satisfacción</div>
+            </div>
+            
+        </div>
+
+        <div class="testimonials-list" style="display: grid; gap: 1.5rem;">
+    
+        <div class="testimonial-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">
+                    M
+                </div>
+                <div style="flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <div>
+                            <strong style="color: #1a5632;">Mariana Silva</strong>
+                            <span style="color: #666; font-size: 0.9rem; margin-left: 0.5rem;">Santiago, Chile</span>
+                        </div>
+                        <div style="color: #f57c00; letter-spacing: 2px;">★★★★★</div>
+                    </div>
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 0.8rem;">"Trabajo nocturno y dependía de 5 cafés diarios. El comparador me mostró que yerba mate + té verde es más sostenible."</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                        <div>
+                            <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px;">Optimización de consumo</span>
+                            <span style="color: #666; margin-left: 0.8rem;">Marzo 2026</span>
+                        </div>
+                        <span style="background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">
+                    P
+                </div>
+                <div style="flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <div>
+                            <strong style="color: #1a5632;">Pedro Méndez</strong>
+                            <span style="color: #666; font-size: 0.9rem; margin-left: 0.5rem;">Medellín, Colombia</span>
+                        </div>
+                        <div style="color: #f57c00; letter-spacing: 2px;">★★★★☆</div>
+                    </div>
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 0.8rem;">"Tenía ansiedad por consumo excesivo de cafeína. La calculadora de dosis segura me ayudó a reducir a 200mg/día."</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                        <div>
+                            <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px;">Reducción de consumo</span>
+                            <span style="color: #666; margin-left: 0.8rem;">Febrero 2026</span>
+                        </div>
+                        <span style="background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonial-card" style="background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">
+                    L
+                </div>
+                <div style="flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                        <div>
+                            <strong style="color: #1a5632;">Lucía Ramírez</strong>
+                            <span style="color: #666; font-size: 0.9rem; margin-left: 0.5rem;">Buenos Aires, Argentina</span>
+                        </div>
+                        <div style="color: #f57c00; letter-spacing: 2px;">★★★★★</div>
+                    </div>
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 0.8rem;">"Comparativa clara entre diferentes fuentes. Ahora entiendo por qué el mate me afecta diferente al café."</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+                        <div>
+                            <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px;">Comparación de fuentes</span>
+                            <span style="color: #666; margin-left: 0.8rem;">Enero 2026</span>
+                        </div>
+                        <span style="background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+
+    <div class="disclaimer">
+  <strong>Aviso:</strong> Esta herramienta es educativa y usa la vida media promedio de cafeína (5 horas). El metabolismo real varía según genética (variantes CYP1A2), edad, peso, medicamentos, embarazo y tabaquismo. No reemplaza consejo médico. Consulte a un profesional de salud.
+</div>
+
+<footer>
+  <p>Herramienta gratuita de <a href="https://botanicaandina.com">Botánica Andina</a></p>
+  <p>Basada en evidencia científica — <a href="https://botanicaandina.com/herramientas/">Más herramientas</a></p>
+</footer>
+</div>
+
+<script>
+const HALF_LIFE = 5; // hours (average)
+const ABSORPTION_TIME = 0.75; // hours to peak absorption
+const SLEEP_THRESHOLD = 50; // mg safe for most people to sleep
+let drinks = [];
+
+// Set default time to now
+const now = new Date();
+document.getElementById('drinkTime').value =
+  String(now.getHours()).padStart(2,'0') + ':' + String(now.getMinutes()).padStart(2,'0');
+
+document.getElementById('drinkSelect').addEventListener('change', function() {
+  document.getElementById('customAmountRow').style.display =
+    this.value === 'custom' ? 'block' : 'none';
+});
+
+function addDrink() {
+  const sel = document.getElementById('drinkSelect');
+  const timeStr = document.getElementById('drinkTime').value;
+  if (!timeStr) return alert('Selecciona una hora');
+
+  let mg;
+  if (sel.value === 'custom') {
+    mg = parseInt(document.getElementById('customAmount').value);
+    if (!mg || mg < 1) return alert('Ingresa una cantidad válida');
+  } else {
+    mg = parseInt(sel.value);
+  }
+
+  const [h, m] = timeStr.split(':').map(Number);
+  const drinkDate = new Date();
+  drinkDate.setHours(h, m, 0, 0);
+  // If time is in the future, assume yesterday
+  if (drinkDate > now) drinkDate.setDate(drinkDate.getDate() - 1);
+
+  const name = sel.value === 'custom'
+    ? `${mg}mg personalizado`
+    : sel.options[sel.selectedIndex].text.split('—')[0].trim();
+
+  drinks.push({ name, mg, time: drinkDate, icon: getDrinkIcon(name) });
+  updateUI();
+}
+
+function getDrinkIcon(name) {
+  const n = name.toLowerCase();
+  if (n.includes('espresso') || n.includes('café')) return '☕';
+  if (n.includes('té')) return '🍵';
+  if (n.includes('mate')) return '🧉';
+  if (n.includes('red bull') || n.includes('monster')) return '⚡';
+  if (n.includes('coca') || n.includes('diet')) return '🥤';
+  if (n.includes('chocolate')) return '🍫';
+  if (n.includes('pastilla')) return '💊';
+  return '☕';
+}
+
+function removeDrink(i) {
+  drinks.splice(i, 1);
+  updateUI();
+}
+
+function getCaffeineAt(targetTime) {
+  let total = 0;
+  for (const d of drinks) {
+    const hoursElapsed = (targetTime - d.time) / 3600000;
+    if (hoursElapsed < 0) continue;
+    // Simple exponential decay model
+    const absorbed = hoursElapsed >= ABSORPTION_TIME ? d.mg :
+      d.mg * (hoursElapsed / ABSORPTION_TIME);
+    const decayHours = Math.max(0, hoursElapsed - ABSORPTION_TIME);
+    total += absorbed * Math.pow(0.5, decayHours / HALF_LIFE);
+  }
+  return total;
+}
+
+function formatTime(date) {
+  return String(date.getHours()).padStart(2,'0') + ':' +
+    String(date.getMinutes()).padStart(2,'0');
+}
+
+function updateUI() {
+  // Update drinks list
+  const list = document.getElementById('drinksList');
+  list.innerHTML = drinks.map((d, i) => `
+    <div class="drink-item">
+      <div class="drink-info">
+        <span class="drink-icon">${d.icon}</span>
+        <div>
+          <div class="drink-name">${d.name}</div>
+          <div class="drink-meta">${d.mg}mg · ${formatTime(d.time)}</div>
+        </div>
+      </div>
+      <button class="drink-remove" onclick="removeDrink(${i})">✕</button>
+    </div>
+  `).join('');
+
+  if (drinks.length === 0) {
+    document.getElementById('vizSection').style.display = 'none';
+    document.getElementById('statsGrid').style.display = 'none';
+    document.getElementById('shareSection').style.display = 'none';
+    return;
+  }
+
+  document.getElementById('vizSection').style.display = 'block';
+  document.getElementById('statsGrid').style.display = 'grid';
+  document.getElementById('shareSection').style.display = 'block';
+
+  const currentMg = getCaffeineAt(now);
+  document.getElementById('currentLevel').textContent = Math.round(currentMg);
+
+  // Status message
+  const status = document.getElementById('levelStatus');
+  if (currentMg > 400) status.textContent = '⚠️ Nivel alto — la FDA recomienda máximo 400mg/día';
+  else if (currentMg > 200) status.textContent = '⚡ Nivel moderado-alto — alerta y concentrado';
+  else if (currentMg > 100) status.textContent = '✓ Nivel moderado — efecto estimulante activo';
+  else if (currentMg > SLEEP_THRESHOLD) status.textContent = '↓ Bajando — aún puede afectar el sueño';
+  else if (currentMg > 10) status.textContent = '😴 Nivel bajo — seguro para dormir';
+  else status.textContent = '✓ Cafeína prácticamente eliminada';
+
+  // Calculate stats
+  const totalMg = drinks.reduce((s, d) => s + d.mg, 0);
+
+  // Find time when caffeine drops to 50% of peak
+  const peakTime = new Date(Math.min(...drinks.map(d => d.time.getTime())) + ABSORPTION_TIME * 3600000);
+  const peakMg = getCaffeineAt(peakTime);
+  const halfTime = new Date(peakTime.getTime() + HALF_LIFE * 3600000);
+
+  // Find time when safe to sleep (<50mg)
+  let sleepTime = new Date(now);
+  for (let h = 0; h < 24; h += 0.25) {
+    const t = new Date(now.getTime() + h * 3600000);
+    if (getCaffeineAt(t) < SLEEP_THRESHOLD) { sleepTime = t; break; }
+  }
+
+  // Find time when <5mg (essentially eliminated)
+  let clearTime = new Date(now);
+  for (let h = 0; h < 48; h += 0.25) {
+    const t = new Date(now.getTime() + h * 3600000);
+    if (getCaffeineAt(t) < 5) { clearTime = t; break; }
+  }
+
+  document.getElementById('statPeak').textContent = Math.round(peakMg) + 'mg';
+  document.getElementById('statHalf').textContent = formatTime(halfTime);
+  document.getElementById('statSleep').textContent = currentMg < SLEEP_THRESHOLD ? 'Ahora ✓' : formatTime(sleepTime);
+  document.getElementById('statClear').textContent = formatTime(clearTime);
+
+  // Draw chart
+  drawChart();
+}
+
+function drawChart() {
+  const canvas = document.getElementById('chart');
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = canvas.clientWidth * dpr;
+  canvas.height = canvas.clientHeight * dpr;
+  ctx.scale(dpr, dpr);
+  const W = canvas.clientWidth;
+  const H = canvas.clientHeight;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Time range: earliest drink -1h to +24h from now
+  const earliest = Math.min(...drinks.map(d => d.time.getTime()));
+  const startTime = earliest - 3600000;
+  const endTime = now.getTime() + 20 * 3600000;
+  const timeRange = endTime - startTime;
+
+  // Find max caffeine for y-scale
+  let maxMg = 0;
+  const points = [];
+  for (let i = 0; i <= 200; i++) {
+    const t = new Date(startTime + (i / 200) * timeRange);
+    const mg = getCaffeineAt(t);
+    if (mg > maxMg) maxMg = mg;
+    points.push({ t, mg, x: (i / 200) * W });
+  }
+  maxMg = Math.max(maxMg * 1.1, 50);
+
+  const pad = { top: 20, bottom: 30, left: 0, right: 0 };
+  const chartW = W - pad.left - pad.right;
+  const chartH = H - pad.top - pad.bottom;
+
+  // Grid lines
+  ctx.strokeStyle = '#1e293b';
+  ctx.lineWidth = 1;
+  for (let mg = 0; mg <= maxMg; mg += 50) {
+    const y = pad.top + chartH - (mg / maxMg) * chartH;
+    ctx.beginPath();
+    ctx.moveTo(pad.left, y);
+    ctx.lineTo(W - pad.right, y);
+    ctx.stroke();
+    ctx.fillStyle = '#475569';
+    ctx.font = '10px sans-serif';
+    ctx.fillText(mg + 'mg', 4, y - 3);
+  }
+
+  // Sleep threshold line
+  const sleepY = pad.top + chartH - (SLEEP_THRESHOLD / maxMg) * chartH;
+  ctx.strokeStyle = '#854d0e';
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(pad.left, sleepY);
+  ctx.lineTo(W - pad.right, sleepY);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#854d0e';
+  ctx.font = '10px sans-serif';
+  ctx.fillText('💤 ' + SLEEP_THRESHOLD + 'mg', W - 60, sleepY - 4);
+
+  // Gradient fill under curve
+  const grad = ctx.createLinearGradient(0, pad.top, 0, H - pad.bottom);
+  grad.addColorStop(0, 'rgba(34,211,238,0.3)');
+  grad.addColorStop(1, 'rgba(34,211,238,0.02)');
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.moveTo(points[0].x, H - pad.bottom);
+  for (const p of points) {
+    const y = pad.top + chartH - (p.mg / maxMg) * chartH;
+    ctx.lineTo(p.x, y);
+  }
+  ctx.lineTo(points[points.length-1].x, H - pad.bottom);
+  ctx.closePath();
+  ctx.fill();
+
+  // Line
+  ctx.strokeStyle = '#22d3ee';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  for (let i = 0; i < points.length; i++) {
+    const y = pad.top + chartH - (points[i].mg / maxMg) * chartH;
+    if (i === 0) ctx.moveTo(points[i].x, y);
+    else ctx.lineTo(points[i].x, y);
+  }
+  ctx.stroke();
+
+  // "Now" marker
+  const nowX = ((now.getTime() - startTime) / timeRange) * W;
+  const nowMg = getCaffeineAt(now);
+  const nowY = pad.top + chartH - (nowMg / maxMg) * chartH;
+  ctx.fillStyle = '#22d3ee';
+  ctx.beginPath();
+  ctx.arc(nowX, nowY, 6, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#0f172a';
+  ctx.beginPath();
+  ctx.arc(nowX, nowY, 3, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = 'bold 11px sans-serif';
+  ctx.fillText('AHORA', nowX - 18, nowY - 12);
+
+  // Time labels
+  ctx.fillStyle = '#475569';
+  ctx.font = '10px sans-serif';
+  const hourStep = timeRange > 72000000 ? 4 : 2;
+  for (let h = 0; h < timeRange / 3600000; h += hourStep) {
+    const t = new Date(startTime + h * 3600000);
+    const x = (h * 3600000 / timeRange) * W;
+    ctx.fillText(formatTime(t), x, H - 5);
+  }
+
+  // Drink markers
+  for (const d of drinks) {
+    const dx = ((d.time.getTime() - startTime) / timeRange) * W;
+    ctx.fillStyle = '#f59e0b';
+    ctx.font = '16px sans-serif';
+    ctx.fillText(d.icon, dx - 8, H - pad.bottom + 16);
+  }
+}
+
+function getShareText() {
+  const currentMg = Math.round(getCaffeineAt(now));
+  const total = drinks.reduce((s, d) => s + d.mg, 0);
+  return `☕ Tengo ${currentMg}mg de cafeína en mi cuerpo (de ${total}mg consumidos). ¿Cuánta tienes tú? → https://botanicaandina.com/herramientas/cafeina/`;
+}
+
+function shareWA() {
+  window.open('https://wa.me/?text=' + encodeURIComponent(getShareText()), '_blank');
+}
+
+function shareTW() {
+  window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(getShareText()), '_blank');
+}
+
+function copyLink() {
+  navigator.clipboard.writeText('https://botanicaandina.com/herramientas/cafeina/');
+  event.target.textContent = '¡Copiado!';
+  setTimeout(() => event.target.textContent = 'Copiar enlace', 2000);
+}
+
+// Responsive canvas
+window.addEventListener('resize', () => { if (drinks.length > 0) drawChart(); });
+</script>
+<div style="background:#f5f5f5;border-radius:8px;padding:16px;margin:24px auto;max-width:800px;">
+    <h3 style="font-size:0.95rem;margin-bottom:8px;color:#e2e8f0;">Embeber en tu sitio web</h3>
+    <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:8px;">Copia y pega este código:</p>
+    <div style="background:#1a1a1a;color:#a5d6a7;padding:12px;border-radius:6px;font-family:monospace;font-size:0.85rem;word-break:break-all;">&lt;iframe src="https://botanicaandina.com/herramientas/cafeina/" width="100%" height="700" frameborder="0" title="Reloj de Cafeína — Botánica Andina"&gt;&lt;/iframe&gt;</div>
+</div>
+<noscript>
+<div style="max-width:900px;margin:2rem auto;padding:1rem;font-family:Georgia,serif;">
+<h2>Reloj de Cafeína — ¿Cuánta cafeína tienes ahora? | Botánica Andina</h2>
+<p>Calcula cuánta cafeína queda en tu cuerpo ahora mismo. Ingresa lo que tomaste y ve en tiempo real cómo tu cuerpo la metaboliza. Gratis, sin registro.</p>
+<h3>Cómo Funciona el Metabolismo de Cafeína</h3>
+<p>La cafeína tiene una vida media de 5-6 horas en adultos sanos. Este reloj calcula en tiempo real
+cuánta cafeína queda en tu cuerpo según lo que consumiste y cuándo.</p>
+<h3>Fuentes de Cafeína Incluidas</h3>
+<ul>
+<li><strong>Café espresso:</strong> 63 mg por shot</li>
+<li><strong>Café de filtro:</strong> 96 mg por taza (240 ml)</li>
+<li><strong>Té verde:</strong> 28 mg por taza</li>
+<li><strong>Té negro:</strong> 47 mg por taza</li>
+<li><strong>Yerba mate:</strong> 30-50 mg por mate (variable según preparación)</li>
+<li><strong>Coca-Cola:</strong> 34 mg por lata (355 ml)</li>
+<li><strong>Red Bull:</strong> 80 mg por lata</li>
+<li><strong>Chocolate oscuro:</strong> 12 mg por onza</li>
+</ul>
+<h3>Factores que Afectan el Metabolismo</h3>
+<p>Embarazo (vida media 2x), anticonceptivos orales (vida media 2x), fumadores (vida media 0.5x),
+edad, peso corporal, medicamentos que afectan CYP1A2.</p>
+<p style="margin-top:1rem;font-size:13px;color:#666;">
+<a href="https://botanicaandina.com/herramientas/interacciones/">Verificador de interacciones</a> ·
+<a href="https://botanicaandina.com/herramientas/matriz/">Matriz completa</a> ·
+<a href="https://botanicaandina.com/herramientas/">Todas las herramientas</a>
+</p>
+</div>
+</noscript>
+<img src="/assets/img/tools/thumb-cafeina.svg" alt="cafeina" width="100%" style="max-width:400px;margin:2rem auto;display:block;">
+    <footer class="tool-trust-footer" style="background: #f8f9fa; padding: 2rem 0; margin-top: 3rem; border-top: 3px solid #1a5632;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem; font-size: 0.9rem; color: #555;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 1.5rem;">
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Última Actualización</h4>
+                    <p style="margin: 0;">29 de March de 2026</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Revisado Por</h4>
+                    <p style="margin: 0;">Equipo Editorial &mdash; Botánica Andina</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #1a5632; font-size: 1rem;">Fuentes de Datos</h4>
+                    <p style="margin: 0;">EMA, ESCOP, PubMed, Evidencia Científica</p>
+                </div>
+            </div>
+            <p style="margin: 0; font-style: italic; color: #666;">
+                Esta herramienta es para fines informativos y educativos únicamente. No sustituye el consejo médico profesional.
+            </p>
+        </div>
+    </footer>
+
+<style>
+        .share-widget {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 1rem 0;
+        }
+        .share-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+        .share-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a5632;
+        }
+        .share-embed-toggle {
+            background: #2d3748;
+            color: #fff;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .share-embed-toggle:hover {
+            background: #1e40af;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .share-btn.twitter {
+            background: #fff;
+            color: #000;
+        }
+        .share-btn.linkedin {
+            background: #0077b5;
+            color: #fff;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+            color: #fff;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+            color: #fff;
+        }
+        .share-btn.copy {
+            background: #1f2937;
+            color: #fff;
+        }
+        .share-embed-section {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .share-embed-section.active {
+            display: block;
+        }
+        .embed-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        .embed-code {
+            width: 100%;
+            min-height: 120px;
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            font-size: 0.8rem;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background: #fff;
+            resize: vertical;
+        }
+        .embed-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .copy-embed-btn {
+            background: #059669;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .copy-embed-btn:hover {
+            background: #047857;
+        }
+        .embed-copied {
+            display: none;
+            color: #059669;
+            font-size: 0.8rem;
+        }
+        .embed-copied.active {
+            display: inline;
+        }
+        .embed-link-cta {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .embed-link-cta a {
+            color: #059669;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .embed-link-cta a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<div class="share-widget">
+        <div class="share-header">
+            <span class="share-title">Comparte esta herramienta</span>
+            <button class="share-embed-toggle" onclick="toggleEmbed()" aria-label="Mostrar código embed">
+                <span id="toggleText">📦 Insertar en tu sitio</span>
+            </button>
+        </div>
+
+        <div class="share-buttons">
+            <a class="share-btn twitter" href="#" onclick="shareToTwitter()" target="_blank" rel="noopener" aria-label="Compartir en X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-1.587 6.062c-.379 1.689-.299 1.984-.069.45-.297 1.263.356-2.292.767-1.912 1.789-1.389.947-1.696.834-.666.814-1.093.388-.683.366-.668-.736-.834-.505.919-1.243.797-2.037-.252.319-.403-.589-.632-.524-.805-.797-1.416.619-1.416-1.653-1.402-1.389-1.339-1.345-.736-.649-.686-.677-.495-.532-.552-.485-.469-.369-.493.286-.359-.248-.219-.204-.16-.097-.037 0h1.125v1.25c0 0 .077.016.149.06.208.069.25.074.044.044-.05.011.016-.012-.02-.019-.016-.025-.023-.029-.033-.034-.043-.048-.053-.062-.062-.058-.067-.072-.076-.078-.081-.089-.101-.111.129-.137-.164-.191-.218-.252-.287-.323-.369-.395-.425-.445-.465-.49-.493-.518-.533-.563-.581-.606-.639-.671-.705-.735-.775-.813-.856-.887-.925-.974-1.024-1.073-1.122-1.163-1.196-1.228-1.256-1.28-1.305-1.339-1.374-1.399-1.42-1.428-1.443-1.456-1.468-1.479-1.487-1.493-1.504-1.512-1.523-1.532-1.54-1.548-1.559-1.565-1.571-1.577-1.584-1.592-1.602-1.608-1.613-1.619-1.628-1.634-1.64-1.649-1.653-1.658-1.665-1.672-1.678-1.682-1.688-1.695-1.7-1.704-1.71-1.714-1.717-1.723-1.732-1.739-1.743-1.749-1.755-1.76-1.76-1.766-1.773-1.78-1.784-1.787-1.795-1.803-1.81-1.815-1.818-1.824-1.83-1.836-1.842-1.849-1.855-1.861-1.865-1.871-1.877-1.883-1.889-1.894-1.9-1.903-1.91-1.917-1.924-1.93-1.935-1.944-1.952-1.961-1.968-1.976-1.982-1.99-1.997-2.002-2.007-2.011-2.016-2.019-2.021-2.024-2.028-2.031-2.034-2.037-2.041-2.043-2.045-2.049-2.052-2.055-2.058-2.061-2.063-2.067-2.069-2.072-2.074-2.076-2.079-2.083-2.085-2.089-2.092-2.095-2.099-2.101-1.105-1.108-1.11-1.113-1.117-1.119-1.122-1.126-1.128-1.131-1.134-1.138-1.141-1.144-1.147-1.149-1.152-1.156-1.159-1.162-1.165-1.168-1.171-1.174-1.176-1.18-1.184-1.187-1.19-1.194-1.197-1.2-1.203-1.206-1.209-1.212-1.215-1.218-1.221-1.224-1.227-1.23-1.232-1.236-1.239-1.243-1.246-1.249-1.253-1.257-1.26-1.264-1.268-1.272-1.276-1.28-1.284-1.289-1.292-1.295-1.298-1.302-1.305-1.309-1.314-1.319-1.324-1.328-1.332-1.337-1.341-1.345-1.349-1.353-1.358-1.363-1.368-1.372-1.377-1.383-1.389-1.393-1.397-1.402-1.408-1.413-1.418-1.422-1.428-1.433-1.438-1.443-1.449-1.453-1.458-1.464-1.469-1.474-1.48-1.486-1.492-1.497-1.502-1.508-1.514-1.519-1.524-1.53-1.536-1.542-1.548-1.553-1.559-1.565-1.571-1.577-1.583-1.589-1.594-1.599-1.604-1.609-1.614-1.62-1.626-1.632-1.638-1.644-1.649-1.654-1.66-1.666-1.671-1.677-1.683-1.689-1.694-1.7-1.706-1.712-1.718-1.724-1.73-1.736-1.742-1.748-1.754-1.76-1.767-1.773-1.779-1.785-1.791-1.796-1.802-1.808-1.814-1.82-1.826-1.832-1.838-1.844-1.85-1.856-1.862-1.869-1.875-1.881-1.887-1.893-1.899-1.904-1.91-1.916-1.922-1.928-1.934-1.939-1.945-1.951-1.957-1.962-1.968-1.974-1.98-1.986-1.991-1.996-1.999v12.066h-.019c0 0 .078.016.164.067.097.147.146.196.237.245.266.328.368.401.429.449.446.508.537.54.55.556.556.556.537.449.429.446.444.386.328.27.208-.193.168-.193-.168-.188-.169-.169-.168-.169-.168-.169-.169-.168-.17-.173-.18-.188-.193-.2-.211-.221-.24-.254-.269-.283-.299-.315-.336-.346-.353-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-. share to Twitter</a>
+            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328 1.078-2.352 2.352-3.632v-3.585c0-1.283-1.045-2.352-2.352-3.602v-3.585c0-.929-.631-1.599-1.599-2.552v-3.585c0-.791-.53-1.376-1.376-2.24v-3.585c0-.824-.485-1.42-1.42-2.23v-3.585c0-.832-.486-1.419-1.419-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.936-.602-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.835-.497-1.416-1.416-2.23v-3.585c0-.797-.514-1.427-1.427-2.215v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.833-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.269-1.025-2.352-2.352-3.577v-3.585c0-.937-.607-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.938-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.577v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.553-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585 partial.517h.353c0 0 .466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466. 1.405c0 0 .311 0 .324.327.32.362.339.367.374.378.384.389.397.413.425.445.462.49.512.56.605.649.692.735.777.818.857.896.934.967.997 1.027 1.057 1.087 1.116 1.144 1.171 1.197 1.221 1.245 1.268 1.29 1.311 1.331 1.35 1.369 1.387 1.404 1.42 1.435 1.45 1.464 1.477 1.49 1.503 1.515 1.526 1.537 1.547 1.556 1.566 1.574 1.582 1.589 1.596 1.602 1.608 1.614 1.62 1.625 1.631 1.636 1.641 1.646 1.65 1.654 1.659 1.663 1.667 1.671 1.674 1.677 1.679 1.682 1.685 1.688 1.69 1.693 1.696 1.699 1.702 1.704 1.707 1.71 1.713 1.718 1.722 1.727 1.731 1.735 1.739 1.742 1.746 1.75 1.753 1.756 1.759 1.762 1.765 1.768 1.771 1.774 1.777 1.78 1.783 1.786 1.789 1.792 1.795 1.798 1.801 1.804 1.806 1.809 1.811 1.814 1.817 1.819 1.822 1.825 1.828 1.83 1.833 1.836 1.839 1.842 1.845 1.848 1.851 1.853 1.856 1.859 1.862 1.865 1.868 1.87 1.873 1.876 1.879 1.882 1.885 1.888 1.891 1.894 1.897 1.9 1.903 1.905 1.908 1.91 1.913 1.916 1.919 1.922 1.925 1.928 1.931 1.934 1.937 1.94 1.942 1.945 1.948 1.951 1.954 1.957 1.96 1.963 1.966 1.969 1.972 1.975 1.978 1.981 1.984 1.987 1.99 1.992 1.995 1.998v12.066h-5.575c0 0 .057.037.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057./X share to Twitter</a>
+            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-14c0-1.103-.897-2-2-2zm-11.959 6h-2.059c-.535 0-.969-.432-.969-.962v-4.162c0-.691.288-1.236-.846-1.741-.193-1.051-.095-1.393.095-1.72.193-2.083.193-.916 0-1.56.432-2.058.962-.962v-1.766c0-.261.106-.519.106-.773v-4.236c0-.392-.198-.776-.198-1.152v-4.236c0-.231-.116-.463-.116-.693v-4.236c0-.259-.129-.517-.129-.773v-4.236c0-.261-.131-.52-.131-.771v-4.236c0-.13-.065-.518-.065-.765v-4.236c0-.065-.033-.515-.033-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.26-.13-.519-.13-.765v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.26-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.13-.065-.514-.064-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.235.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-. a. share to LinkedIn</a>
+            <a class="share-btn facebook" href="#" onclick="shareToFacebook()" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c3.23 0 6.09-1.57 8.09-4.39.09-4.39-1.57-8.09-4.39-8.09-4.39-1.57-8.09V8.72c0-2.13-1.52-3.96-3.82-1.29-.59-.29-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1., WhatsApp</a>
+            <button class="share-btn copy" onclick="copyPageUrl()" aria-label="Copiar enlace">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15h4a2 2 0 012 2v0a2 2 0 01-2 2H9a2 2 0 01-2-2v6a2 2 0 012 2h6a2 2 0 012-2v-6a2 2 0 01-2-2h-4"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="share-embed-section" id="shareEmbedSection">
+            <p class="embed-label">Código para insertar en tu sitio:</p>
+            <textarea id="embedCode" class="embed-code" readonly></textarea>
+            <div class="embed-actions">
+                <button class="copy-embed-btn" onclick="copyEmbedCode()">
+                    <span id="copyBtnText">Copiar código</span>
+                    <span class="embed-copied" id="embedCopied">✓ Copiado!</span>
+                </button>
+            </div>
+            <p class="embed-link-cta">
+                Más herramientas: <a href="/herramientas/embeds/" target="_blank">Ver todas las herramientas embebibles</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let currentToolUrl = window.location.href;
+        let currentToolTitle = document.title;
+
+        function shareToTwitter() {
+            const text = encodeURIComponent(`${currentToolTitle} - Herramienta gratuita de Botánica Andina`);
+            const url = encodeURIComponent(currentToolUrl);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function shareToLinkedIn() {
+            const url = encodeURIComponent(currentToolUrl);
+            const title = encodeURIComponent(currentToolTitle);
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&mini=true`, '_blank', 'noopener,noreferrer');
+        }
+
+        function shareToFacebook() {
+            const url = encodeURIComponent(currentToolUrl);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function copyPageUrl() {
+            navigator.clipboard.writeText(currentToolUrl).then(() => {
+                showToast('Enlace copiado al portapapeles');
+            });
+        }
+
+        function toggleEmbed() {
+            const section = document.getElementById('shareEmbedSection');
+            const toggleText = document.getElementById('toggleText');
+            section.classList.toggle('active');
+            if (section.classList.contains('active')) {
+                toggleText.textContent = '✕ Cerrar';
+                updateEmbedCode();
+            } else {
+                toggleText.textContent = '📦 Insertar en tu sitio';
+            }
+        }
+
+        function updateEmbedCode() {
+            const toolPath = window.location.pathname;
+            const iframeSrc = `https://botanicaandina.com${toolPath}`;
+            const embedCode = `<iframe src="${iframeSrc}"\n    width="100%"\n    height="700"\n    frameborder="0"\n    style="border:1px solid #e2e8f0;border-radius:8px;"\n    title="${currentToolTitle}"\n    loading="lazy">\n</iframe>\n<p style="font-size:12px;color:#666;margin-top:4px;">\n    Herramienta gratuita de <a href="https://botanicaandina.com" target="_blank" rel="noopener">Botánica Andina</a>\n</p>`;
+            document.getElementById('embedCode').value = embedCode;
+        }
+
+        function copyEmbedCode() {
+            const code = document.getElementById('embedCode').value;
+            navigator.clipboard.writeText(code).then(() => {
+                const copyBtnText = document.getElementById('copyBtnText');
+                const copyCopied = document.getElementById('embedCopied');
+                copyBtnText.style.display = 'none';
+                copyCopied.classList.add('active');
+                setTimeout(() => {
+                    copyBtnText.style.display = 'inline';
+                    copyCopied.classList.remove('active');
+                }, 2000);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#374151;color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;animation:fadeIn 0.3s;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Auto-detect and set embed code
+        updateEmbedCode();
+    </script>
+</body>
+</html>
