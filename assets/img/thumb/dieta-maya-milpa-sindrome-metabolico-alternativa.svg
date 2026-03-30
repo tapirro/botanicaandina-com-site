@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg-dieta-maya-m" x1="0%" y1="0%" x2="100%" y2="100%"
+        gradientTransform="rotate(292)">
+      <stop offset="0%" stop-color="hsl(35, 25%, 95%)"/>
+      <stop offset="100%" stop-color="hsl(55, 30%, 88%)"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg-dieta-maya-m)"/>
+  <circle cx="452" cy="166" r="72" fill="hsl(15, 50%, 70%)" opacity="0.08"/><circle cx="346" cy="213" r="33" fill="hsl(30, 50%, 70%)" opacity="0.14"/><circle cx="168" cy="324" r="53" fill="hsl(45, 50%, 70%)" opacity="0.20"/><circle cx="476" cy="198" r="28" fill="hsl(20, 50%, 70%)" opacity="0.08"/><circle cx="294" cy="147" r="52" fill="hsl(35, 50%, 70%)" opacity="0.14"/><circle cx="271" cy="315" r="58" fill="hsl(50, 50%, 70%)" opacity="0.20"/><circle cx="390.0" cy="180.0" r="112.00000000000001" fill="hsl(35, 40%, 85%)" opacity="0.3"/><circle cx="390.0" cy="180.0" r="72.0" fill="hsl(35, 45%, 92%)" opacity="0.5"/><line x1="12" y1="0" x2="600" y2="385" stroke="hsl(35, 30%, 80%)" stroke-width="2" opacity="0.08"/>
+</svg>

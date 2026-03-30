@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- License: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/) -->
+<!-- Source: https://botanicaandina.com/noticias/berberina-grasa-visceral-obesidad-ensayo-jama/ -->
+<!-- DOI: 10.1001/jamanetworkopen.2025.54152 -->
+<svg viewBox="0 0 480 226" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reduccion de grasa con berberina" style="max-width:480px;width:100%;height:auto;margin:1.5rem auto;display:block;">
+    <rect width="480" height="226" rx="12" fill="#f8f9fa" stroke="#e9ecef" stroke-width="1"/>
+    <text x="20" y="30" fill="#222" font-size="15" font-family="Arial,sans-serif" font-weight="bold">Reduccion de grasa con berberina</text>
+    
+        <text x="20" y="50" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Grasa visceral</text>
+        <rect x="20" y="58" width="272" height="24" rx="4" fill="#1a5632" opacity="0.85"/>
+        <text x="300" y="76" fill="#555" font-size="12" font-family="Arial,sans-serif">Reduccion significativa</text>
+        <text x="20" y="102" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Grasa hepática</text>
+        <rect x="20" y="110" width="240" height="24" rx="4" fill="#2d7a4a" opacity="0.85"/>
+        <text x="268" y="128" fill="#555" font-size="12" font-family="Arial,sans-serif">Reduccion significativa</text>
+        <text x="20" y="154" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Placebo</text>
+        <rect x="20" y="162" width="48" height="24" rx="4" fill="#ccc" opacity="0.85"/>
+        <text x="76" y="180" fill="#555" font-size="12" font-family="Arial,sans-serif">Cambio minimo</text>
+</svg>
