@@ -302,7 +302,82 @@
 
         .evidence-legend { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin: 0.5rem 0 1rem; padding: 0.6rem 1rem; background: #fff; border-radius: 8px; border: 1px solid #eee; }
         .evidence-legend-item { display: flex; align-items: center; gap: 0.3rem; font-family: Arial, sans-serif; font-size: 0.72rem; color: #555; }
-    </style>
+    
+/* Pain Amplification / Urgency Section */
+.pain-amplification {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+}
+
+.pain-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pain-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.pain-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #92400e;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pain-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #78350f;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pain-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+.pain-solution {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    font-weight: 600;
+    color: #92400e;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .pain-amplification {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .pain-title {
+        font-size: 1.1rem;
+    }
+}
+</style>
 </head>
 <body>
     <nav class="site-nav">
@@ -614,7 +689,24 @@
             <div class="example-cta">Prueba con tus plantas y medicamentos abajo</div>
         </div>
 
-        <div class="checker-section">
+        <!-- URGENCY SECTION -->
+<section class="pain-amplification" id="urgency">
+  <div class="pain-inner">
+    <div class="pain-icon">⚡</div>
+    <h2 class="pain-title">¿Estás tomando medicamentos ahora?</h2>
+    <ul class="pain-list">
+      <li>¿Sabes si tus suplementos interactúan con tus medicamentos?</li>
+      <li>¿Has sentido efectos secundarios nuevos recientemente?</li>
+      <li>¿Tu médico revisó todas tus hierbas medicinales?</li>
+      <li>¿Tomaste algo nuevo esta semana?</li>
+    </ul>
+    <p class="pain-solution">
+      Verifica ahora antes de tu siguiente dosis. Algunas combinaciones son peligrosas.
+    </p>
+  </div>
+</section>
+
+<div class="checker-section">
             <h2>1. Selecciona una planta medicinal</h2>
             <div class="input-group">
                 <label for="herbInput">Escribe el nombre de la planta</label>

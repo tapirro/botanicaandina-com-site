@@ -220,6 +220,81 @@ footer a{color:var(--green);text-decoration:none;font-weight:600}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
 }
+
+/* Pain Amplification / Urgency Section */
+.pain-amplification {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+}
+
+.pain-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pain-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.pain-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #92400e;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pain-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #78350f;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pain-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+.pain-solution {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    font-weight: 600;
+    color: #92400e;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .pain-amplification {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .pain-title {
+        font-size: 1.1rem;
+    }
+}
 </style>
 </head>
 <body>
@@ -459,6 +534,23 @@ footer a{color:var(--green);text-decoration:none;font-weight:600}
 
   <p>Verifica si tus suplementos son seguros juntos. Selecciona entre 2 y 5 suplementos para calcular tu puntuación.</p>
 </div>
+
+<!-- URGENCY SECTION -->
+<section class="pain-amplification" id="urgency">
+  <div class="pain-inner">
+    <div class="pain-icon">⚡</div>
+    <h2 class="pain-title">¿Estás embarazada o planeando estarlo?</h2>
+    <ul class="pain-list">
+      <li>¿Sabes qué hierbas evitar durante el primer trimestre?</li>
+      <li>¿Tomaste algún suplemento sin consultar?</li>
+      <li>¿Sientes ansiedad sobre si algo es seguro?</li>
+      <li>¿Tu médico conoce todos los suplementos que tomas?</li>
+    </ul>
+    <p class="pain-solution">
+      La seguridad de tu bebé depende de esto. Verifica cada ingrediente antes de ingerirlo.
+    </p>
+  </div>
+</section>
 
 <div class="input-area">
   <h2>Selecciona tus suplementos</h2>

@@ -650,6 +650,81 @@ body.embed-mode .methodology { display: none; }
   .herb-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
   .site-header nav { display: none; }
 }
+
+/* Pain Amplification / Urgency Section */
+.pain-amplification {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left: 4px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);
+}
+
+.pain-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pain-icon {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.pain-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #92400e;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pain-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pain-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #78350f;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pain-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f59e0b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1rem;
+}
+
+.pain-solution {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    font-weight: 600;
+    color: #92400e;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (max-width: 600px) {
+    .pain-amplification {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .pain-title {
+        font-size: 1.1rem;
+    }
+}
 </style>
 </head>
 <body>
@@ -948,7 +1023,24 @@ body.embed-mode .methodology { display: none; }
     <div class="herb-grid" id="herb-grid"></div>
   </div>
 
-  <div class="result-card" id="result-card">
+  <!-- URGENCY SECTION -->
+<section class="pain-amplification" id="urgency">
+  <div class="pain-inner">
+    <div class="pain-icon">⚡</div>
+    <h2 class="pain-title">¿No quieres perder fechas críticas?</h2>
+    <ul class="pain-list">
+      <li>¿Sabes cuándo ocurre la semana 12 (fin del primer trimestre)?</li>
+      <li>¿Conoces las fechas para ecografías importantes?</li>
+      <li>¿Sabes qué nutrientes son críticos en cada trimestre?</li>
+      <li>¿Has olvidado citas médicas importantes?</li>
+    </ul>
+    <p class="pain-solution">
+      Tu bebé se desarrolla rápido. No pierdas los hitos clave de cada semana de embarazo.
+    </p>
+  </div>
+</section>
+
+<div class="result-card" id="result-card">
     <div class="result-header">
       <div>
         <div class="result-herb-name" id="r-name"></div>
