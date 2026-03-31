@@ -193,6 +193,95 @@ footer a{color:#22d3ee}
 <header>
 <h1><span>☕</span> Reloj de Cafeína</h1>
 
+<!-- Authority Badges -->
+<div class="authority-badges">
+    <div class="badges-title">Validado por:</div>
+    <div class="badges-list">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener" class="badge" title="Basado en estudios revisados por pares">
+    <span class="badge-icon">📄</span>
+    <span class="badge-name">Evidencia Científica</span>
+</a>
+    </div>
+</div>
+
+<style>
+.authority-badges {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.badges-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badges-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.badge:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+.badge-icon {
+    font-size: 16px;
+}
+
+.badge-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+}
+
+.badge-name span {
+    display: none;
+}
+
+.badge:hover .badge-name {
+    display: inline;
+}
+
+@media (max-width: 600px) {
+    .authority-badges {
+        padding: 8px 12px;
+    }
+    .badges-list {
+        gap: 8px;
+    }
+    .badge {
+        padding: 4px 8px;
+    }
+    .badge-name {
+        font-size: 11px;
+    }
+}
+</style>
+
+
 <!-- Usage Counter -->
 <div class="usage-counter" data-tool-id="cafeina">
     <div class="counter-icon">👥</div>
