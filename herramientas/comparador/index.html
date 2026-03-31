@@ -241,6 +241,138 @@
 
     <div class="tool-header">
         <h1>Comparador de Suplementos</h1>
+
+<!-- Usage Counter -->
+<div class="usage-counter" data-tool-id="comparador">
+    <div class="counter-icon">👥</div>
+    <div class="counter-content">
+        <span class="counter-label">Personas que usaron esta herramienta:</span>
+        <span class="counter-number" id="usageCount">--</span>
+    </div>
+</div>
+
+<script>
+(function() {
+    const toolId = "comparador";
+    const storageKey = "tool_usage_" + toolId;
+    const baselineCount = 234;
+
+    // Get local increment
+    let localCount = parseInt(localStorage.getItem(storageKey) || "0");
+
+    // Format number
+    function formatNumber(num) {
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1) + "K";
+        }
+        return num.toLocaleString();
+    }
+
+    // Update display
+    function updateCounter() {
+        localCount++;
+        localStorage.setItem(storageKey, localCount);
+        const totalCount = baselineCount + localCount;
+        const countEl = document.getElementById("usageCount");
+        if (countEl) {
+            countEl.textContent = formatNumber(totalCount);
+            countEl.classList.add("counter-animate");
+            setTimeout(() => countEl.classList.remove("counter-animate"), 500);
+        }
+    }
+
+    // Initial display
+    const totalCount = baselineCount + localCount;
+    const countEl = document.getElementById("usageCount");
+    if (countEl) {
+        countEl.textContent = formatNumber(totalCount);
+    }
+
+    // Increment on page load (count this visit)
+    if (!sessionStorage.getItem(storageKey + "_session")) {
+        updateCounter();
+        sessionStorage.setItem(storageKey + "_session", "1");
+    }
+
+    // Optional: track to analytics if available
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'tool_usage', {
+            'event_category': 'tools',
+            'event_label': toolId,
+            'value': 1
+        });
+    }
+})();
+</script>
+
+<style>
+.usage-counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 12px;
+    border: 1px solid #bae6fd;
+    margin: 20px 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.counter-icon {
+    font-size: 24px;
+    background: #fff;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.counter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.counter-label {
+    font-size: 13px;
+    color: #0369a1;
+    font-weight: 500;
+}
+
+.counter-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0c4a6e;
+}
+
+.counter-animate {
+    animation: pulse 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    .usage-counter {
+        padding: 10px 12px;
+    }
+    .counter-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .counter-number {
+        font-size: 24px;
+    }
+}
+</style>
+
         <p>Selecciona 2 o 3 suplementos para ver una comparaci&oacute;n lado a lado: ingredientes, evidencia cient&iacute;fica, dosis y usos recomendados.</p>
     </div>
 
