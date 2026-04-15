@@ -1,745 +1,302 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina</title>
-    <meta name="description" content="Herramientas gratuitas de salud: verificador de interacciones plantas-medicamentos, buscador de plantas medicinales andinas, y quiz personalizado. Basadas en evidencia cient&iacute;fica.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://botanicaandina.com/herramientas/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina">
-    <meta property="og:description" content="Verificador de interacciones, buscador de plantas y quiz personalizado. Herramientas gratuitas basadas en ciencia.">
-    <meta property="og:image" content="https://botanicaandina.com/assets/img/og/herramientas-hub.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="es_LA">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Herramientas Gratuitas de Salud &mdash; Bot&aacute;nica Andina">
-    <meta name="twitter:description" content="Verificador de interacciones, buscador de plantas y quiz personalizado. Gratuitas y basadas en ciencia.">
-    <meta name="twitter:image" content="https://botanicaandina.com/assets/img/og/herramientas-hub.jpg">
-    <link rel="icon" href="/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Herramientas de Salud — Botánica Andina</title>
+<meta name="description" content="Herramientas gratuitas basadas en evidencia científica: verificador de interacciones plantas-medicamentos, buscador de plantas medicinales, calculadoras de salud.">
+<link rel="canonical" href="https://botanicaandina.com/herramientas/">
+<link rel="icon" href="/favicon.ico">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,'Times New Roman',serif;line-height:1.6;color:#1a1a1a;background:#fafaf7}
+a{color:#1a5632;text-decoration:none}a:hover{text-decoration:underline}
+
+.nav{background:#1a5632;position:sticky;top:0;z-index:100}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;min-height:52px}
+.nav-b{color:#fff;font-family:Georgia,serif;font-size:1.1rem;font-weight:bold;text-decoration:none}
+.nav-l{display:flex;gap:1.5rem}.nav-l a{color:rgba(255,255,255,.85);font-family:Arial,sans-serif;font-size:.82rem;text-decoration:none}.nav-l a:hover{color:#fff}
+@media(max-width:700px){.nav-in{flex-wrap:wrap;padding:.8rem 1rem;gap:.5rem}.nav-l{gap:.8rem;flex-wrap:wrap}}
+
+.hero{max-width:1100px;margin:2.5rem auto 2rem;padding:0 1.5rem}
+.hero h1{font-size:1.8rem;margin-bottom:.4rem}
+.hero p{font-family:Arial,sans-serif;font-size:.95rem;color:#555;max-width:600px}
+
+.grid{max-width:1100px;margin:0 auto;padding:0 1.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+
+.card{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:1.5rem;transition:box-shadow .2s,border-color .2s;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:#c8e6c9}
+.card-head{display:flex;align-items:flex-start;gap:.8rem;margin-bottom:.8rem}
+.card-icon{font-size:1.6rem;line-height:1;flex-shrink:0;margin-top:.15rem}
+.card-title{font-size:1.05rem;line-height:1.3;color:#1a1a1a}
+.card-tag{display:inline-block;font-family:Arial,sans-serif;font-size:.6rem;text-transform:uppercase;letter-spacing:.8px;color:#888;background:#f5f5f5;padding:2px 6px;border-radius:3px;margin-left:.5rem;vertical-align:middle}
+.card-desc{font-family:Arial,sans-serif;font-size:.85rem;color:#555;line-height:1.5;margin-bottom:.8rem;flex:1}
+.card-stats{font-family:Arial,sans-serif;font-size:.75rem;color:#999;margin-bottom:.8rem}
+.card-cta{font-family:Arial,sans-serif;font-size:.85rem;color:#1a5632;font-weight:600}
+.card-cta:hover{color:#2e7d32}
+
+.section-label{max-width:1100px;margin:0 auto;padding:0 1.5rem .8rem;font-family:Arial,sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:#999}
+
+footer{background:#1a2e1a;color:#aaa;padding:2rem 1.5rem;text-align:center;font-family:Arial,sans-serif;font-size:.78rem;margin-top:1rem}
+footer a{color:#ccc}
+</style>
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Herramientas Gratuitas de Salud",
-        "url": "https://botanicaandina.com/herramientas/",
-        "description": "Colección de herramientas interactivas gratuitas para salud y plantas medicinales, basadas en evidencia científica.",
-        "author": { "@type": "Organization", "name": "Botánica Andina", "url": "https://botanicaandina.com" },
-        "hasPart": [
-            {
-                "@type": "WebApplication",
-                "name": "Verificador de Interacciones Plantas-Medicamentos",
-                "url": "https://botanicaandina.com/herramientas/interacciones/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Buscador de Plantas Medicinales Andinas",
-                "url": "https://botanicaandina.com/herramientas/buscador/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Quiz: ¿Qué Planta Andina Necesitas?",
-                "url": "https://botanicaandina.com/herramientas/quiz/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Verificador de Suplementos",
-                "url": "https://botanicaandina.com/herramientas/verificador/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Reloj de Cafeína",
-                "url": "https://botanicaandina.com/herramientas/cafeina/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Stack Checker — Verificador de Compatibilidad de Suplementos",
-                "url": "https://botanicaandina.com/herramientas/stack-checker/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "¿Es Seguro? — Hierbas en Embarazo y Lactancia",
-                "url": "https://botanicaandina.com/herramientas/embarazo/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "¿Puede Matarme? — Calculadora de Dosis Letal",
-                "url": "https://botanicaandina.com/herramientas/dosis-letal/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Supplement Safety Score — Puntuación de Seguridad",
-                "url": "https://botanicaandina.com/herramientas/seguridad/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            },
-            {
-                "@type": "WebApplication",
-                "name": "Matriz de Interacciones Hierba–Medicamento",
-                "url": "https://botanicaandina.com/herramientas/matriz/",
-                "applicationCategory": "HealthApplication",
-                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-            }
-        ]
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Herramientas de Salud — Botánica Andina",
+      "numberOfItems": 16,
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Verificador de Interacciones Plantas – Medicamentos", "url": "https://botanicaandina.com/herramientas/interacciones/"},
+        {"@type": "ListItem", "position": 2, "name": "Verificador de Seguridad de Suplementos", "url": "https://botanicaandina.com/herramientas/seguridad/"},
+        {"@type": "ListItem", "position": 3, "name": "Verificador Rápido de Contraindicaciones", "url": "https://botanicaandina.com/herramientas/verificador/"},
+        {"@type": "ListItem", "position": 4, "name": "Stack Checker", "url": "https://botanicaandina.com/herramientas/stack-checker/"},
+        {"@type": "ListItem", "position": 5, "name": "Buscador de Plantas Medicinales", "url": "https://botanicaandina.com/herramientas/buscador/"},
+        {"@type": "ListItem", "position": 6, "name": "Hierbas Seguras en Embarazo y Lactancia", "url": "https://botanicaandina.com/herramientas/embarazo/"},
+        {"@type": "ListItem", "position": 7, "name": "Botiqín Natural", "url": "https://botanicaandina.com/herramientas/botiquin/"},
+        {"@type": "ListItem", "position": 8, "name": "Matriz de Evidencia", "url": "https://botanicaandina.com/herramientas/matriz/"},
+        {"@type": "ListItem", "position": 9, "name": "Calculadora de Cafeína", "url": "https://botanicaandina.com/herramientas/cafeina/"},
+        {"@type": "ListItem", "position": 10, "name": "Calculadora de Vitamina D", "url": "https://botanicaandina.com/herramientas/calculadora-vitamina-d/"},
+        {"@type": "ListItem", "position": 11, "name": "Índice de Seguridad — Dosis Letales", "url": "https://botanicaandina.com/herramientas/dosis-letal/"},
+        {"@type": "ListItem", "position": 12, "name": "Calculadora de Cafeína en Mate", "url": "https://botanicaandina.com/herramientas/calculadora-contenido-cafeina-mate/"},
+        {"@type": "ListItem", "position": 13, "name": "Quiz de Plantas Medicinales", "url": "https://botanicaandina.com/herramientas/quiz/"},
+        {"@type": "ListItem", "position": 14, "name": "Comparador de Suplementos", "url": "https://botanicaandina.com/herramientas/comparador/"},
+        {"@type": "ListItem", "position": 15, "name": "Generador de Reportes", "url": "https://botanicaandina.com/herramientas/reporte/"},
+        {"@type": "ListItem", "position": 16, "name": "Guía del Mate", "url": "https://botanicaandina.com/herramientas/mate/"}
+      ]
     }
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Herramientas"}
-        ]
-    }
-    </script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.6; color: #1a1a1a; background: #fafaf7; }
-        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
-        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
-        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
-        .nav-links a:hover { color: #fff; }
-        @media (max-width: 700px) {
-            .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
-            .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-        }
-
-        .page-header { background: linear-gradient(135deg, #1a5632 0%, #2e7d32 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
-        .page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .page-header p { font-family: Arial, sans-serif; font-size: 1rem; opacity: 0.85; max-width: 650px; margin: 0 auto; }
-
-        .stats-bar { display: flex; gap: 2rem; justify-content: center; margin: -1.5rem auto 2rem; flex-wrap: wrap; position: relative; z-index: 10; background: #fff; max-width: 600px; border-radius: 12px; padding: 1.2rem 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 1.8rem; font-weight: bold; color: #1a5632; display: block; }
-        .stat-label { font-family: Arial, sans-serif; font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
-
-        .tools-grid { max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem; display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-
-        .tool-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
-        .tool-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
-
-        .tool-card-inner { display: flex; align-items: stretch; }
-        .tool-icon-area { flex-shrink: 0; width: 140px; display: flex; align-items: center; justify-content: center; }
-        .tool-icon-area img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px 0 0 12px; }
-        .tool-icon-area.green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-        .tool-icon-area.blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
-        .tool-icon-area.amber { background: linear-gradient(135deg, #fff8e1, #ffe082); }
-        .tool-content { padding: 1.5rem 1.8rem; flex: 1; }
-        .tool-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 10px; font-family: Arial, sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
-        .tool-badge.popular { background: #e8f5e9; color: #2e7d32; }
-        .tool-badge.new { background: #fff3e0; color: #e65100; }
-        .tool-content h2 { font-size: 1.2rem; margin-bottom: 0.4rem; color: #1a5632; }
-        .tool-content p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #555; margin-bottom: 0.8rem; }
-        .tool-features { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tool-features li { font-family: Arial, sans-serif; font-size: 0.78rem; color: #1a5632; background: #f1f8f3; padding: 0.2rem 0.6rem; border-radius: 10px; }
-        .tool-cta { display: inline-block; margin-top: 0.8rem; font-family: Arial, sans-serif; font-size: 0.85rem; color: #1a5632; font-weight: bold; }
-
-        .embed-btn { display: inline-block; margin-top: 0.5rem; padding: 0.4rem 0.8rem; background: #f1f8f3; color: #1a5632; font-family: Arial, sans-serif; font-size: 0.78rem; border-radius: 8px; text-decoration: none; border: 1px solid #c6e2b5; }
-        .embed-btn:hover { background: #e8f5e9; border-color: #2e7d32; }
-
-        .embed-callout { max-width: 1000px; margin: 0 auto 3rem; padding: 0 1.5rem; }
-        .embed-callout-inner { background: #f5f5f5; border-radius: 12px; padding: 2rem; text-align: center; }
-        .embed-callout-inner h2 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #333; }
-        .embed-callout-inner p { font-family: Arial, sans-serif; font-size: 0.9rem; color: #666; max-width: 600px; margin: 0 auto 1rem; }
-        .embed-callout-inner a { color: #1a5632; font-weight: bold; text-decoration: none; }
-        .embed-callout-inner a:hover { text-decoration: underline; }
-
-        .cta-banner { background: linear-gradient(135deg, #1a5632 0%, #2d7a4e 100%); padding: 3rem 1.5rem; margin: 2rem 0; }
-        .cta-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .cta-banner h2 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.8rem; color: #fff; margin-bottom: 1rem; }
-        .cta-banner p { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 1.1rem; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
-        .cta-button { display: inline-block; background: #fff; color: #1a5632; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-
-        footer { background: #1a5632; color: rgba(255,255,255,0.7); padding: 2rem 1.5rem; text-align: center; font-family: Arial, sans-serif; font-size: 0.8rem; }
-        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
-
-        @media (max-width: 700px) {
-            .page-header h1 { font-size: 1.5rem; }
-            .tool-card-inner { flex-direction: column; }
-            .tool-icon-area { width: 100%; height: 100px; }
-            .stats-bar { gap: 1.2rem; padding: 1rem; }
-        }
-    </style>
-    <link rel="preload" as="image" href="/assets/img/tools/thumb-interacciones.svg">
 </head>
 <body>
-    <nav class="site-nav">
-        <div class="nav-container">
-            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
-            <div class="nav-links">
-                <a href="/noticias/">Noticias</a>
-                <a href="/herramientas/" style="color:#fff;font-weight:bold">Herramientas</a>
-                <a href="/herramientas/interacciones/">Interacciones</a>
-                <a href="/sobre-nosotros/">Sobre Nosotros</a>
-            </div>
-        </div>
-    </nav>
+<nav class="nav"><div class="nav-in">
+<a href="/" class="nav-b">Botánica Andina</a>
+<div class="nav-l">
+<a href="/noticias/">Noticias</a>
+<a href="/herramientas/">Herramientas</a>
+<a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+<a href="/sobre-nosotros/">Sobre Nosotros</a>
+</div>
+</div></nav>
 
-    <header class="page-header">
-        <h1>Herramientas Gratuitas de Salud</h1>
-        <p>Herramientas interactivas basadas en evidencia cient&iacute;fica para tomar mejores decisiones sobre plantas medicinales y suplementos.</p>
-    </header>
+<div class="hero">
+<h1>Herramientas de Salud</h1>
+<p>Calculadoras, verificadores y guías interactivas basadas en evidencia de la EMA, ESCOP y PubMed. Gratuitas, sin registro.</p>
+</div>
 
-    <div class="stats-bar">
-        <div class="stat-item">
-            <span class="stat-number">15</span>
-            <span class="stat-label">Herramientas</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">250+</span>
-            <span class="stat-label">Plantas</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">592</span>
-            <span class="stat-label">Interacciones</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Gratuito</span>
-        </div>
-    </div>
+<div class="section-label">Verificadores</div>
+<div class="grid">
 
-    <div class="cta-banner">
-        <div class="cta-content">
-            <h2>¿Tienes un sitio web? Integra nuestras herramientas gratis</h2>
-            <p>Todas nuestras herramientas son embebibles y gratuitas. Copia el código iframe y añádelas a tu sitio en segundos.</p>
-            <a href="/herramientas/embeds/" class="cta-button">Ver códigos embed (14 herramientas)</a>
-        </div>
-    </div>
+<a href="/herramientas/interacciones/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">⚕️</span>
+<span class="card-title">Verificador de Interacciones Plantas – Medicamentos<span class="card-tag">Popular</span></span>
+</div>
+<p class="card-desc">Consulta si tu planta medicinal puede interactuar con medicamentos. Datos de monografías EMA/ESCOP y estudios de PubMed.</p>
+<span class="card-stats">250 plantas · 53 clases de fármacos · 592 interacciones</span>
+<span class="card-cta">Verificar interacciones →</span>
+</a>
 
-    <div class="tools-grid">
-        <a href="/herramientas/interacciones/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-interacciones.svg" alt="Verificador de interacciones plantas-medicamentos" width="140" height="140" loading="eager" fetchpriority="high"></div>
-                <div class="tool-content">
-                    <span class="tool-badge popular">M&aacute;s usada</span>
-                    <h2>Verificador de Interacciones Plantas &ndash; Medicamentos</h2>
-                    <p>&iquest;Tomas alg&uacute;n medicamento y quieres saber si tu planta medicinal puede interactuar? Verifica aqu&iacute; con datos de monograf&iacute;as oficiales (EMA, ESCOP) y estudios de PubMed.</p>
-                    <ul class="tool-features">
-                        <li>100 plantas</li>
-                        <li>30 clases de f&aacute;rmacos</li>
-                        <li>302 interacciones</li>
-                        <li>Niveles de severidad</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Verificar interacciones &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
+<a href="/herramientas/seguridad/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🛡️</span>
+<span class="card-title">Verificador de Seguridad de Suplementos</span>
+</div>
+<p class="card-desc">Evalúa la seguridad de suplementos herbales según tu perfil de salud, medicamentos actuales y condiciones médicas.</p>
+<span class="card-stats">Perfil personalizado · Niveles de riesgo · Referencias científicas</span>
+<span class="card-cta">Verificar seguridad →</span>
+</a>
 
-        <a href="/herramientas/buscador/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-buscador.svg" alt="Buscador de plantas medicinales andinas" width="140" height="140" loading="lazy" decoding="async"></div>
-                <div class="tool-content">
-                    <span class="tool-badge popular">Esencial</span>
-                    <h2>Buscador de Plantas Medicinales Andinas</h2>
-                    <p>Encuentra la planta medicinal adecuada seg&uacute;n tus s&iacute;ntomas o necesidades de salud. Filtra por regi&oacute;n, tipo de evidencia y condici&oacute;n m&eacute;dica.</p>
-                    <ul class="tool-features">
-                        <li>22 plantas</li>
-                        <li>B&uacute;squeda por s&iacute;ntomas</li>
-                        <li>Filtro por evidencia</li>
-                        <li>Enlaces a estudios</li>
-                    </ul>
-                    <span class="tool-cta">Buscar plantas &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
+<a href="/herramientas/verificador/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">✅</span>
+<span class="card-title">Verificador Rápido de Contraindicaciones</span>
+</div>
+<p class="card-desc">Comprueba contraindicaciones de plantas medicinales para embarazo, lactancia, cirugía y condiciones específicas.</p>
+<span class="card-stats">Verificación rápida · Base de datos EMA</span>
+<span class="card-cta">Verificar →</span>
+</a>
 
-        <a href="/herramientas/quiz/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-quiz.svg" alt="Quiz de plantas andinas personalizado" width="140" height="140" loading="lazy" decoding="async"></div>
-                <div class="tool-content">
-                    <span class="tool-badge new">Nuevo</span>
-                    <h2>&iquest;Qu&eacute; Planta Andina Necesitas? &mdash; Quiz Personalizado</h2>
-                    <p>Responde 7 preguntas r&aacute;pidas sobre tu salud, estilo de vida y preferencias. Recibe una recomendaci&oacute;n personalizada con las plantas que mejor se adaptan a tu perfil.</p>
-                    <ul class="tool-features">
-                        <li>7 preguntas</li>
-                        <li>12 plantas evaluadas</li>
-                        <li>Detecta interacciones</li>
-                        <li>Compartible</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Hacer el quiz &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-    </div>
+<a href="/herramientas/stack-checker/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">📋</span>
+<span class="card-title">Stack Checker — Combinaciones de Suplementos</span>
+</div>
+<p class="card-desc">Analiza tu combinación de suplementos y detecta posibles interacciones, redundancias o riesgos entre ellos.</p>
+<span class="card-stats">Múltiples suplementos · Análisis cruzado</span>
+<span class="card-cta">Analizar stack →</span>
+</a>
 
-        <a href="/herramientas/verificador/" class="tool-card">
-            <div class="tool-card-inner">
-                <div class="tool-icon-area"><img src="/assets/img/tools/thumb-verificador.svg" alt="Verificador de suplementos con evidencia" width="140" height="140" loading="lazy" decoding="async"></div>
-                <div class="tool-content">
-                    <span class="tool-badge new">Nuevo</span>
-                    <h2>Verificador de Suplementos &mdash; Evidencia Cient&iacute;fica</h2>
-                    <p>&iquest;Tu suplemento tiene evidencia real? Consulta calificaciones de eficacia (A&ndash;F), seguridad, interacciones y dosis para 55 suplementos populares. La primera base de datos independiente en espa&ntilde;ol.</p>
-                    <ul class="tool-features">
-                        <li>55 suplementos</li>
-                        <li>Calificaci&oacute;n A&ndash;F</li>
-                        <li>Interacciones</li>
-                        <li>Dosis</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Verificar suplemento &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-    </div>
+<a href="/herramientas/verificador-interacciones-plantas-medicamentos/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🌿</span>
+<span class="card-title">Verificador de Interacciones Plantas–Medicamentos</span>
+</div>
+<p class="card-desc">Verifica interacciones entre 150 plantas medicinales y 30 clases de medicamentos. 503 interacciones documentadas con evidencia de EMA/ESCOP y PubMed.</p>
+<span class="card-stats">150 plantas · 503 interacciones · Datos EMA/ESCOP</span>
+<span class="card-cta">Verificar →</span>
+</a>
 
-    <div class="tools-grid">
-        <a href="/herramientas/stack-checker/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-stack-checker.svg" alt="Stack Checker suplementos" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="tool-body">
-                    <h2>Stack Checker &mdash; &iquest;Tus suplementos son compatibles?</h2>
-                    <p>Verifica interacciones entre suplementos, competencia por absorci&oacute;n y horarios &oacute;ptimos de toma. 78 suplementos, 102 interacciones documentadas.</p>
-                    <ul class="tool-features">
-                        <li>78 suplementos</li>
-                        <li>102 interacciones</li>
-                        <li>Horario de toma</li>
-                        <li>Embed gratis</li>
-                    </ul>
-                    <span class="tool-cta">Verificar stack &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/embarazo/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-embarazo.svg" alt="Hierbas seguras en embarazo" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="tool-body">
-                    <h2>&iquest;Es Seguro? &mdash; Hierbas en Embarazo y Lactancia</h2>
-                    <p>Verifica si una hierba o suplemento es seguro durante el embarazo o la lactancia. 37 hierbas incluyendo 11 plantas andinas no disponibles en otras bases de datos.</p>
-                    <ul class="tool-features">
-                        <li>37 hierbas evaluadas</li>
-                        <li>11 plantas andinas</li>
-                        <li>Modo embarazo y lactancia</li>
-                        <li>Fuentes cient&iacute;ficas</li>
-                    </ul>
-                    <span class="tool-cta">Verificar hierba &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/dosis-letal/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-dosis-letal.svg" alt="Calculadora dosis letal" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="tool-body">
-                    <h2>&iquest;Puede Matarme? &mdash; Calculadora de Dosis Letal</h2>
-                    <p>Calcula cu&aacute;nto de una sustancia com&uacute;n necesitar&iacute;as para alcanzar la dosis letal (LD50). Perspectiva cient&iacute;fica sobre toxicolog&iacute;a cotidiana.</p>
-                    <ul class="tool-features">
-                        <li>25+ sustancias comunes</li>
-                        <li>Datos LD50 reales</li>
-                        <li>Ajuste por peso corporal</li>
-                        <li>Contexto visual</li>
-                    </ul>
-                    <span class="tool-cta">Calcular dosis &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/cafeina/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-cafeina.svg" alt="Reloj de cafe&iacute;na" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Reloj de Cafe&iacute;na &mdash; &iquest;Cu&aacute;nta cafe&iacute;na tienes ahora?</h2>
-                    <p>Calcula cu&aacute;nta cafe&iacute;na queda en tu cuerpo. Visualizaci&oacute;n en tiempo real del metabolismo con info sobre plantas que afectan la cafe&iacute;na.</p>
-                    <ul class="tool-features">
-                        <li>14 bebidas comunes</li>
-                        <li>Gr&aacute;fico en tiempo real</li>
-                        <li>Hora segura para dormir</li>
-                        <li>Info de hierbas</li>
-                    </ul>
-                    <span class="tool-cta">Calcular ahora &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-    </div>
+<a href="/herramientas/supplement-safety-score-calculadora/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🔢</span>
+<span class="card-title">Supplement Safety Score — Calculadora de Seguridad</span>
+</div>
+<p class="card-desc">Evalúa la seguridad de suplementos dietéticos y plantas medicinales con una puntuación basada en evidencia científica.</p>
+<span class="card-stats">Puntuación personalizada · Efectos secundarios · Contraindicaciones</span>
+<span class="card-cta">Calcular puntuación →</span>
+</a>
 
-        <a href="/herramientas/botiquin/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-botiquin.svg" alt="Botiqu&iacute;n natural de hierbas" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Botiqu&iacute;n Natural &mdash; Tu kit de hierbas esenciales</h2>
-                    <p>Arma tu botiqu&iacute;n de hierbas medicinales seg&uacute;n tus necesidades. Recomendaciones personalizadas basadas en evidencia cient&iacute;fica.</p>
-                    <ul class="tool-features">
-                        <li>Personalizado</li>
-                        <li>Basado en evidencia</li>
-                        <li>Plantas andinas</li>
-                    </ul>
-                    <span class="tool-cta">Armar botiqu&iacute;n &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/comparador/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-comparador.svg" alt="Comparador de suplementos" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Comparador de Suplementos</h2>
-                    <p>Compara suplementos lado a lado: ingredientes, evidencia cient&iacute;fica, precios y beneficios. Decide con datos.</p>
-                    <ul class="tool-features">
-                        <li>Comparaci&oacute;n detallada</li>
-                        <li>Evidencia cient&iacute;fica</li>
-                        <li>Precios actualizados</li>
-                    </ul>
-                    <span class="tool-cta">Comparar ahora &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/mate/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-mate.svg" alt="Calculadora de yerba mate" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                </div>
-                <div class="tool-body">
-                    <h2>Calculadora de Yerba Mate</h2>
-                    <p>Calcula la cafe&iacute;na por tipo de mate, marca y preparaci&oacute;n. Basado en datos de 47 estudios cient&iacute;ficos.</p>
-                    <ul class="tool-features">
-                        <li>47 estudios analizados</li>
-                        <li>Por marca y tipo</li>
-                        <li>Comparaci&oacute;n con caf&eacute;</li>
-                    </ul>
-                    <span class="tool-cta">Calcular mate &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
+</div>
 
-        <a href="/herramientas/calc-vitamina-d.html" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <svg width="60" height="60" viewBox="0 0 60 60" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff">
-                        <path d="M30 15c-3 0 15h20c0-9-2c8 0 9s-10.5c9 2c8 0 9h-9" fill="currentColor" stroke-width="3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        <circle cx="42" cy="30" r="3" fill="#f59e0b"/>
-                        <text x="42" y="35" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">Vit D</text>
-                    </svg>
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="tool-body">
-                    <h2>Calculadora de Vitamina D &mdash; Solar</h2>
-                    <p>Calcula tu necesidad diaria de vitamina D seg&uacute;n tu edad, tipo de piel y ubicaci&oacute;n en LATAM. Basado en Institute of Medicine 2011 + datos de UVB por ciudad.</p>
-                    <ul class="tool-features">
-                        <li>Por grupo de edad</li>
-                        <li>Por tipo de piel (5 tipos)</li>
-                        <li>10 ciudades LATAM</li>
-                        <li>UVB real por ubicaci&oacute;n</li>
-                        <li>Dosis recomendada (400-2000 UI)</li>
-                        <li>Visual: s&iacute;ntesis solar vs necesidad</li>
-                    </ul>
-                    <span class="tool-cta">Calcular ahora &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </a>
-        </a>
-        <a href="/herramientas/seguridad/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <img src="/assets/img/tools/thumb-seguridad.svg" alt="Supplement Safety Score" width="60" height="60" loading="lazy" decoding="async" style="border-radius:8px">
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="tool-body">
-                    <h2>Supplement Safety Score &mdash; Puntuaci&oacute;n de Seguridad</h2>
-                    <p>Ingresa 2&ndash;5 suplementos y obt&eacute;n una puntuaci&oacute;n de seguridad (0&ndash;100) con detalles de interacciones, tarjeta compartible y c&oacute;digo para insertar en tu sitio.</p>
-                    <ul class="tool-features">
-                        <li>50 suplementos</li>
-                        <li>52 interacciones</li>
-                        <li>Puntuaci&oacute;n 0&ndash;100</li>
-                        <li>Tarjeta compartible</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Calcular seguridad &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-        <a href="/herramientas/matriz/" class="tool-card">
-            <div class="tool-card-content">
-                <div class="tool-header">
-                    <div style="width:60px;height:60px;background:linear-gradient(135deg,#1a237e,#3949ab);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;font-weight:700">M</div>
-                    <div class="tool-badges">
-                        <span class="badge badge-new">Nuevo</span>
-                    </div>
-                </div>
-                <div class="tool-body">
-                    <h2>Matriz de Interacciones Hierba&ndash;Medicamento</h2>
-                    <p>Explora visualmente 592 interacciones entre 204 hierbas medicinales y 53 clases de medicamentos. Filtra por hierba, medicamento o severidad.</p>
-                    <ul class="tool-features">
-                        <li>204 hierbas</li>
-                        <li>53 clases de medicamentos</li>
-                        <li>592 interacciones</li>
-                        <li>Filtros interactivos</li>
-                        <li>Embeddable</li>
-                    </ul>
-                    <span class="tool-cta">Explorar matriz &rarr;</span>
-                    <a href="/herramientas/embeds/" class="embed-btn">Embed gratis &rarr;</a>
-                </div>
-            </div>
-        </a>
-    </div>
+<div class="section-label">Buscadores y guías</div>
+<div class="grid">
 
-    <div class="embed-callout">
-        <div class="embed-callout-inner">
-            <h2>Integra nuestras herramientas en tu sitio web</h2>
-            <p>Todas nuestras herramientas se pueden integrar gratis con un simple c&oacute;digo iframe. Ideal para blogs de salud, farmacias, cl&iacute;nicas y herbolarios.</p>
-            <p>Cada herramienta incluye el c&oacute;digo de integraci&oacute;n en su p&aacute;gina. <a href="/herramientas/interacciones/">Ver ejemplo &rarr;</a></p>
-        </div>
-    </div>
+<a href="/herramientas/buscador/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🔍</span>
+<span class="card-title">Buscador de Plantas Medicinales</span>
+</div>
+<p class="card-desc">Encuentra la planta medicinal adecuada según tus síntomas o necesidades. Filtra por región, evidencia y condición médica.</p>
+<span class="card-stats">22 plantas · Búsqueda por síntomas · Filtro por evidencia</span>
+<span class="card-cta">Buscar plantas →</span>
+</a>
 
-    <footer>
-        <p>&copy; 2026 <a href="/">Bot&aacute;nica Andina</a> &mdash; Informaci&oacute;n basada en evidencia cient&iacute;fica</p>
-        <p style="margin-top:0.3rem"><a href="/politica-editorial/">Pol&iacute;tica Editorial</a> &middot; <a href="/sobre-nosotros/">Sobre Nosotros</a></p>
-    </footer>
+<a href="/herramientas/embarazo/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🤰</span>
+<span class="card-title">Hierbas Seguras en Embarazo y Lactancia</span>
+</div>
+<p class="card-desc">Guía de seguridad de plantas medicinales durante el embarazo y la lactancia basada en evidencia clínica.</p>
+<span class="card-stats">Clasificación por trimestre · Niveles de seguridad</span>
+<span class="card-cta">Consultar guía →</span>
+</a>
 
-    <div class="share-section" style="margin-top: 2rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-        <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2c3e50;">Compartir esta herramienta</h3>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button onclick="shareTo('twitter')" style="padding: 0.5rem 1rem; background: #1DA1F2; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-9.42 0 4.48 4.48 0 0 0-3.14-1.53 7.74 7.74 0 0 1-6.8-6.63V5.5h4.15v4.8a5.12 5.12 0 0 1 5.12 5.12h1.76v6.25a7.9 7.9 0 0 1-7.85 6.79h-4.1v9.2h3.96a6.7 6.7 0 0 1 6.7-6.7V5.5h3.1l.68-4.18h-3.78V3a3.25 3.25 0 0 1-3.25-3.25H5.4V1h3.38C13.66 1 15 2.34 15 5.38v4.22h4.23l.68 4.18h-4.91v15.08a9.2 9.2 0 0 1-9.2 9.2H3a9.2 9.2 0 0 1-9.2-9.2z"/></svg>
-                Twitter
-            </button>
-            <button onclick="shareTo('facebook')" style="padding: 0.5rem 1rem; background: #1877F2; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 1.686.235 1.686.235v2.953H5.874c-.335 0-.533.223-.533.638v2.648c0 .414.198.638.533.638h.661v4.373h3.924C21.383 20.433 24 16.614 24 12.073z"/></svg>
-                Facebook
-            </button>
-            <button onclick="shareTo('whatsapp')" style="padding: 0.5rem 1rem; background: #25D366; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.673-.148-.276 0-.375.101-.468.244-.086.133-.527.352-.917.662-.267.208-.458.414-.581.747-.122.334-.184.662-.184.991 0 .558.224 1.028.634 1.363.06.057.129.098.207.117.065-.018.083-.072.124-.155-.041-.082-.128-.247-.259-.49-.38-.451-.37-.956-.933-1.633-1.388-.288-.207-.568-.442-.842-.691-.272-.246-.495-.424-.688-.544-.411-.287-.617-.44-.617-.44 0-.037.02-.087.044-.129.074-.014.041-.04.104-.053-.19-.013-.086-.002-.196.009-.243.021-.086.021-.194.007-.324-.014-.13-.021-.27-.004-.418-.016-.15-.012-.314-.018-.492-.006-.18.011-.377.018-.596.006-.218.013-.459.005-.72-.008-.26-.015-.543-.026-.863-.011-.319-.019-.66-.024-1.022.011-.36.021-.726.032-1.097.011-.371.021-.744.032-1.124.011-.379.023-.756.032-1.144.011-.386.021-.776.032-1.172.012-.397.022-.789.032-1.194.012-.404.021-.809.032-1.228.012-.42.021-.842.032-1.278.012-.435.022-.874.031-1.333.012-.459.021-.919.031-1.4.012-.481.022-.966.031-1.486.012-.52.021-1.044.031-1.585.012-.54.022-1.087.031-1.672.012-.584.021-1.172.031-1.795.011-.624.022-1.254.032-1.925.012-.67.021-1.345.031-2.07.012-.724.022-1.452.031-2.23.012-.779.021-1.568.031-2.393.012-.825.022-1.66.031-2.557.012-.897.021-1.8.032-2.722.011-.922.022-1.851.032-2.818.012-.967.021-1.943.031-2.957.012-1.022.022-2.052.031-3.127.012-1.069.021-2.149.031-3.26.012-1.106.021-2.22.031-3.36.012-1.131.022-2.268.031-3.424.012-1.147.022-2.293.031-3.453.012-1.145.021-2.296.031-3.445.012-1.115.022-2.238.031-3.378.011-1.069.022-2.148.031-3.25.012-.998.021-2.002.031-3.056.012-.935.022-1.877.031-2.882.012-.897.021-1.796.031-2.76.012-.873.022-1.752.031-2.686.012-.856.021-1.715.031-2.639.012-.836.022-1.676.031-2.58.012-.845.021-1.694.031-2.605.012-.874.022-1.753.031-2.7.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.65z"/></svg>
-                WhatsApp
-            </button>
-            <button onclick="copyLink()" id="copyBtn" style="padding: 0.5rem 1rem; background: #6b7280; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
-                📋 Copiar enlace
-            </button>
-        </div>
-    </div>
-    <div class="embed-section" style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-radius: 12px; border: 1px solid #bbf7d0;">
-        <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #166534;">Incrustar en tu sitio</h3>
-        <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #374151;">Copia el código para incrustar esta herramienta:</p>
-        <textarea id="embedCode" readonly style="width: 100%; height: 80px; padding: 0.5rem; border: 1px solid #bbf7d0; border-radius: 6px; font-family: monospace; font-size: 0.85rem; background: #fff;" onclick="this.select();"></textarea>
-        <button onclick="copyEmbed()" id="copyEmbedBtn" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: #16a34a; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
-            📋 Copiar código
-        </button>
-    </div>
+<a href="/herramientas/botiquin/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🏠</span>
+<span class="card-title">Botiquín Natural</span>
+</div>
+<p class="card-desc">Arma tu botiquín de plantas medicinales esenciales para el hogar con guía de uso, dosis y precauciones.</p>
+<span class="card-stats">Plantas esenciales · Guía de uso</span>
+<span class="card-cta">Armar botiquín →</span>
+</a>
 
-    <script>
-        function shareTo(platform) {
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent(document.title);
-            let shareUrl;
+<a href="/herramientas/matriz/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">📊</span>
+<span class="card-title">Matriz de Evidencia</span>
+</div>
+<p class="card-desc">Visualiza el nivel de evidencia científica de cada planta medicinal para diferentes condiciones de salud.</p>
+<span class="card-stats">Niveles A–D · Múltiples condiciones</span>
+<span class="card-cta">Ver matriz →</span>
+</a>
 
-            switch(platform) {
-                case 'twitter':
-                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-                    break;
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                    break;
-                case 'whatsapp':
-                    shareUrl = `https://wa.me/?text=${text} ${url}`;
-                    break;
-            }
+<a href="/herramientas/hierbas-seguras-embarazo-lactancia/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🤱</span>
+<span class="card-title">Hierbas Seguras en Embarazo y Lactancia</span>
+</div>
+<p class="card-desc">Verifica si una planta medicinal o suplemento es seguro durante el embarazo o lactancia. Base de datos con 100+ plantas y su evidencia de seguridad.</p>
+<span class="card-stats">100+ plantas · Seguridad por trimestre · Evidencia clínica</span>
+<span class="card-cta">Consultar seguridad →</span>
+</a>
 
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
+</div>
 
-        function copyLink() {
-            navigator.clipboard.writeText(window.location.href);
-            const btn = document.getElementById('copyBtn');
-            btn.textContent = '✓ ¡Copiado!';
-            btn.style.background = '#16a34a';
-            setTimeout(() => {
-                btn.textContent = '📋 Copiar enlace';
-                btn.style.background = '#6b7280';
-            }, 2000);
-        }
+<div class="section-label">Calculadoras</div>
+<div class="grid">
 
-        function copyEmbed() {
-            const embedCode = document.getElementById('embedCode');
-            navigator.clipboard.writeText(embedCode.value);
-            const btn = document.getElementById('copyEmbedBtn');
-            btn.textContent = '✓ ¡Copiado!';
-            setTimeout(() => {
-                btn.textContent = '📋 Copiar código';
-            }, 2000);
-        }
+<a href="/herramientas/cafeina/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">☕</span>
+<span class="card-title">Calculadora de Cafeína</span>
+</div>
+<p class="card-desc">Calcula tu consumo diario de cafeína de todas las fuentes: café, té, mate, guaraná y suplementos.</p>
+<span class="card-stats">Múltiples fuentes · Límites diarios</span>
+<span class="card-cta">Calcular cafeína →</span>
+</a>
 
-        // Generate embed code
-        window.addEventListener('DOMContentLoaded', function() {
-            const embedCode = document.getElementById('embedCode');
-            if (embedCode) {
-                const toolUrl = window.location.href;
-                const toolName = document.title;
-                embedCode.value = `<iframe src="${toolUrl}" width="100%" height="600" frameborder="0" title="${toolName}"></iframe>`;
-            }
-        });
-    </script>
+<a href="/herramientas/calculadora-vitamina-d/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">☀️</span>
+<span class="card-title">Calculadora de Vitamina D</span>
+</div>
+<p class="card-desc">Estima tu necesidad de vitamina D según tu ubicación, piel, edad y estilo de vida.</p>
+<span class="card-stats">Personalizada · Recomendaciones por perfil</span>
+<span class="card-cta">Calcular →</span>
+</a>
 
+<a href="/herramientas/dosis-letal/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">⚠️</span>
+<span class="card-title">Índice de Seguridad — Dosis Letales</span>
+</div>
+<p class="card-desc">Compara el margen de seguridad (LD50) de sustancias naturales y sintéticas con contexto científico.</p>
+<span class="card-stats">Datos toxicológicos · Contexto comparativo</span>
+<span class="card-cta">Ver índice →</span>
+</a>
 
-    <div class="share-widget">
-        <div class="share-header">
-            <span class="share-title">Comparte esta herramienta</span>
-            <button class="share-embed-toggle" onclick="toggleEmbed()" aria-label="Mostrar código embed">
-                <span id="toggleText">📦 Insertar en tu sitio</span>
-            </button>
-        </div>
+<a href="/herramientas/calculadora-contenido-cafeina-mate/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🧉</span>
+<span class="card-title">Calculadora de Cafeína en Mate</span>
+</div>
+<p class="card-desc">Calcula la cafeína en tu mate según el tipo de yerba, temperatura del agua y forma de preparación.</p>
+<span class="card-stats">Yerba mate · Variables de preparación</span>
+<span class="card-cta">Calcular →</span>
+</a>
 
-        <div class="share-buttons">
-            <a class="share-btn twitter" href="#" onclick="shareToTwitter()" target="_blank" rel="noopener" aria-label="Compartir en X">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-1.587 6.062c-.379 1.689-.299 1.984-.069.45-.297 1.263.356-2.292.767-1.912 1.789-1.389.947-1.696.834-.666.814-1.093.388-.683.366-.668-.736-.834-.505.919-1.243.797-2.037-.252.319-.403-.589-.632-.524-.805-.797-1.416.619-1.416-1.653-1.402-1.389-1.339-1.345-.736-.649-.686-.677-.495-.532-.552-.485-.469-.369-.493.286-.359-.248-.219-.204-.16-.097-.037 0h1.125v1.25c0 0 .077.016.149.06.208.069.25.074.044.044-.05.011.016-.012-.02-.019-.016-.025-.023-.029-.033-.034-.043-.048-.053-.062-.062-.058-.067-.072-.076-.078-.081-.089-.101-.111.129-.137-.164-.191-.218-.252-.287-.323-.369-.395-.425-.445-.465-.49-.493-.518-.533-.563-.581-.606-.639-.671-.705-.735-.775-.813-.856-.887-.925-.974-1.024-1.073-1.122-1.163-1.196-1.228-1.256-1.28-1.305-1.339-1.374-1.399-1.42-1.428-1.443-1.456-1.468-1.479-1.487-1.493-1.504-1.512-1.523-1.532-1.54-1.548-1.559-1.565-1.571-1.577-1.584-1.592-1.602-1.608-1.613-1.619-1.628-1.634-1.64-1.649-1.653-1.658-1.665-1.672-1.678-1.682-1.688-1.695-1.7-1.704-1.71-1.714-1.717-1.723-1.732-1.739-1.743-1.749-1.755-1.76-1.76-1.766-1.773-1.78-1.784-1.787-1.795-1.803-1.81-1.815-1.818-1.824-1.83-1.836-1.842-1.849-1.855-1.861-1.865-1.871-1.877-1.883-1.889-1.894-1.9-1.903-1.91-1.917-1.924-1.93-1.935-1.944-1.952-1.961-1.968-1.976-1.982-1.99-1.997-2.002-2.007-2.011-2.016-2.019-2.021-2.024-2.028-2.031-2.034-2.037-2.041-2.043-2.045-2.049-2.052-2.055-2.058-2.061-2.063-2.067-2.069-2.072-2.074-2.076-2.079-2.083-2.085-2.089-2.092-2.095-2.099-2.101-1.105-1.108-1.11-1.113-1.117-1.119-1.122-1.126-1.128-1.131-1.134-1.138-1.141-1.144-1.147-1.149-1.152-1.156-1.159-1.162-1.165-1.168-1.171-1.174-1.176-1.18-1.184-1.187-1.19-1.194-1.197-1.2-1.203-1.206-1.209-1.212-1.215-1.218-1.221-1.224-1.227-1.23-1.232-1.236-1.239-1.243-1.246-1.249-1.253-1.257-1.26-1.264-1.268-1.272-1.276-1.28-1.284-1.289-1.292-1.295-1.298-1.302-1.305-1.309-1.314-1.319-1.324-1.328-1.332-1.337-1.341-1.345-1.349-1.353-1.358-1.363-1.368-1.372-1.377-1.383-1.389-1.393-1.397-1.402-1.408-1.413-1.418-1.422-1.428-1.433-1.438-1.443-1.449-1.453-1.458-1.464-1.469-1.474-1.48-1.486-1.492-1.497-1.502-1.508-1.514-1.519-1.524-1.53-1.536-1.542-1.548-1.553-1.559-1.565-1.571-1.577-1.583-1.589-1.594-1.599-1.604-1.609-1.614-1.62-1.626-1.632-1.638-1.644-1.649-1.654-1.66-1.666-1.671-1.677-1.683-1.689-1.694-1.7-1.706-1.712-1.718-1.724-1.73-1.736-1.742-1.748-1.754-1.76-1.767-1.773-1.779-1.785-1.791-1.796-1.802-1.808-1.814-1.82-1.826-1.832-1.838-1.844-1.85-1.856-1.862-1.869-1.875-1.881-1.887-1.893-1.899-1.904-1.91-1.916-1.922-1.928-1.934-1.939-1.945-1.951-1.957-1.962-1.968-1.974-1.98-1.986-1.991-1.996-1.999v12.066h-.019c0 0 .078.016.164.067.097.147.146.196.237.245.266.328.368.401.429.449.446.508.537.54.55.556.556.556.537.449.429.446.444.386.328.27.208-.193.168-.193-.168-.188-.169-.169-.168-.169-.168-.169-.169-.168-.17-.173-.18-.188-.193-.2-.211-.221-.24-.254-.269-.283-.299-.315-.336-.346-.353-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-. share to Twitter</a>
-            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328 1.078-2.352 2.352-3.632v-3.585c0-1.283-1.045-2.352-2.352-3.602v-3.585c0-.929-.631-1.599-1.599-2.552v-3.585c0-.791-.53-1.376-1.376-2.24v-3.585c0-.824-.485-1.42-1.42-2.23v-3.585c0-.832-.486-1.419-1.419-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.936-.602-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.835-.497-1.416-1.416-2.23v-3.585c0-.797-.514-1.427-1.427-2.215v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.833-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.269-1.025-2.352-2.352-3.577v-3.585c0-.937-.607-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.938-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.577v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.553-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585 partial.517h.353c0 0 .466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466. 1.405c0 0 .311 0 .324.327.32.362.339.367.374.378.384.389.397.413.425.445.462.49.512.56.605.649.692.735.777.818.857.896.934.967.997 1.027 1.057 1.087 1.116 1.144 1.171 1.197 1.221 1.245 1.268 1.29 1.311 1.331 1.35 1.369 1.387 1.404 1.42 1.435 1.45 1.464 1.477 1.49 1.503 1.515 1.526 1.537 1.547 1.556 1.566 1.574 1.582 1.589 1.596 1.602 1.608 1.614 1.62 1.625 1.631 1.636 1.641 1.646 1.65 1.654 1.659 1.663 1.667 1.671 1.674 1.677 1.679 1.682 1.685 1.688 1.69 1.693 1.696 1.699 1.702 1.704 1.707 1.71 1.713 1.718 1.722 1.727 1.731 1.735 1.739 1.742 1.746 1.75 1.753 1.756 1.759 1.762 1.765 1.768 1.771 1.774 1.777 1.78 1.783 1.786 1.789 1.792 1.795 1.798 1.801 1.804 1.806 1.809 1.811 1.814 1.817 1.819 1.822 1.825 1.828 1.83 1.833 1.836 1.839 1.842 1.845 1.848 1.851 1.853 1.856 1.859 1.862 1.865 1.868 1.87 1.873 1.876 1.879 1.882 1.885 1.888 1.891 1.894 1.897 1.9 1.903 1.905 1.908 1.91 1.913 1.916 1.919 1.922 1.925 1.928 1.931 1.934 1.937 1.94 1.942 1.945 1.948 1.951 1.954 1.957 1.96 1.963 1.966 1.969 1.972 1.975 1.978 1.981 1.984 1.987 1.99 1.992 1.995 1.998v12.066h-5.575c0 0 .057.037.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057./X share to Twitter</a>
-            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-14c0-1.103-.897-2-2-2zm-11.959 6h-2.059c-.535 0-.969-.432-.969-.962v-4.162c0-.691.288-1.236-.846-1.741-.193-1.051-.095-1.393.095-1.72.193-2.083.193-.916 0-1.56.432-2.058.962-.962v-1.766c0-.261.106-.519.106-.773v-4.236c0-.392-.198-.776-.198-1.152v-4.236c0-.231-.116-.463-.116-.693v-4.236c0-.259-.129-.517-.129-.773v-4.236c0-.261-.131-.52-.131-.771v-4.236c0-.13-.065-.518-.065-.765v-4.236c0-.065-.033-.515-.033-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.26-.13-.519-.13-.765v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.26-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.13-.065-.514-.064-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.235.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-. a. share to LinkedIn</a>
-            <a class="share-btn facebook" href="#" onclick="shareToFacebook()" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c3.23 0 6.09-1.57 8.09-4.39.09-4.39-1.57-8.09-4.39-8.09-4.39-1.57-8.09V8.72c0-2.13-1.52-3.96-3.82-1.29-.59-.29-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1., WhatsApp</a>
-            <button class="share-btn copy" onclick="copyPageUrl()" aria-label="Copiar enlace">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15h4a2 2 0 012 2v0a2 2 0 01-2 2H9a2 2 0 01-2-2v6a2 2 0 012 2h6a2 2 0 012-2v-6a2 2 0 01-2-2h-4"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="share-embed-section" id="shareEmbedSection">
-            <p class="embed-label">Código para insertar en tu sitio:</p>
-            <textarea id="embedCode" class="embed-code" readonly></textarea>
-            <div class="embed-actions">
-                <button class="copy-embed-btn" onclick="copyEmbedCode()">
-                    <span id="copyBtnText">Copiar código</span>
-                    <span class="embed-copied" id="embedCopied">✓ Copiado!</span>
-                </button>
-            </div>
-            <p class="embed-link-cta">
-                Más herramientas: <a href="/herramientas/embeds/" target="_blank">Ver todas las herramientas embebibles</a>
-            </p>
-        </div>
-    </div>
+</div>
 
-    <script>
-        let currentToolUrl = window.location.href;
-        let currentToolTitle = document.title;
+<div class="section-label">Otros</div>
+<div class="grid">
 
-        function shareToTwitter() {
-            const text = encodeURIComponent(`${currentToolTitle} - Herramienta gratuita de Botánica Andina`);
-            const url = encodeURIComponent(currentToolUrl);
-            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
-        }
+<a href="/herramientas/quiz/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">❓</span>
+<span class="card-title">Quiz de Plantas Medicinales</span>
+</div>
+<p class="card-desc">Pon a prueba tus conocimientos sobre plantas medicinales, interacciones y medicina tradicional.</p>
+<span class="card-stats">Preguntas variadas · Respuestas con referencias</span>
+<span class="card-cta">Comenzar quiz →</span>
+</a>
 
-        function shareToLinkedIn() {
-            const url = encodeURIComponent(currentToolUrl);
-            const title = encodeURIComponent(currentToolTitle);
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&mini=true`, '_blank', 'noopener,noreferrer');
-        }
+<a href="/herramientas/comparador/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">⚖️</span>
+<span class="card-title">Comparador de Suplementos</span>
+</div>
+<p class="card-desc">Compara propiedades, evidencia y seguridad de dos o más suplementos herbales lado a lado.</p>
+<span class="card-stats">Comparación directa · Evidencia lado a lado</span>
+<span class="card-cta">Comparar →</span>
+</a>
 
-        function shareToFacebook() {
-            const url = encodeURIComponent(currentToolUrl);
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer');
-        }
+<a href="/herramientas/reporte/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">📄</span>
+<span class="card-title">Generador de Reportes</span>
+</div>
+<p class="card-desc">Genera un reporte personalizado sobre las interacciones de tus plantas y medicamentos para compartir con tu médico.</p>
+<span class="card-stats">PDF descargable · Para profesionales</span>
+<span class="card-cta">Generar reporte →</span>
+</a>
 
-        function copyPageUrl() {
-            navigator.clipboard.writeText(currentToolUrl).then(() => {
-                showToast('Enlace copiado al portapapeles');
-            });
-        }
+<a href="/herramientas/mate/" class="card" style="text-decoration:none">
+<div class="card-head">
+<span class="card-icon">🧉</span>
+<span class="card-title">Guía del Mate</span>
+</div>
+<p class="card-desc">Todo sobre el mate: propiedades, beneficios, contraindicaciones e interacciones con medicamentos.</p>
+<span class="card-stats">Guía completa · Base científica</span>
+<span class="card-cta">Leer guía →</span>
+</a>
 
-        function toggleEmbed() {
-            const section = document.getElementById('shareEmbedSection');
-            const toggleText = document.getElementById('toggleText');
-            section.classList.toggle('active');
-            if (section.classList.contains('active')) {
-                toggleText.textContent = '✕ Cerrar';
-                updateEmbedCode();
-            } else {
-                toggleText.textContent = '📦 Insertar en tu sitio';
-            }
-        }
+</div>
 
-        function updateEmbedCode() {
-            const toolPath = window.location.pathname;
-            const iframeSrc = `https://botanicaandina.com${toolPath}`;
-            const embedCode = `<iframe src="${iframeSrc}"\n    width="100%"\n    height="700"\n    frameborder="0"\n    style="border:1px solid #e2e8f0;border-radius:8px;"\n    title="${currentToolTitle}"\n    loading="lazy">\n</iframe>\n<p style="font-size:12px;color:#666;margin-top:4px;">\n    Herramienta gratuita de <a href="https://botanicaandina.com" target="_blank" rel="noopener">Botánica Andina</a>\n</p>`;
-            document.getElementById('embedCode').value = embedCode;
-        }
-
-        function copyEmbedCode() {
-            const code = document.getElementById('embedCode').value;
-            navigator.clipboard.writeText(code).then(() => {
-                const copyBtnText = document.getElementById('copyBtnText');
-                const copyCopied = document.getElementById('embedCopied');
-                copyBtnText.style.display = 'none';
-                copyCopied.classList.add('active');
-                setTimeout(() => {
-                    copyBtnText.style.display = 'inline';
-                    copyCopied.classList.remove('active');
-                }, 2000);
-            });
-        }
-
-        function showToast(message) {
-            const toast = document.createElement('div');
-            toast.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#374151;color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;animation:fadeIn 0.3s;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
-            toast.textContent = message;
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 3000);
-        }
-
-        // Auto-detect and set embed code
-        updateEmbedCode();
-    </script>
-
+<footer>
+<p>© 2026 Botánica Andina · <a href="/herramientas/">Herramientas</a> · <a href="/noticias/">Noticias</a> · <a href="/">Inicio</a></p>
+<p style="margin-top:.3rem;font-size:.7rem;color:#666">Fuentes: EMA, ESCOP, PubMed · Información educativa, no reemplaza el consejo médico</p>
+</footer>
 </body>
 </html>

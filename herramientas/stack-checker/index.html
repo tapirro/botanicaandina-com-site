@@ -128,13 +128,13 @@
         .result-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #ccc; }
         .result-card.danger { border-left-color: #d32f2f; }
         .result-card.warning { border-left-color: #f57c00; }
-        .result-card.info { border-left-color: #1976d2; }
+        .result-card.info { border-left-color: #1a5632; }
         .result-card.ok { border-left-color: #2e7d4f; }
         .result-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
         .severity-badge { padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; color: #fff; }
         .severity-badge.alta { background: #d32f2f; }
         .severity-badge.media { background: #f57c00; }
-        .severity-badge.baja { background: #1976d2; }
+        .severity-badge.baja { background: #1a5632; }
         .severity-badge.sinergia { background: #2e7d4f; }
         .result-title { font-weight: 600; font-size: 1rem; }
         .result-detail { color: #555; font-size: 0.9rem; margin-bottom: 6px; }
@@ -146,7 +146,7 @@
         .stat-label { font-size: 0.8rem; color: #666; }
         .stat.danger-bg { background: #fde8e8; color: #d32f2f; }
         .stat.warning-bg { background: #fff3e0; color: #f57c00; }
-        .stat.info-bg { background: #e3f2fd; color: #1976d2; }
+        .stat.info-bg { background: #edf5ef; color: #1a5632; }
         .stat.ok-bg { background: #e8f5e9; color: #2e7d4f; }
         .timing-section { margin-top: 24px; }
         .timing-section h3 { color: #1a5632; margin-bottom: 12px; }
@@ -190,10 +190,32 @@
         body.embed-mode .powered-by { text-align: center; padding: 12px 0 4px; font-size: 0.8rem; color: #888; border-top: 1px solid #e0e0e0; margin-top: 16px; }
         body.embed-mode .powered-by a { color: #2e7d4f; text-decoration: none; font-weight: 600; }
         body.embed-mode .powered-by a:hover { text-decoration: underline; }
-    </style>
+    
+/* Unified Nav */
+.site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+.nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+@media (max-width: 700px) {
+    .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+    .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
+</style>
 </head>
 <body>
-    <nav><a href="https://botanicaandina.com/">← Botánica Andina</a> · <a href="https://botanicaandina.com/herramientas/">Herramientas</a></nav>
+    <nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+        <div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/herramientas/">Herramientas</a>
+            <a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+        </div>
+    </div>
+</nav>
     <div class="container">
         <img src="/assets/img/tools/stack-checker-hero.svg" alt="Stack Checker - Verificador de compatibilidad de suplementos con ilustración botánica" style="width:100%;max-width:800px;height:auto;border-radius:12px;margin:0 auto 20px;display:block;box-shadow:0 2px 12px rgba(0,0,0,0.08);" loading="lazy" decoding="async">
         <h1>🧪 Stack Checker</h1>

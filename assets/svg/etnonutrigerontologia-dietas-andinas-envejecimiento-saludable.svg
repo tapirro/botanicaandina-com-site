@@ -10,7 +10,7 @@
         <text x="75" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Cultura</text><text x="135" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>
         <rect x="160" y="50" width="110" height="80" rx="10" fill="#6d4c41"/>
         <text x="215" y="72" fill="rgba(255,255,255,0.5)" font-size="28" font-family="Arial,sans-serif" font-weight="900" text-anchor="middle">2</text>
-        <text x="215" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Nutricion</text><text x="275" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>
+        <text x="215" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Nutrición</text><text x="275" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>
         <rect x="300" y="50" width="110" height="80" rx="10" fill="#8d6e63"/>
         <text x="355" y="72" fill="rgba(255,255,255,0.5)" font-size="28" font-family="Arial,sans-serif" font-weight="900" text-anchor="middle">3</text>
         <text x="355" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Biologia</text><text x="415" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>

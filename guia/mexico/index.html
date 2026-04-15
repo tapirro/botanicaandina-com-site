@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plantas Medicinales de México: Guía Completa (51 Especies)</title>
+<meta name="description" content="Guía de 51 plantas medicinales de México con nombres científicos, usos tradicionales, compuestos activos y enlaces a evidencia PubMed. Recurso gratuito de Botánica Andina.">
+<link rel="canonical" href="https://botanicaandina.com/guia/mexico/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Plantas Medicinales de México: Guía Completa (51 Especies)">
+<meta property="og:description" content="Guía de 51 plantas medicinales de México con nombres científicos, usos tradicionales, compuestos activos y enlaces a evidencia PubMed. Recurso gratuito de Botánica Andina.">
+<meta property="og:url" content="https://botanicaandina.com/guia/mexico/">
+<meta property="og:site_name" content="Botánica Andina">
+<meta property="og:locale" content="es_LA">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://botanicaandina.com/"}, {"@type": "ListItem", "position": 2, "name": "Guías por País", "item": "https://botanicaandina.com/guia/"}, {"@type": "ListItem", "position": 3, "name": "Plantas de México", "item": "https://botanicaandina.com/guia/mexico/"}]}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuántas plantas medicinales tiene México?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En nuestra base de datos documentamos 51 plantas medicinales de México con respaldo científico. Las familias botánicas más representadas son Asteraceae, Fabaceae, Malvaceae, Lamiaceae, Solanaceae."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde puedo consultar la evidencia científica de estas plantas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada planta enlaza a su monografía en Yerbateca.org, donde encontrarás referencias de PubMed, monografías EMA/ESCOP y perfiles de seguridad detallados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es seguro usar plantas medicinales de México?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las plantas medicinales pueden interactuar con medicamentos farmacéuticos. Consulta siempre el verificador de interacciones de Botánica Andina y habla con tu médico antes de iniciar cualquier tratamiento herbal."
+      }
+    }
+  ]
+}</script>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:Georgia,'Times New Roman',serif; line-height:1.6; color:#1a1a1a; background:#fafaf7; }
+img { max-width:100%; height:auto; }
+.site-nav { background:#1a5632; padding:0; position:sticky; top:0; z-index:100; }
+.nav-container { max-width:1100px; margin:0 auto; padding:0 1.5rem; display:flex; justify-content:space-between; align-items:center; min-height:56px; }
+.nav-brand { color:#fff; text-decoration:none; font-family:Georgia,serif; font-size:1.15rem; font-weight:bold; }
+.nav-links { display:flex; gap:1.5rem; align-items:center; }
+.nav-links a { color:rgba(255,255,255,0.85); text-decoration:none; font-family:Arial,sans-serif; font-size:0.85rem; }
+.nav-links a:hover { color:#fff; }
+
+.hero { background:linear-gradient(135deg,#1a5632 0%,#2e7d32 100%); color:#fff; padding:3rem 1.5rem 2.5rem; text-align:center; }
+.hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+.hero .flag { font-size:3rem; display:block; margin-bottom:0.8rem; }
+.hero p { max-width:700px; margin:0 auto; font-family:Arial,sans-serif; font-size:1rem; opacity:0.9; line-height:1.6; }
+.hero .stat { display:inline-block; margin:1rem 1rem 0; text-align:center; }
+.hero .stat-num { display:block; font-size:2rem; font-weight:bold; }
+.hero .stat-label { font-size:0.8rem; opacity:0.7; font-family:Arial,sans-serif; }
+
+.breadcrumb { max-width:1100px; margin:0 auto; padding:1rem 1.5rem 0; font-family:Arial,sans-serif; font-size:0.8rem; color:#888; }
+.breadcrumb a { color:#1a5632; text-decoration:none; }
+.breadcrumb a:hover { text-decoration:underline; }
+
+.main { max-width:1100px; margin:0 auto; padding:1.5rem; }
+
+.section-title { font-family:Arial,sans-serif; font-size:0.85rem; text-transform:uppercase; letter-spacing:2px; color:#888; margin:2rem 0 1rem; padding-bottom:0.5rem; border-bottom:2px solid #1a5632; }
+
+.family-stats { background:#fff; border-radius:8px; padding:1.5rem; margin-bottom:2rem; box-shadow:0 1px 4px rgba(0,0,0,0.06); }
+.family-bar { display:flex; align-items:center; gap:0.8rem; margin-bottom:0.5rem; font-family:Arial,sans-serif; font-size:0.85rem; }
+.family-name { width:160px; text-align:right; color:#555; flex-shrink:0; }
+.bar-track { flex:1; height:20px; background:#f0f0f0; border-radius:10px; overflow:hidden; }
+.bar-fill { height:100%; background:linear-gradient(90deg,#2e7d32,#43a047); border-radius:10px; min-width:4px; }
+.family-count { width:30px; color:#888; font-size:0.8rem; }
+
+.plant-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.2rem; margin-bottom:2rem; }
+.plant-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.06); display:flex; flex-direction:column; transition:box-shadow 0.2s; }
+.plant-card:hover { box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+.card-header { padding:1rem 1rem 0.3rem; }
+.card-header h3 { font-size:1.05rem; }
+.card-header h3 a { color:#1a5632; text-decoration:none; }
+.card-header h3 a:hover { text-decoration:underline; }
+.sci-name { font-size:0.85rem; color:#888; margin-top:0.1rem; }
+.card-body { padding:0.5rem 1rem; flex:1; }
+.card-row { font-family:Arial,sans-serif; font-size:0.82rem; color:#555; margin-bottom:0.3rem; }
+.label { font-weight:bold; color:#333; }
+.card-tags { display:flex; flex-wrap:wrap; gap:0.3rem; margin-top:0.4rem; }
+.tag { font-family:Arial,sans-serif; font-size:0.7rem; padding:2px 8px; border-radius:12px; }
+.use-tag { background:#e8f5e9; color:#2e7d32; }
+.compound-tag { background:#e3f2fd; color:#1565c0; }
+.card-link { display:block; padding:0.7rem 1rem; text-align:center; font-family:Arial,sans-serif; font-size:0.82rem; color:#1a5632; text-decoration:none; border-top:1px solid #f0f0f0; font-weight:bold; }
+.card-link:hover { background:#f5f5f5; }
+
+.cta-box { background:linear-gradient(135deg,#e8f5e9,#c8e6c9); border-radius:12px; padding:2rem; text-align:center; margin:2rem 0; }
+.cta-box h3 { font-size:1.2rem; margin-bottom:0.5rem; color:#1a5632; }
+.cta-box p { font-family:Arial,sans-serif; font-size:0.9rem; color:#555; margin-bottom:1rem; max-width:600px; margin-left:auto; margin-right:auto; }
+.cta-btn { display:inline-block; background:#1a5632; color:#fff; padding:0.7rem 2rem; border-radius:6px; text-decoration:none; font-family:Arial,sans-serif; font-size:0.9rem; font-weight:bold; }
+.cta-btn:hover { background:#2e7d32; }
+
+.faq { background:#fff; border-radius:8px; padding:1.5rem; margin:2rem 0; box-shadow:0 1px 4px rgba(0,0,0,0.06); }
+.faq-item { margin-bottom:1.2rem; }
+.faq-item h4 { font-size:1rem; color:#1a5632; margin-bottom:0.3rem; }
+.faq-item p { font-family:Arial,sans-serif; font-size:0.9rem; color:#555; }
+
+@media (max-width:700px) {
+    .nav-container { flex-direction:column; padding:0.8rem 1rem; gap:0.5rem; }
+    .nav-links { gap:1rem; flex-wrap:wrap; justify-content:center; }
+    .hero h1 { font-size:1.5rem; }
+    .plant-grid { grid-template-columns:1fr; }
+    .family-name { width:100px; font-size:0.75rem; }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+<div class="nav-container">
+<a href="/" class="nav-brand">Botánica Andina</a>
+<div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/herramientas/">Herramientas</a>
+            <a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+</div>
+</div>
+</nav>
+
+<div class="hero">
+<span class="flag">🇲🇽</span>
+<h1>Plantas Medicinales de México</h1>
+<p>La herbolaria mexicana, heredera de saberes aztecas, mayas y tarahumaras, es una de las más diversas del mundo. Aquí reunimos 51 especies con respaldo científico.</p>
+<div>
+<span class="stat"><span class="stat-num">51</span><span class="stat-label">Especies documentadas</span></span>
+<span class="stat"><span class="stat-num">10</span><span class="stat-label">Familias botánicas</span></span>
+</div>
+</div>
+
+<div class="breadcrumb">
+<a href="/">Inicio</a> › <a href="/guia/">Guías por País</a> › Plantas de México
+</div>
+
+<div class="main">
+
+<h2 class="section-title">Familias Botánicas</h2>
+<div class="family-stats">
+<div class="family-bar"><span class="family-name">Asteraceae</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="family-count">7</span></div>
+<div class="family-bar"><span class="family-name">Fabaceae</span><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div><span class="family-count">6</span></div>
+<div class="family-bar"><span class="family-name">Malvaceae</span><div class="bar-track"><div class="bar-fill" style="width:57%"></div></div><span class="family-count">4</span></div>
+<div class="family-bar"><span class="family-name">Lamiaceae</span><div class="bar-track"><div class="bar-fill" style="width:57%"></div></div><span class="family-count">4</span></div>
+<div class="family-bar"><span class="family-name">Solanaceae</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div><span class="family-count">3</span></div>
+<div class="family-bar"><span class="family-name">Amaranthaceae</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div><span class="family-count">3</span></div>
+<div class="family-bar"><span class="family-name">Papaveraceae</span><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><span class="family-count">2</span></div>
+<div class="family-bar"><span class="family-name">Lauraceae</span><div class="bar-track"><div class="bar-fill" style="width:14%"></div></div><span class="family-count">1</span></div>
+
+</div>
+
+<h2 class="section-title">51 Plantas Medicinales</h2>
+<div class="plant-grid">
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/persea-americana/" target="_blank" rel="noopener">Aguacate</a></h3>
+<p class="sci-name"><em>Persea americana</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Lauraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Hepatoprotector</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Catequina</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Escopoletina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/persea-americana/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/gossypium-hirsutum/" target="_blank" rel="noopener">Algodón</a></h3>
+<p class="sci-name"><em>Gossypium hirsutum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Malvaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Emenagogo</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Esfingolípido</span><span class="tag compound-tag">Terpenos</span><span class="tag compound-tag">Trehalosa</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/gossypium-hirsutum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/ageratina-pichinchensis/" target="_blank" rel="noopener">Axihuitl</a></h3>
+<p class="sci-name"><em>Ageratina pichinchensis</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antifúngico</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Cromeno</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/ageratina-pichinchensis/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/bougainvillea-glabra/" target="_blank" rel="noopener">Bugambilia</a></h3>
+<p class="sci-name"><em>Bougainvillea glabra</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Nyctaginaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Respiratory</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Catequina</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/bougainvillea-glabra/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/calliandra-houstoniana/" target="_blank" rel="noopener">Cabeza de ángel</a></h3>
+<p class="sci-name"><em>Calliandra houstoniana</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Fabaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/calliandra-houstoniana/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/theobroma-cacao/" target="_blank" rel="noopener">Cacao</a></h3>
+<p class="sci-name"><em>Theobroma cacao</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Malvaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Cardiovascular</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Cafeína</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/theobroma-cacao/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/tagetes-erecta/" target="_blank" rel="noopener">Cempasúchil</a></h3>
+<p class="sci-name"><em>Tagetes erecta</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Digestivo</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Estigmasterol</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/tagetes-erecta/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/castela-tortuosa/" target="_blank" rel="noopener">Chaparro amargoso</a></h3>
+<p class="sci-name"><em>Castela tortuosa</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Simaroubaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiamoebic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/castela-tortuosa/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/argemone-mexicana/" target="_blank" rel="noopener">Chicalote</a></h3>
+<p class="sci-name"><em>Argemone mexicana</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Papaveraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Analgésico</span></div>
+<div class="card-tags"><span class="tag compound-tag">berberina</span><span class="tag compound-tag">sanguinarina</span><span class="tag compound-tag">argemonina</span><span class="tag compound-tag">flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/argemone-mexicana/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/capsicum-annuum/" target="_blank" rel="noopener">Chile</a></h3>
+<p class="sci-name"><em>Capsicum annuum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Solanaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Analgésico</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Capsaicina</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/capsicum-annuum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/salvia-hispanica/" target="_blank" rel="noopener">Chía</a></h3>
+<p class="sci-name"><em>Salvia hispanica</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Lamiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Nutritive</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Antocianinas</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Mucílagos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/salvia-hispanica/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/equisetum-hyemale/" target="_blank" rel="noopener">Cola de caballo</a></h3>
+<p class="sci-name"><em>Equisetum hyemale</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Equisetaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Semillas, Tallo</div>
+<div class="card-tags"><span class="tag use-tag">Diurético</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Campesterol</span><span class="tag compound-tag">Farnesol</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/equisetum-hyemale/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/adiantum-capillus-veneris/" target="_blank" rel="noopener">Culantrillo</a></h3>
+<p class="sci-name"><em>Adiantum capillus-veneris</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Pteridaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Tallo, Rizoma</div>
+<div class="card-tags"><span class="tag use-tag">Expectorante</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Rutina</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/adiantum-capillus-veneris/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/artemisia-ludoviciana/" target="_blank" rel="noopener">Estafiate</a></h3>
+<p class="sci-name"><em>Artemisia ludoviciana</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Semillas, Tallo</div>
+<div class="card-tags"><span class="tag use-tag">Digestivo</span></div>
+<div class="card-tags"><span class="tag compound-tag">Estafiatina</span><span class="tag compound-tag">Eupatilina</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Superóxido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/artemisia-ludoviciana/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/chiranthodendron-pentadactylon/" target="_blank" rel="noopener">Flor de manita</a></h3>
+<p class="sci-name"><em>Chiranthodendron pentadactylon</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Malvaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Cardiotonic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Terpenos</span><span class="tag compound-tag">Ácido ferúlico</span><span class="tag compound-tag">ácido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/chiranthodendron-pentadactylon/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/phaseolus-vulgaris/" target="_blank" rel="noopener">Frijol</a></h3>
+<p class="sci-name"><em>Phaseolus vulgaris</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Fabaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Nutritive</span></div>
+<div class="card-tags"><span class="tag compound-tag">Antocianinas</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Péptido</span><span class="tag compound-tag">ácido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/phaseolus-vulgaris/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/helianthus-annuus/" target="_blank" rel="noopener">Girasol</a></h3>
+<p class="sci-name"><em>Helianthus annuus</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Miricetina</span><span class="tag compound-tag">Rutina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/helianthus-annuus/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/aristolochia-serpentaria/" target="_blank" rel="noopener">Guaco</a></h3>
+<p class="sci-name"><em>Aristolochia serpentaria</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Aristolochiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antivenom</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Terpeno</span><span class="tag compound-tag">Terpenos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/aristolochia-serpentaria/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/cecropia-obtusifolia/" target="_blank" rel="noopener">Guarumbo</a></h3>
+<p class="sci-name"><em>Cecropia obtusifolia</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Urticaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Hypoglycemic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Conocido</span><span class="tag compound-tag">Esterol</span><span class="tag compound-tag">Estigmasterol</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/cecropia-obtusifolia/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/psidium-guajava/" target="_blank" rel="noopener">Guayaba</a></h3>
+<p class="sci-name"><em>Psidium guajava</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Myrtaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antidiarrheal</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Miricetina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/psidium-guajava/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/guazuma-ulmifolia/" target="_blank" rel="noopener">Guázuma</a></h3>
+<p class="sci-name"><em>Guazuma ulmifolia</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Malvaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Hypoglycemic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Glucósidos</span><span class="tag compound-tag">Kaempferol</span><span class="tag compound-tag">Luteolina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/guazuma-ulmifolia/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/oenothera-rosea/" target="_blank" rel="noopener">Hierba del golpe</a></h3>
+<p class="sci-name"><em>Oenothera rosea</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Onagraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span><span class="tag compound-tag">Terpenos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/oenothera-rosea/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/commelina-coelestis/" target="_blank" rel="noopener">Hierba del pollo</a></h3>
+<p class="sci-name"><em>Commelina coelestis</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Commelinaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Hemostatic</span></div>
+<div class="card-tags"><span class="tag compound-tag">vitexina</span><span class="tag compound-tag">isovitexina</span><span class="tag compound-tag">ácido cafeico</span><span class="tag compound-tag">taninos condensados</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/commelina-coelestis/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/chenopodium-graveolens/" target="_blank" rel="noopener">Hierba del zorrillo</a></h3>
+<p class="sci-name"><em>Chenopodium graveolens</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Amaranthaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antiespasmódico</span></div>
+<div class="card-tags"><span class="tag compound-tag">Conocido</span><span class="tag compound-tag">Crisina</span><span class="tag compound-tag">Daucosterol</span><span class="tag compound-tag">Esterol</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/chenopodium-graveolens/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/solanum-americanum/" target="_blank" rel="noopener">Hierba mora</a></h3>
+<p class="sci-name"><em>Solanum americanum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Solanaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Betacaroteno</span><span class="tag compound-tag">Caroteno</span><span class="tag compound-tag">Conocido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/solanum-americanum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/piper-auritum/" target="_blank" rel="noopener">Hoja santa</a></h3>
+<p class="sci-name"><em>Piper auritum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Piperaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Analgésico</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Cumarinas</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/piper-auritum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/chenopodium-nuttalliae/" target="_blank" rel="noopener">Huauzontle</a></h3>
+<p class="sci-name"><em>Chenopodium nuttalliae</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Amaranthaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Semillas, Tallo</div>
+<div class="card-tags"><span class="tag use-tag">Nutritive</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Kaempferol</span><span class="tag compound-tag">Quercetina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/chenopodium-nuttalliae/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/acacia-farnesiana/" target="_blank" rel="noopener">Huizache</a></h3>
+<p class="sci-name"><em>Acacia farnesiana</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Fabaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Astringente</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Betulina</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Taninos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/acacia-farnesiana/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/bocconia-frutescens/" target="_blank" rel="noopener">Llora sangre</a></h3>
+<p class="sci-name"><em>Bocconia frutescens</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Papaveraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antimicrobiano</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Sanguinarina</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/bocconia-frutescens/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/agave-americana/" target="_blank" rel="noopener">Maguey</a></h3>
+<p class="sci-name"><em>Agave americana</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asparagaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Kaempferol</span><span class="tag compound-tag">Polifenoles</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/agave-americana/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/zea-mays/" target="_blank" rel="noopener">Maíz (pelos)</a></h3>
+<p class="sci-name"><em>Zea mays</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Poaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Diurético</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/zea-mays/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/achillea-millefolium/" target="_blank" rel="noopener">Milenrama</a></h3>
+<p class="sci-name"><em>Achillea millefolium</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Hemostatic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Rutina</span><span class="tag compound-tag">Saponinas</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/achillea-millefolium/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/lippia-graveolens/" target="_blank" rel="noopener">Orégano mexicano</a></h3>
+<p class="sci-name"><em>Lippia graveolens</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Verbenaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antimicrobiano</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Carvacrol</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Luteolina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/lippia-graveolens/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/haematoxylum-campechianum/" target="_blank" rel="noopener">Palo de Campeche</a></h3>
+<p class="sci-name"><em>Haematoxylum campechianum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Fabaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Astringente</span></div>
+<div class="card-tags"><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Hematoxilina</span><span class="tag compound-tag">Hematoxina</span><span class="tag compound-tag">Hematoxylol</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/haematoxylum-campechianum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/bursera-simaruba/" target="_blank" rel="noopener">Palo mulato</a></h3>
+<p class="sci-name"><em>Bursera simaruba</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Burseraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span><span class="tag compound-tag">Terpenos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/bursera-simaruba/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/cochlospermum-vitifolium/" target="_blank" rel="noopener">Pochote</a></h3>
+<p class="sci-name"><em>Cochlospermum vitifolium</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Cochlospermaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Hepatoprotector</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Cumarinas</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/cochlospermum-vitifolium/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/clinopodium-mexicanum/" target="_blank" rel="noopener">Poleo</a></h3>
+<p class="sci-name"><em>Clinopodium mexicanum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Lamiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Digestivo</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Monoterpeno</span><span class="tag compound-tag">Pulegona</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/clinopodium-mexicanum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/brickellia-cavanillesii/" target="_blank" rel="noopener">Prodigiosa</a></h3>
+<p class="sci-name"><em>Brickellia cavanillesii</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Hypoglycemic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Glicósido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/brickellia-cavanillesii/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/amaranthus-hybridus/" target="_blank" rel="noopener">Quelite</a></h3>
+<p class="sci-name"><em>Amaranthus hybridus</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Amaranthaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Nutritive</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Glucósido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/amaranthus-hybridus/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/brosimum-alicastrum/" target="_blank" rel="noopener">Ramón</a></h3>
+<p class="sci-name"><em>Brosimum alicastrum</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Moraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Galactagogue</span></div>
+<div class="card-tags"><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Polifenol</span><span class="tag compound-tag">Polifenoles</span><span class="tag compound-tag">Posiciona</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/brosimum-alicastrum/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/rosmarinus-officinalis/" target="_blank" rel="noopener">Romero</a></h3>
+<p class="sci-name"><em>Rosmarinus officinalis</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Lamiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Semillas, Planta entera</div>
+<div class="card-tags"><span class="tag use-tag">Circulatory</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Carnosol</span><span class="tag compound-tag">Eucaliptol</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/rosmarinus-officinalis/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/salvia-officinalis/" target="_blank" rel="noopener">Salvia</a></h3>
+<p class="sci-name"><em>Salvia officinalis</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Lamiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiseptic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Aceite esencial</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Linalool</span><span class="tag compound-tag">Mentol</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/salvia-officinalis/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/tanacetum-parthenium/" target="_blank" rel="noopener">Santa María</a></h3>
+<p class="sci-name"><em>Tanacetum parthenium</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Asteraceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Tallo</div>
+<div class="card-tags"><span class="tag use-tag">Antimigraine</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Cumarinas</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Fenoles</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/tanacetum-parthenium/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/calliandra-anomala/" target="_blank" rel="noopener">Tepescohuite</a></h3>
+<p class="sci-name"><em>Calliandra anomala</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Fabaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Corteza, Flores</div>
+<div class="card-tags"><span class="tag use-tag">Wound-healing</span></div>
+<div class="card-tags"><span class="tag compound-tag">Compuestos fenólicos</span><span class="tag compound-tag">Diterpenos</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Taninos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/calliandra-anomala/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/mimosa-tenuiflora/" target="_blank" rel="noopener">Tepescohuite</a></h3>
+<p class="sci-name"><em>Mimosa tenuiflora</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Fabaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Wound-healing</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Saponinas</span><span class="tag compound-tag">Terpenos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/mimosa-tenuiflora/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/datura-stramonium/" target="_blank" rel="noopener">Toloache</a></h3>
+<p class="sci-name"><em>Datura stramonium</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Solanaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Antiespasmódico</span></div>
+<div class="card-tags"><span class="tag compound-tag">Acetilcolina</span><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Atropina</span><span class="tag compound-tag">Conanolido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/datura-stramonium/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/hamelia-patens/" target="_blank" rel="noopener">Tres puntas</a></h3>
+<p class="sci-name"><em>Hamelia patens</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Rubiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Corteza, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Wound-healing</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Catequina</span><span class="tag compound-tag">Epicatequina</span><span class="tag compound-tag">Estigmasterol</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/hamelia-patens/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/vanilla-planifolia/" target="_blank" rel="noopener">Vainilla</a></h3>
+<p class="sci-name"><em>Vanilla planifolia</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Orchidaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Anxiolytic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Fenoles</span><span class="tag compound-tag">Glucósidos</span><span class="tag compound-tag">Terpenos</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/vanilla-planifolia/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/portulaca-oleracea/" target="_blank" rel="noopener">Verdolaga</a></h3>
+<p class="sci-name"><em>Portulaca oleracea</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Portulacaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiinflamatorio</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Quercetina</span><span class="tag compound-tag">ácido</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/portulaca-oleracea/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/galphimia-glauca/" target="_blank" rel="noopener">Árnica roja</a></h3>
+<p class="sci-name"><em>Galphimia glauca</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Malpighiaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Flores, Frutos, Semillas</div>
+<div class="card-tags"><span class="tag use-tag">Anxiolytic</span></div>
+<div class="card-tags"><span class="tag compound-tag">Conocido</span><span class="tag compound-tag">Distribuido</span><span class="tag compound-tag">Flavonoides</span><span class="tag compound-tag">Galphimina</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/galphimia-glauca/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+<div class="plant-card">
+<div class="card-header">
+<h3><a href="https://yerbateca.org/plantas/dioscorea-villosa/" target="_blank" rel="noopener">Ñame silvestre</a></h3>
+<p class="sci-name"><em>Dioscorea villosa</em></p>
+</div>
+<div class="card-body">
+<div class="card-row"><span class="label">Familia:</span> Dioscoreaceae</div>
+<div class="card-row"><span class="label">Partes usadas:</span> Hojas, Raíz, Flores, Frutos</div>
+<div class="card-tags"><span class="tag use-tag">Antiespasmódico</span></div>
+<div class="card-tags"><span class="tag compound-tag">Alcaloides</span><span class="tag compound-tag">Dioscina</span><span class="tag compound-tag">Diosgenina</span><span class="tag compound-tag">Flavonoides</span></div>
+</div>
+<a href="https://yerbateca.org/plantas/dioscorea-villosa/" class="card-link" target="_blank" rel="noopener">Ver monografía completa →</a>
+</div>
+</div>
+
+<div class="cta-box">
+<h3>¿Tomas plantas medicinales con medicamentos?</h3>
+<p>Verifica posibles interacciones con nuestro buscador gratuito. Cubre 250+ hierbas y 53 clases de fármacos con datos de EMA, ESCOP y PubMed.</p>
+<a href="https://botanicaandina.com/herramientas/interacciones/" class="cta-btn">Verificar interacciones →</a>
+</div>
+
+<h2 class="section-title">Preguntas Frecuentes</h2>
+<div class="faq">
+<div class="faq-item">
+<h4>¿Cuántas plantas medicinales tiene México?</h4>
+<p>En nuestra base de datos documentamos 51 plantas medicinales de México con respaldo científico. Las familias botánicas más representadas son Asteraceae, Fabaceae, Malvaceae, Lamiaceae, Solanaceae.</p>
+</div>
+<div class="faq-item">
+<h4>¿Dónde puedo consultar la evidencia científica?</h4>
+<p>Cada planta enlaza a su monografía en <a href="https://yerbateca.org" style="color:#1a5632;">Yerbateca.org</a>, donde encontrarás referencias de PubMed, monografías EMA/ESCOP y perfiles de seguridad detallados.</p>
+</div>
+<div class="faq-item">
+<h4>¿Es seguro usar plantas medicinales?</h4>
+<p>Las plantas medicinales pueden interactuar con medicamentos farmacéuticos. Consulta siempre el <a href="https://botanicaandina.com/herramientas/interacciones/" style="color:#1a5632;">verificador de interacciones</a> y habla con tu médico antes de iniciar cualquier tratamiento herbal.</p>
+</div>
+</div>
+
+</div>
+
+<footer style="background:#1a5632;color:rgba(255,255,255,0.8);padding:2.5rem 1.5rem;margin-top:3rem;font-family:Arial,sans-serif;font-size:0.85rem;text-align:center;">
+<div style="max-width:800px;margin:0 auto;">
+<p style="margin-bottom:0.8rem;"><strong style="color:#fff;">Botánica Andina</strong> — Información de salud basada en evidencia</p>
+<p style="margin-bottom:0.5rem;">Los datos provienen de monografías EMA/ESCOP y estudios indexados en PubMed. <br>Esta guía no reemplaza el consejo médico profesional.</p>
+<p style="opacity:0.6;">© 2026 Botánica Andina · <a href="/politica-editorial/" style="color:rgba(255,255,255,0.7);">Política editorial</a> · <a href="/open-data/" style="color:rgba(255,255,255,0.7);">Datos abiertos</a></p>
+</div>
+</footer>
+</body>
+</html>

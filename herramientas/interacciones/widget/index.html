@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Widget de Interacciones — Variantes</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f7fafc;color:#1a202c;line-height:1.6}
+.container{max-width:960px;margin:0 auto;padding:2rem}
+h1{color:#22543d;margin-bottom:.5rem}
+.subtitle{color:#718096;margin-bottom:2rem}
+.variant{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:2rem}
+.variant h2{color:#22543d;font-size:1.2rem;margin-bottom:.5rem}
+.variant .desc{color:#718096;font-size:.9rem;margin-bottom:1rem}
+.preview{border:2px dashed #e2e8f0;border-radius:8px;overflow:hidden;margin-bottom:1rem;background:#f7fafc;display:inline-block}
+.embed-code{background:#1a202c;border-radius:8px;padding:1rem;position:relative}
+.embed-code code{color:#68d391;font-size:.85rem;white-space:pre-wrap;word-break:break-all}
+.copy-btn{position:absolute;top:8px;right:8px;background:#22543d;color:#fff;border:none;padding:4px 12px;border-radius:4px;font-size:12px;cursor:pointer}
+.copy-btn:hover{background:#276749}
+.tip{background:#f0fff4;border:1px solid #c6f6d5;border-radius:8px;padding:.8rem;margin-bottom:1.5rem;font-size:.85rem;color:#22543d}
+.tip code{background:#e6ffed;padding:1px 4px;border-radius:3px;font-size:.8rem}
+.back{display:inline-block;margin-bottom:1rem;color:#22543d;text-decoration:none;font-size:.9rem}
+.back:hover{text-decoration:underline}
+
+/* Unified Nav */
+.site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+.nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+@media (max-width: 700px) {
+    .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+    .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+        <div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/herramientas/">Herramientas</a>
+            <a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+<a href="/herramientas/embeds/" class="back">&larr; Todas las herramientas embebibles</a>
+<h1>Widget de Interacciones Hierba &times; Medicamento</h1>
+<p class="subtitle">Tres variantes embebibles para tu sitio web. Sin cookies, sin registro, GDPR-compatible, gratis.</p>
+
+<div class="tip">
+  <strong>Personaliza el tema:</strong> Agrega <code>&amp;theme=dark</code> para modo oscuro o <code>&amp;theme=auto</code> para seguir la preferencia del usuario.
+</div>
+
+<div class="variant">
+  <h2>Sidebar (300 &times; 400px)</h2>
+  <p class="desc">Ideal para barras laterales de blogs. Búsqueda compacta con resultados resumidos (sin mecanismos).</p>
+  <div class="preview" style="width:300px;height:400px;">
+    <iframe src="/herramientas/widget/embed.html?mode=sidebar" width="300" height="400" frameborder="0" style="border:none;"></iframe>
+  </div>
+  <div class="embed-code">
+    <button class="copy-btn" onclick="copy(this)">Copiar</button>
+    <code>&lt;iframe src="https://botanicaandina.com/herramientas/widget/embed.html?mode=sidebar"
+    width="300" height="400" frameborder="0"
+    style="border:1px solid #e2e8f0;border-radius:8px;"
+    title="Verificador de Interacciones Plantas-Medicamentos"
+    loading="lazy"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:11px;color:#666;margin-top:4px;"&gt;
+    Datos de &lt;a href="https://botanicaandina.com"&gt;Botánica Andina&lt;/a&gt; · 592 interacciones verificadas
+&lt;/p&gt;</code>
+  </div>
+</div>
+
+<div class="variant">
+  <h2>Inline (600 &times; 350px)</h2>
+  <p class="desc">Perfecto para insertar dentro de un artículo. Campos de búsqueda lado a lado.</p>
+  <div class="preview" style="width:600px;height:350px;">
+    <iframe src="/herramientas/widget/embed.html?mode=inline" width="600" height="350" frameborder="0" style="border:none;"></iframe>
+  </div>
+  <div class="embed-code">
+    <button class="copy-btn" onclick="copy(this)">Copiar</button>
+    <code>&lt;iframe src="https://botanicaandina.com/herramientas/widget/embed.html?mode=inline"
+    width="600" height="350" frameborder="0"
+    style="border:1px solid #e2e8f0;border-radius:8px;"
+    title="Verificador de Interacciones Plantas-Medicamentos"
+    loading="lazy"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:11px;color:#666;margin-top:4px;"&gt;
+    Datos de &lt;a href="https://botanicaandina.com"&gt;Botánica Andina&lt;/a&gt; · 592 interacciones verificadas
+&lt;/p&gt;</code>
+  </div>
+</div>
+
+<div class="variant">
+  <h2>Completa (100% &times; 500px)</h2>
+  <p class="desc">Experiencia completa con detalles de mecanismo. Para páginas de recursos o herramientas.</p>
+  <div class="preview" style="width:100%;height:500px;">
+    <iframe src="/herramientas/widget/embed.html?mode=full" width="100%" height="500" frameborder="0" style="border:none;"></iframe>
+  </div>
+  <div class="embed-code">
+    <button class="copy-btn" onclick="copy(this)">Copiar</button>
+    <code>&lt;iframe src="https://botanicaandina.com/herramientas/widget/embed.html?mode=full"
+    width="100%" height="500" frameborder="0"
+    style="border:1px solid #e2e8f0;border-radius:8px;"
+    title="Verificador de Interacciones Plantas-Medicamentos"
+    loading="lazy"&gt;&lt;/iframe&gt;
+&lt;p style="font-size:11px;color:#666;margin-top:4px;"&gt;
+    Datos de &lt;a href="https://botanicaandina.com"&gt;Botánica Andina&lt;/a&gt; · 592 interacciones verificadas
+&lt;/p&gt;</code>
+  </div>
+</div>
+
+<div class="variant" style="border:2px dashed #22543d;">
+  <h2>Modo oscuro</h2>
+  <p class="desc">Misma variante completa con <code>&amp;theme=dark</code>.</p>
+  <div class="preview" style="width:100%;height:500px;">
+    <iframe src="/herramientas/widget/embed.html?mode=full&theme=dark" width="100%" height="500" frameborder="0" style="border:none;"></iframe>
+  </div>
+</div>
+
+</div>
+<script>
+function copy(btn){
+  const code = btn.parentElement.querySelector("code").textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    btn.textContent = "¡Copiado!";
+    setTimeout(() => btn.textContent = "Copiar", 2000);
+  });
+}
+</script>
+</body>
+</html>

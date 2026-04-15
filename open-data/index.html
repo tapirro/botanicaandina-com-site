@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datos Abiertos — Plantas Medicinales e Interacciones | Botánica Andina</title>
+<meta name="description" content="Descarga gratis nuestra base de datos de 312 plantas medicinales, 592 interacciones hierba-medicamento y 308 perfiles de seguridad. JSON y CSV. Licencia CC-BY-SA 4.0.">
+<meta property="og:title" content="Datos Abiertos — Plantas Medicinales e Interacciones">
+<meta property="og:description" content="Base de datos abierta: 312 plantas, 592 interacciones, 308 perfiles de seguridad. Gratis, JSON/CSV, CC-BY-SA 4.0.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://botanicaandina.com/open-data/">
+<link rel="canonical" href="https://botanicaandina.com/open-data/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Base de Datos de Plantas Medicinales Latinoamericanas",
+  "description": "Datos abiertos sobre 312 plantas medicinales, 592 interacciones hierba-medicamento documentadas con fuentes EMA/ESCOP/PubMed, y 308 perfiles de seguridad. Incluye taxonomía, usos tradicionales, compuestos activos, mecanismos de interacción y niveles de evidencia.",
+  "url": "https://botanicaandina.com/open-data/",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "creator": {
+    "@type": "Organization",
+    "name": "Botánica Andina",
+    "url": "https://botanicaandina.com"
+  },
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-04-14",
+  "inLanguage": "es",
+  "keywords": ["plantas medicinales", "interacciones hierba-medicamento", "fitoterapia", "farmacognosia", "etnobotánica", "América Latina"],
+  "temporalCoverage": "2024/2026",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "América Latina"
+  },
+  "variableMeasured": [
+    "Taxonomía botánica",
+    "Compuestos activos",
+    "Interacciones farmacológicas",
+    "Niveles de evidencia",
+    "Perfiles de seguridad"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/botanicaandina/herbal-data/raw/main/herbs-v1.json",
+      "name": "Plantas medicinales (JSON)"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/botanicaandina/herbal-data/raw/main/herbs-v1.csv",
+      "name": "Plantas medicinales (CSV)"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/botanicaandina/herbal-data/raw/main/interactions-v1.json",
+      "name": "Interacciones hierba-medicamento (JSON)"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://github.com/botanicaandina/herbal-data/raw/main/interactions-v1.csv",
+      "name": "Interacciones hierba-medicamento (CSV)"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://github.com/botanicaandina/herbal-data/raw/main/safety-profiles-v1.json",
+      "name": "Perfiles de seguridad (JSON)"
+    }
+  ]
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a202c;line-height:1.6;background:#f7fafc}
+.container{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:2rem;margin-bottom:.5rem;color:#22543d}
+.subtitle{color:#4a5568;font-size:1.1rem;margin-bottom:2rem}
+h2{color:#22543d;font-size:1.4rem;margin:2rem 0 1rem}
+.dataset-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;transition:box-shadow .2s}
+.dataset-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.dataset-card h3{color:#22543d;font-size:1.2rem;margin-bottom:.5rem}
+.dataset-desc{color:#4a5568;margin-bottom:1rem;font-size:.95rem}
+.stats{display:flex;gap:1.5rem;margin-bottom:1rem;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-value{font-size:1.8rem;font-weight:700;color:#22543d;display:block}
+.stat-label{font-size:.8rem;color:#718096}
+.download-links{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{padding:.6rem 1.2rem;border-radius:8px;font-size:.9rem;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;border:none;font-weight:500}
+.btn-primary{background:#22543d;color:#fff}
+.btn-primary:hover{background:#276749}
+.btn-secondary{background:#edf2f7;color:#2d3748;border:1px solid #e2e8f0}
+.btn-secondary:hover{background:#e2e8f0}
+.btn-github{background:#24292e;color:#fff}
+.btn-github:hover{background:#1b1f23}
+.hero-stats{display:flex;justify-content:center;gap:3rem;margin:2rem 0;flex-wrap:wrap}
+.hero-stats .stat{background:#fff;padding:1.5rem 2rem;border-radius:12px;border:1px solid #e2e8f0;min-width:140px}
+.license-box{background:#f0fff4;border:1px solid #c6f6d5;border-radius:12px;padding:1.5rem;margin:2rem 0}
+.license-box h3{color:#22543d;margin-bottom:.5rem}
+.citation-box{background:#1a202c;border-radius:8px;padding:1rem;margin:1rem 0;position:relative}
+.citation-box pre{margin:0}
+.citation-box code{color:#68d391;font-size:.85rem;white-space:pre-wrap}
+.copy-btn{position:absolute;top:.5rem;right:.5rem;background:#4a5568;color:#fff;border:none;padding:.3rem .6rem;border-radius:4px;cursor:pointer;font-size:.75rem}
+.copy-btn:hover{background:#718096}
+.copied{background:#48bb78!important}
+.fields-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem}
+.fields-table th{background:#f0fff4;color:#22543d;text-align:left;padding:.5rem .75rem;border:1px solid #e2e8f0}
+.fields-table td{padding:.5rem .75rem;border:1px solid #e2e8f0}
+.fields-table tr:hover{background:#f7fafc}
+.sample-data{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin:1rem 0}
+.sample-data summary{cursor:pointer;color:#22543d;font-weight:600}
+.sample-data pre{background:#1a202c;border-radius:8px;padding:1rem;margin-top:.75rem;overflow-x:auto}
+.sample-data code{color:#68d391;font-size:.82rem}
+.use-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1rem 0}
+.use-case{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:1rem}
+.use-case h4{color:#22543d;font-size:1rem;margin-bottom:.4rem}
+.use-case p{color:#4a5568;font-size:.85rem}
+footer{text-align:center;color:#718096;font-size:.85rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e2e8f0}
+footer a{color:#22543d}
+@media(max-width:600px){.container{padding:1rem}.hero-stats{gap:1rem}.hero-stats .stat{min-width:100px;padding:1rem}}
+
+/* Unified Nav */
+.site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+.nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+@media (max-width: 700px) {
+    .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+    .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+        <div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/herramientas/">Herramientas</a>
+            <a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+<h1>Datos Abiertos de Plantas Medicinales</h1>
+<p class="subtitle">La base de datos abierta más completa de plantas medicinales latinoamericanas y sus interacciones con medicamentos. Gratis, sin restricciones, con licencia CC-BY-SA 4.0.</p>
+
+<div class="hero-stats">
+  <div class="stat">
+    <span class="stat-value">312</span>
+    <span class="stat-label">Plantas medicinales</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value">592</span>
+    <span class="stat-label">Interacciones documentadas</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value">308</span>
+    <span class="stat-label">Perfiles de seguridad</span>
+  </div>
+  <div class="stat">
+    <span class="stat-value">5,049</span>
+    <span class="stat-label">Estudios PubMed indexados</span>
+  </div>
+</div>
+
+<div style="text-align:center;margin-bottom:2rem">
+  <a href="https://github.com/botanicaandina/herbal-data" class="btn btn-github" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    Ver en GitHub
+  </a>
+</div>
+
+<h2>Datasets disponibles</h2>
+
+<div class="dataset-card" style="border-left:4px solid #48bb78">
+  <h3>Plantas Medicinales (herbs-v1)</h3>
+  <p class="dataset-desc">312 plantas medicinales de América Latina con taxonomía completa, nombres en español/inglés/portugués, usos tradicionales, partes utilizadas y compuestos activos identificados.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">312</span><span class="stat-label">plantas</span></div>
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">11</span><span class="stat-label">campos</span></div>
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">2</span><span class="stat-label">formatos</span></div>
+  </div>
+  <div class="download-links">
+    <a href="https://github.com/botanicaandina/herbal-data/raw/main/herbs-v1.json" class="btn btn-primary" download>JSON (245 KB)</a>
+    <a href="https://github.com/botanicaandina/herbal-data/raw/main/herbs-v1.csv" class="btn btn-secondary" download>CSV (85 KB)</a>
+  </div>
+  <details class="sample-data">
+    <summary>Ver ejemplo de datos</summary>
+    <pre><code>{
+  "id": "curcuma-longa",
+  "scientific_name": "Curcuma longa",
+  "common_name": "Curcuma",
+  "alternative_names": ["turmeric", "palillo"],
+  "family": "Zingiberaceae",
+  "genus": "Curcuma",
+  "regions": ["PE", "CO", "IN"],
+  "origin": "Sur de Asia",
+  "parts_used": ["rhizome"],
+  "traditional_uses": ["antiinflamatorio", "digestivo"],
+  "active_compounds": ["Curcuminoides", "Turmerona"]
+}</code></pre>
+  </details>
+</div>
+
+<div class="dataset-card" style="border-left:4px solid #ed8936">
+  <h3>Interacciones Hierba-Medicamento (interactions-v1)</h3>
+  <p class="dataset-desc">592 interacciones documentadas entre 250 plantas medicinales y 53 clases de medicamentos. Incluye severidad, mecanismo farmacológico, nivel de evidencia y referencia bibliográfica con DOI.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">592</span><span class="stat-label">interacciones</span></div>
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">53</span><span class="stat-label">clases de fármacos</span></div>
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">8</span><span class="stat-label">campos</span></div>
+  </div>
+  <div class="download-links">
+    <a href="https://github.com/botanicaandina/herbal-data/raw/main/interactions-v1.json" class="btn btn-primary" download>JSON (520 KB)</a>
+    <a href="https://github.com/botanicaandina/herbal-data/raw/main/interactions-v1.csv" class="btn btn-secondary" download>CSV (180 KB)</a>
+  </div>
+  <details class="sample-data">
+    <summary>Ver ejemplo de datos</summary>
+    <pre><code>{
+  "herb_id": "hypericum",
+  "drug_class_id": "anticoagulantes",
+  "severity": "alta",
+  "effect": "Reduce niveles de warfarina, riesgo de trombosis",
+  "mechanism": "Inducción CYP3A4, CYP2C9 y P-gp",
+  "evidence_level": "Ensayos clínicos",
+  "source": "EMA/HMPC; Jiang et al. Clin Pharmacol Ther 2004",
+  "doi": "10.1016/j.clpt.2004.02.009"
+}</code></pre>
+  </details>
+</div>
+
+<div class="dataset-card" style="border-left:4px solid #667eea">
+  <h3>Perfiles de Seguridad (safety-profiles-v1)</h3>
+  <p class="dataset-desc">308 perfiles de seguridad detallados que cubren contraindicaciones en embarazo, lactancia, pediatría, adultos mayores, cirugía y hepatopatía. Redactados por farmacognostas con fuentes EMA/ESCOP.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">308</span><span class="stat-label">perfiles</span></div>
+    <div class="stat"><span class="stat-value" style="font-size:1.3rem">4</span><span class="stat-label">campos</span></div>
+  </div>
+  <div class="download-links">
+    <a href="https://github.com/botanicaandina/herbal-data/raw/main/safety-profiles-v1.json" class="btn btn-primary" download>JSON (1.2 MB)</a>
+  </div>
+</div>
+
+<h2>Fuentes y metodología</h2>
+<div class="dataset-card">
+  <table class="fields-table">
+    <thead><tr><th>Fuente</th><th>Tipo</th><th>Cobertura</th></tr></thead>
+    <tbody>
+      <tr><td>EMA/HMPC</td><td>Monografías regulatorias</td><td>Plantas con uso establecido en la UE</td></tr>
+      <tr><td>ESCOP</td><td>Monografías científicas</td><td>Fitoterapia basada en evidencia</td></tr>
+      <tr><td>PubMed</td><td>Ensayos clínicos y revisiones</td><td>5,049 estudios indexados</td></tr>
+      <tr><td>Bussmann & Sharon (2016)</td><td>Etnobotánica de campo</td><td>449 especies del norte del Perú</td></tr>
+      <tr><td>Tradición oral andina</td><td>Usos tradicionales documentados</td><td>Recetas de curanderos, parteras</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>Casos de uso</h2>
+<div class="use-cases">
+  <div class="use-case">
+    <h4>Investigación académica</h4>
+    <p>Análisis estadístico de interacciones, revisiones sistemáticas, meta-análisis de fitoterapia latinoamericana.</p>
+  </div>
+  <div class="use-case">
+    <h4>Aplicaciones de salud</h4>
+    <p>Verificadores de interacciones, apps de farmacia, herramientas de prescripción con alertas de hierbas.</p>
+  </div>
+  <div class="use-case">
+    <h4>Ciencia de datos</h4>
+    <p>Modelos de ML para predicción de interacciones, análisis de redes farmacológicas, NLP en español médico.</p>
+  </div>
+  <div class="use-case">
+    <h4>Educación</h4>
+    <p>Material para cursos de farmacognosia, etnobotánica y fitoterapia en universidades latinoamericanas.</p>
+  </div>
+</div>
+
+<div class="license-box">
+  <h3>Licencia CC-BY-SA 4.0</h3>
+  <p>Puedes usar, compartir y adaptar estos datos <strong>libremente</strong>, incluso para fines comerciales, siempre que atribuyas la fuente y compartas derivados bajo la misma licencia.</p>
+  <div class="citation-box">
+    <button class="copy-btn" onclick="copyText(this)">Copiar</button>
+    <pre><code>Yerbateca.org (2026). Base de datos de plantas medicinales
+y sus interacciones con medicamentos [Dataset].
+Botánica Andina. https://botanicaandina.com/open-data/
+Licencia: CC-BY-SA 4.0</code></pre>
+  </div>
+</div>
+
+<h2>API (próximamente)</h2>
+<div class="dataset-card">
+  <p class="dataset-desc">Estamos desarrollando una API REST gratuita para consultar los datos programáticamente. Si te interesa acceso anticipado, escribe a <a href="mailto:hola@botanicaandina.com" style="color:#22543d">hola@botanicaandina.com</a>.</p>
+</div>
+
+<footer>
+  <p><a href="https://botanicaandina.com">Botánica Andina</a> · <a href="https://yerbateca.org">Yerbateca</a> · <a href="https://botanicaandina.com/herramientas/">Herramientas</a></p>
+  <p style="margin-top:.5rem">Datos actualizados trimestralmente · v1.0 — abril 2026</p>
+</footer>
+
+</div>
+
+<script>
+function copyText(btn) {
+  const code = btn.parentElement.querySelector('code');
+  navigator.clipboard.writeText(code.textContent).then(() => {
+    btn.textContent = 'Copiado';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copiar'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+</script>
+</body>
+</html>

@@ -185,9 +185,33 @@ footer a{color:#22d3ee}
   .level-number{font-size:2.5rem}
   .container{padding:1rem}
 }
+
+/* Unified Nav */
+.site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+.nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.5px; }
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; transition: color 0.2s; }
+.nav-links a:hover { color: #fff; }
+@media (max-width: 700px) {
+    .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; }
+    .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+}
 </style>
 </head>
 <body>
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
+        <div class="nav-links">
+            <a href="/noticias/">Noticias</a>
+            <a href="/herramientas/">Herramientas</a>
+            <a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+            <a href="/sobre-nosotros/">Sobre Nosotros</a>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
 <a href="https://botanicaandina.com/herramientas/" class="nav-link">← Herramientas</a>
 <header>
@@ -596,7 +620,7 @@ footer a{color:#22d3ee}
                             <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px;">Optimización de consumo</span>
                             <span style="color: #666; margin-left: 0.8rem;">Marzo 2026</span>
                         </div>
-                        <span style="background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
+                        <span style="background: #edf5ef; color: #1a5632; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
                     </div>
                 </div>
             </div>
@@ -621,7 +645,7 @@ footer a{color:#22d3ee}
                             <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px;">Reducción de consumo</span>
                             <span style="color: #666; margin-left: 0.8rem;">Febrero 2026</span>
                         </div>
-                        <span style="background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
+                        <span style="background: #edf5ef; color: #1a5632; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
                     </div>
                 </div>
             </div>
@@ -646,7 +670,7 @@ footer a{color:#22d3ee}
                             <span style="background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px;">Comparación de fuentes</span>
                             <span style="color: #666; margin-left: 0.8rem;">Enero 2026</span>
                         </div>
-                        <span style="background: #e3f2fd; color: #1976d2; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
+                        <span style="background: #edf5ef; color: #1a5632; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500;">Verificado ✓</span>
                     </div>
                 </div>
             </div>

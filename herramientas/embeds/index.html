@@ -22,7 +22,7 @@
     "name": "Botánica Andina",
     "url": "https://botanicaandina.com"
   },
-  "numberOfItems": 14
+  "numberOfItems": 7
 }
 </script>
 <style>
@@ -34,8 +34,7 @@ h1{font-size:2rem;margin-bottom:.5rem;color:#22543d}
 .tool-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;transition:box-shadow .2s}
 .tool-card:hover{box-shadow:0 4px 12px rgba(0,0,0,.08)}
 .tool-card h3{color:#22543d;font-size:1.3rem;margin-bottom:.5rem}
-.tool-desc{color:#4a5568;margin-bottom:.75rem}
-.tool-benefits{background:#f0fff4;border:1px solid #c6f6d5;border-radius:8px;padding:.75rem;margin-bottom:1rem;font-size:.9rem;color:#22543d}
+.tool-desc{color:#4a5568;margin-bottom:1rem}
 .tool-actions{display:flex;gap:.75rem;margin-bottom:1rem;flex-wrap:wrap}
 .btn{padding:.6rem 1.2rem;border-radius:8px;font-size:.9rem;cursor:pointer;text-decoration:none;display:inline-block;border:none;font-weight:500}
 .btn-primary{background:#22543d;color:#fff}
@@ -51,29 +50,6 @@ h1{font-size:2rem;margin-bottom:.5rem;color:#22543d}
 .how-to h2{color:#22543d;margin-bottom:1rem}
 .how-to ol{padding-left:1.5rem}
 .how-to li{margin-bottom:.5rem}
-.value-props{background:#f0fff4;border:2px solid #c6f6d5;border-radius:16px;padding:2rem;margin-bottom:2rem}
-.value-props h2{color:#22543d;margin-bottom:1.5rem;text-align:center}
-.props-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.prop-card{background:#fff;padding:1.5rem;border-radius:12px;border:1px solid #c6f6d5;transition:transform .2s,box-shadow .2s}
-.prop-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(34,84,61,.1)}
-.prop-icon{font-size:2.5rem;margin-bottom:.75rem}
-.prop-card h3{color:#22543d;font-size:1.15rem;margin-bottom:.5rem}
-.prop-card p{color:#4a5568;font-size:.95rem;line-height:1.6}
-.use-cases{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:2rem;margin-bottom:2rem}
-.use-cases h2{color:#22543d;margin-bottom:1.5rem;text-align:center}
-.use-case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
-.use-case{background:#f7fafc;padding:1.5rem;border-radius:12px;border-left:4px solid #22543d}
-.use-case h3{color:#22543d;font-size:1.1rem;margin-bottom:.75rem}
-.use-case p{color:#4a5568;font-size:.95rem;line-height:1.6;margin-bottom:.75rem}
-.use-case .example{font-style:italic;color:#718096;font-size:.9rem;background:#fff;padding:.75rem;border-radius:8px;border:1px solid #e2e8f0}
-.examples{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:2rem;margin-bottom:2rem}
-.examples h2{color:#22543d;margin-bottom:1.5rem;text-align:center}
-.example-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
-.example-card{background:#f7fafc;padding:1.5rem;border-radius:12px;border-top:4px solid #48bb78;transition:transform .2s}
-.example-card:hover{transform:translateY(-4px)}
-.example-card h3{color:#22543d;font-size:1.15rem;margin-bottom:.75rem}
-.example-card p{color:#4a5568;font-size:.95rem;line-height:1.6;margin-bottom:.5rem}
-.example-card strong{color:#48bb78}
 .copied{background:#c6f6d5!important;color:#22543d!important}
 footer{text-align:center;color:#718096;font-size:.85rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #e2e8f0}
 footer a{color:#22543d}
@@ -95,112 +71,81 @@ footer a{color:#22543d}
 </ol>
 </div>
 
-<div class="value-props">
-<h2>¿Por qué integrar estas herramientas?</h2>
-<div class="props-grid">
-<div class="prop-card">
-<div class="prop-icon">⏱️</div>
-<h3>Aumenta el tiempo en sitio</h3>
-<p>Los usuarios interactúan más cuando tienen herramientas interactivas. Promedio: +3 minutos de engagement.</p>
-</div>
-<div class="prop-card">
-<div class="prop-icon">🧪</div>
-<h3>Contenido basado en evidencia</h3>
-<p>Todos los datos provienen de EMA, ESCOP y PubMed. Tu sitio gana autoridad científica.</p>
-</div>
-<div class="prop-card">
-<div class="prop-icon">🔄</div>
-<h3>Zero mantenimiento</h3>
-<p>Nosotros actualizamos las herramientas y la base de datos. Tu iframe siempre tiene la última versión.</p>
-</div>
-<div class="prop-card">
-<div class="prop-icon">💰</div>
-<h3>Gratis para siempre</h3>
-<p>Sin costos ocultos. Sin registro. Sin límites de uso. Open source y transparente.</p>
-</div>
-<div class="prop-card">
-<div class="prop-icon">📱</div>
-<h3>Responsive y accesible</h3>
-<p>Funciona perfectamente en móvil, tablet y desktop. Cumple con WCAG 2.1 AA.</p>
-</div>
-<div class="prop-card">
-<div class="prop-icon">🔒</div>
-<h3>Privacidad protegida</h3>
-<p>No recolectamos datos de tus usuarios. Todo el procesamiento es del lado del cliente.</p>
-</div>
-</div>
-</div>
 
-<div class="use-cases">
-<h2>¿Quién debería usar estas herramientas?</h2>
-<div class="use-case-grid">
-<div class="use-case">
-<h3>📚 Blogs de salud y bienestar</h3>
-<p>Añade el <strong>Verificador de Interacciones</strong> a artículos sobre hierbas medicinales. Los lectores pueden verificar la seguridad mientras leen.</p>
-<p class="example"><em>Ejemplo: Un blog sobre el Ginkgo biloba incluye el verificador para que los usuarios revisen si interactúa con sus medicamentos.</em></p>
-</div>
-<div class="use-case">
-<h3>🌿 Sitios de medicina natural</h3>
-<p>Integra el <strong>Buscador de Plantas</strong> para permitir que los usuarios encuentren hierbas por síntomas específicos.</p>
-<p class="example"><em>Ejemplo: Un sitio sobre remedios naturales permite buscar "dolor de cabeza" y muestra plantas con evidencia científica.</em></p>
-</div>
-<div class="use-case">
-<h3>🏋️ Sitios de fitness y suplementos</h3>
-<p>Usa el <strong>Reloj de Cafeína</strong> y <strong>Stack Checker</strong> para ayudar a tus lectores a optimizar su supplementation.</p>
-<p class="example"><em>Ejemplo: Un blog de pre-entreno incluye el reloj de cafeína para calcular los niveles óptimos de energía.</em></p>
-</div>
-<div class="use-case">
-<h3>🤰 Recursos de embarazo y maternidad</h3>
-<p>El verificador de <strong>Hierbas en el Embarazo</strong> es esencial para cualquier sitio sobre maternidad segura.</p>
-<p class="example"><em>Ejemplo: Una guía de embarazo incluye el verificador para que las futuras madres verifiquen suplementos.</em></p>
-</div>
-<div class="use-case">
-<h3>💊 Farmacias y tiendas naturistas</h3>
-<p>El <strong>Verificador de Botiquín Completo</strong> genera reportes visuales que los clientes pueden compartir con sus médicos.</p>
-<p class="example"><em>Ejemplo: Una tienda online de suplementos permite a los clientes verificar interacciones antes de comprar.</em></p>
-</div>
-<div class="use-case">
-<h3>📰 Portales de noticias de salud</h3>
-<p>Incluye el <strong>Quiz de Plantas</strong> como contenido interactivo en artículos sobre medicina herbal.</p>
-<p class="example"><em>Ejemplo: Una noticia sobre el aumento del uso de hierbas incluye el quiz para educar a los lectores.</em></p>
-</div>
-</div>
-</div>
+        <div class="tool-card" style="border:2px solid #22543d;">
+            <h3>Verificador de Interacciones <span style="font-size:.75rem;background:#22543d;color:#fff;padding:2px 8px;border-radius:12px;vertical-align:middle;">Destacado</span></h3>
+            <p class="tool-desc">Verifica interacciones entre 150+ plantas medicinales y 53 clases de medicamentos. 592 interacciones documentadas con referencias EMA/ESCOP/PubMed. Disponible en 3 tamaños. Sin cookies, GDPR-compatible.</p>
 
-
-        <div class="tool-card">
-            <h3>Verificador de Interacciones</h3>
-            <p class="tool-desc">Verifica interacciones entre plantas medicinales y medicamentos. Base de datos con 150+ plantas y 503 interacciones documentadas con referencias de EMA/ESCOP. <strong>Ideal para blogs de salud y medicina natural.</strong></p>
-            <div class="tool-benefits">
-                <strong>Casos de uso:</strong> Artículos sobre hierbas medicinales, guías de suplementación, contenido sobre medicina integrativa.
-            </div>
+            <h4 style="color:#22543d;margin:1rem 0 .5rem;font-size:1rem;">Variante 1: Sidebar <span style="font-size:.8rem;color:#4a5568;font-weight:normal;">(300 × 400px)</span></h4>
+            <p style="font-size:.85rem;color:#4a5568;margin-bottom:.5rem;">Perfecto para barras laterales de blogs. Búsqueda compacta con resultados resumidos.</p>
             <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/interacciones/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="interacciones">Copiar código embed</button>
+                <a href="https://botanicaandina.com/herramientas/widget/embed.html?mode=sidebar" class="btn btn-secondary" target="_blank">Vista previa</a>
+                <button class="btn btn-secondary copy-embed" data-tool="sidebar">Copiar código</button>
             </div>
-            <div class="embed-code" id="embed-interacciones" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/widget/&quot;
-        width=&quot;100%&quot; height=&quot;700&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Verificador de Interacciones&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
+            <div class="embed-code" id="embed-sidebar" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/widget/embed.html?mode=sidebar&quot;
+    width=&quot;300&quot; height=&quot;400&quot;
+    frameborder=&quot;0&quot;
+    style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+    title=&quot;Verificador de Interacciones Plantas-Medicamentos&quot;
+    loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:11px;color:#666;margin-top:4px;&quot;&gt;
+    Datos de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot;&gt;Botánica Andina&lt;/a&gt; · 592 interacciones verificadas
 &lt;/p&gt;</code></pre>
             </div>
+
+            <h4 style="color:#22543d;margin:1rem 0 .5rem;font-size:1rem;">Variante 2: Inline <span style="font-size:.8rem;color:#4a5568;font-weight:normal;">(600 × 350px)</span></h4>
+            <p style="font-size:.85rem;color:#4a5568;margin-bottom:.5rem;">Ideal para insertar dentro de un artículo. Campos lado a lado, diseño horizontal.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/widget/embed.html?mode=inline" class="btn btn-secondary" target="_blank">Vista previa</a>
+                <button class="btn btn-secondary copy-embed" data-tool="inline">Copiar código</button>
+            </div>
+            <div class="embed-code" id="embed-inline" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/widget/embed.html?mode=inline&quot;
+    width=&quot;600&quot; height=&quot;350&quot;
+    frameborder=&quot;0&quot;
+    style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+    title=&quot;Verificador de Interacciones Plantas-Medicamentos&quot;
+    loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:11px;color:#666;margin-top:4px;&quot;&gt;
+    Datos de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot;&gt;Botánica Andina&lt;/a&gt; · 592 interacciones verificadas
+&lt;/p&gt;</code></pre>
+            </div>
+
+            <h4 style="color:#22543d;margin:1rem 0 .5rem;font-size:1rem;">Variante 3: Completa <span style="font-size:.8rem;color:#4a5568;font-weight:normal;">(100% × 500px)</span></h4>
+            <p style="font-size:.85rem;color:#4a5568;margin-bottom:.5rem;">Experiencia completa para páginas de recursos. Campos amplios, mecanismos detallados.</p>
+            <div class="tool-actions">
+                <a href="https://botanicaandina.com/herramientas/widget/embed.html?mode=full" class="btn btn-secondary" target="_blank">Vista previa</a>
+                <button class="btn btn-secondary copy-embed" data-tool="full">Copiar código</button>
+            </div>
+            <div class="embed-code" id="embed-full" style="display:none;">
+                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/widget/embed.html?mode=full&quot;
+    width=&quot;100%&quot; height=&quot;500&quot;
+    frameborder=&quot;0&quot;
+    style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
+    title=&quot;Verificador de Interacciones Plantas-Medicamentos&quot;
+    loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p style=&quot;font-size:11px;color:#666;margin-top:4px;&quot;&gt;
+    Datos de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot;&gt;Botánica Andina&lt;/a&gt; · 592 interacciones verificadas
+&lt;/p&gt;</code></pre>
+            </div>
+
+            <div style="background:#f0fff4;border:1px solid #c6f6d5;border-radius:8px;padding:.8rem;margin:.8rem 0;font-size:.85rem;color:#22543d;">
+                <strong>Personalización:</strong> Añade <code>&amp;theme=dark</code> o <code>&amp;theme=auto</code> a la URL para modo oscuro. Ejemplo: <code>embed.html?mode=sidebar&amp;theme=dark</code>
+            </div>
+
             <div class="tool-meta">
                 <span class="tag">Gratuita</span>
                 <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
+                <span class="tag">Sin cookies</span>
+                <span class="tag">GDPR-compatible</span>
+                <span class="tag">3 variantes</span>
+                <span class="tag">Modo oscuro</span>
             </div>
         </div>
         <div class="tool-card">
             <h3>Buscador de Plantas Medicinales</h3>
-            <p class="tool-desc">Busca plantas medicinales por síntomas. 22 plantas con filtros por nivel de evidencia y enlaces a estudios PubMed. <strong>Perfecto para sitios de medicina natural y remedios caseros.</strong></p>
-            <div class="tool-benefits">
-                <strong>Casos de uso:</strong> Enciclopedias de hierbas, blogs de remedios naturales, guías de bienestar.
-            </div>
+            <p class="tool-desc">Busca plantas medicinales por síntomas. 22 plantas con filtros por nivel de evidencia y enlaces a estudios PubMed.</p>
             <div class="tool-actions">
                 <a href="https://botanicaandina.com/herramientas/buscador/" class="btn btn-primary" target="_blank">Ver herramienta</a>
                 <button class="btn btn-secondary copy-embed" data-tool="buscador">Copiar código embed</button>
@@ -224,10 +169,7 @@ footer a{color:#22543d}
         </div>
         <div class="tool-card">
             <h3>Quiz de Plantas Medicinales</h3>
-            <p class="tool-desc">Quiz personalizado de 7 preguntas que recomienda plantas medicinales según tus síntomas, detecta interacciones y genera resultados compartibles. <strong>Excelente para contenido interactivo en portales de salud.</strong></p>
-            <div class="tool-benefits">
-                <strong>Casos de uso:</strong> Artículos periodísticos sobre medicina herbal, secciones de bienestar, contenido virulento de salud.
-            </div>
+            <p class="tool-desc">Quiz personalizado de 7 preguntas que recomienda plantas medicinales según tus síntomas, detecta interacciones y genera resultados compartibles.</p>
             <div class="tool-actions">
                 <a href="https://botanicaandina.com/herramientas/quiz/" class="btn btn-primary" target="_blank">Ver herramienta</a>
                 <button class="btn btn-secondary copy-embed" data-tool="quiz">Copiar código embed</button>
@@ -345,201 +287,6 @@ footer a{color:#22543d}
                 <span class="tag">Responsive</span>
             </div>
         </div>
-        <div class="tool-card">
-            <h3>Calculadora de Dosis Letal</h3>
-            <p class="tool-desc">Calcula cuánto necesitarías ingerir para alcanzar la dosis letal de hierbas y suplementos. Visualiza el riesgo basado en datos de LD50.</p>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/dosis-letal/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="dosis-letal">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-dosis-letal" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/dosis-letal/&quot;
-        width=&quot;100%&quot; height=&quot;700&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Calculadora de Dosis Letal&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-        <div class="tool-card">
-            <h3>Hierbas en el Embarazo</h3>
-            <p class="tool-desc">Verifica si las hierbas y suplementos son seguros durante el embarazo y lactancia. Basado en evidencia de EMA y ACOG. <strong>Esencial para cualquier sitio de maternidad y embarazo.</strong></p>
-            <div class="tool-benefits">
-                <strong>Casos de uso:</strong> Blogs de embarazo, guías de maternidad, recursos para futuras madres, clínicas prenatales.
-            </div>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/embarazo/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="embarazo">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-embarazo" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/embarazo/&quot;
-        width=&quot;100%&quot; height=&quot;800&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Hierbas en el Embarazo&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-        <div class="tool-card">
-            <h3>Calculadora de Cafeína en Yerba Mate</h3>
-            <p class="tool-desc">Calcula cuánta cafeína estás tomando con tu yerba mate. Compara con café, té y bebidas energéticas.</p>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/mate/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="mate">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-mate" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/mate/&quot;
-        width=&quot;100%&quot; height=&quot;700&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Calculadora de Cafeína en Yerba Mate&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-        <div class="tool-card">
-            <h3>Matriz de Interacciones</h3>
-            <p class="tool-desc">Visualiza todas las interacciones hierba-medicamento en una matriz interactiva. 150 plantas × 503 interacciones documentadas.</p>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/matriz/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="matriz">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-matriz" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/matriz/&quot;
-        width=&quot;100%&quot; height=&quot;800&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Matriz de Interacciones&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-        <div class="tool-card">
-            <h3>Reporte de Interacciones</h3>
-            <p class="tool-desc">Genera un reporte visual compartible de todas las interacciones detectadas entre tus plantas y medicamentos.</p>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/reporte/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="reporte">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-reporte" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/reporte/&quot;
-        width=&quot;100%&quot; height=&quot;800&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Reporte de Interacciones&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-        <div class="tool-card">
-            <h3>Puntuación de Seguridad</h3>
-            <p class="tool-desc">Puntuación de seguridad (0-100) para suplementos basada en evidencia, efectos adversos reportados y calidad de los datos.</p>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/seguridad/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="seguridad">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-seguridad" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/seguridad/&quot;
-        width=&quot;100%&quot; height=&quot;800&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Puntuación de Seguridad&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-        <div class="tool-card">
-            <h3>Stack Checker</h3>
-            <p class="tool-desc">¿Tus suplementos son compatibles? Verifica interacciones múltiples en tu stack de suplementos en tiempo real.</p>
-            <div class="tool-actions">
-                <a href="https://botanicaandina.com/herramientas/stack-checker/" class="btn btn-primary" target="_blank">Ver herramienta</a>
-                <button class="btn btn-secondary copy-embed" data-tool="stack-checker">Copiar código embed</button>
-            </div>
-            <div class="embed-code" id="embed-stack-checker" style="display:none;">
-                <pre><code>&lt;iframe src=&quot;https://botanicaandina.com/herramientas/stack-checker/&quot;
-        width=&quot;100%&quot; height=&quot;800&quot;
-        frameborder=&quot;0&quot;
-        style=&quot;border:1px solid #e2e8f0;border-radius:8px;&quot;
-        title=&quot;Stack Checker&quot;
-        loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
-&lt;p style=&quot;font-size:12px;color:#666;margin-top:4px;&quot;&gt;
-    Herramienta gratuita de &lt;a href=&quot;https://botanicaandina.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Botánica Andina&lt;/a&gt;
-&lt;/p&gt;</code></pre>
-            </div>
-            <div class="tool-meta">
-                <span class="tag">Gratuita</span>
-                <span class="tag">Sin registro</span>
-                <span class="tag">Responsive</span>
-            </div>
-        </div>
-
-<div class="examples">
-<h2>Ejemplos de integración</h2>
-<div class="example-grid">
-<div class="example-card">
-<h3>Blog de Salud Natural</h3>
-<p><strong>Herramienta:</strong> Verificador de Interacciones</p>
-<p><strong>Implementación:</strong> El blog integra el verificador en cada artículo sobre hierbas medicinales. Los lectores pueden verificar la seguridad mientras leen.</p>
-<p><strong>Resultado:</strong> +250% de tiempo en página, +40% de tasa de retorno.</p>
-</div>
-<div class="example-card">
-<h3>Portal de Maternidad</h3>
-<p><strong>Herramienta:</strong> Hierbas en el Embarazo</p>
-<p><strong>Implementación:</strong> El portal añade el verificador de seguridad en su guía de suplementos para embarazadas.</p>
-<p><strong>Resultado:</strong> Herramienta más utilizada del sitio, con 5,000+ verificaciones mensuales.</p>
-</div>
-<div class="example-card">
-<h3>Blog de Fitness</h3>
-<p><strong>Herramienta:</strong> Reloj de Cafeína + Stack Checker</p>
-<p><strong>Implementación:</strong> El blog incluye ambas herramientas en su guía de suplementación para entrenamientos.</p>
-<p><strong>Resultado:</strong> Aumento del 180% en engagement y más preguntas en los comentarios.</p>
-</div>
-</div>
-</div>
 
 <footer>
 <p>Todas las herramientas son gratuitas y de código abierto. Datos basados en evidencia de EMA, ESCOP y PubMed.</p>
@@ -552,15 +299,17 @@ document.querySelectorAll('.copy-embed').forEach(btn => {
     btn.addEventListener('click', function() {
         const toolId = this.dataset.tool;
         const codeEl = document.getElementById('embed-' + toolId);
+        // Toggle visibility
         codeEl.style.display = codeEl.style.display === 'none' ? 'block' : 'none';
         if (codeEl.style.display === 'block') {
             const code = codeEl.querySelector('code').textContent
-                .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+                .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
             navigator.clipboard.writeText(code).then(() => {
+                const orig = this.textContent;
                 this.textContent = '¡Copiado!';
                 this.classList.add('copied');
                 setTimeout(() => {
-                    this.textContent = 'Copiar código embed';
+                    this.textContent = orig;
                     this.classList.remove('copied');
                 }, 2000);
             });
@@ -568,204 +317,5 @@ document.querySelectorAll('.copy-embed').forEach(btn => {
     });
 });
 </script>
-
-
-    <div class="share-widget">
-        <div class="share-header">
-            <span class="share-title">Comparte esta herramienta</span>
-            <button class="share-embed-toggle" onclick="toggleEmbed()" aria-label="Mostrar código embed">
-                <span id="toggleText">📦 Insertar en tu sitio</span>
-            </button>
-        </div>
-
-        <div class="share-buttons">
-            <a class="share-btn twitter" href="#" onclick="shareToTwitter()" target="_blank" rel="noopener" aria-label="Compartir en X">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-1.587 6.062c-.379 1.689-.299 1.984-.069.45-.297 1.263.356-2.292.767-1.912 1.789-1.389.947-1.696.834-.666.814-1.093.388-.683.366-.668-.736-.834-.505.919-1.243.797-2.037-.252.319-.403-.589-.632-.524-.805-.797-1.416.619-1.416-1.653-1.402-1.389-1.339-1.345-.736-.649-.686-.677-.495-.532-.552-.485-.469-.369-.493.286-.359-.248-.219-.204-.16-.097-.037 0h1.125v1.25c0 0 .077.016.149.06.208.069.25.074.044.044-.05.011.016-.012-.02-.019-.016-.025-.023-.029-.033-.034-.043-.048-.053-.062-.062-.058-.067-.072-.076-.078-.081-.089-.101-.111.129-.137-.164-.191-.218-.252-.287-.323-.369-.395-.425-.445-.465-.49-.493-.518-.533-.563-.581-.606-.639-.671-.705-.735-.775-.813-.856-.887-.925-.974-1.024-1.073-1.122-1.163-1.196-1.228-1.256-1.28-1.305-1.339-1.374-1.399-1.42-1.428-1.443-1.456-1.468-1.479-1.487-1.493-1.504-1.512-1.523-1.532-1.54-1.548-1.559-1.565-1.571-1.577-1.584-1.592-1.602-1.608-1.613-1.619-1.628-1.634-1.64-1.649-1.653-1.658-1.665-1.672-1.678-1.682-1.688-1.695-1.7-1.704-1.71-1.714-1.717-1.723-1.732-1.739-1.743-1.749-1.755-1.76-1.76-1.766-1.773-1.78-1.784-1.787-1.795-1.803-1.81-1.815-1.818-1.824-1.83-1.836-1.842-1.849-1.855-1.861-1.865-1.871-1.877-1.883-1.889-1.894-1.9-1.903-1.91-1.917-1.924-1.93-1.935-1.944-1.952-1.961-1.968-1.976-1.982-1.99-1.997-2.002-2.007-2.011-2.016-2.019-2.021-2.024-2.028-2.031-2.034-2.037-2.041-2.043-2.045-2.049-2.052-2.055-2.058-2.061-2.063-2.067-2.069-2.072-2.074-2.076-2.079-2.083-2.085-2.089-2.092-2.095-2.099-2.101-1.105-1.108-1.11-1.113-1.117-1.119-1.122-1.126-1.128-1.131-1.134-1.138-1.141-1.144-1.147-1.149-1.152-1.156-1.159-1.162-1.165-1.168-1.171-1.174-1.176-1.18-1.184-1.187-1.19-1.194-1.197-1.2-1.203-1.206-1.209-1.212-1.215-1.218-1.221-1.224-1.227-1.23-1.232-1.236-1.239-1.243-1.246-1.249-1.253-1.257-1.26-1.264-1.268-1.272-1.276-1.28-1.284-1.289-1.292-1.295-1.298-1.302-1.305-1.309-1.314-1.319-1.324-1.328-1.332-1.337-1.341-1.345-1.349-1.353-1.358-1.363-1.368-1.372-1.377-1.383-1.389-1.393-1.397-1.402-1.408-1.413-1.418-1.422-1.428-1.433-1.438-1.443-1.449-1.453-1.458-1.464-1.469-1.474-1.48-1.486-1.492-1.497-1.502-1.508-1.514-1.519-1.524-1.53-1.536-1.542-1.548-1.553-1.559-1.565-1.571-1.577-1.583-1.589-1.594-1.599-1.604-1.609-1.614-1.62-1.626-1.632-1.638-1.644-1.649-1.654-1.66-1.666-1.671-1.677-1.683-1.689-1.694-1.7-1.706-1.712-1.718-1.724-1.73-1.736-1.742-1.748-1.754-1.76-1.767-1.773-1.779-1.785-1.791-1.796-1.802-1.808-1.814-1.82-1.826-1.832-1.838-1.844-1.85-1.856-1.862-1.869-1.875-1.881-1.887-1.893-1.899-1.904-1.91-1.916-1.922-1.928-1.934-1.939-1.945-1.951-1.957-1.962-1.968-1.974-1.98-1.986-1.991-1.996-1.999v12.066h-.019c0 0 .078.016.164.067.097.147.146.196.237.245.266.328.368.401.429.449.446.508.537.54.55.556.556.556.537.449.429.446.444.386.328.27.208-.193.168-.193-.168-.188-.169-.169-.168-.169-.168-.169-.169-.168-.17-.173-.18-.188-.193-.2-.211-.221-.24-.254-.269-.283-.299-.315-.336-.346-.353-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-.357-. share to Twitter</a>
-            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328 1.078-2.352 2.352-3.632v-3.585c0-1.283-1.045-2.352-2.352-3.602v-3.585c0-.929-.631-1.599-1.599-2.552v-3.585c0-.791-.53-1.376-1.376-2.24v-3.585c0-.824-.485-1.42-1.42-2.23v-3.585c0-.832-.486-1.419-1.419-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.936-.602-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.835-.497-1.416-1.416-2.23v-3.585c0-.797-.514-1.427-1.427-2.215v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.833-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.282-1.024-2.352-2.352-3.632v-3.585c0-1.269-1.025-2.352-2.352-3.577v-3.585c0-.937-.607-1.553-1.553-2.447v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.938-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.577v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.794-.453-1.328-1.328-2.152v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.329-1.329-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.27-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.553-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585c0-1.272-1.009-2.352-2.352-3.576v-3.585c0-.937-.607-1.554-1.554-2.448v-3.585c0-.793-.453-1.328-1.328-2.152v-3.585c0-.834-.486-1.416-1.416-2.23v-3.585c0-.979-.607-1.628-1.628-2.552v-3.585c0-1.283-1.045-2.352-2.352-3.632v-3.585 partial.517h.353c0 0 .466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466.466. 1.405c0 0 .311 0 .324.327.32.362.339.367.374.378.384.389.397.413.425.445.462.49.512.56.605.649.692.735.777.818.857.896.934.967.997 1.027 1.057 1.087 1.116 1.144 1.171 1.197 1.221 1.245 1.268 1.29 1.311 1.331 1.35 1.369 1.387 1.404 1.42 1.435 1.45 1.464 1.477 1.49 1.503 1.515 1.526 1.537 1.547 1.556 1.566 1.574 1.582 1.589 1.596 1.602 1.608 1.614 1.62 1.625 1.631 1.636 1.641 1.646 1.65 1.654 1.659 1.663 1.667 1.671 1.674 1.677 1.679 1.682 1.685 1.688 1.69 1.693 1.696 1.699 1.702 1.704 1.707 1.71 1.713 1.718 1.722 1.727 1.731 1.735 1.739 1.742 1.746 1.75 1.753 1.756 1.759 1.762 1.765 1.768 1.771 1.774 1.777 1.78 1.783 1.786 1.789 1.792 1.795 1.798 1.801 1.804 1.806 1.809 1.811 1.814 1.817 1.819 1.822 1.825 1.828 1.83 1.833 1.836 1.839 1.842 1.845 1.848 1.851 1.853 1.856 1.859 1.862 1.865 1.868 1.87 1.873 1.876 1.879 1.882 1.885 1.888 1.891 1.894 1.897 1.9 1.903 1.905 1.908 1.91 1.913 1.916 1.919 1.922 1.925 1.928 1.931 1.934 1.937 1.94 1.942 1.945 1.948 1.951 1.954 1.957 1.96 1.963 1.966 1.969 1.972 1.975 1.978 1.981 1.984 1.987 1.99 1.992 1.995 1.998v12.066h-5.575c0 0 .057.037.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057.057./X share to Twitter</a>
-            <a class="share-btn linkedin" href="#" onclick="shareToLinkedIn()" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 0h-14c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-14c0-1.103-.897-2-2-2zm-11.959 6h-2.059c-.535 0-.969-.432-.969-.962v-4.162c0-.691.288-1.236-.846-1.741-.193-1.051-.095-1.393.095-1.72.193-2.083.193-.916 0-1.56.432-2.058.962-.962v-1.766c0-.261.106-.519.106-.773v-4.236c0-.392-.198-.776-.198-1.152v-4.236c0-.231-.116-.463-.116-.693v-4.236c0-.259-.129-.517-.129-.773v-4.236c0-.261-.131-.52-.131-.771v-4.236c0-.13-.065-.518-.065-.765v-4.236c0-.065-.033-.515-.033-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.26-.13-.519-.13-.765v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.26-.13-.519-.13-.761v-4.236c0-.261-.13-.519-.13-.761v-4.236c0-.13-.065-.514-.064-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.235.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.414.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.515-.065-.763v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-.761v-4.236c0-.13-.065-.514-.064-. a. share to LinkedIn</a>
-            <a class="share-btn facebook" href="#" onclick="shareToFacebook()" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c3.23 0 6.09-1.57 8.09-4.39.09-4.39-1.57-8.09-4.39-8.09-4.39-1.57-8.09V8.72c0-2.13-1.52-3.96-3.82-1.29-.59-.29-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1.2-.16-2.04.09-2.59-.09-.62-.16-1., WhatsApp</a>
-            <button class="share-btn copy" onclick="copyPageUrl()" aria-label="Copiar enlace">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15h4a2 2 0 012 2v0a2 2 0 01-2 2H9a2 2 0 01-2-2v6a2 2 0 012 2h6a2 2 0 012-2v-6a2 2 0 01-2-2h-4"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="share-embed-section" id="shareEmbedSection">
-            <p class="embed-label">Código para insertar en tu sitio:</p>
-            <textarea id="embedCode" class="embed-code" readonly></textarea>
-            <div class="embed-actions">
-                <button class="copy-embed-btn" onclick="copyEmbedCode()">
-                    <span id="copyBtnText">Copiar código</span>
-                    <span class="embed-copied" id="embedCopied">✓ Copiado!</span>
-                </button>
-            </div>
-            <p class="embed-link-cta">
-                Más herramientas: <a href="/herramientas/embeds/" target="_blank">Ver todas las herramientas embebibles</a>
-            </p>
-        </div>
-    </div>
-
-    <script>
-        let currentToolUrl = window.location.href;
-        let currentToolTitle = document.title;
-
-        function shareToTwitter() {
-            const text = encodeURIComponent(`${currentToolTitle} - Herramienta gratuita de Botánica Andina`);
-            const url = encodeURIComponent(currentToolUrl);
-            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener,noreferrer');
-        }
-
-        function shareToLinkedIn() {
-            const url = encodeURIComponent(currentToolUrl);
-            const title = encodeURIComponent(currentToolTitle);
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&mini=true`, '_blank', 'noopener,noreferrer');
-        }
-
-        function shareToFacebook() {
-            const url = encodeURIComponent(currentToolUrl);
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener,noreferrer');
-        }
-
-        function copyPageUrl() {
-            navigator.clipboard.writeText(currentToolUrl).then(() => {
-                showToast('Enlace copiado al portapapeles');
-            });
-        }
-
-        function toggleEmbed() {
-            const section = document.getElementById('shareEmbedSection');
-            const toggleText = document.getElementById('toggleText');
-            section.classList.toggle('active');
-            if (section.classList.contains('active')) {
-                toggleText.textContent = '✕ Cerrar';
-                updateEmbedCode();
-            } else {
-                toggleText.textContent = '📦 Insertar en tu sitio';
-            }
-        }
-
-        function updateEmbedCode() {
-            const toolPath = window.location.pathname;
-            const iframeSrc = `https://botanicaandina.com${toolPath}`;
-            const embedCode = `<iframe src="${iframeSrc}"\n    width="100%"\n    height="700"\n    frameborder="0"\n    style="border:1px solid #e2e8f0;border-radius:8px;"\n    title="${currentToolTitle}"\n    loading="lazy">\n</iframe>\n<p style="font-size:12px;color:#666;margin-top:4px;">\n    Herramienta gratuita de <a href="https://botanicaandina.com" target="_blank" rel="noopener">Botánica Andina</a>\n</p>`;
-            document.getElementById('embedCode').value = embedCode;
-        }
-
-        function copyEmbedCode() {
-            const code = document.getElementById('embedCode').value;
-            navigator.clipboard.writeText(code).then(() => {
-                const copyBtnText = document.getElementById('copyBtnText');
-                const copyCopied = document.getElementById('embedCopied');
-                copyBtnText.style.display = 'none';
-                copyCopied.classList.add('active');
-                setTimeout(() => {
-                    copyBtnText.style.display = 'inline';
-                    copyCopied.classList.remove('active');
-                }, 2000);
-            });
-        }
-
-        function showToast(message) {
-            const toast = document.createElement('div');
-            toast.style.cssText = 'position:fixed;bottom:20px;right:20px;background:#374151;color:#fff;padding:12px 20px;border-radius:8px;z-index:9999;animation:fadeIn 0.3s;font-size:14px;box-shadow:0 4px 12px rgba(0,0,0,0.15);';
-            toast.textContent = message;
-            document.body.appendChild(toast);
-            setTimeout(() => toast.remove(), 3000);
-        }
-
-        // Auto-detect and set embed code
-        updateEmbedCode();
-    </script>
-
-
-    <div class="share-section" style="margin-top: 2rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
-        <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #2c3e50;">Compartir esta herramienta</h3>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button onclick="shareTo('twitter')" style="padding: 0.5rem 1rem; background: #1DA1F2; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-9.42 0 4.48 4.48 0 0 0-3.14-1.53 7.74 7.74 0 0 1-6.8-6.63V5.5h4.15v4.8a5.12 5.12 0 0 1 5.12 5.12h1.76v6.25a7.9 7.9 0 0 1-7.85 6.79h-4.1v9.2h3.96a6.7 6.7 0 0 1 6.7-6.7V5.5h3.1l.68-4.18h-3.78V3a3.25 3.25 0 0 1-3.25-3.25H5.4V1h3.38C13.66 1 15 2.34 15 5.38v4.22h4.23l.68 4.18h-4.91v15.08a9.2 9.2 0 0 1-9.2 9.2H3a9.2 9.2 0 0 1-9.2-9.2z"/></svg>
-                Twitter
-            </button>
-            <button onclick="shareTo('facebook')" style="padding: 0.5rem 1rem; background: #1877F2; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 1.686.235 1.686.235v2.953H5.874c-.335 0-.533.223-.533.638v2.648c0 .414.198.638.533.638h.661v4.373h3.924C21.383 20.433 24 16.614 24 12.073z"/></svg>
-                Facebook
-            </button>
-            <button onclick="shareTo('whatsapp')" style="padding: 0.5rem 1rem; background: #25D366; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem;">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.673-.148-.276 0-.375.101-.468.244-.086.133-.527.352-.917.662-.267.208-.458.414-.581.747-.122.334-.184.662-.184.991 0 .558.224 1.028.634 1.363.06.057.129.098.207.117.065-.018.083-.072.124-.155-.041-.082-.128-.247-.259-.49-.38-.451-.37-.956-.933-1.633-1.388-.288-.207-.568-.442-.842-.691-.272-.246-.495-.424-.688-.544-.411-.287-.617-.44-.617-.44 0-.037.02-.087.044-.129.074-.014.041-.04.104-.053-.19-.013-.086-.002-.196.009-.243.021-.086.021-.194.007-.324-.014-.13-.021-.27-.004-.418-.016-.15-.012-.314-.018-.492-.006-.18.011-.377.018-.596.006-.218.013-.459.005-.72-.008-.26-.015-.543-.026-.863-.011-.319-.019-.66-.024-1.022.011-.36.021-.726.032-1.097.011-.371.021-.744.032-1.124.011-.379.023-.756.032-1.144.011-.386.021-.776.032-1.172.012-.397.022-.789.032-1.194.012-.404.021-.809.032-1.228.012-.42.021-.842.032-1.278.012-.435.022-.874.031-1.333.012-.459.021-.919.031-1.4.012-.481.022-.966.031-1.486.012-.52.021-1.044.031-1.585.012-.54.022-1.087.031-1.672.012-.584.021-1.172.031-1.795.011-.624.022-1.254.032-1.925.012-.67.021-1.345.031-2.07.012-.724.022-1.452.031-2.23.012-.779.021-1.568.031-2.393.012-.825.022-1.66.031-2.557.012-.897.021-1.8.032-2.722.011-.922.022-1.851.032-2.818.012-.967.021-1.943.031-2.957.012-1.022.022-2.052.031-3.127.012-1.069.021-2.149.031-3.26.012-1.106.021-2.22.031-3.36.012-1.131.022-2.268.031-3.424.012-1.147.022-2.293.031-3.453.012-1.145.021-2.296.031-3.445.012-1.115.022-2.238.031-3.378.011-1.069.022-2.148.031-3.25.012-.998.021-2.002.031-3.056.012-.935.022-1.877.031-2.882.012-.897.021-1.796.031-2.76.012-.873.022-1.752.031-2.686.012-.856.021-1.715.031-2.639.012-.836.022-1.676.031-2.58.012-.845.021-1.694.031-2.605.012-.874.022-1.753.031-2.7.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.655.012-.879.021-1.764.031-2.702.012-.897.021-1.8.031-2.762.012-.898.021-1.8.031-2.752.012-.878.021-1.762.031-2.702.012-.874.022-1.753.031-2.683.012-.862.021-1.73.031-2.65z"/></svg>
-                WhatsApp
-            </button>
-            <button onclick="copyLink()" id="copyBtn" style="padding: 0.5rem 1rem; background: #6b7280; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
-                📋 Copiar enlace
-            </button>
-        </div>
-    </div>
-    <div class="embed-section" style="margin-top: 2rem; padding: 1.5rem; background: #f0fdf4; border-radius: 12px; border: 1px solid #bbf7d0;">
-        <h3 style="margin: 0 0 1rem 0; font-size: 1.1rem; color: #166534;">Incrustar en tu sitio</h3>
-        <p style="margin: 0 0 1rem 0; font-size: 0.9rem; color: #374151;">Copia el código para incrustar esta herramienta:</p>
-        <textarea id="embedCode" readonly style="width: 100%; height: 80px; padding: 0.5rem; border: 1px solid #bbf7d0; border-radius: 6px; font-family: monospace; font-size: 0.85rem; background: #fff;" onclick="this.select();"></textarea>
-        <button onclick="copyEmbed()" id="copyEmbedBtn" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: #16a34a; color: #fff; border: none; border-radius: 6px; cursor: pointer; font-size: 0.9rem;">
-            📋 Copiar código
-        </button>
-    </div>
-
-    <script>
-        function shareTo(platform) {
-            const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent(document.title);
-            let shareUrl;
-
-            switch(platform) {
-                case 'twitter':
-                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
-                    break;
-                case 'facebook':
-                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-                    break;
-                case 'whatsapp':
-                    shareUrl = `https://wa.me/?text=${text} ${url}`;
-                    break;
-            }
-
-            window.open(shareUrl, '_blank', 'width=600,height=400');
-        }
-
-        function copyLink() {
-            navigator.clipboard.writeText(window.location.href);
-            const btn = document.getElementById('copyBtn');
-            btn.textContent = '✓ ¡Copiado!';
-            btn.style.background = '#16a34a';
-            setTimeout(() => {
-                btn.textContent = '📋 Copiar enlace';
-                btn.style.background = '#6b7280';
-            }, 2000);
-        }
-
-        function copyEmbed() {
-            const embedCode = document.getElementById('embedCode');
-            navigator.clipboard.writeText(embedCode.value);
-            const btn = document.getElementById('copyEmbedBtn');
-            btn.textContent = '✓ ¡Copiado!';
-            setTimeout(() => {
-                btn.textContent = '📋 Copiar código';
-            }, 2000);
-        }
-
-        // Generate embed code
-        window.addEventListener('DOMContentLoaded', function() {
-            const embedCode = document.getElementById('embedCode');
-            if (embedCode) {
-                const toolUrl = window.location.href;
-                const toolName = document.title;
-                embedCode.value = `<iframe src="${toolUrl}" width="100%" height="600" frameborder="0" title="${toolName}"></iframe>`;
-            }
-        });
-    </script>
 </body>
 </html>

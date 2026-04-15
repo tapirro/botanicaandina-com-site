@@ -4,7 +4,7 @@
 <!-- DOI: 10.1016/j.numecd.2025.104470 -->
 <svg viewBox="0 0 480 226" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reduccion de colesterol con kiwicha (90 dias)" style="max-width:480px;width:100%;height:auto;margin:1.5rem auto;display:block;">
     <rect width="480" height="226" rx="12" fill="#f8f9fa" stroke="#e9ecef" stroke-width="1"/>
-    <text x="20" y="30" fill="#222" font-size="15" font-family="Arial,sans-serif" font-weight="bold">Reduccion de colesterol con kiwicha (90 dias)</text>
+    <text x="20" y="30" fill="#222" font-size="15" font-family="Arial,sans-serif" font-weight="bold">Reducción de colesterol con kiwicha (90 dias)</text>
     
         <text x="20" y="50" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">LDL</text>
         <rect x="20" y="58" width="281" height="24" rx="4" fill="#e65100" opacity="0.85"/>

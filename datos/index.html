@@ -3,149 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos y visualizaciones - Infografías científicas | Botánica Andina</title>
-    <meta name="description" content="Infografías científicas sobre plantas medicinales andinas, ensayos clínicos y salud pública en América Latina. Licencia CC BY-SA 4.0 — uso libre con atribución.">
+    <title>Datos: plantas medicinales por condición — Botánica Andina</title>
+    <meta name="description" content="Explore plantas medicinales organizadas por condición de salud. Base de datos con 16 condiciones y cientos de plantas con referencias científicas.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://botanicaandina.com/datos/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Datos y visualizaciones científicas - Botánica Andina">
-    <meta property="og:description" content="Infografías científicas de uso libre (CC BY-SA 4.0) sobre plantas medicinales, ensayos clínicos y salud pública en América Latina.">
-    <meta property="og:locale" content="es_LA">
-    <meta property="og:image" content="https://botanicaandina.com/assets/img/og-home.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Datos y visualizaciones científicas",
-        "description": "Infografías científicas sobre plantas medicinales andinas y salud pública en América Latina",
-        "url": "https://botanicaandina.com/datos/",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Botánica Andina",
-            "url": "https://botanicaandina.com"
-        },
-        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
-    }
-    </script>
-    <link rel="stylesheet" href="/assets/css/page.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.8; color: #1a1a1a; background: #fafaf7; }
+        .site-nav { background: #1a5632; padding: 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+        .nav-brand { color: #fff; text-decoration: none; font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-family: Arial, sans-serif; font-size: 0.85rem; }
+        .nav-links a:hover { color: #fff; }
+        @media (max-width: 700px) { .nav-container { flex-direction: column; padding: 0.8rem 1rem; gap: 0.5rem; } .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; } }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; color: #111; }
+        .subtitle { font-size: 1rem; color: #555; margin-bottom: 2rem; }
+        .datos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
+        .dato-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.2rem; text-decoration: none; color: inherit; transition: box-shadow 0.2s; display: block; }
+        .dato-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .dato-emoji { font-size: 1.8rem; display: block; margin-bottom: 0.5rem; }
+        .dato-card h3 { font-size: 0.95rem; color: #1a5632; margin-bottom: 0.3rem; }
+        .dato-card p { font-family: Arial, sans-serif; font-size: 0.8rem; color: #666; margin: 0; line-height: 1.5; }
+        .dato-count { display: inline-block; margin-top: 0.5rem; font-family: Arial, sans-serif; font-size: 0.75rem; color: #888; background: #f5f5f5; padding: 2px 8px; border-radius: 3px; }
+
+        .site-footer { background: #1a2e1a; color: #ccc; padding: 3rem 0 2rem; margin-top: 3rem; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+        .footer-brand { font-family: Georgia, serif; font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem; }
+        .footer-desc { font-size: 0.85rem; line-height: 1.6; color: #aaa; }
+        .footer-heading { font-family: Arial, sans-serif; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #fff; margin-bottom: 0.8rem; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 0.4rem; }
+        .footer-links a { color: #aaa; text-decoration: none; font-size: 0.85rem; font-family: Arial, sans-serif; }
+        .footer-links a:hover { color: #8bc34a; }
+        .footer-bottom { border-top: 1px solid #2a3e2a; padding-top: 1.5rem; text-align: center; }
+        .footer-bottom p { font-size: 0.78rem; color: #777; font-family: Arial, sans-serif; margin: 0; }
+        @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
     <nav class="site-nav">
         <div class="nav-container">
-            <a href="/" class="nav-brand">Botánica Andina</a>
+            <a href="/" class="nav-brand">Bot&aacute;nica Andina</a>
             <div class="nav-links">
                 <a href="/noticias/">Noticias</a>
-                <a href="/datos/">Datos</a>
-                <a href="/sobre-nosotros/">Equipo</a>
+                <a href="/herramientas/">Herramientas</a>
+                <a href="https://interacciones.botanicaandina.com/herramientas/interacciones/todas/">Interacciones</a>
+                <a href="/sobre-nosotros/">Sobre Nosotros</a>
             </div>
         </div>
     </nav>
-    <header class="page-header">
-        <h1>Datos y visualizaciones</h1>
-        <p>Infografías científicas sobre plantas medicinales, ensayos clínicos y salud pública en América Latina</p>
-    </header>
-    <main class="content">
-        <div class="license-banner">
-            <strong>Licencia CC BY-SA 4.0</strong> — Todas las infografías de esta página son de uso libre.
-            Puedes copiarlas, compartirlas y adaptarlas para cualquier propósito, incluso comercial,
-            siempre que incluyas atribución: <em>"Fuente: <a href="https://botanicaandina.com/datos/">Botánica Andina</a>"</em>
-            y mantengas la misma licencia.
-            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" rel="nofollow">Ver licencia completa</a>.
+
+    <div class="container">
+        <h1>Plantas medicinales por condición</h1>
+        <p class="subtitle">Base de datos con 16 condiciones de salud y las plantas medicinales estudiadas para cada una.</p>
+
+        <div class="datos-grid">
+            <a href="/datos/tos-y-afecciones-respiratorias/" class="dato-card">
+                <span class="dato-emoji">🫁</span>
+                <h3>Plantas medicinales para las vías respiratorias</h3>
+                <p>Guía de plantas expectorantes, antitusivas y broncodilatadoras. Eucalipto, matico, mullein y más.</p>
+                <span class="dato-count">101 plantas</span>
+            </a>
+            <a href="/datos/problemas-digestivos/" class="dato-card">
+                <span class="dato-emoji">🫄</span>
+                <h3>Plantas medicinales para el sistema digestivo</h3>
+                <p>Guía de plantas para problemas digestivos: manzanilla, boldo, jengibre, menta. Evidencia para gastritis, dispepsia e int</p>
+                <span class="dato-count">52 plantas</span>
+            </a>
+            <a href="/datos/afecciones-dermatologicas/" class="dato-card">
+                <span class="dato-emoji">🧴</span>
+                <h3>Plantas medicinales para afecciones dermatológicas</h3>
+                <p>Guía de plantas medicinales con evidencia para problemas de la piel: dermatitis, eczema, acné, heridas. Usos tradicional</p>
+                <span class="dato-count">37 plantas</span>
+            </a>
+            <a href="/datos/cancer/" class="dato-card">
+                <span class="dato-emoji">🔬</span>
+                <h3>Plantas medicinales en investigación contra el cáncer</h3>
+                <p>Revisión de plantas sudamericanas estudiadas en investigación oncológica. Compuestos activos, mecanismos y estado de la </p>
+                <span class="dato-count">32 plantas</span>
+            </a>
+            <a href="/datos/cicatrizacion-de-heridas/" class="dato-card">
+                <span class="dato-emoji">🩹</span>
+                <h3>Plantas para la cicatrización de heridas y regeneración</h3>
+                <p>Plantas medicinales con evidencia en cicatrización: sangre de drago, caléndula, sábila y más. Mecanismos y aplicaciones.</p>
+                <span class="dato-count">29 plantas</span>
+            </a>
+            <a href="/datos/dolor-muscular-articular-de-cabeza/" class="dato-card">
+                <span class="dato-emoji">💪</span>
+                <h3>Plantas medicinales para el dolor</h3>
+                <p>Analgésicos naturales con evidencia: uña de gato, sauce, cúrcuma. Para dolor articular, muscular y de cabeza.</p>
+                <span class="dato-count">28 plantas</span>
+            </a>
+            <a href="/datos/diarrea/" class="dato-card">
+                <span class="dato-emoji">💧</span>
+                <h3>Plantas medicinales para la diarrea</h3>
+                <p>Plantas con efecto antidiarreico: guayaba, sangre de drago, ratania. Mecanismos astringentes y antimicrobianos.</p>
+                <span class="dato-count">18 plantas</span>
+            </a>
+            <a href="/datos/infecciones-bacterianas/" class="dato-card">
+                <span class="dato-emoji">🦠</span>
+                <h3>Plantas medicinales con actividad antibacteriana</h3>
+                <p>Plantas con actividad antimicrobiana demostrada: sangre de drago, muña, molle. Espectro de acción y mecanismos.</p>
+                <span class="dato-count">18 plantas</span>
+            </a>
+            <a href="/datos/trastornos-hepaticos/" class="dato-card">
+                <span class="dato-emoji">🫁</span>
+                <h3>Plantas medicinales hepatoprotectoras</h3>
+                <p>Guía de plantas medicinales con evidencia para proteger y regenerar el hígado. Boldo, cardo mariano, desmodium y más.</p>
+                <span class="dato-count">17 plantas</span>
+            </a>
+            <a href="/datos/hipertension/" class="dato-card">
+                <span class="dato-emoji">❤️</span>
+                <h3>Plantas medicinales para la presión arterial alta</h3>
+                <p>Revisión de plantas con evidencia en el control de la hipertensión arterial. Mecanismos de acción, dosis estudiadas y pr</p>
+                <span class="dato-count">16 plantas</span>
+            </a>
+            <a href="/datos/investigacion-anticancerigena/" class="dato-card">
+                <span class="dato-emoji">🔬</span>
+                <h3>Plantas sudamericanas en investigación oncológica</h3>
+                <p>Compuestos vegetales sudamericanos en estudio contra el cáncer. Estado de la investigación preclínica y clínica.</p>
+                <span class="dato-count">11 plantas</span>
+            </a>
+            <a href="/datos/diabetes-y-control-glucemico/" class="dato-card">
+                <span class="dato-emoji">🩸</span>
+                <h3>Plantas medicinales para la diabetes y control glucémico</h3>
+                <p>Guía basada en evidencia de plantas medicinales estudiadas para el control de la glucosa y diabetes tipo 2. Con referenc</p>
+                <span class="dato-count">9 plantas</span>
+            </a>
+            <a href="/datos/ansiedad-y-estres/" class="dato-card">
+                <span class="dato-emoji">🧘</span>
+                <h3>Plantas medicinales ansiolíticas y adaptógenas</h3>
+                <p>Revisión de plantas con evidencia para ansiedad y estrés: pasiflora, valeriana, ashwagandha. Mecanismos y dosis estudiad</p>
+                <span class="dato-count">7 plantas</span>
+            </a>
+            <a href="/datos/estrenimiento/" class="dato-card">
+                <span class="dato-emoji">🌿</span>
+                <h3>Plantas medicinales para el estreñimiento</h3>
+                <p>Laxantes naturales con evidencia: sen, cáscara sagrada, linaza. Tipos de acción, dosis y precauciones.</p>
+                <span class="dato-count">6 plantas</span>
+            </a>
+            <a href="/datos/retencion-de-liquidos-edema/" class="dato-card">
+                <span class="dato-emoji">💦</span>
+                <h3>Plantas medicinales diuréticas</h3>
+                <p>Diuréticos naturales con evidencia: cola de caballo, diente de león, maíz morado. Mecanismos y precauciones.</p>
+                <span class="dato-count">5 plantas</span>
+            </a>
+            <a href="/datos/inflamacion-gastrointestinal/" class="dato-card">
+                <span class="dato-emoji">🔥</span>
+                <h3>Plantas para la inflamación gastrointestinal</h3>
+                <p>Plantas con acción antiinflamatoria intestinal: manzanilla, sangre de drago, llantén. Para gastritis, colitis y Crohn.</p>
+                <span class="dato-count">5 plantas</span>
+            </a>
         </div>
+    </div>
 
-        <div class="infographic-grid">
-            <div class="infographic-card">
-                <div class="svg-container">
-                    <svg viewBox="0 0 480 226" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reducción de grasa con berberina" style="max-width:480px;width:100%;height:auto;">
-                        <rect width="480" height="226" rx="12" fill="#f8f9fa" stroke="#e9ecef" stroke-width="1"/>
-                        <text x="20" y="30" fill="#222" font-size="15" font-family="Arial,sans-serif" font-weight="bold">Reducción de grasa con berberina</text>
-                        <text x="20" y="50" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Grasa visceral</text>
-                        <rect x="20" y="58" width="272" height="24" rx="4" fill="#1a5632" opacity="0.85"/>
-                        <text x="300" y="76" fill="#555" font-size="12" font-family="Arial,sans-serif">Reducción significativa</text>
-                        <text x="20" y="102" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Grasa hepática</text>
-                        <rect x="20" y="110" width="240" height="24" rx="4" fill="#2d7a4a" opacity="0.85"/>
-                        <text x="268" y="128" fill="#555" font-size="12" font-family="Arial,sans-serif">Reducción significativa</text>
-                        <text x="20" y="154" fill="#444" font-size="13" font-family="Arial,sans-serif" font-weight="600">Placebo</text>
-                        <rect x="20" y="162" width="48" height="24" rx="4" fill="#ccc" opacity="0.85"/>
-                        <text x="76" y="180" fill="#555" font-size="12" font-family="Arial,sans-serif">Cambio mínimo</text>
-                    </svg>
-                </div>
-                <div class="card-body">
-                    <h3>Berberina reduce grasa visceral y hepática</h3>
-                    <p class="source">Ensayo clínico aleatorizado publicado en JAMA Network Open. DOI: <a href="https://doi.org/10.1001/jamanetworkopen.2025.54152" rel="noopener" target="_blank">10.1001/jamanetworkopen.2025.54152</a></p>
-                    <a href="/assets/svg/berberina-grasa-visceral-obesidad-ensayo-jama.svg" class="download-link" download>Descargar SVG</a>
-                </div>
-            </div>
-
-            <div class="infographic-card">
-                <div class="svg-container">
-                    <svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="casos de dengue en 2024" style="max-width:480px;width:100%;height:auto;">
-                        <rect width="480" height="180" rx="12" fill="#b71c1c" opacity="0.08"/>
-                        <rect x="0" y="0" width="6" height="180" rx="3" fill="#b71c1c"/>
-                        <text x="28" y="80" fill="#b71c1c" font-size="52" font-family="Arial,sans-serif" font-weight="900">14,6M</text>
-                        <text x="28" y="112" fill="#333" font-size="15" font-family="Arial,sans-serif" font-weight="600">casos de dengue en 2024 a nivel global</text>
-                        <text x="28" y="138" fill="#777" font-size="12" font-family="Arial,sans-serif">12.000 muertes | 410.000+ casos de chikungunya en las Américas</text>
-                    </svg>
-                </div>
-                <div class="card-body">
-                    <h3>Dengue: 14,6 millones de casos globales en 2024</h3>
-                    <p class="source">Datos de la revisión publicada en Travel Medicine and Infectious Disease. DOI: <a href="https://doi.org/10.1016/j.tmaid.2026.102972" rel="noopener" target="_blank">10.1016/j.tmaid.2026.102972</a></p>
-                    <a href="/assets/svg/dengue-chikungunya-vacunacion-viajeros-guia-2026.svg" class="download-link" download>Descargar SVG</a>
-                </div>
-            </div>
-
-            <div class="infographic-card">
-                <div class="svg-container">
-                    <svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="personas infectadas con Chagas" style="max-width:480px;width:100%;height:auto;">
-                        <rect width="480" height="180" rx="12" fill="#b71c1c" opacity="0.08"/>
-                        <rect x="0" y="0" width="6" height="180" rx="3" fill="#b71c1c"/>
-                        <text x="28" y="80" fill="#b71c1c" font-size="52" font-family="Arial,sans-serif" font-weight="900">6-7M</text>
-                        <text x="28" y="112" fill="#333" font-size="15" font-family="Arial,sans-serif" font-weight="600">personas infectadas con enfermedad de Chagas</text>
-                        <text x="28" y="138" fill="#777" font-size="12" font-family="Arial,sans-serif">~1/3 desarrollan complicaciones cardíacas | endémica en Bolivia, Argentina, Paraguay, Brasil, Perú</text>
-                    </svg>
-                </div>
-                <div class="card-body">
-                    <h3>Enfermedad de Chagas: 6-7 millones de infectados</h3>
-                    <p class="source">Datos del estudio publicado en JACC. DOI: <a href="https://doi.org/10.1016/j.jacc.2026.03.022" rel="noopener" target="_blank">10.1016/j.jacc.2026.03.022</a></p>
-                    <a href="/assets/svg/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se.svg" class="download-link" download>Descargar SVG</a>
-                </div>
-            </div>
-
-            <div class="infographic-card">
-                <div class="svg-container">
-                    <svg viewBox="0 0 570 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Modelo de etnonutrigerontología" style="max-width:570px;width:100%;height:auto;">
-                        <text x="20" y="30" fill="#222" font-size="15" font-family="Arial,sans-serif" font-weight="bold">Modelo de etnonutrigerontología</text>
-                        <rect x="20" y="50" width="110" height="80" rx="10" fill="#4e342e"/>
-                        <text x="75" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Cultura</text>
-                        <text x="135" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>
-                        <rect x="160" y="50" width="110" height="80" rx="10" fill="#6d4c41"/>
-                        <text x="215" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Nutrición</text>
-                        <text x="275" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>
-                        <rect x="300" y="50" width="110" height="80" rx="10" fill="#8d6e63"/>
-                        <text x="355" y="95" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Biología</text>
-                        <text x="415" y="95" fill="#999" font-size="20" font-family="Arial,sans-serif" text-anchor="middle">&#8594;</text>
-                        <rect x="440" y="50" width="110" height="80" rx="10" fill="#a1887f"/>
-                        <text x="495" y="85" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">Envejecimiento</text>
-                        <text x="495" y="101" fill="#fff" font-size="12" font-family="Arial,sans-serif" font-weight="600" text-anchor="middle">saludable</text>
-                    </svg>
-                </div>
-                <div class="card-body">
-                    <h3>Etnonutrigerontología: de la cultura al envejecimiento saludable</h3>
-                    <p class="source">Modelo propuesto en Cureus. DOI: <a href="https://doi.org/10.7759/cureus.103502" rel="noopener" target="_blank">10.7759/cureus.103502</a></p>
-                    <a href="/assets/svg/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable.svg" class="download-link" download>Descargar SVG</a>
-                </div>
-            </div>
-        </div>
-
-        <p style="margin-top: 2rem; font-family: Arial, sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
-            Mostrando 4 de 10 infografías disponibles.
-            <a href="/noticias/" style="color: #1a5632;">Ver todos los artículos</a> para acceder a las visualizaciones completas.
-        </p>
-    </main>
     <footer class="site-footer">
-        <p>&copy; 2026 Botánica Andina. Contenido licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="nofollow">CC BY-SA 4.0</a>.</p>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Botánica Andina</div>
+                    <p class="footer-desc">Información basada en evidencia sobre plantas medicinales de América del Sur.</p>
+                </div>
+                <div>
+                    <div class="footer-heading">Recursos</div>
+                    <ul class="footer-links">
+                        <li><a href="/herramientas/">Herramientas</a></li>
+                        <li><a href="/noticias/">Noticias</a></li>
+                        <li><a href="/datos/">Datos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading">Sobre</div>
+                    <ul class="footer-links">
+                        <li><a href="/sobre-nosotros/">Sobre nosotros</a></li>
+                        <li><a href="/politica-editorial/">Política editorial</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Botánica Andina. Contenido educativo, no consejo médico.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
