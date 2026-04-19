@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://botanicaandina.com/sitemap.xml
-Sitemap: https://interacciones.botanicaandina.com/herramientas/interacciones/sitemap.xml
