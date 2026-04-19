@@ -439,8 +439,20 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://botanicaandina.com/guia/interacciones-hierba-medicamento/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/plantas-peligrosas-con-medicamentos/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://botanicaandina.com/guia/</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

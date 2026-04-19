@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Block individual interaction pages (13K+ herb×drug combos)
+# Keep the main tool page crawlable via sitemap
+Disallow: /herramientas/interacciones/*/
+
 Sitemap: https://botanicaandina.com/sitemap.xml
