@@ -2,584 +2,260 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://botanicaandina.com/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/herramientas/</loc>
-    <lastmod>2026-03-30</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/botiquin/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/buscador/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/cafeina/</loc>
-    <lastmod>2026-03-30</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/calculadora-contenido-cafeina-mate/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/calculadora-vitamina-d/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/comparador/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/dosis-letal/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/embarazo/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/herramientas/hierbas-seguras-embarazo-lactancia/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/herramientas/interacciones/</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/herramientas/mate/</loc>
-    <lastmod>2026-03-30</lastmod>
+    <loc>https://botanicaandina.com/herramientas/buscador/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/herramientas/matriz/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://botanicaandina.com/herramientas/botiquin/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/herramientas/quiz/</loc>
-    <lastmod>2026-03-30</lastmod>
+    <loc>https://botanicaandina.com/herramientas/embarazo/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/herramientas/comparador/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/herramientas/seguridad/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/herramientas/stack-checker/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/herramientas/supplement-safety-score-calculadora/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://botanicaandina.com/herramientas/calculadora-vitamina-d/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/herramientas/verificador-interacciones-plantas-medicamentos/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/herramientas/verificador/</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.9</priority>
+    <loc>https://botanicaandina.com/datos/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/diabetes-y-control-glucemico/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/hipertension/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/cancer/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/ansiedad-y-estres/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/problemas-digestivos/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/dolor-muscular-articular-de-cabeza/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/afecciones-dermatologicas/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/datos/trastornos-hepaticos/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/interacciones-hierba-medicamento/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/plantas-peligrosas-con-medicamentos/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/peru/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/colombia/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/guia/mexico/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/noticias/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/noticias/adaptacion-altitud-andinos-tibetanos-etiopes-comparacion/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://botanicaandina.com/noticias/mitos-curcuma-que-dice-la-ciencia/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/noticias/ayahuasca-cognicion-revision-sistematica-efectos/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://botanicaandina.com/noticias/mitos-hierba-de-san-juan-interacciones-peligrosas/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/noticias/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <loc>https://botanicaandina.com/noticias/mitos-ajo-medicinal-evidencia-cientifica/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/noticias/mitos-valeriana-sueno-verdad-evidencia/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/noticias/mitos-ginkgo-biloba-memoria-evidencia/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/noticias/mitos-jengibre-propiedades-reales/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/noticias/mitos-aloe-vera-usos-reales/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://botanicaandina.com/noticias/mitos-te-verde-beneficios-riesgos/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/noticias/berberina-grasa-visceral-obesidad-ensayo-jama/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/bixina-achiote-potencial-farmacologico-revision/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/canihua-grano-andino-emergente-perfil-nutricional/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/carotenoides-retinales-aumentan-colesterol-hdl/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/chanca-piedra-proteccion-renal-diabetes-estudio/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/chiric-sanango-planta-amazonica-adicciones-takiwasi/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/curcuma-mucositis-oral-cancer-revision-sistematica/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/curcuma-salud-periodontal-metaanalisis/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/noticias/curcumina-cancer-diabetes-estrategias-dobles/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/noticias/curcumina-mejora-estado-animo-estudio/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <loc>https://botanicaandina.com/noticias/ayahuasca-terapeutica-revision-evalua-su-potencial-en-depresion-y-ansiedad/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://botanicaandina.com/noticias/curcumina-te-verde-egcg-bdnf-estado-animo-ensayo/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/dengue-chikungunya-vacunacion-viajeros-guia-2026/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/dieta-maya-milpa-sindrome-metabolico-alternativa/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/disglucemia-riesgo-cardiometabolico-nutraceuticos/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/enfermedad-de-chagas-cardiomiopatia-chagasica-tiene-peor-pronostico-que-otras-se/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/etnonutrigerontologia-dietas-andinas-envejecimiento-saludable/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://botanicaandina.com/noticias/chanca-piedra-proteccion-renal-diabetes-estudio/</loc>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/noticias/fitoterapia-sindrome-metabolico-revision/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/frutas-amazonicas-potencial-anticancer-revision/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/guayusa-guarana-compuestos-naturales-rendimiento-cognitivo/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/kiwicha-colesterol-ensayo-clinico-perfil-lipidico/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/luteina-zeaxantina-prevencion-miopia-adolescentes/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/masticar-hoja-de-coca-reduce-el-cortisol-en-mineros-andinos-segun-estudio-piloto/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/melon-amargo-diabetes-tipo-2-evidencia/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/plantas-sudamericanas-proteccion-adn-antigenotoxicas/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/quinoa-mejora-biomarcadores-metabolicos-en-estudio-clinico-de-inmunonutricion/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/sacha-inchi-curcumina-sinergia-anticancer/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/sangre-de-drago-anticoagulante-natural-loureirin/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/suplementos-de-hierro-y-desarrollo-cognitivo-infantil-lo-que-dice-la-evidencia-g/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/suplementos-herbales-disfuncion-erectil-metaanalisis/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/tarwi-chocho-microbioma-seguridad-alimentaria-andino/</loc>
-    <lastmod>2026-03-24</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/una-de-gato-aterosclerosis-estudio/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/zinc-infecciones-respiratorias-ninos-evidencia-clinica/</loc>
-    <lastmod>2026-03-26</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/diabetes-y-control-glucemico/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/hipertension/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/cancer/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/afecciones-dermatologicas/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/cicatrizacion-de-heridas/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/trastornos-hepaticos/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/ansiedad-y-estres/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/problemas-digestivos/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/estrenimiento/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/diarrea/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/tos-y-afecciones-respiratorias/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/dolor-muscular-articular-de-cabeza/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/infecciones-bacterianas/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/retencion-de-liquidos-edema/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/inflamacion-gastrointestinal/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/datos/investigacion-anticancerigena/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/peru/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/bolivia/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/mexico/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/cuba/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/republica-dominicana/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/brasil/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/guatemala/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/costa-rica/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/colombia/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/guia/ecuador/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/equipo/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.4</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/equipo/dr-carlos-mendez/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.4</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/equipo/dra-lucia-paredes/</loc>
-    <lastmod>2026-03-29</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/sobre-nosotros/</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://botanicaandina.com/politica-editorial/</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.3</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-curcuma-que-dice-la-ciencia/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-hierba-de-san-juan-interacciones-peligrosas/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-ajo-medicinal-evidencia-cientifica/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-valeriana-sueno-verdad-evidencia/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-ginkgo-biloba-memoria-evidencia/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-jengibre-propiedades-reales/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-aloe-vera-usos-reales/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://botanicaandina.com/noticias/mitos-te-verde-beneficios-riesgos/</loc>
-    <lastmod>2026-04-14</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2026-04-19</lastmod>
+    <priority>0.4</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>
